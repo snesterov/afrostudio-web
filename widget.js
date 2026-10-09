@@ -917,66 +917,365 @@
       grid-column: 1 / -1;
     }
 
-    /* 6. COOKIE BANNER (152-FZ) */
-    #afro-cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(14, 14, 18, 0.96);
-      backdrop-filter: blur(14px);
-      border-top: 1px solid rgba(245, 158, 11, 0.35);
-      padding: 16px 24px;
-      z-index: 9998;
-      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
-      display: none;
+    
+    /* 6. COOKIE & LEGAL BANNER (YANDEX STYLE - SCREENSHOTS 1, 2, 3) */
+    .afro-cookie-close-corner {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 13px;
+      line-height: 1;
+      padding: 0;
+      transition: all 0.2s;
+      z-index: 10;
+    }
+    .afro-cookie-close-corner:hover {
+      background: #f59e0b;
+      color: #0b0f17;
+      border-color: #f59e0b;
+    }
+
+    .afro-cookie-banner {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      max-width: 440px;
+      width: calc(100% - 40px);
+      background: #141722;
+      border: 1.5px solid #f59e0b;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.9), 0 0 25px rgba(245, 158, 11, 0.25);
+      border-radius: 18px;
+      padding: 22px;
+      z-index: 999999;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(25px);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+      box-sizing: border-box;
+      color: #e2e8f0;
+    }
+    .afro-cookie-banner.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .afro-cookie-view {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .afro-cookie-view.hidden {
+      display: none !important;
+    }
+
+    .afro-cookie-top-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-right: 32px;
+    }
+    .afro-cookie-back-btn {
+      background: transparent;
+      border: none;
+      color: #cbd5e1;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .afro-cookie-back-btn:hover {
+      color: #f59e0b;
+      background: rgba(245, 158, 11, 0.12);
+    }
+
+    .afro-cookie-title {
+      font-family: 'Cinzel', serif;
+      font-size: 17px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0.03em;
+      line-height: 1.3;
+      padding-right: 28px;
     }
     .afro-cookie-text {
-      font-size: 13px;
-      color: #cbd5e1;
-      max-width: 840px;
-      line-height: 1.5;
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: #94a3b8;
     }
     .afro-cookie-text a {
       color: #f59e0b;
       text-decoration: underline;
+      cursor: pointer;
     }
-    .afro-cookie-actions {
+    .afro-cookie-text a:hover {
+      color: #fbbf24;
+    }
+
+    .afro-cookie-btn-col {
       display: flex;
-      gap: 10px;
-      flex-shrink: 0;
+      flex-direction: column;
+      gap: 9px;
+      margin-top: 4px;
     }
-    .afro-cookie-accept {
-      background: #f59e0b;
-      color: #0b0b0f;
+    .afro-cookie-btn-primary {
+      width: 100%;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0b0f17;
       border: none;
-      padding: 9px 22px;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .afro-cookie-btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+    }
+    .afro-cookie-btn-secondary {
+      width: 100%;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(217, 119, 6, 0.22) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      color: #f59e0b;
+      border-radius: 10px;
+      padding: 11px 16px;
       font-size: 13px;
       font-weight: 700;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .afro-cookie-accept:hover {
-      background: #fbbf24;
-    }
-    .afro-cookie-settings {
-      background: transparent;
-      color: #cbd5e1;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 9px 16px;
-      font-size: 13px;
-      font-weight: 600;
-      border-radius: 8px;
       cursor: pointer;
       transition: all 0.2s;
     }
-    .afro-cookie-settings:hover {
+    .afro-cookie-btn-secondary:hover {
+      background: rgba(245, 158, 11, 0.32);
+      color: #ffffff;
+    }
+    .afro-cookie-btn-dark {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .afro-cookie-btn-dark:hover {
+      background: rgba(255, 255, 255, 0.1);
       border-color: #f59e0b;
       color: #ffffff;
+    }
+
+    /* TOGGLES LIST (SCREENSHOT 3) */
+    .afro-cookie-toggles-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 4px 0 6px;
+    }
+    .afro-cookie-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 10px 14px;
+    }
+    .afro-cookie-item-label {
+      font-size: 12.5px;
+      color: #e2e8f0;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .afro-cookie-item-label span {
+      color: #f59e0b;
+      font-weight: 700;
+    }
+
+    /* SWITCH TOGGLE */
+    .afro-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+    .afro-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .afro-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(255, 255, 255, 0.2);
+      transition: 0.3s;
+      border-radius: 24px;
+    }
+    .afro-slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: #ffffff;
+      transition: 0.3s;
+      border-radius: 50%;
+    }
+    .afro-switch input:checked + .afro-slider {
+      background-color: #f59e0b;
+    }
+    .afro-switch input:checked + .afro-slider:before {
+      transform: translateX(20px);
+    }
+    .afro-switch input:disabled + .afro-slider {
+      opacity: 0.75;
+      cursor: not-allowed;
+      background-color: #b45309;
+    }
+
+    /* FOOTER (SCREENSHOT 2) */
+    .afro-custom-footer {
+      background: #090a0f;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 28px 20px 32px;
+      text-align: center;
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.6;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .afro-footer-line1 {
+      color: #cbd5e1;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .afro-footer-line2 {
+      font-size: 10.5px;
+      color: #64748b;
+      margin-bottom: 12px;
+    }
+    .afro-footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .afro-footer-link {
+      background: transparent;
+      border: none;
+      color: #38bdf8;
+      text-decoration: underline;
+      font-size: 12px;
+      cursor: pointer;
+      padding: 0;
+      transition: color 0.2s;
+    }
+    .afro-footer-link:hover {
+      color: #f59e0b;
+    }
+
+    /* POLICY MODAL (IN-PAGE 152-FZ) */
+    .afro-policy-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .afro-policy-backdrop.open {
+      display: flex !important;
+    }
+    .afro-policy-box {
+      background: #0f1017;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: 20px;
+      max-width: 720px;
+      width: 100%;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.9), 0 0 35px rgba(245,158,11,0.15);
+      overflow: hidden;
+    }
+    .afro-policy-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .afro-policy-title {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .afro-policy-close {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 15px;
+      transition: all 0.2s;
+    }
+    .afro-policy-close:hover {
+      background: #f59e0b;
+      color: #000;
+      border-color: #f59e0b;
+    }
+    .afro-policy-body {
+      padding: 24px;
+      overflow-y: auto;
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+    .afro-policy-body h4 {
+      color: #f59e0b;
+      margin: 18px 0 8px;
+      font-size: 15px;
+    }
+    .afro-policy-body h4:first-child {
+      margin-top: 0;
     }
 
     /* RESPONSIVE DESIGN */
@@ -1306,16 +1605,112 @@
       </div>
     </section>
 
-    <!-- 6. COOKIE BANNER (152-FZ) -->
-    <div id="afro-cookie-banner">
-      <div class="afro-cookie-text">
-        Мы используем файлы cookie для персонализации сервиса и повышения удобства работы. Продолжая использовать сайт, вы даете согласие на обработку данных в соответствии с <a href="https://afrostudio.ru/privacy" target="_blank">Политикой конфиденциальности</a> (152-ФЗ).
+    
+    <!-- 6. LEGAL & FOOTER SECTION (SCREENSHOT 2) -->
+    <footer class="afro-custom-footer">
+      <div class="afro-footer-line1">&copy; 2012&ndash;2026 AFROSTUDIO &middot; Студия наращивания волос и афроплетения &middot; afrostudio.ru &middot; г. Москва, ул. Большая Полянка, 26 к. 1</div>
+      <div class="afro-footer-line2">*Meta признана экстремистской организацией и запрещена на территории РФ</div>
+      <div class="afro-footer-links">
+        <button type="button" class="afro-footer-link" onclick="openPolicyModal()">Политика конфиденциальности</button>
+        <button type="button" class="afro-footer-link" onclick="openCookieSettings()">Настройки Cookie</button>
       </div>
-      <div class="afro-cookie-actions">
-        <button class="afro-cookie-settings" onclick="window.afroDismissCookie()">Настроить</button>
-        <button class="afro-cookie-accept" onclick="window.afroDismissCookie()">Принять</button>
+    </footer>
+
+    <!-- 7. COOKIE BANNER & MODAL (SCREENSHOTS 1 & 3) -->
+    <div id="afro-cookie-banner" class="afro-cookie-banner">
+      <button type="button" class="afro-cookie-close-corner" onclick="closeCookieBanner()" title="Закрыть" aria-label="Закрыть">&times;</button>
+      
+      <!-- ШАГ 1: ГЛАВНЫЙ БАННЕР СОГЛАСИЯ (SCREENSHOT 1) -->
+      <div id="afro-cookie-view-main" class="afro-cookie-view">
+        <div class="afro-cookie-title">AFROSTUDIO использует файлы COOKIE</div>
+        <div class="afro-cookie-text">
+          Они необходимы для правильной и надежной работы сайта и сервисов. Подробнее прочитайте в <a onclick="openPolicyModal()">Политике использования файлов cookie</a>
+        </div>
+        <div class="afro-cookie-btn-col">
+          <button type="button" class="afro-cookie-btn-primary" onclick="acceptAllCookies()">Разрешить все</button>
+          <button type="button" class="afro-cookie-btn-secondary" onclick="acceptEssentialCookies()">Разрешить обязательные</button>
+          <button type="button" class="afro-cookie-btn-dark" onclick="showCookieSettings()">Настроить</button>
+        </div>
+      </div>
+
+      <!-- ШАГ 2: ДЕТАЛЬНЫЕ НАСТРОЙКИ COOKIE (SCREENSHOT 3) -->
+      <div id="afro-cookie-view-settings" class="afro-cookie-view hidden">
+        <div class="afro-cookie-top-nav">
+          <button type="button" class="afro-cookie-back-btn" onclick="hideCookieSettings()" title="Назад" aria-label="Назад">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="afro-cookie-title">Настройки файлов COOKIE</div>
+        </div>
+        
+        <div class="afro-cookie-text">
+          Сервис использует технические файлы cookie для функционирования сайта. Также используются маркетинговые и аналитические файлы cookie для улучшения взаимодействия и показа релевантных материалов. Подробнее читайте в <a onclick="openPolicyModal()">Политике использования файлов cookie</a>
+        </div>
+
+        <div class="afro-cookie-toggles-list">
+          <div class="afro-cookie-item">
+            <div class="afro-cookie-item-label">
+              <span>+</span> Технические, всегда активны
+            </div>
+            <label class="afro-switch">
+              <input type="checkbox" checked disabled>
+              <span class="afro-slider"></span>
+            </label>
+          </div>
+
+          <div class="afro-cookie-item">
+            <div class="afro-cookie-item-label">
+              <span>+</span> Аналитические / маркетинговые
+            </div>
+            <label class="afro-switch">
+              <input type="checkbox" id="afro-cookie-toggle-analytics" checked>
+              <span class="afro-slider"></span>
+            </label>
+          </div>
+
+          <div class="afro-cookie-item">
+            <div class="afro-cookie-item-label">
+              <span>+</span> Другие файлы cookie
+            </div>
+            <label class="afro-switch">
+              <input type="checkbox" id="afro-cookie-toggle-other" checked>
+              <span class="afro-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="afro-cookie-btn-col">
+          <button type="button" class="afro-cookie-btn-primary" onclick="acceptSelectedCookies()">Разрешить выбранные</button>
+          <button type="button" class="afro-cookie-btn-secondary" onclick="acceptEssentialCookies()">Разрешить обязательные</button>
+        </div>
       </div>
     </div>
+
+    <!-- 8. POLICY MODAL (152-FZ) -->
+    <div id="afro-policy-modal" class="afro-policy-backdrop" onclick="closePolicyModal()">
+      <div class="afro-policy-box" onclick="event.stopPropagation()">
+        <div class="afro-policy-top">
+          <div class="afro-policy-title">Политика конфиденциальности</div>
+          <button type="button" class="afro-policy-close" onclick="closePolicyModal()">&times;</button>
+        </div>
+        <div class="afro-policy-body">
+          <h4>1. Общие положения</h4>
+          <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ &laquo;О персональных данных&raquo; и определяет порядок обработки персональных данных и меры по обеспечению безопасности данных студией Afrostudio (г. Москва, ул. Большая Полянка, д. 26, корп. 1).</p>
+          
+          <h4>2. Цели сбора и обработки данных</h4>
+          <p>Сбор данных (имя, номер телефона, аккаунт Telegram, выбранные услуги) осуществляется исключительно в целях консультации, записи на процедуры наращивания волос и афроплетения, а также информирования о подтверждении визита.</p>
+          
+          <h4>3. Обработка файлов cookie</h4>
+          <p>Сайт использует файлы cookie для корректной работы сервисов, авторизации сессий и сбора статистики посещаемости через систему Яндекс Метрика. Пользователь вправе в любой момент изменить настройки файлов cookie в соответствующем меню сайта.</p>
+          
+          <h4>4. Безопасность и защита данных</h4>
+          <p>Студия принимает необходимые организационные и технические меры для защиты персональной информации от неправомерного или случайного доступа, уничтожения, изменения или распространения третьими лицами.</p>
+
+          <h4>5. Контакты студии</h4>
+          <p>Студия Afrostudio: г. Москва, ул. Большая Полянка, 26 к. 1.<br>Телефон: +7 (495) 911-39-11.<br>Официальный сайт: afrostudio.ru</p>
+        </div>
+      </div>
+    </div>
+
   `;
 
   // 7. RENDER TABS FOR HAIR EXTENSION TECHNOLOGIES
@@ -1587,15 +1982,99 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // 11. COOKIE BANNER DISMISS
-  const cookieBanner = document.getElementById('afro-cookie-banner');
-  if (cookieBanner && !localStorage.getItem('afro_cookie_dismissed')) {
-    cookieBanner.style.display = 'flex';
+  
+  // ========================================================================
+  // COOKIE, LEGAL & POLICY MODAL LOGIC (152-FZ)
+  // ========================================================================
+  function saveCookieConsent(settings) {
+    try {
+      localStorage.setItem('afro_cookie_consent', JSON.stringify(settings));
+      localStorage.setItem('afro_cookie_accepted', '1');
+    } catch(e) {}
+    closeCookieBanner();
   }
-  window.afroDismissCookie = function() {
-    if (cookieBanner) cookieBanner.style.display = 'none';
-    localStorage.setItem('afro_cookie_dismissed', '1');
+
+  window.closeCookieBanner = function() {
+    const banner = document.getElementById('afro-cookie-banner');
+    if (banner) {
+      banner.classList.remove('visible');
+      setTimeout(function() { banner.style.display = 'none'; }, 300);
+    }
   };
+
+  window.acceptAllCookies = function() {
+    saveCookieConsent({ technical: true, analytics: true, other: true });
+  };
+
+  window.acceptEssentialCookies = function() {
+    saveCookieConsent({ technical: true, analytics: false, other: false });
+  };
+
+  window.acceptSelectedCookies = function() {
+    const analytics = document.getElementById('afro-cookie-toggle-analytics');
+    const other = document.getElementById('afro-cookie-toggle-other');
+    saveCookieConsent({
+      technical: true,
+      analytics: analytics ? analytics.checked : true,
+      other: other ? other.checked : true
+    });
+  };
+
+  window.showCookieSettings = function() {
+    const mainView = document.getElementById('afro-cookie-view-main');
+    const settingsView = document.getElementById('afro-cookie-view-settings');
+    if (mainView && settingsView) {
+      mainView.classList.add('hidden');
+      settingsView.classList.remove('hidden');
+    }
+  };
+
+  window.hideCookieSettings = function() {
+    const mainView = document.getElementById('afro-cookie-view-main');
+    const settingsView = document.getElementById('afro-cookie-view-settings');
+    if (mainView && settingsView) {
+      settingsView.classList.add('hidden');
+      mainView.classList.remove('hidden');
+    }
+  };
+
+  window.openCookieSettings = function() {
+    const banner = document.getElementById('afro-cookie-banner');
+    if (banner) {
+      banner.style.display = 'flex';
+      window.showCookieSettings();
+      setTimeout(function() { banner.classList.add('visible'); }, 20);
+    }
+  };
+
+  window.openPolicyModal = function() {
+    const modal = document.getElementById('afro-policy-modal');
+    if (modal) modal.classList.add('open');
+  };
+
+  window.closePolicyModal = function() {
+    const modal = document.getElementById('afro-policy-modal');
+    if (modal) modal.classList.remove('open');
+  };
+
+  function checkCookieConsent() {
+    try {
+      const saved = localStorage.getItem('afro_cookie_consent') || localStorage.getItem('afro_cookie_accepted');
+      if (!saved) {
+        setTimeout(function() {
+          const banner = document.getElementById('afro-cookie-banner');
+          if (banner) {
+            banner.style.display = 'flex';
+            window.hideCookieSettings();
+            setTimeout(function() { banner.classList.add('visible'); }, 30);
+          }
+        }, 1000);
+      }
+    } catch(e) {}
+  }
+
+  // Trigger check on load
+  checkCookieConsent();
 
   // 12. METRIKA GOALS
   window.afroTrack = function(goal) {
