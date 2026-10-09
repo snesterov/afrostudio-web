@@ -1,11 +1,11 @@
 /**
- * AFROSTUDIO.RU - LUXURY BEAUTY SALON APPLICATION
- * Version: 9.0.0 - High-Contrast Forms, Unique Feed, Interactive Price Table
+ * AFROSTUDIO.RU - ELITE BEAUTY SALON WEB SYSTEM
+ * Version: 10.0.0 - Strict Design Standards, Spacing & Native Killers
  */
 (function() {
   'use strict';
 
-  // 1. INJECT EXTERNAL STYLES & FONTS
+  // 1. INJECT EXTERNAL STYLES & LUXURY FONTS
   if (!document.getElementById('afro-web-fonts')) {
     const fontLink = document.createElement('link');
     fontLink.id = 'afro-web-fonts';
@@ -23,25 +23,29 @@
     document.head.appendChild(glScript);
   }
 
-  // 3. INJECT APPLICATION STYLES
+  // 3. INJECT APPLICATION STYLES (ELITE DESIGN SYSTEM)
   const styles = `
-    /* HIDE OLD TILDA BLOCKS, DUPLICATE FEED AND DUPLICATE FOOTER */
+    /* ABSOLUTE KILL LIST FOR JUNK TILDA BLOCKS (INCLUDING NATIVE BLACK ARROW t190 & COOKIE t972) */
     #rec2325313701, #rec2325313981, #rec2325314041, #rec2222808741, 
-    #rec2334967441, #rec2222715461, #t-footer, .t345, .t854 {
+    #rec2334967441, #rec2334967991, #rec2222715461, #t-footer, .t345, .t854, 
+    .t190, .t190__button, .t972 {
       display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
     }
 
-    /* TILDA POPUP FORM #rec4646446601 - ULTRA-CLEAR HIGH-CONTRAST STYLING */
+    /* TILDA POPUP FORM #rec4646446601 - ULTRA-CLEAR HIGH-CONTRAST */
     #rec4646446601 .t-popup {
-      background: rgba(0, 0, 0, 0.9) !important;
-      backdrop-filter: blur(14px) !important;
+      background: rgba(0, 0, 0, 0.92) !important;
+      backdrop-filter: blur(16px) !important;
     }
     #rec4646446601 .t-popup__container {
       background: #0f1118 !important;
       border: 1.5px solid rgba(245, 158, 11, 0.5) !important;
-      border-radius: 26px !important;
-      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 40px rgba(245, 158, 11, 0.25) !important;
-      padding: 42px 34px !important;
+      border-radius: 28px !important;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.95), 0 0 45px rgba(245, 158, 11, 0.25) !important;
+      padding: 44px 36px !important;
     }
     #rec4646446601 .t-popup__close-icon {
       fill: #f59e0b !important;
@@ -83,7 +87,7 @@
       display: block !important;
     }
 
-    /* NOTICE / SUBTITLE HELPER (Telegram / MAX instruction) */
+    /* SUBTITLE NOTICE (Telegram / MAX instruction) */
     #rec4646446601 .t-input-subtitle,
     #rec4646446601 .t-input-subtitle * {
       color: #e2e8f0 !important;
@@ -237,23 +241,23 @@
       box-shadow: inset 0 2px 3px rgba(255,255,255,0.95), inset 0 -3px 6px rgba(0,0,0,0.4), 0 16px 36px -2px rgba(245,158,11,0.75), 0 0 26px rgba(251,191,36,0.55) !important;
     }
 
-    /* ULTRA-BRIGHT RADIANT 3D GOLD SCROLL TO TOP */
+    /* ONLY ONE ULTRA-BRIGHT RADIANT 3D GOLD SCROLL BUTTON */
     #afro-scroll-top {
       position: fixed !important;
-      bottom: 28px !important;
-      right: 28px !important;
-      width: 52px !important;
-      height: 52px !important;
+      bottom: 30px !important;
+      right: 30px !important;
+      width: 54px !important;
+      height: 54px !important;
       border-radius: 50% !important;
-      background: radial-gradient(120% 120% at 40% 15%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 55%), linear-gradient(135deg, #fde68a 0%, #f59e0b 50%, #d97706 100%) !important;
-      border: 2px solid rgba(255, 255, 255, 0.75) !important;
+      background: radial-gradient(120% 120% at 35% 15%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 55%), linear-gradient(135deg, #fde68a 0%, #f59e0b 50%, #d97706 100%) !important;
+      border: 2.5px solid rgba(255, 255, 255, 0.85) !important;
       color: #0b0c10 !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
       cursor: pointer !important;
       z-index: 999999 !important;
-      box-shadow: inset 0 2px 4px rgba(255,255,255,0.9), inset 0 -3px 6px rgba(0,0,0,0.35), 0 10px 28px rgba(245, 158, 11, 0.65), 0 0 18px rgba(251, 191, 36, 0.5) !important;
+      box-shadow: inset 0 2px 4px rgba(255,255,255,0.95), inset 0 -3px 6px rgba(0,0,0,0.35), 0 12px 32px rgba(245, 158, 11, 0.75), 0 0 22px rgba(251, 191, 36, 0.6) !important;
       transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
       opacity: 0 !important;
       visibility: hidden !important;
@@ -266,20 +270,20 @@
     }
     #afro-scroll-top:hover {
       transform: translateY(-4px) scale(1.1) !important;
-      box-shadow: inset 0 2px 4px rgba(255,255,255,1), inset 0 -3px 6px rgba(0,0,0,0.4), 0 16px 36px rgba(245, 158, 11, 0.85), 0 0 28px rgba(251, 191, 36, 0.7) !important;
+      box-shadow: inset 0 2px 4px rgba(255,255,255,1), inset 0 -3px 6px rgba(0,0,0,0.4), 0 18px 40px rgba(245, 158, 11, 0.9), 0 0 30px rgba(251, 191, 36, 0.8) !important;
     }
     #afro-scroll-top svg {
-      width: 24px !important;
-      height: 24px !important;
+      width: 26px !important;
+      height: 26px !important;
       stroke: #0b0c10 !important;
-      stroke-width: 3.2px !important;
+      stroke-width: 3.5px !important;
     }
 
-    /* FULL CANVAS BEAUTY LUXURY STYLING */
+    /* MASTER DESIGN SYSTEM: BREATHING ROOM & SPACING (ПРАВИЛА ВЕБ-СТАНДАРТОВ) */
     #afrostudio-app {
       font-family: 'Montserrat', sans-serif;
       color: #ffffff;
-      background-color: #08090e;
+      background-color: #07080c;
       overflow-x: hidden;
       width: 100%;
       margin: 0;
@@ -290,37 +294,51 @@
       box-sizing: border-box;
     }
 
-    /* CONTAINER & HEADERS */
+    /* ELEGANT SECTION DIVIDER (ЗОЛОТОЙ СВЕТОВОЙ ЛУЧ МЕЖДУ БЛОКАМИ) */
+    .afro-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(245, 158, 11, 0.35) 50%, transparent 100%);
+      margin: 0;
+      border: none;
+    }
+
+    /* SECTION SPACING: 120px VERTICAL PADDING ДЛЯ ПРЕМИАЛЬНОГО ВОЗДУХА */
+    .afro-section-spacer {
+      padding: 110px 0;
+    }
+
     .afro-container {
       max-width: 1320px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 28px;
       width: 100%;
     }
+
     .afro-section-header {
       text-align: center;
-      margin-bottom: 48px;
+      margin-bottom: 56px;
     }
     .afro-section-pill {
       display: inline-block;
       font-size: 11.5px;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: #fbbf24;
       background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      padding: 7px 20px;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 8px 24px;
       border-radius: 9999px;
-      margin-bottom: 16px;
-      box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+      margin-bottom: 18px;
+      box-shadow: 0 0 18px rgba(245, 158, 11, 0.2);
     }
     .afro-section-title {
       font-family: 'Cinzel', serif;
-      font-size: 38px;
+      font-size: 40px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       letter-spacing: 0.02em;
       line-height: 1.25;
     }
@@ -330,11 +348,11 @@
       -webkit-text-fill-color: transparent;
     }
     .afro-section-sub {
-      font-size: 15.5px;
+      font-size: 16px;
       color: #94a3b8;
-      max-width: 720px;
+      max-width: 740px;
       margin: 0 auto;
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     /* FISH-EYE 3D LIQUID GLASS GOLD BUTTON */
@@ -344,8 +362,8 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      min-height: 52px;
-      padding: 16px 38px;
+      min-height: 54px;
+      padding: 16px 40px;
       border-radius: 9999px;
       background: radial-gradient(120% 120% at 50% 10%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 60%), linear-gradient(180deg, #fde68a 0%, #f59e0b 45%, #d97706 100%);
       border: 1px solid rgba(255, 255, 255, 0.5);
@@ -387,8 +405,8 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      min-height: 52px;
-      padding: 16px 36px;
+      min-height: 54px;
+      padding: 16px 38px;
       border-radius: 9999px;
       background: radial-gradient(120% 120% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.02) 65%), rgba(20, 22, 34, 0.75);
       border: 1.5px solid rgba(245, 158, 11, 0.45);
@@ -428,7 +446,7 @@
     .afro-hero-section {
       position: relative;
       width: 100%;
-      min-height: 580px;
+      min-height: 620px;
       overflow: hidden;
       background: #000000;
       display: flex;
@@ -442,49 +460,49 @@
     }
     .afro-hero-slide {
       min-width: 100%;
-      min-height: 580px;
+      min-height: 620px;
       position: relative;
       background-size: cover;
       background-position: center center;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 80px 24px 90px;
+      padding: 90px 24px 100px;
     }
     .afro-hero-slide::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at center, rgba(10, 10, 14, 0.65) 0%, rgba(6, 7, 10, 0.92) 100%);
+      background: radial-gradient(circle at center, rgba(10, 10, 14, 0.6) 0%, rgba(6, 7, 10, 0.94) 100%);
       z-index: 1;
     }
     .afro-hero-content {
       position: relative;
       z-index: 2;
-      max-width: 900px;
+      max-width: 920px;
       text-align: center;
     }
     .afro-hero-pill {
       display: inline-block;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       color: #fbbf24;
       background: rgba(245, 158, 11, 0.15);
       border: 1px solid rgba(245, 158, 11, 0.4);
-      padding: 8px 24px;
+      padding: 8px 26px;
       border-radius: 9999px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
       box-shadow: 0 0 16px rgba(245, 158, 11, 0.25);
     }
     .afro-hero-h1 {
       font-family: 'Cinzel', serif;
-      font-size: 48px;
+      font-size: 50px;
       font-weight: 800;
       line-height: 1.2;
       color: #ffffff;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       text-shadow: 0 4px 24px rgba(0,0,0,0.9);
     }
     .afro-hero-h1 span {
@@ -493,10 +511,10 @@
       -webkit-text-fill-color: transparent;
     }
     .afro-hero-desc {
-      font-size: 16.5px;
+      font-size: 17px;
       color: #cbd5e1;
-      max-width: 720px;
-      margin: 0 auto 34px;
+      max-width: 740px;
+      margin: 0 auto 36px;
       line-height: 1.7;
     }
     .afro-hero-actions {
@@ -504,7 +522,7 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 18px;
+      gap: 20px;
     }
 
     /* SLIDER NAV ARROWS & DOTS */
@@ -512,8 +530,8 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 50px;
-      height: 50px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       background: rgba(15, 17, 26, 0.85);
       border: 1.5px solid rgba(245, 158, 11, 0.4);
@@ -558,44 +576,42 @@
       box-shadow: 0 0 12px #f59e0b;
     }
 
-    /* 2. DIRECTIONS GRID */
+    /* 2. DIRECTIONS GRID (4 MAIN CARDS) */
     .afro-directions-section {
-      padding: 90px 0;
       background: #090a10;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
     .afro-dir-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      gap: 28px;
     }
     .afro-dir-card {
       position: relative;
-      border-radius: 20px;
+      border-radius: 22px;
       overflow: hidden;
-      height: 420px;
+      height: 440px;
       background-size: cover;
       background-position: center center;
       border: 1.5px solid rgba(255, 255, 255, 0.1);
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 28px 24px;
+      padding: 30px 24px;
       text-decoration: none;
       transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
     }
     .afro-dir-card::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(8, 9, 14, 0.1) 0%, rgba(8, 9, 14, 0.9) 85%);
+      background: linear-gradient(180deg, rgba(8, 9, 14, 0.1) 0%, rgba(8, 9, 14, 0.92) 85%);
       transition: opacity 0.3s;
     }
     .afro-dir-card:hover {
       transform: translateY(-8px);
       border-color: #f59e0b;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.3);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.85), 0 0 25px rgba(245, 158, 11, 0.3);
     }
     .afro-dir-content {
       position: relative;
@@ -612,7 +628,7 @@
       border: 1px solid rgba(245, 158, 11, 0.4);
       padding: 4px 12px;
       border-radius: 9999px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .afro-dir-name {
       font-family: 'Cinzel', serif;
@@ -623,31 +639,29 @@
       line-height: 1.3;
     }
     .afro-dir-desc {
-      font-size: 13.5px;
+      font-size: 14px;
       color: #cbd5e1;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     /* 3. ALL KINDS OF HAIR EXTENSIONS SWITCHER WITH PRICES */
     .afro-all-types-section {
-      padding: 90px 0;
-      background: #0c0d14;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      background: #0d0f17;
     }
     .afro-types-layout {
       display: grid;
       grid-template-columns: 360px 1fr;
-      gap: 36px;
+      gap: 40px;
       align-items: start;
     }
     .afro-types-menu {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      background: #12141e;
+      gap: 10px;
+      background: #121420;
       border: 1.5px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      padding: 16px;
+      border-radius: 22px;
+      padding: 18px;
     }
     .afro-type-btn {
       display: flex;
@@ -656,8 +670,8 @@
       width: 100%;
       background: transparent;
       border: 1px solid transparent;
-      border-radius: 12px;
-      padding: 13px 18px;
+      border-radius: 14px;
+      padding: 14px 20px;
       color: #cbd5e1;
       font-size: 14.5px;
       font-weight: 600;
@@ -677,29 +691,29 @@
       box-shadow: 0 4px 15px rgba(245, 158, 11, 0.15);
     }
     .afro-type-display {
-      background: #12141e;
-      border: 1.5px solid rgba(245, 158, 11, 0.3);
-      border-radius: 24px;
+      background: #121420;
+      border: 1.5px solid rgba(245, 158, 11, 0.35);
+      border-radius: 26px;
       overflow: hidden;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-      min-height: 500px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
+      min-height: 520px;
     }
     .afro-type-photo {
       position: relative;
       background-size: cover;
       background-position: center center;
-      min-height: 400px;
+      min-height: 420px;
     }
     .afro-type-photo::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, rgba(18, 20, 30, 0) 60%, rgba(18, 20, 30, 1) 100%);
+      background: linear-gradient(90deg, rgba(18, 20, 32, 0) 55%, rgba(18, 20, 32, 1) 100%);
     }
     .afro-type-info {
-      padding: 40px 36px;
+      padding: 44px 40px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -708,43 +722,43 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 800;
       color: #fbbf24;
       background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      padding: 6px 16px;
-      border-radius: 10px;
-      margin-bottom: 16px;
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      padding: 7px 18px;
+      border-radius: 12px;
+      margin-bottom: 18px;
       width: fit-content;
     }
     .afro-type-title {
       font-family: 'Cinzel', serif;
-      font-size: 26px;
+      font-size: 27px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       line-height: 1.25;
     }
     .afro-type-text {
-      font-size: 14.5px;
+      font-size: 15px;
       color: #cbd5e1;
-      line-height: 1.65;
-      margin-bottom: 20px;
+      line-height: 1.7;
+      margin-bottom: 22px;
     }
     .afro-type-features {
       list-style: none;
       padding: 0;
-      margin: 0 0 28px;
+      margin: 0 0 32px;
       display: flex;
       flex-direction: column;
-      gap: 9px;
+      gap: 10px;
     }
     .afro-type-features li {
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 13.5px;
+      font-size: 14px;
       color: #e2e8f0;
     }
     .afro-type-features li span {
@@ -754,19 +768,17 @@
 
     /* 4. NATIVE INTERACTIVE PRICING TABLE MATRIX */
     .afro-pricing-section {
-      padding: 90px 0;
       background: #090a11;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
     .afro-price-tabs {
       display: flex;
       justify-content: center;
-      gap: 16px;
-      margin-bottom: 40px;
+      gap: 18px;
+      margin-bottom: 48px;
       flex-wrap: wrap;
     }
     .afro-price-tab-btn {
-      padding: 14px 32px;
+      padding: 15px 36px;
       border-radius: 9999px;
       border: 1.5px solid rgba(245, 158, 11, 0.35);
       background: rgba(255, 255, 255, 0.05);
@@ -782,18 +794,18 @@
       background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
       color: #0b0c10;
       border-color: #f59e0b;
-      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45);
     }
     .afro-price-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 28px;
     }
     .afro-price-card {
-      background: #11131e;
+      background: #111320;
       border: 1.5px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      padding: 32px 26px;
+      border-radius: 22px;
+      padding: 36px 30px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -801,72 +813,66 @@
       position: relative;
     }
     .afro-price-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
       border-color: #f59e0b;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.2);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85), 0 0 25px rgba(245, 158, 11, 0.25);
     }
     .afro-price-card.featured {
-      border-color: rgba(245, 158, 11, 0.6);
-      background: linear-gradient(180deg, #161828 0%, #11131e 100%);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(245, 158, 11, 0.15);
+      border-color: rgba(245, 158, 11, 0.65);
+      background: linear-gradient(180deg, #171a2c 0%, #111320 100%);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75), 0 0 25px rgba(245, 158, 11, 0.2);
     }
     .afro-price-badge {
       position: absolute;
-      top: 18px;
-      right: 18px;
+      top: 20px;
+      right: 20px;
       font-size: 11px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #0b0c10;
       background: #fbbf24;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 9999px;
     }
     .afro-price-card-title {
       font-family: 'Cinzel', serif;
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       line-height: 1.3;
     }
     .afro-price-card-desc {
-      font-size: 13.5px;
+      font-size: 14px;
       color: #94a3b8;
       line-height: 1.6;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
       min-height: 44px;
     }
     .afro-price-val {
       font-family: 'Cinzel', serif;
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 800;
       color: #fbbf24;
-      margin-bottom: 22px;
-    }
-    .afro-price-val span {
-      font-size: 13px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-      color: #94a3b8;
+      margin-bottom: 24px;
     }
     .afro-price-includes {
       list-style: none;
       padding: 0;
-      margin: 0 0 28px;
+      margin: 0 0 32px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 11px;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 20px;
+      padding-top: 22px;
     }
     .afro-price-includes li {
-      font-size: 13px;
+      font-size: 13.5px;
       color: #cbd5e1;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 9px;
     }
     .afro-price-includes li span {
       color: #f59e0b;
@@ -875,75 +881,71 @@
 
     /* 5. KLING AI ART BANNER */
     .afro-art-section {
-      padding: 80px 0;
       background: #08090e;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
     .afro-art-banner {
       position: relative;
-      border-radius: 24px;
+      border-radius: 26px;
       overflow: hidden;
-      background: linear-gradient(135deg, #141724 0%, #0d0f17 100%);
-      border: 1.5px solid rgba(245, 158, 11, 0.35);
-      padding: 56px 48px;
+      background: linear-gradient(135deg, #151826 0%, #0d0f17 100%);
+      border: 1.5px solid rgba(245, 158, 11, 0.4);
+      padding: 64px 54px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 36px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(245, 158, 11, 0.15);
+      gap: 40px;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 35px rgba(245, 158, 11, 0.18);
     }
     .afro-art-text {
-      max-width: 650px;
+      max-width: 680px;
     }
     .afro-art-title {
       font-family: 'Cinzel', serif;
-      font-size: 32px;
+      font-size: 34px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       line-height: 1.3;
     }
     .afro-art-title span {
       color: #fbbf24;
     }
     .afro-art-desc {
-      font-size: 15.5px;
+      font-size: 16px;
       color: #cbd5e1;
-      line-height: 1.7;
-      margin-bottom: 26px;
+      line-height: 1.75;
+      margin-bottom: 30px;
     }
 
-    /* 6. TELEGRAM LIVE FEED (STREAMLINED & DIVERSE) */
+    /* 6. TELEGRAM LIVE FEED */
     .afro-tg-section {
-      padding: 90px 0;
-      background: #090a10;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      background: #0c0d16;
     }
     .afro-tg-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-bottom: 48px;
+      gap: 32px;
+      margin-bottom: 56px;
     }
     .afro-tg-card {
-      background: #11131c;
+      background: #121422;
       border: 1.5px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
+      border-radius: 22px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       transition: all 0.35s ease;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
     }
     .afro-tg-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
       border-color: #f59e0b;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.25);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.85), 0 0 25px rgba(245, 158, 11, 0.25);
     }
     .afro-tg-media {
       position: relative;
       width: 100%;
-      height: 290px;
+      height: 300px;
       background-size: cover;
       background-position: center center;
       background-color: #0b0c12;
@@ -954,57 +956,57 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 58px;
-      height: 58px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      background: rgba(11, 13, 20, 0.8);
+      background: rgba(11, 13, 20, 0.85);
       border: 2px solid #f59e0b;
       color: #f59e0b;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+      box-shadow: 0 0 22px rgba(245, 158, 11, 0.45);
       transition: all 0.25s ease;
     }
     .afro-tg-card:hover .afro-tg-play-btn {
       transform: translate(-50%, -50%) scale(1.12);
       background: #f59e0b;
       color: #0b0c10;
-      box-shadow: 0 0 30px rgba(245, 158, 11, 0.7);
+      box-shadow: 0 0 32px rgba(245, 158, 11, 0.75);
     }
     .afro-tg-play-btn svg {
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       margin-left: 3px;
     }
     .afro-tg-body {
-      padding: 24px;
+      padding: 26px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
     .afro-tg-title {
       font-family: 'Cinzel', serif;
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       line-height: 1.4;
     }
     .afro-tg-text {
       font-size: 14px;
       color: #94a3b8;
-      line-height: 1.6;
+      line-height: 1.65;
       flex-grow: 1;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
     .afro-tg-meta {
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 14px;
-      font-size: 12.5px;
+      padding-top: 16px;
+      font-size: 13px;
       color: #64748b;
     }
     .afro-tg-link {
@@ -1013,7 +1015,7 @@
       font-weight: 700;
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
       transition: color 0.2s;
     }
     .afro-tg-link:hover {
@@ -1023,7 +1025,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 18px;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
@@ -1034,38 +1036,38 @@
       opacity: 1 !important;
       position: relative !important;
       z-index: 99 !important;
-      background: #08090e !important;
+      background: #06070a !important;
       border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-      padding: 40px 20px 44px !important;
+      padding: 50px 20px 54px !important;
       text-align: center !important;
-      font-size: 12.5px !important;
+      font-size: 13px !important;
       color: #94a3b8 !important;
-      line-height: 1.7 !important;
+      line-height: 1.75 !important;
       width: 100% !important;
       box-sizing: border-box !important;
     }
     .afro-footer-line1 {
       color: #cbd5e1;
       font-weight: 500;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .afro-footer-line2 {
       color: #64748b;
-      font-size: 11.5px;
-      margin-bottom: 14px;
+      font-size: 12px;
+      margin-bottom: 16px;
     }
     .afro-footer-links {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
       flex-wrap: wrap;
     }
     .afro-footer-link {
       background: none;
       border: none;
       color: #94a3b8;
-      font-size: 12.5px;
+      font-size: 13px;
       text-decoration: underline;
       cursor: pointer;
       padding: 0;
@@ -1078,19 +1080,19 @@
     /* 8. COOKIE BANNER & MODAL */
     .afro-cookie-banner {
       position: fixed;
-      bottom: 24px;
-      left: 24px;
+      bottom: 28px;
+      left: 28px;
       max-width: 440px;
-      width: calc(100% - 48px);
-      background: #12141f;
+      width: calc(100% - 56px);
+      background: #121422;
       border: 1.5px solid #f59e0b;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 30px rgba(245, 158, 11, 0.25);
-      border-radius: 20px;
-      padding: 24px;
+      border-radius: 22px;
+      padding: 26px;
       z-index: 999998;
       display: none;
       box-sizing: border-box;
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
     }
     .afro-cookie-banner.open {
       display: block !important;
@@ -1262,8 +1264,8 @@
     .afro-policy-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.88);
-      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(12px);
       z-index: 1000000;
       display: none;
       align-items: center;
@@ -1277,8 +1279,8 @@
     .afro-policy-box {
       background: #0f1118;
       border: 1.5px solid rgba(245, 158, 11, 0.45);
-      border-radius: 24px;
-      max-width: 740px;
+      border-radius: 26px;
+      max-width: 760px;
       width: 100%;
       max-height: 85vh;
       display: flex;
@@ -1290,12 +1292,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 22px 26px;
+      padding: 24px 28px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     .afro-policy-title {
       font-family: 'Cinzel', serif;
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 800;
       color: #ffffff;
     }
@@ -1319,16 +1321,16 @@
       border-color: #f59e0b;
     }
     .afro-policy-body {
-      padding: 26px;
+      padding: 28px;
       overflow-y: auto;
-      font-size: 13.5px;
+      font-size: 14px;
       line-height: 1.75;
       color: #cbd5e1;
     }
     .afro-policy-body h4 {
       color: #fbbf24;
-      margin: 20px 0 8px;
-      font-size: 15.5px;
+      margin: 22px 0 8px;
+      font-size: 16px;
     }
     .afro-policy-body h4:first-child {
       margin-top: 0;
@@ -1350,6 +1352,9 @@
       }
     }
     @media (max-width: 768px) {
+      .afro-section-spacer {
+        padding: 70px 0;
+      }
       .afro-hero-h1 {
         font-size: 32px;
       }
@@ -1368,7 +1373,7 @@
       .afro-art-banner {
         flex-direction: column;
         text-align: center;
-        padding: 36px 24px;
+        padding: 40px 24px;
       }
       #afro-scroll-top {
         bottom: 20px !important;
@@ -1767,8 +1772,10 @@
       </div>
     </section>
 
+    <div class="afro-divider"></div>
+
     <!-- 2. DIRECTIONS GRID -->
-    <section class="afro-directions-section" id="afro-directions">
+    <section class="afro-directions-section afro-section-spacer" id="afro-directions">
       <div class="afro-container">
         <div class="afro-section-header">
           <span class="afro-section-pill">НАПРАВЛЕНИЯ РАБОТЫ</span>
@@ -1808,8 +1815,10 @@
       </div>
     </section>
 
+    <div class="afro-divider"></div>
+
     <!-- 3. ALL KINDS OF HAIR EXTENSIONS -->
-    <section class="afro-all-types-section" id="afro-tech-section">
+    <section class="afro-all-types-section afro-section-spacer" id="afro-tech-section">
       <div class="afro-container">
         <div class="afro-section-header">
           <span class="afro-section-pill">ВСЕ ВИДЫ НАРАЩИВАНИЯ</span>
@@ -1823,8 +1832,10 @@
       </div>
     </section>
 
+    <div class="afro-divider"></div>
+
     <!-- 4. NATIVE INTERACTIVE PRICING TABLE MATRIX -->
-    <section class="afro-pricing-section" id="afro-pricing">
+    <section class="afro-pricing-section afro-section-spacer" id="afro-pricing">
       <div class="afro-container">
         <div class="afro-section-header">
           <span class="afro-section-pill">ПРОЗРАЧНЫЙ ПРАЙС-ЛИСТ</span>
@@ -1839,8 +1850,10 @@
       </div>
     </section>
 
+    <div class="afro-divider"></div>
+
     <!-- 5. KLING AI ART BANNER -->
-    <section class="afro-art-section">
+    <section class="afro-art-section afro-section-spacer">
       <div class="afro-container">
         <div class="afro-art-banner">
           <div class="afro-art-text">
@@ -1850,15 +1863,17 @@
             <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('cta_art_consult')">Записаться на примерку</a>
           </div>
           <div class="afro-art-badge">
-            <div style="font-family: 'Cinzel', serif; font-size: 54px; font-weight: 800; color: #fbbf24; line-height: 1; text-align: center;">14</div>
-            <div style="font-size: 13px; font-weight: 700; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; margin-top: 6px;">Лет мастерства</div>
+            <div style="font-family: 'Cinzel', serif; font-size: 56px; font-weight: 800; color: #fbbf24; line-height: 1; text-align: center;">14</div>
+            <div style="font-size: 13px; font-weight: 700; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.12em; text-align: center; margin-top: 8px;">Лет мастерства</div>
           </div>
         </div>
       </div>
     </section>
 
+    <div class="afro-divider"></div>
+
     <!-- 6. TELEGRAM LIVE FEED (STREAMLINED & DIVERSE) -->
-    <section class="afro-tg-section" id="afro-telegram-feed">
+    <section class="afro-tg-section afro-section-spacer" id="afro-telegram-feed">
       <div class="afro-container">
         <div class="afro-section-header">
           <span class="afro-section-pill">ЖИВАЯ ЛЕНТА TELEGRAM</span>
@@ -1955,7 +1970,7 @@
       </div>
     </div>
 
-    <!-- 10. ULTRA-BRIGHT 3D GOLD SCROLL TO TOP -->
+    <!-- 10. ONLY ONE ULTRA-BRIGHT 3D GOLD SCROLL TO TOP -->
     <button type="button" id="afro-scroll-top" aria-label="Наверх" title="Наверх">
       <svg viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
@@ -2109,11 +2124,11 @@
 
   renderTelegramPosts();
 
-  // 13. SCROLL TO TOP LOGIC
+  // 13. ONLY ONE SCROLL TO TOP LOGIC (SMOOTH & BRIGHT)
   const scrollTopBtn = document.getElementById('afro-scroll-top');
   if (scrollTopBtn) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
+      if (window.scrollY > 350) {
         scrollTopBtn.classList.add('afro-visible');
       } else {
         scrollTopBtn.classList.remove('afro-visible');
