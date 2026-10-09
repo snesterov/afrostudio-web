@@ -394,47 +394,62 @@
 
     /* FIX FOR TILDA PHONE MASK SO NUMBERS ARE FULLY VISIBLE WITHOUT CLIPPING */
     .t-input-group_ph .t-input-block,
-    #rec630108157 .t-input-group_ph .t-input-block {
+    #rec630108157 .t-input-group_ph .t-input-block,
+    .t-input-phonemask__wrap,
+    #rec630108157 .t-input-phonemask__wrap {
       display: flex !important;
       align-items: center !important;
       background: rgba(255, 255, 255, 0.05) !important;
       border: 1.5px solid rgba(244, 114, 182, 0.35) !important;
       border-radius: 14px !important;
-      padding: 6px 14px !important;
+      padding: 4px 12px !important;
       box-sizing: border-box !important;
       width: 100% !important;
       box-shadow: inset 0 2px 6px rgba(0,0,0,0.5) !important;
     }
     .t-input-group_ph .t-input-block:focus-within,
-    #rec630108157 .t-input-group_ph .t-input-block:focus-within {
+    #rec630108157 .t-input-group_ph .t-input-block:focus-within,
+    .t-input-phonemask__wrap:focus-within,
+    #rec630108157 .t-input-phonemask__wrap:focus-within {
       border-color: #fb7185 !important;
       box-shadow: 0 0 20px rgba(244, 63, 94, 0.45) !important;
     }
     .t-input-group_ph input[type="tel"],
-    .t-input-group_ph .t-input,
-    .t-input-group_ph .js-phonemask-input,
-    #rec630108157 .t-input-group_ph input[type="tel"],
-    #rec630108157 .t-input-group_ph .t-input {
+    .t-input-group_ph .t-input-phonemask,
+    .t-input-phonemask__wrap input[type="tel"],
+    .t-input-phonemask__wrap .t-input-phonemask,
+    .t-input-phonemask,
+    #rec630108157 input[type="tel"],
+    #rec630108157 .t-input-phonemask {
       border: none !important;
       background: transparent !important;
       box-shadow: none !important;
       border-radius: 0 !important;
-      padding: 10px 8px !important;
+      padding: 10px 4px !important;
       margin: 0 !important;
       flex: 1 1 auto !important;
       width: 100% !important;
       min-width: 0 !important;
       color: #ffffff !important;
       font-size: 16px !important;
-      letter-spacing: 0.03em !important;
+      letter-spacing: 0.02em !important;
       box-sizing: border-box !important;
+      outline: none !important;
     }
-    .t-input-phonemask__wrap,
     .t-input-phonemask__select {
       display: inline-flex !important;
       align-items: center !important;
       flex-shrink: 0 !important;
       margin-right: 6px !important;
+      padding: 0 2px !important;
+    }
+    .t-input-group_ph .t-input-block .t-input-phonemask__wrap {
+      border: none !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
     }
 
     /* HIGH CONTRAST RADIANT CHECKBOX & TERMS ACCENTS */
@@ -1326,25 +1341,34 @@
       .afro-cookie-banner { left: 16px !important; right: 16px !important; max-width: none !important; }
 
       /* MODAL DIALOG ON MOBILE (NO WORD CLIPPING & PERFECT PADDING) */
+      .t-popup__container,
       .t702__wrapper,
+      #rec630108157 .t-popup__container,
       #rec630108157 .t702__wrapper {
-        padding: 36px 18px !important;
+        padding: 30px 14px !important;
+        border-radius: 20px !important;
+        box-sizing: border-box !important;
       }
       .t702__title,
       .t-popup .t-title,
       #rec630108157 .t-title {
-        font-size: 23px !important;
-        letter-spacing: 0.04em !important;
+        font-size: 21px !important;
+        letter-spacing: 0.02em !important;
         white-space: nowrap !important;
-        line-height: 1.25 !important;
+        line-height: 1.2 !important;
         margin-bottom: 14px !important;
       }
-      .t-input-group_ph .t-input-block {
-        padding: 4px 10px !important;
+      .t-input-group_ph .t-input-block,
+      .t-input-phonemask__wrap,
+      #rec630108157 .t-input-phonemask__wrap {
+        padding: 4px 8px !important;
       }
-      .t-input-group_ph input[type="tel"] {
-        font-size: 15px !important;
-        padding: 8px 4px !important;
+      .t-input-group_ph input[type="tel"],
+      .t-input-phonemask,
+      #rec630108157 input[type="tel"] {
+        font-size: 14.5px !important;
+        padding: 8px 2px !important;
+        letter-spacing: 0.01em !important;
       }
     }
   `;
@@ -2032,6 +2056,23 @@
         a.style.setProperty('-webkit-text-fill-color', '#fbcfe8', 'important');
         a.style.setProperty('text-decoration', 'underline', 'important');
         a.style.setProperty('text-shadow', '0 0 12px rgba(244, 114, 182, 0.8)', 'important');
+      });
+
+      // Phone input stretch enforcement
+      const phoneInputs = document.querySelectorAll(`
+        #rec630108157 input[type="tel"],
+        #rec630108157 .t-input-phonemask,
+        .t-input-group_ph input[type="tel"],
+        .t-input-phonemask__wrap input[type="tel"]
+      `);
+      phoneInputs.forEach(inp => {
+        inp.style.setProperty('border', 'none', 'important');
+        inp.style.setProperty('background', 'transparent', 'important');
+        inp.style.setProperty('box-shadow', 'none', 'important');
+        inp.style.setProperty('color', '#ffffff', 'important');
+        inp.style.setProperty('width', '100%', 'important');
+        inp.style.setProperty('min-width', '0', 'important');
+        inp.style.setProperty('flex', '1 1 auto', 'important');
       });
     }
     enforceFormRadiance();
