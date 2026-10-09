@@ -437,21 +437,51 @@
       stroke-width: 3.5px !important;
     }
     .t-form__bottom-text,
+    .t-form__bottom-text *,
+    .t-checkbox__control,
+    .t-checkbox__control *,
+    .t-checkbox__control span,
+    .t-checkbox__control_flex,
+    .t-checkbox__control_flex span,
+    .t-checkbox__control.t-text,
+    .t-checkbox__control.t-text_xs,
+    .t-checkbox__control.t-text_xs span,
     .t-checkbox__labeltext,
-    .t-checkbox__labeltext a {
+    .t-checkbox__labeltext *,
+    .t-input-group_cb,
+    .t-input-group_cb *,
+    .t-input-group_cb label,
+    .t-input-group_cb span,
+    [data-field-type="cb"],
+    [data-field-type="cb"] *,
+    [data-field-type="cb"] span,
+    [data-field-type="cb"] label,
+    .t-popup [data-field-type="cb"] span,
+    .t702 [data-field-type="cb"] span {
       color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      opacity: 1 !important;
+      visibility: visible !important;
       font-size: 13.5px !important;
       font-weight: 600 !important;
       line-height: 1.55 !important;
-      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85) !important;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.45), 0 1px 4px rgba(0, 0, 0, 0.9) !important;
     }
-    .t-checkbox__labeltext a {
+    .t-checkbox__control a,
+    .t-checkbox__control span a,
+    .t-checkbox__labeltext a,
+    .t-input-group_cb a,
+    [data-field-type="cb"] a {
       color: #fbcfe8 !important;
+      -webkit-text-fill-color: #fbcfe8 !important;
       text-decoration: underline !important;
       font-weight: 700 !important;
+      text-shadow: 0 0 10px rgba(244, 114, 182, 0.7) !important;
     }
-    .t-checkbox__labeltext a:hover {
+    .t-checkbox__control a:hover,
+    .t-input-group_cb a:hover {
       color: #fbbf24 !important;
+      -webkit-text-fill-color: #fbbf24 !important;
     }
     .t702__img {
       border-radius: 20px 20px 0 0 !important;
@@ -1758,7 +1788,32 @@
     });
   }
 
-  // 14. INITIALIZATION ORCHESTRATOR
+  // 14. FORM AGREEMENT TEXT RADIANCE GUARDIAN
+  function initFormStyleGuardian() {
+    function enforceFormRadiance() {
+      const elements = document.querySelectorAll('.t-checkbox__control, .t-checkbox__control span, .t-checkbox__control_flex span, .t-input-group_cb span, [data-field-type="cb"] span, .t-checkbox__labeltext, .t-form__bottom-text');
+      elements.forEach(el => {
+        el.style.setProperty('color', '#ffffff', 'important');
+        el.style.setProperty('-webkit-text-fill-color', '#ffffff', 'important');
+        el.style.setProperty('opacity', '1', 'important');
+        el.style.setProperty('visibility', 'visible', 'important');
+        el.style.setProperty('font-weight', '600', 'important');
+        el.style.setProperty('text-shadow', '0 0 12px rgba(255, 255, 255, 0.45), 0 1px 4px rgba(0, 0, 0, 0.9)', 'important');
+      });
+      const links = document.querySelectorAll('.t-checkbox__control a, .t-checkbox__control span a, .t-input-group_cb a, [data-field-type="cb"] a');
+      links.forEach(a => {
+        a.style.setProperty('color', '#fbcfe8', 'important');
+        a.style.setProperty('-webkit-text-fill-color', '#fbcfe8', 'important');
+        a.style.setProperty('text-decoration', 'underline', 'important');
+        a.style.setProperty('text-shadow', '0 0 10px rgba(244, 114, 182, 0.7)', 'important');
+      });
+    }
+    enforceFormRadiance();
+    setInterval(enforceFormRadiance, 1000);
+    document.addEventListener('click', () => { setTimeout(enforceFormRadiance, 150); setTimeout(enforceFormRadiance, 500); });
+  }
+
+  // 15. INITIALIZATION ORCHESTRATOR
   function init() {
     buildHeroSlider();
     buildDirectionsSection();
@@ -1768,6 +1823,7 @@
     buildCustomFooter();
     buildScrollButton();
     buildPolicyAndCookie();
+    initFormStyleGuardian();
     initBackgroundFeedSync();
   }
 
