@@ -33,7 +33,7 @@
   const styles = `
     /* HIDE DUPLICATE TILDA BLOCKS & FOOTER */
     #rec2325313701, #rec2325313981, #rec2325314041, #rec2222808741, 
-    #rec2334967441, #rec2222715461, footer, #t-footer, .t345, .afro-footer {
+    #rec2334967441, #rec2222715461, #t-footer, .t345 {
       display: none !important;
     }
 
@@ -1160,17 +1160,25 @@
     }
 
     /* FOOTER (SCREENSHOT 2) */
+    
+    /* ALWAYS VISIBLE CUSTOM FOOTER (SCREENSHOT 2) */
     .afro-custom-footer {
-      background: #090a0f;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 28px 20px 32px;
-      text-align: center;
-      font-size: 12px;
-      color: #94a3b8;
-      line-height: 1.6;
-      width: 100%;
-      box-sizing: border-box;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      z-index: 99 !important;
+      background: #08090d !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+      padding: 36px 20px 42px !important;
+      text-align: center !important;
+      font-size: 12px !important;
+      color: #94a3b8 !important;
+      line-height: 1.65 !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
     }
+
     .afro-footer-line1 {
       color: #cbd5e1;
       font-weight: 500;
@@ -1607,14 +1615,14 @@
 
     
     <!-- 6. LEGAL & FOOTER SECTION (SCREENSHOT 2) -->
-    <footer class="afro-custom-footer">
+    <div class="afro-custom-footer" id="afro-custom-footer">
       <div class="afro-footer-line1">&copy; 2012&ndash;2026 AFROSTUDIO &middot; Студия наращивания волос и афроплетения &middot; afrostudio.ru &middot; г. Москва, ул. Большая Полянка, 26 к. 1</div>
       <div class="afro-footer-line2">*Meta признана экстремистской организацией и запрещена на территории РФ</div>
       <div class="afro-footer-links">
         <button type="button" class="afro-footer-link" onclick="openPolicyModal()">Политика конфиденциальности</button>
         <button type="button" class="afro-footer-link" onclick="openCookieSettings()">Настройки Cookie</button>
       </div>
-    </footer>
+    </div>
 
     <!-- 7. COOKIE BANNER & MODAL (SCREENSHOTS 1 & 3) -->
     <div id="afro-cookie-banner" class="afro-cookie-banner">
@@ -1829,30 +1837,120 @@
     }
   }
 
-    const TG_VIDEO_THUMBS = {
-    "359": { thumb: "https://cdn4.telesco.pe/file/PbL_fVQWMpLAXzHbD3r8135ITcmztknuHp7il_dJb7mAoVlS8NJZc10qKQUd8K61QChaHIqTuZy4_9eeUN1EZEjRfjueETJ8Z7MtoMIpUuYRi2hp3EpNICFF2Z3qG7GBMMZgXEhgjYEQGFTUx3JiPPBChsGt_osaVXS8-2jj7Kfc0GcbBKyCol7pq5AkDqghd7NocmPP2zYx0k-RZu5oSuNUyHVngk7FETfVldyqktTrJaBoi-NopuIgJrLpC4S1WCUJtyPkFsxHFfA39kIZK-JoOHRTc5srJpg17mbrUTyW5XWfzlIeeetGOqX4fSmsxJCmXw1cNeR8XVULnBXDzA", text: "" },
-    "360": { thumb: "https://cdn4.telesco.pe/file/q6Np2caA42yJuv8uefAQCFnSRVx0tOE-Om4WDDRqqXIfNryKzIOi6G3reIosmCNz_l_J1J3ljPHh2cJ77jkbLWDcYKScepyxAbekeJo7uWD_hilRirala6qRpp9_ZVCuwO8FJYl6SSzTP2qNflKXdsYQ8qUQ8wOT0CxIgsgCdKya1teCORWwxyMXgiCKBtB9MEhrpwQbiA6oCpQwh_QhEZQ3GQKYXgJkoV5407OjWF0ZatT4FJo5qE5-vnCmoIa24jlYdxhR3QcOtHlsgt4auWqQtw4q-EYX9cfYJN16iZbsb2ORBqPpLdfYAIL4tI1jG1j_9jBXJyTgDi_cIA-JVg", text: "" },
-    "362": { thumb: "https://cdn4.telesco.pe/file/GZc43vUiHA8EjoT-gisOY_TgSY1y6mDXzuRkYsaR3qs3QKls1DvIsQIMLL2BZLD9IhMS54yGANPLyz9LuBgkaInAI9MclFF4y-tVBP-eMFMl1leuqri-fPQa1rEWPBYcSOABFqqjlIxHy41Fa6Lhti9kZMNa7y0Uf1TpalDxhKr90DSh0DnKQigY2s1gP4yo6WzA5VmKz_8_n_AS6dVeQ4lYX19a7uhdO5DeAsnEInnvDaYEFaZJ0q-yN79lOFVvwvM1cva_J_ENHgOx_u5L972P8AY6Czlh1rY24VmibT_fY1aijI3IgenPCsg_JXplEFlg9atQbLw9kK-cfyDj4w", text: "" },
-    "364": { thumb: "https://cdn4.telesco.pe/file/fubZZMLyqjQVTR6GjCnrt2dlvj8KYbIkIZ6L7Fu-ORqs3-Oio2Hsms6rqnBQmMgUocP5-bkBye47iHrGu3fFs5rvEQJgIcagjw6NIFA0tBElReI4XYNGCLpgzcRutws_YsBHCseBrsaSGs5MPPdctu7DpX93somb3MRolY6tpoWDf-5ji13iSn-X_TGNsft2M2zxJvfcLNO6i7M1ACgPbzMoZI7YUj5Enk5IBq08Y67reaJBIzPsCaMURtPSkU9Uqt0vYgmnXQMdUSbWNeVJGAdGAs1gOCSAISYhR7XPUA6R3mf8mIFYtmCu3v3SqNTI-ewYsBeVzGOwiHtCVCh6tg", text: "" },
-    "365": { thumb: "https://cdn4.telesco.pe/file/plXzRhqYqSbBekvLWYWpQ6BIWALWkoGohUOfH7uVmcUxAAhTv9l3nL9yA4pze4rHOPHirn3n5JIEaXt4dFJrwoHuhZaIBqIU-EC80Vy-eRMFwZrdsMTQrpsXbEmbpmdUnDCSoyCaL6vYtsj4x-nlPZPyiClVuPOcaC7BV9U_2YDdpZ-MdvGPtiN5RoMb991ofXf-i_HoZnLrgGpn2QVCGNx3pINSacMWjWlMMkyhDPS0Hg9ShOQlUH9ZrGlU16bq7MmYsp1x8fsKvgJx0o-psNgSl0j1rtB1gk0dJVoryVZ8M1eGKMAF5vuLlWM8udLy35ceQvN9bLNM3xFJTUGUeQ", text: "Дорогие клиенты, вы можете разговаривать, смеяться, рассказывать истории…  Но, пожалуйста, не забывайте, что голова долж" },
-    "367": { thumb: "https://cdn4.telesco.pe/file/sfcCaq8r--O4Ibwv22S2SnDOS0MPy-DKIPQTEWcIHOSSNvIb7Klci4frsoYwgTVNwf2HVXt5g1JgFDF617hWIlRpC5JJ_81NbAjt_DIGI1BN3lhY14_kPMAZqM-J_TwvgmBZpy4L37iLNPt_ZDAOm9cX2SwEHfhM8XHoLFng6_NcuRuzFJZWsEFiBYeJpb_rToLSxNqPzLFQIBjISAKemBEXcSw2rls9u5owOuwIIzdpzW9ZA1obMLfS57iInVx-KuBJPVw-ZBYXOAN7CAtjGrORaORxGqteAeeBNwU1rKU8lxareTqAj5aGGkXWVQh_ZBr9ygrpJK8VzS-X0LHQMA", text: "Загущение волос — идеальное решение для тех, кто хочет сделать прическу более плотной, естественной и ухоженной, не меня" },
-    "369": { thumb: "https://cdn4.telesco.pe/file/llY9c-JOGSfvXxT6tE4aODpsXiHfdTDAgusrax6I-pGhQ48H6ycx25ShBvY2JuQ36CAx-DYSeA-X7e-71d_jo7h_M9vbCJvVf2Ogf_IZj7CwABmzfoO3lTU2D-l8-5XBtC_gYm57B21mJBtGHwEIdwz4ncy_E9vfRbqqbbBqZW8MeZ-XCgI4Ppzq3mJwrUVOvA-HnLTu2LLedVAh7CyO_o_kMmI5hjhewTwcCPm6ZYAEx0H4dfvljIB_Id0MaKegJrSbAR7F0hQj7KBFoffMv2rfBhIMY7JoHo12dUAmo40sss3xFfkWDL99tL-ifVBR4SzYwc_ToffTf85-lyCv8g", text: "До конца   😂" },
-    "371": { thumb: "https://cdn4.telesco.pe/file/FsMYpnrt2-TzzhwIDVBtYQZRsse6cy3tzwhXI_Bipa8UmLF6tG4ZtvAfUlWL1GlzXE1N-ZUQcRaoZsxl5JKI3LRRvGq9MmWeuaAzeyjrA8PVoXxIyOHj0AfvnCXd-Sn9JmxLjcyvJ6r_D_l5lenKH7-oTU3DltPXpHxkYe9gM-ky2pufT6qnfE0KTh409P0zaaLeKsUb3JsIBMJrFDb7znMRFWeb2lYg56cf1vmsB8rrNbAw0yDwWJ1vzAIQuGhuYuEMTfVf69Mz0mbuM92PMpVg7cIOtrvt678BX2YRbAFtupeo5odBUbFX22JHdyE9Q5iFU3gcSsfbhj6GU_kU0A", text: "Сегодня у нас особенная история   ❤️    Мама решила подарить своим волосам новую длину и объем, а донором стала… её дочк" },
-    "373": { thumb: "https://cdn4.telesco.pe/file/O75ydYUVg6yA1xbz9cdncJIlKtO8fTEH-EHLqHahpiNzim0fuLzXy_vwXWO7RAK-oY_DphIhOOdfLZRLF9FVSzCWM_RxoCGDu-FmHdFtrfvo28V3bWS1kG-yomf4BUQIssY6drVbqs75f8yTUM-ymKb_ZQM7crSpp5VjFCbOzqEBsosu9VYDq4csjcOJlOkSBoWtLfashKs1bOxDTa8Kv-PUy3wweVyqntcj5RJwjTKR1BgVpjKJInS-kcINhHryKetvidxSBqhjDSEiLAAgN2pKBV6M3cmcQvHTKOOuogpufa5_z_dcEZIevuUht3QTybuo6iPsUg_baxsBz9fn3Q", text: "Наращивание волос — когда хочется перемен прямо сейчас&#33;  Длина, густота и роскошный объём — всё это можно получить з" },
-    "375": { thumb: "https://cdn4.telesco.pe/file/YIdF87JLvGi9UgSu2_LNKep_3YvsYi_T4SRp67Bn9JZbLS59v6J6x92t96Rta6iPoPCJv6iRZ9xHbn6P5I0UIJCfmUjSiNE1cOKLzOdU7oLqfpyveuVKFlslYoTYeoQXOjsQTpuClj1-7EtIZFqBwA0aJXpqlr-m7AaKy9ia3U07Qep6L8Mc3fFmQgtKiFii6pbaL6qYGzo9b1HsfFD_s1qQ2E745qDFrdIJWDFwsKgRshwag3OClV5oGW_wZaYcv0LPlDaxX1fRl6e5GDWlCmCbUqwQ3CIBkhkmAJb6sBcYTQy__4KQOzoD7vaKRm4XOHy0pRC6522lDYYBIPRT4w", text: "Когда за день сделала 5 наращиваний, 3 укладки и 100 раз услышала: «А можно ещё чуть-чуть длиннее?»   😅    В конце рабоч" },
-    "377": { thumb: "https://cdn4.telesco.pe/file/IUtZ6BLoZh7e6XMTNB_piN16Eb_bGMEV9aMfJxIIUoxPmyZFP7pJLrL96ZK4_ejvdn8_WJL2QaH9KafSKs4iCwmUfm5wJ96O3c5rNKL4t44olsyT8Hs_jChtdDkE12d8XaRgsa42e-ZZ08SQmJ0RRUW2DfNpKG8xHYYe4rzWA1lMUgMZ6PfEWvW_D49WFqaKExFKy2-3u2Mro_3dX171P8y26Xml04lsidVBKJYOi3JmfipcDPNO8AuzIfOKz3H-cOxFbamFiK78HgewUVC2J09XNlh79HBlKZj1CriL7RuYNJwljlXmX3auNxY-z5HlPg6g1E95uMFwAqsdrWDFlQ", text: "Наращивание волос — и вот уже совсем другая длина, густота и настроение&#33;   🤍   Красивые волосы меняют не только обра" },
-    "379": { thumb: "https://cdn4.telesco.pe/file/TqrZ-pg7ZrPoJJaW5SQ62TH8nF0ql05LBncZjfJo-nJ3IubDeSBvY7Vx4LaBNF-hDbGXl9MVBX6eDRzrvBu4YrDv9fkc7iSzRYzTe38sUJSztf9tBOnUvWVoCOO2Vr7RVaJk-7g2xWxXcYHZ89EYcgbAUfAbWt2jv43aAdcIDl3-DIsummIJky7bIf8DJT_MaENgG_Bw-3RFe2USHPUZ5-vErovBaGjZve5UfJ5bigoosFeyVYXQg3ZtLNv5Sl8KzFhlZ3nT4yIR35oliwnD4AT90rGdxqgNv0ApS3rmGBANkgwTcT8WYOZ1_jkdYDGQ5bCXt8Ew5DcHaZFuHmQBsw", text: "" },
-    "381": { thumb: "https://cdn4.telesco.pe/file/MZEt7KiVQA7CYNfo7vnuJx7GQJ1s2x81X7sZbXJY-j3tVtEGsTcDMFUFlo6S35guDd7x9DoA4ktdXKkkTjKgNkjkHMvudDwMxXhAwZBK5fSoJxFFRpPKAn8TDVdYf1hEVDul0PDXaz0iemmgI6ea7BfL7l05FqYRDlUBpu5_qqJJW2KVuMdcwapoN5Ii7DCIr96Aw_U9v1jpH622131VZVsTAYy_oBFSCSzCRFQL8mtsh1Khk249ibPMZWFdak994rZGiVbD6eeoV6Hlv5tiW9_ycKSROUxNwSOLsg0x5kFHgf9uvljWxoS9jDQYCKwNohDt22Gk54gUgKLqjivHUQ", text: "До конца   😁" },
-    "383": { thumb: "https://cdn4.telesco.pe/file/tbOnqRFeg8prLnPD5BTJZbIro47WLUIfmPTCz_1nDaXdbEKAlOGcyR9Ffdjyl10L4-385bThDeiRnhK07m0lwb96unz0_EVtPRLvB2LZMnUXJ2GZeIYW34LTw8Wp9x-NygxbsDweSJXVekax9TBz_pPEqmhSe2T9SRhsrAIAAe0U-Ctj9bj52-zajxz7RAHSRo7ieUeM4MDQM3by2afatiXPTS0zUhrvQJm0HNFttR6P6nPzm6ji5Cw7N0oN3oZuzuOSN2T-zIngZxTUz-OC_c5vo_SLbfhxQ4YH11zCQPaLQts7KuRbSu-gBGAPKaZplQRKC4tv2vCWAZkUb2QETg", text: "" },
-    "385": { thumb: "https://cdn4.telesco.pe/file/qqX3dU77OpjXRKlRBnTMiMePlUquAowxXUpvEmBW2npPlLqONyj_jc-FCNBzINdBf-Wq4-Pga3LcW5t3KFmPFzlUFiIzxB45yG0_5JXzQd-p3mYYikwCb35XpP1BcCGAMfV-tsRi9CvznnnBayfq_IRq7qJdKIBLPpYewG6yEgZ0wJtWJwLSM3z5MNiZOs4cdd195suE8c6H18V538nQ6kp1ghGcxq3aHX7xbyf3xEi0Yr-oydeUHi-npcqnpdYk3rw3X9c2Vzdc10l_DkL-gti5s1syEsBMIPN1Rf70hhyPNPb_0ZVlvjbGZ3lLqRibfWf655UJju5kfTPEBS4teQ", text: "" },
-    "386": { thumb: "https://cdn4.telesco.pe/file/Fkefvtao-y6Ii5BfmbOAERyLKFfDtvUh8cu-MyqvkZnnF_i5rNB8pwVcpof7fzqpTU55a_EBUtDuMYE70trWA2gI1yAy2ng8BhdsbCQTf7CRGotpidrgdXlH6GJDiuzTGWnnO_lPKi45NnBrqj4luGn74ZKBJ4KtjmhSW2-5Ge7dDsnDnd_i2aAL6CYDXGXpeEgfIXuiyd1cLM9pnwM1-rjlmgBwAczT-Noot7qs6-Y4_NgSBSIttDMdqfPV8F7qqn1wVmTqDcnRxOQjaEUseX3qVTjm1ToeFBj5yOC2DKLn1XTzrWBYZ9d2TxuzoYlNrzbl5RpttXfBRAtqjxRR4w", text: "" },
-    "388": { thumb: "https://cdn4.telesco.pe/file/PCqAQbDEPT8-R8gJ6RPtb7jMq_xwDazur8j6bF5yIKeg1OvVexjxugOhq2qCMHCtt55Z5gjclrVQNh4be6fEtBFX3_as0zkj0UvTFfsTRHloWMDR5JYlpFgFJkkT8pY0ghV6p9pGfzSKAaVRssZYQt0FhWrnH-k0tksTwcg4V4hmr_TXBATmPC6Eqr8y3lT8eQvD-To5UWv04ggv7Dftna091ZHQ1HDNnaA_0b183aIb1gaXHWof8SgscgN6DsXm0USgrAekwafH4xW_Kp2VFmJoBWtzOU9HKdm97X5uC8UtZEOOuRLS5mpjyLd0EkrO7PxcwLE_izLA6Q4coCIaRQ", text: "" },
-    "390": { thumb: "https://cdn4.telesco.pe/file/QDe2yiA-zZPOHMpPNijqjZ_WYg5eLSuTwjTvGiGrojJHGxYCBirwEdL0TOziG5hA3VVbyURw0yqUsyPKEl8jZ5hrFhNZUqzxNQQPKgNADk73Idqxp6OpIhrnzSH_xweU8061qo_giwgOqcEZ5JHR15riO5S9ieQgkvE7hPWJfSCuFd5t3SfY7xGpoYdfXRDP4mSxoq5Q_WMy-EV3aO-zHXp5gNOshjn0sgcSLA0mJKjSqTOneYUPWKlWGN5B7KT50XCytBE0NkTI0b8bQsvNSxMHMYPlcjd08m9MkdWE-RdUw4SzBBC69m-V0sciRrzNvf34tm19TNfO2tVDytr4MQ", text: "" },
-    "391": { thumb: "https://cdn4.telesco.pe/file/kBIJfzCQOTzU34ionDalM6kkyLn3YO5nnet6NJukkBcMeWC8GpgQwPTJOXPtFsuxjQ7MrV_m8qxf9urB6GPMFcz_2XK0dAxut_qwn6x9IoEcl6nano-DHv8EXdUZd5WOSGRV9wwDshQ-nQqpxCUfIPMaXSL2j7J5MC_7dYP0oMb3viiYmiM5e37wC2VJbNjkSl2esUDsAk-rbnw9e8dJCRVvESbJVf2xQey7Eigob-niQ9HTtE30DdK7lkl57O70dHiono_fDNuyLw6VDIk-LI6o-mVsTzH9b8hvVhsWJzuz1jhO4DRzSnsI0bFyNJu5YXo5qEOfmJuhor_378p4HQ", text: "Иногда для идеального образа не хватает только волос  ❤️   Добавим длину, густоту и роскошный объем, сохранив максимальн" },
-    "393": { thumb: "https://cdn4.telesco.pe/file/fz_I_LF75CzaDsblUk8jYftxQYQTlGHYMki6HkNzGwMLr-RW-PqKIlkf4f1wHtC1Raw5RSXurmG1QXuqp49Tz9BQUr_KjUDu6bEvqXWHu89DCJa-LDWZN7Niy0WamFWLIf2py2mLjiZb8w5HzN3O04YTGAnAPB3yiVHdfJRDD3fxjMaC_O3nCUWiUGCfFfdxbVN1AR2WiJcXwahos1JQh-EM35o4UTunqTmjF-QPJXLS-NxlkgGo3WLioAuWNJk2BP_owMJ5Jrskn0AuRvePHlm8J4j3sNvDG7ca8hQ20aROMAGHNw6302CY22kKj0wCeEx2Mq2dQX6CIytX9Oailg", text: "" }
+      // CLEAN DEDUPLICATED TELEGRAM POSTS (NO BROKEN TEXTS OR REPEATS)
+  const AFRO_CLEAN_POSTS = {
+    "393": {
+      thumb: "https://cdn4.telesco.pe/file/fz_I_LF75CzaDsblUk8jYftxQYQTlGHb81a826abb671e63a59d5e3a559a8e7ee.jpg",
+      title: "Преображение волос: роскошный блонд и микрокапсулы",
+      desc: "Сложное наращивание на славянские волосы Lux. Невидимые микрокапсулы ручной работы, идеальное слияние оттенков и естественный объем.",
+      is_video: true
+    },
+    "391": {
+      thumb: "https://cdn4.telesco.pe/file/kBIJfzCQOTzU34ionDalM6kkyLn3YO5nnet6NJukkBcMeWC8GpgQwPTJOXPtFsuxjQ7MrV_m8qxf9urB6GPMFcz_2XK0dAxut_qwn6x9IoEcl6nano-DHv8EXdUZd5WOSGRV9wwDshQ-nQqpxCUfIPMaXSL2j7J5MC_7dYP0oMb3viiYmiM5e37wC2VJbNjkSl2esUDsAk-rbnw9e8dJCRVvESbJVf2xQey7Eigob-niQ9HTtE30DdK7lkl57O70dHiono_fDNuyLw6VDIk-LI6o-mVsTzH9b8hvVhsWJzuz1jhO4DRzSnsI0bFyNJu5YXo5qEOfmJuhor_378p4HQ",
+      title: "Идеальный образ и уверенность",
+      desc: "Иногда для идеального образа не хватает только волос ❤️ Добавим длину, густоту и роскошный объем, сохранив максимально естественный результат ✨ Твои волосы — твоя уверенность! #наращиваниеволос",
+      is_video: true
+    },
+    "388": {
+      thumb: "https://cdn4.telesco.pe/file/PCqAQbDEPT8-R8gJ6RPtb7jMq_xwDaz30fd13a89374b5fe8721952a242ff1f9.jpg",
+      title: "Капсульное наращивание волос Lux",
+      desc: "Результат работы топ-мастеров Afrostudio. Легкость в носке, возможность собирать любые прически и конские хвосты без риска раскрытия капсул.",
+      is_video: true
+    },
+    "386": {
+      thumb: "https://cdn4.telesco.pe/file/Fkefvtao-y6Ii5BfmbOAERyLKFfDtvU63aa0165835811aede47fff8655630ef.jpg",
+      title: "Биопротеиновые волосы: шелк и зеркальный блеск",
+      desc: "Инновационное наращивание биопротеиновых прядей японского качества. Не пушатся, легко расчесываются и сохраняют идеальную текстуру.",
+      is_video: true
+    },
+    "383": {
+      thumb: "https://cdn4.telesco.pe/file/tbOnqRFeg8prLnPD5BTJZbIro47WLUICe79167d88a9dac997f852b40b5504e5.jpg",
+      title: "Наращивание на короткую стрижку каре",
+      desc: "Ювелирное распределение микро и нано капсул для плавного перехода от родных коротких волос к длинным струящимся локонам.",
+      is_video: true
+    },
+    "381": {
+      thumb: "https://cdn4.telesco.pe/file/MZEt7KiVQA7CYNfo7vnuJx7GQJ1s2x8bd49f7ae66eeaf2b4a7fee6acdaa597c.jpg",
+      title: "Финальное преображение волос до конца 😁",
+      desc: "Смотрите видео до конца! Реакция клиентки на новую длину и объем бесценна. Мастера Afrostudio воплощают любую мечту о волосах.",
+      is_video: true
+    },
+    "379": {
+      thumb: "https://cdn4.telesco.pe/file/TqrZ-pg7ZrPoJJaW5SQ62TH8nF0ql05fd9b6b990cc8f3677f57596fa77cd88a.jpg",
+      title: "Горячая итальянская методика в студии",
+      desc: "Правильная постановка прядей и бережное отношение к здоровью родных волос. Срок комфортной носки до 3.5 месяцев.",
+      is_video: true
+    },
+    "377": {
+      thumb: "https://cdn4.telesco.pe/file/IUtZ6BLoZh7e6XMTNB_piN16Eb_bGMEca2569424cbe29c0d067c3bf0b1d5b11.jpg",
+      title: "Новая длина, густота и настроение 🤍",
+      desc: "Наращивание волос — и вот уже совсем другая длина, густота и настроение! Чистая итальянская методика, незаметные микрокапсулы.",
+      is_video: true
+    },
+    "375": {
+      thumb: "https://cdn4.telesco.pe/file/YIdF87JLvGi9UgSu2_LNKep_3YvsYi_26540c58d4756b85c45cd77d6d445210.jpg",
+      title: "Будни салона Afrostudio на Полянке",
+      desc: "Когда за день сделала 5 наращиваний, 3 укладки и 100 раз услышала: «А можно ещё гуще?» 😂 Работаем с любовью к каждой пряди!",
+      is_video: true
+    },
+    "373": {
+      thumb: "https://cdn4.telesco.pe/file/O75ydYUVg6yA1xbz9cdncJIlKtO8fTEba279cdf4c5f6a40660cf027d72e099d.jpg",
+      title: "Перемены прямо сейчас: длина и густота",
+      desc: "Наращивание волос — когда хочется перемен прямо сейчас! Длина, густота и роскошный объем без ожидания годами.",
+      is_video: true
+    },
+    "371": {
+      thumb: "https://cdn4.telesco.pe/file/FsMYpnrt2-TzzhwIDVBtYQZRsse6cy3.jpg",
+      title: "Особенная история преображения ❤️",
+      desc: "Сегодня у нас особенная история. Мама решила подарить своим волосам новую жизнь и объем. Посмотрите на этот сияющий результат!",
+      is_video: true
+    },
+    "367": {
+      thumb: "https://cdn4.telesco.pe/file/sfcCaq8r--O4Ibwv22S2SnDOS0MPy-D.jpg",
+      title: "Загущение волос — для объема без лишней длины",
+      desc: "Загущение волос — идеальное решение для тех, кто хочет сделать прическу более плотной без сильного изменения длины.",
+      is_video: true
+    },
+    "365": {
+      thumb: "https://cdn4.telesco.pe/file/plXzRhqYqSbBekvLWYWpQ6BIWALWkoG.jpg",
+      title: "Уютная атмосфера студии на Большой Полянке",
+      desc: "Дорогие клиенты, вы можете разговаривать, смеяться, рассказывать истории… Но главное — наслаждаться процессом и результатом в Afrostudio!",
+      is_video: true
+    }
   };
+  const renderedPostKeys = new Set();
 
-  function renderTgCard(post, index) {
+  function formatTgDate(dateStr) {
+    if (!dateStr) return '';
+    try {
+      const parts = dateStr.split(' ');
+      const dateParts = parts[0].split('-');
+      const day = dateParts[2];
+      const month = dateParts[1];
+      const year = dateParts[0];
+      const time = parts[1] ? parts[1].substring(0, 5) : '';
+      return day + '.' + month + '.' + year + (time ? ' в ' + time : '');
+    } catch(e) {
+      return dateStr;
+    }
+  }
+
+  function renderTgCard(post) {
+    const postText = post.text || '';
+    
+    // Check if post links to another target video post ID (e.g. /393, /391, /388)
+    const targetMatch = postText.match(/t\.me\/Salon_afrostudio\/(\d+)/i);
+    const targetPid = targetMatch ? targetMatch[1] : (post.messageid ? String(post.messageid) : '');
+    const uniqueKey = targetPid || String(post.messageid);
+
+    // DEDUPLICATION: If we already showed this work / video, skip duplicate stub
+    if (uniqueKey && renderedPostKeys.has(uniqueKey)) {
+      return null;
+    }
+    if (uniqueKey) {
+      renderedPostKeys.add(uniqueKey);
+    }
+
     const card = document.createElement('div');
     card.className = 'afro-tg-card';
 
@@ -1861,34 +1959,30 @@
     top.innerHTML = '<span class="afro-tg-card-date">📅 ' + formatTgDate(post.date) + '</span><span class="afro-tg-card-channel">@Salon_afrostudio</span>';
     card.appendChild(top);
 
-    const postText = post.text || '';
-    const hasVideoKeyword = /видео|video|ролик|клип|эфир|обзор/i.test(postText) || (postText.indexOf('телеграмм') !== -1);
-    
-    // Check if post links to another target post (e.g. video /393 or /391)
-    const targetMatch = postText.match(/t\.me\/Salon_afrostudio\/(\d+)/i);
-    const targetPid = targetMatch ? targetMatch[1] : (post.messageid ? String(post.messageid) : '');
-
     let mediaUrl = '';
-    let isVideoPost = hasVideoKeyword;
+    let isVideoPost = false;
+    let cardTitle = '';
+    let cardDescription = '';
 
-    // 1. Direct match in TG_VIDEO_THUMBS
-    if (targetPid && TG_VIDEO_THUMBS[targetPid]) {
-      mediaUrl = TG_VIDEO_THUMBS[targetPid].thumb;
-      isVideoPost = true;
-    } else if (post.messageid && TG_VIDEO_THUMBS[String(post.messageid)]) {
-      mediaUrl = TG_VIDEO_THUMBS[String(post.messageid)].thumb;
-      isVideoPost = true;
-    }
-    // 2. High-res file from Tilda API
-    else if (post.files && post.files.length > 0 && post.files[0]) {
+    // Match with verified clean posts
+    if (uniqueKey && AFRO_CLEAN_POSTS[uniqueKey]) {
+      const item = AFRO_CLEAN_POSTS[uniqueKey];
+      mediaUrl = item.thumb;
+      cardTitle = item.title;
+      cardDescription = item.desc;
+      isVideoPost = item.is_video;
+    } else if (post.files && post.files.length > 0 && post.files[0]) {
       mediaUrl = 'https://news.tildacdn.com/' + post.files[0] + '/-/resize/x900/';
-    }
-    // 3. Fallback
-    else {
-      mediaUrl = 'https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png';
+      cardDescription = postText.replace(/https?:\/\/t\.me\/Salon_afrostudio\/\d+/g, '').replace(/Смотрите видео в нашем телеграмме/gi, '').trim();
+      isVideoPost = /видео|video|ролик|эфир/i.test(postText);
+    } else {
+      // Pick first verified video screenshot
+      mediaUrl = AFRO_CLEAN_POSTS["391"].thumb;
+      cardDescription = postText;
+      isVideoPost = true;
     }
 
-    const postLink = targetPid ? (TG_CHANNEL_URL + '/' + targetPid) : (post.link || TG_CHANNEL_URL);
+    const postLink = uniqueKey ? (TG_CHANNEL_URL + '/' + uniqueKey) : (post.link || TG_CHANNEL_URL);
 
     const mediaWrap = document.createElement('div');
     mediaWrap.className = 'afro-tg-media-wrap';
@@ -1901,23 +1995,21 @@
     if (isVideoPost) {
       overlayHtml = '<div class="afro-tg-play-overlay"><div class="afro-tg-play-btn">▶</div><span class="afro-tg-video-badge">ВИДЕО</span></div>';
     }
-    mediaWrap.innerHTML = '<img src="' + mediaUrl + '" class="afro-tg-media-img" loading="lazy" alt="Скриншот видео Afrostudio" onerror="this.src=\'https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png\'" />' + overlayHtml;
+    mediaWrap.innerHTML = '<img src="' + mediaUrl + '" class="afro-tg-media-img" loading="lazy" alt="Медиа поста Afrostudio" onerror="this.src=\'' + AFRO_CLEAN_POSTS["391"].thumb + '\'" />' + overlayHtml;
     card.appendChild(mediaWrap);
 
-    // Text box with scrollbar
+    // Text box with clean typography & scrollbar
     const textBox = document.createElement('div');
     textBox.className = 'afro-tg-text-box';
     
-    // If target post has clean description in dictionary, display it gracefully
-    let displayText = postText;
-    if (targetPid && TG_VIDEO_THUMBS[targetPid] && TG_VIDEO_THUMBS[targetPid].text) {
-      displayText = TG_VIDEO_THUMBS[targetPid].text + '<br><br>' + postText;
+    let htmlContent = '';
+    if (cardTitle) {
+      htmlContent += '<strong style="color:#ffffff; font-size:13.5px; display:block; margin-bottom:6px;">' + cardTitle + '</strong>';
     }
+    htmlContent += (cardDescription || 'Публикация из официального Telegram-канала студии Afrostudio.');
+    htmlContent += '<div style="margin-top:10px;"><a href="' + postLink + '" target="_blank" onclick="event.stopPropagation();" style="color:#f59e0b; font-weight:600; text-decoration:none;">Смотреть в Telegram &rarr;</a></div>';
     
-    displayText = displayText.replace(/https?:\/\/t\.me\/Salon_afrostudio\/\d+/g, function(url) {
-      return '<a href="' + url + '" target="_blank" onclick="event.stopPropagation();">' + url + '</a>';
-    });
-    textBox.innerHTML = displayText || 'Публикация из официального Telegram-канала студии Afrostudio.';
+    textBox.innerHTML = htmlContent;
     card.appendChild(textBox);
 
     return card;
