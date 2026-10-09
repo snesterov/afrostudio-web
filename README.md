@@ -1,2 +1,9 @@
 # afrostudio-web
-Afrostudio landing page blocks and widgets for Tilda
+Интерактивные модули, Zero Block расширения и скрипты для Afrostudio (Tilda + Яндекс Директ + Метрика).
+
+## Интеграция с Яндекс.Метрикой
+- Счётчик: **88058414**
+- Заявка Тильда: `296485879`
+- WhatsApp (+79255069900): `233127645`
+- Telegram: `368208880` / `465100176`
+- Колесо Фортуны: `540991082` (event `gamelead_send`)
