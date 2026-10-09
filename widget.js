@@ -1,6 +1,6 @@
 /**
  * AFROSTUDIO.RU - ULTRA BEAUTY MARKETING TREND WEB SYSTEM
- * Version: 20.0.0 - Instant Zero-Lag First Paint + Non-Blocking Background Live Telegram Sync
+ * Version: 21.0.0 - Instant Zero-Lag First Paint + Non-Blocking Background Live Telegram Sync
  */
 (function() {
   'use strict';
