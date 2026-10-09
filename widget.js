@@ -1,6 +1,6 @@
 /**
  * AFROSTUDIO.RU - ULTRA BEAUTY MARKETING TREND WEB SYSTEM
- * Version: 22.0.0 - Post 393 (3 October) Strictly First with HD Frame + Live Background Sync
+ * Version: 23.0.0 - High Contrast Form Placeholders, Glowing Checkbox & Terms Lighting
  */
 (function() {
   'use strict';
@@ -363,11 +363,95 @@
       outline: none !important;
       box-shadow: 0 0 20px rgba(244, 63, 94, 0.45) !important;
     }
+    /* HIGH CONTRAST RADIANT PLACEHOLDERS */
+    .t-popup .t-input::placeholder,
+    .t702 .t-input::placeholder,
+    #rec630108157 .t-input::placeholder,
+    #rec4646446601 .t-input::placeholder,
+    input.t-input::placeholder,
+    .t-input::placeholder,
+    input::placeholder {
+      color: #fbcfe8 !important;
+      opacity: 0.95 !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.03em !important;
+    }
+    .t-popup .t-input::-webkit-input-placeholder,
+    .t-input::-webkit-input-placeholder,
+    input::-webkit-input-placeholder {
+      color: #fbcfe8 !important;
+      opacity: 0.95 !important;
+      font-weight: 600 !important;
+    }
+    .t-input-phonemask__code,
+    .t-input-phonemask__select-code,
+    .t-input-phonemask__text,
+    .t-input-phonemask__flag,
+    .t-input-phonemask__country-select {
+      color: #ffffff !important;
+      font-weight: 700 !important;
+    }
+
+    /* HIGH CONTRAST RADIANT CHECKBOX & TERMS ACCENTS */
+    .t-checkbox__control {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      cursor: pointer !important;
+      margin: 14px 0 !important;
+    }
+    .t-checkbox__indicator {
+      width: 24px !important;
+      height: 24px !important;
+      min-width: 24px !important;
+      min-height: 24px !important;
+      background: rgba(255, 255, 255, 0.15) !important;
+      border: 2px solid #f43f5e !important;
+      border-radius: 6px !important;
+      box-shadow: 0 0 14px rgba(244, 63, 94, 0.6), inset 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.25s ease !important;
+      box-sizing: border-box !important;
+    }
+    .t-checkbox__control:hover .t-checkbox__indicator {
+      border-color: #fb7185 !important;
+      box-shadow: 0 0 20px rgba(244, 63, 94, 0.85) !important;
+    }
+    .t-checkbox__control input[type="checkbox"]:checked ~ .t-checkbox__indicator,
+    .t-checkbox__control input:checked + .t-checkbox__indicator,
+    .t-checkbox__indicator.t-checkbox__indicator_active {
+      background: linear-gradient(135deg, #f43f5e 0%, #fb7185 40%, #f59e0b 100%) !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 22px rgba(244, 63, 94, 0.9), 0 0 12px rgba(245, 158, 11, 0.7) !important;
+    }
+    .t-checkbox__indicator::after {
+      border: solid #ffffff !important;
+      border-width: 0 3px 3px 0 !important;
+      width: 6px !important;
+      height: 12px !important;
+    }
+    .t-checkbox__indicator svg path {
+      stroke: #ffffff !important;
+      stroke-width: 3.5px !important;
+    }
     .t-form__bottom-text,
-    .t-checkbox__labeltext {
-      color: #c4b5fd !important;
-      font-size: 13px !important;
-      line-height: 1.5 !important;
+    .t-checkbox__labeltext,
+    .t-checkbox__labeltext a {
+      color: #ffffff !important;
+      font-size: 13.5px !important;
+      font-weight: 600 !important;
+      line-height: 1.55 !important;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85) !important;
+    }
+    .t-checkbox__labeltext a {
+      color: #fbcfe8 !important;
+      text-decoration: underline !important;
+      font-weight: 700 !important;
+    }
+    .t-checkbox__labeltext a:hover {
+      color: #fbbf24 !important;
     }
     .t702__img {
       border-radius: 20px 20px 0 0 !important;
