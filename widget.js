@@ -1,12 +1,6 @@
 /**
- * AFROSTUDIO.RU - OFFICIAL HIGH-CONVERTING INTERACTIVE APPLICATION
- * Version: 4.1.0 - Luxury Gold Edition
- * Features:
- *  - Full Range Hair Extensions Interactive Technology Switcher (Hot, Cold, Tape, Hollywood, Bioprotein)
- *  - Dynamic Telegram Live Feed with Real Screenshots & Video Play Badges
- *  - Removed Gallery 4-photos block per user directive
- *  - Full Bleed Desktop & Mobile-First Alignment
- *  - Fixed Arrow Up & Cookie Banner
+ * AFROSTUDIO.RU - LUXURY BEAUTY SALON APPLICATION
+ * Version: 8.0.0 - Liquid Glass Fish-Eye UI & High-Contrast Forms
  */
 (function() {
   'use strict';
@@ -16,7 +10,7 @@
     const fontLink = document.createElement('link');
     fontLink.id = 'afro-web-fonts';
     fontLink.rel = 'stylesheet';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap';
     document.head.appendChild(fontLink);
   }
 
@@ -31,168 +25,239 @@
 
   // 3. INJECT APPLICATION STYLES
   const styles = `
-    /* HIDE DUPLICATE TILDA BLOCKS & FOOTER */
+    /* HIDE OLD TILDA BLOCKS & DUPLICATE FOOTER */
     #rec2325313701, #rec2325313981, #rec2325314041, #rec2222808741, 
     #rec2334967441, #rec2222715461, #t-footer, .t345 {
       display: none !important;
     }
 
-    
-    /* STYLING TILDA POPUP FORM #rec4646446601 IN LUXURY DARK-GOLD THEME */
-    #rec4646446601 .t-popup__container {
-      background: #0d0e14 !important;
-      border: 1px solid rgba(245, 158, 11, 0.4) !important;
-      border-radius: 24px !important;
-      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 35px rgba(245, 158, 11, 0.15) !important;
-      padding: 36px 30px !important;
+    /* TILDA POPUP FORM #rec4646446601 - ULTRA-CLEAR LUXURY BEAUTY STYLING */
+    #rec4646446601 .t-popup {
+      background: rgba(0, 0, 0, 0.88) !important;
+      backdrop-filter: blur(12px) !important;
     }
-    #rec4646446601 .t702__title, #rec4646446601 .t-name {
+    #rec4646446601 .t-popup__container {
+      background: #0f1118 !important;
+      border: 1.5px solid rgba(245, 158, 11, 0.5) !important;
+      border-radius: 26px !important;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 40px rgba(245, 158, 11, 0.25) !important;
+      padding: 42px 34px !important;
+    }
+    #rec4646446601 .t-popup__close-icon {
+      fill: #f59e0b !important;
+      width: 22px !important;
+      height: 22px !important;
+    }
+    #rec4646446601 .t702__title,
+    #rec4646446601 .t-title,
+    #rec4646446601 .t-title_xxs {
       color: #ffffff !important;
       font-family: 'Cinzel', serif !important;
-      letter-spacing: 0.02em !important;
+      font-size: 26px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.03em !important;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.7) !important;
+      margin-bottom: 12px !important;
+      text-align: center !important;
     }
-    #rec4646446601 .t702__descr, #rec4646446601 .t-descr {
-      color: #94a3b8 !important;
+    #rec4646446601 .t702__descr,
+    #rec4646446601 .t-descr,
+    #rec4646446601 .t-text {
+      color: #cbd5e1 !important;
+      font-size: 14.5px !important;
+      line-height: 1.6 !important;
+      text-align: center !important;
     }
-    #rec4646446601 .t-input {
-      background: rgba(255, 255, 255, 0.05) !important;
-      border: 1px solid rgba(255, 255, 255, 0.15) !important;
-      color: #ffffff !important;
-      border-radius: 12px !important;
-      padding-left: 16px !important;
-    }
-    #rec4646446601 .t-input:focus {
-      border-color: #f59e0b !important;
-      outline: none !important;
-      box-shadow: 0 0 15px rgba(245, 158, 11, 0.3) !important;
-    }
-    #rec4646446601 .t-submit {
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
-      color: #0b0b0f !important;
+    
+    /* HIGHLIGHT FIELD TITLES AND LABELS */
+    #rec4646446601 .t-input-title,
+    #rec4646446601 .t-input-subtitle,
+    #rec4646446601 .t-descr_md {
+      color: #fbbf24 !important;
       font-weight: 700 !important;
+      font-size: 13.5px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      margin-bottom: 8px !important;
+      display: block !important;
+    }
+    
+    /* ALL INPUTS CLEAR & CONTRAST */
+    #rec4646446601 .t-input,
+    #rec4646446601 input[type="text"],
+    #rec4646446601 input[type="tel"],
+    #rec4646446601 textarea {
+      background: #171926 !important;
+      border: 1.5px solid rgba(245, 158, 11, 0.45) !important;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
       font-size: 15px !important;
-      border-radius: 12px !important;
-      box-shadow: 0 6px 24px rgba(245, 158, 11, 0.45) !important;
-      transition: transform 0.2s, box-shadow 0.2s !important;
+      font-weight: 600 !important;
+      border-radius: 14px !important;
+      padding: 15px 18px !important;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.6) !important;
+      transition: all 0.25s ease !important;
+    }
+    #rec4646446601 .t-input:focus,
+    #rec4646446601 input[type="text"]:focus,
+    #rec4646446601 input[type="tel"]:focus {
+      border-color: #fbbf24 !important;
+      background: #1d2030 !important;
+      box-shadow: 0 0 18px rgba(245, 158, 11, 0.5), inset 0 2px 5px rgba(0,0,0,0.6) !important;
+      outline: none !important;
+    }
+    #rec4646446601 .t-input::placeholder,
+    #rec4646446601 input::placeholder {
+      color: #94a3b8 !important;
+      -webkit-text-fill-color: #94a3b8 !important;
+      opacity: 1 !important;
+    }
+
+    /* MESSENGER SELECTOR RADIOS */
+    #rec4646446601 .t-contact-method__type {
+      border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+      border-radius: 14px !important;
+      padding: 12px 16px !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      transition: all 0.2s !important;
+      cursor: pointer !important;
+    }
+    #rec4646446601 .t-contact-method__type:hover,
+    #rec4646446601 .t-contact-method__type_active {
+      border-color: #f59e0b !important;
+      background: rgba(245, 158, 11, 0.2) !important;
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.3) !important;
+    }
+    #rec4646446601 .t-contact-method__title {
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      font-size: 14px !important;
+    }
+
+    /* SUBMIT BUTTON - FISH-EYE 3D GOLD LUXURY PILL */
+    #rec4646446601 .t-submit {
+      position: relative !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      min-height: 56px !important;
+      padding: 18px 36px !important;
+      background: radial-gradient(120% 120% at 50% 10%, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 60%), linear-gradient(180deg, #fde68a 0%, #f59e0b 45%, #d97706 100%) !important;
+      color: #0b0c10 !important;
+      font-weight: 800 !important;
+      font-size: 15px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      border-radius: 9999px !important;
+      border: 1px solid rgba(255,255,255,0.6) !important;
+      box-shadow: inset 0 2px 3px rgba(255,255,255,0.85), inset 0 -3px 6px rgba(0,0,0,0.35), 0 12px 30px -4px rgba(245,158,11,0.6), 0 0 18px rgba(251,191,36,0.4) !important;
+      cursor: pointer !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
     }
     #rec4646446601 .t-submit:hover {
-      transform: translateY(-2px) !important;
-      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.6) !important;
+      transform: translateY(-2px) scale(1.02) !important;
+      box-shadow: inset 0 2px 3px rgba(255,255,255,0.95), inset 0 -3px 6px rgba(0,0,0,0.4), 0 16px 36px -2px rgba(245,158,11,0.75), 0 0 26px rgba(251,191,36,0.55) !important;
+    }
+    #rec4646446601 .t-form__bottom-text,
+    #rec4646446601 .t-form__bottom-text * {
+      color: #94a3b8 !important;
+      font-size: 12.5px !important;
+      line-height: 1.55 !important;
+      text-align: center !important;
+    }
+    #rec4646446601 .t-form__bottom-text a {
+      color: #f59e0b !important;
+      text-decoration: underline !important;
     }
 
-/* FULL WIDTH & LUXURY DARK CANVAS */
-    html, body {
-      margin: 0 !important;
-      padding: 0 !important;
-      width: 100% !important;
-      max-width: 100vw !important;
-      overflow-x: hidden !important;
-      background-color: #060608 !important;
+    /* ULTRA-BRIGHT RADIANT 3D GOLD SCROLL TO TOP */
+    #afro-scroll-top {
+      position: fixed !important;
+      bottom: 28px !important;
+      right: 28px !important;
+      width: 52px !important;
+      height: 52px !important;
+      border-radius: 50% !important;
+      background: radial-gradient(120% 120% at 40% 15%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 55%), linear-gradient(135deg, #fde68a 0%, #f59e0b 50%, #d97706 100%) !important;
+      border: 2px solid rgba(255, 255, 255, 0.75) !important;
+      color: #0b0c10 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      z-index: 999999 !important;
+      box-shadow: inset 0 2px 4px rgba(255,255,255,0.9), inset 0 -3px 6px rgba(0,0,0,0.35), 0 10px 28px rgba(245, 158, 11, 0.65), 0 0 18px rgba(251, 191, 36, 0.5) !important;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(15px) scale(0.9) !important;
     }
-    #allrecords {
-      overflow-x: hidden !important;
-      width: 100% !important;
+    #afro-scroll-top.afro-visible {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) scale(1) !important;
     }
-    #rec4638438901, 
-    #rec4638438901 .t123, 
-    #rec4638438901 .t-container_100, 
-    #rec4638438901 .t-width, 
-    #rec4638438901 .t-width_100 {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
+    #afro-scroll-top:hover {
+      transform: translateY(-4px) scale(1.1) !important;
+      box-shadow: inset 0 2px 4px rgba(255,255,255,1), inset 0 -3px 6px rgba(0,0,0,0.4), 0 16px 36px rgba(245, 158, 11, 0.85), 0 0 28px rgba(251, 191, 36, 0.7) !important;
+    }
+    #afro-scroll-top svg {
+      width: 24px !important;
+      height: 24px !important;
+      stroke: #0b0c10 !important;
+      stroke-width: 3.2px !important;
     }
 
+    /* FULL CANVAS BEAUTY LUXURY STYLING */
     #afrostudio-app {
-      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      color: #f1f5f9;
-      background: radial-gradient(circle at 50% 0%, #15141c 0%, #060608 65%, #030304 100%);
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      background-color: #08090e;
       overflow-x: hidden;
+      width: 100%;
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
-      line-height: 1.5;
     }
     #afrostudio-app * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    .afro-container {
-      width: 100%;
-      max-width: 1260px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* SCROLL TO TOP - STRICTLY BOTTOM 14px, LEFT 14px, 40x40px */
-    #afro-scroll-top {
-      position: fixed;
-      bottom: 14px;
-      left: 14px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #141418;
-      border: 1px solid #f59e0b;
-      color: #f59e0b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 99999;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.7);
-      transition: all 0.25s ease;
-      opacity: 0;
-      visibility: hidden;
-    }
-    #afro-scroll-top.afro-visible {
-      opacity: 1;
-      visibility: visible;
-    }
-    #afro-scroll-top:hover {
-      background: #f59e0b;
-      color: #000;
-      transform: translateY(-2px);
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
-    }
-    #afro-scroll-top svg {
-      width: 18px;
-      height: 18px;
-      stroke-width: 2.5;
     }
 
     /* SECTION TITLES & BADGES */
+    .afro-container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
     .afro-section-header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
-    .afro-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
+    .afro-section-pill {
+      display: inline-block;
+      font-size: 11.5px;
       font-weight: 700;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #f59e0b;
+      color: #fbbf24;
       background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      padding: 6px 16px;
-      border-radius: 999px;
-      margin-bottom: 14px;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      padding: 7px 20px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
     }
     .afro-section-title {
       font-family: 'Cinzel', serif;
-      font-size: 36px;
+      font-size: 38px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       letter-spacing: 0.02em;
+      line-height: 1.25;
     }
     .afro-section-title span {
       background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
@@ -200,18 +265,108 @@
       -webkit-text-fill-color: transparent;
     }
     .afro-section-sub {
-      font-size: 15px;
+      font-size: 15.5px;
       color: #94a3b8;
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
-      line-height: 1.6;
+      line-height: 1.65;
+    }
+
+    /* FISH-EYE 3D LIQUID GLASS GOLD BUTTON */
+    .afro-btn-gold {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 16px 38px;
+      border-radius: 9999px;
+      background: radial-gradient(120% 120% at 50% 10%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 60%), linear-gradient(180deg, #fde68a 0%, #f59e0b 45%, #d97706 100%);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: #0b0c10 !important;
+      font-weight: 800;
+      font-size: 14.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.8), inset 0 -3px 6px rgba(0, 0, 0, 0.35), 0 10px 28px -4px rgba(245, 158, 11, 0.55), 0 0 16px rgba(251, 191, 36, 0.35);
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .afro-btn-gold::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 12%;
+      right: 12%;
+      height: 44%;
+      border-radius: 9999px 9999px 60% 60%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.05) 100%);
+      pointer-events: none;
+    }
+    .afro-btn-gold:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.95), inset 0 -3px 6px rgba(0, 0, 0, 0.4), 0 16px 36px -2px rgba(245, 158, 11, 0.75), 0 0 26px rgba(251, 191, 36, 0.55);
+    }
+    .afro-btn-gold:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    /* FISH-EYE FROSTED LIQUID GLASS BUTTON */
+    .afro-btn-trans {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 16px 36px;
+      border-radius: 9999px;
+      background: radial-gradient(120% 120% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.02) 65%), rgba(20, 22, 34, 0.75);
+      border: 1.5px solid rgba(245, 158, 11, 0.45);
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 14.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      white-space: nowrap;
+      backdrop-filter: blur(12px);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.35), 0 8px 24px rgba(0, 0, 0, 0.5);
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .afro-btn-trans::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 12%;
+      right: 12%;
+      height: 44%;
+      border-radius: 9999px 9999px 60% 60%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+      pointer-events: none;
+    }
+    .afro-btn-trans:hover {
+      transform: translateY(-3px) scale(1.03);
+      border-color: #fbbf24;
+      color: #fbbf24 !important;
+      background: radial-gradient(120% 120% at 50% 10%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.05) 65%), rgba(245, 158, 11, 0.18);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5), 0 0 25px rgba(245, 158, 11, 0.4);
+    }
+    .afro-btn-trans:active {
+      transform: translateY(0) scale(0.98);
     }
 
     /* 1. HERO SLIDER */
     .afro-hero-section {
       position: relative;
       width: 100%;
-      min-height: 560px;
+      min-height: 580px;
       overflow: hidden;
       background: #000000;
       display: flex;
@@ -225,49 +380,49 @@
     }
     .afro-hero-slide {
       min-width: 100%;
-      min-height: 560px;
+      min-height: 580px;
       position: relative;
       background-size: cover;
       background-position: center center;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 70px 24px 80px;
+      padding: 80px 24px 90px;
     }
     .afro-hero-slide::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at center, rgba(10, 10, 14, 0.6) 0%, rgba(5, 5, 7, 0.94) 100%);
+      background: radial-gradient(circle at center, rgba(10, 10, 14, 0.65) 0%, rgba(6, 7, 10, 0.92) 100%);
       z-index: 1;
     }
     .afro-hero-content {
       position: relative;
       z-index: 2;
-      text-align: center;
       max-width: 900px;
-      margin: 0 auto;
+      text-align: center;
     }
     .afro-hero-pill {
       display: inline-block;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #f59e0b;
-      background: rgba(245, 158, 11, 0.14);
-      border: 1px solid rgba(245, 158, 11, 0.45);
-      padding: 6px 18px;
-      border-radius: 999px;
-      margin-bottom: 20px;
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 8px 24px;
+      border-radius: 9999px;
+      margin-bottom: 22px;
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.25);
     }
     .afro-hero-h1 {
       font-family: 'Cinzel', serif;
-      font-size: 46px;
+      font-size: 48px;
       font-weight: 800;
       line-height: 1.2;
       color: #ffffff;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       text-shadow: 0 4px 24px rgba(0,0,0,0.9);
     }
     .afro-hero-h1 span {
@@ -276,59 +431,18 @@
       -webkit-text-fill-color: transparent;
     }
     .afro-hero-desc {
-      font-size: 16px;
+      font-size: 16.5px;
       color: #cbd5e1;
-      max-width: 680px;
-      margin: 0 auto 32px;
-      line-height: 1.65;
+      max-width: 720px;
+      margin: 0 auto 34px;
+      line-height: 1.7;
     }
     .afro-hero-actions {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 16px;
-    }
-    .afro-btn-gold {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      color: #08080c !important;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 14px 28px;
-      border-radius: 12px;
-      text-decoration: none;
-      box-shadow: 0 6px 24px rgba(245, 158, 11, 0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
-      cursor: pointer;
-    }
-    .afro-btn-gold:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.6);
-    }
-    .afro-btn-trans {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.08);
-      color: #ffffff !important;
-      font-weight: 600;
-      font-size: 14px;
-      padding: 14px 26px;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      text-decoration: none;
-      backdrop-filter: blur(8px);
-      transition: background 0.2s, border-color 0.2s;
-      cursor: pointer;
-    }
-    .afro-btn-trans:hover {
-      background: rgba(255, 255, 255, 0.16);
-      border-color: #f59e0b;
+      gap: 18px;
     }
 
     /* SLIDER NAV ARROWS & DOTS */
@@ -336,593 +450,427 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 48px;
-      height: 48px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      background: rgba(15, 15, 20, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      color: #fff;
+      background: rgba(15, 17, 26, 0.85);
+      border: 1.5px solid rgba(245, 158, 11, 0.4);
+      color: #f59e0b;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       z-index: 10;
+      backdrop-filter: blur(8px);
       transition: all 0.2s;
     }
     .afro-hero-arrow:hover {
       background: #f59e0b;
-      color: #000;
-      border-color: #f59e0b;
+      color: #0b0c10;
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
     }
-    .afro-arrow-prev { left: 20px; }
-    .afro-arrow-next { right: 20px; }
+    .afro-arrow-prev { left: 24px; }
+    .afro-arrow-next { right: 24px; }
     .afro-hero-dots {
       position: absolute;
       bottom: 24px;
-      left: 0;
-      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
+      gap: 10px;
       z-index: 10;
     }
-    .afro-dot {
-      width: 10px;
-      height: 10px;
+    .afro-hero-dot {
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       cursor: pointer;
-      transition: all 0.25s;
+      transition: all 0.3s;
     }
-    .afro-dot.active {
+    .afro-hero-dot.active {
       background: #f59e0b;
-      width: 28px;
-      border-radius: 6px;
+      border-color: #f59e0b;
+      transform: scale(1.3);
+      box-shadow: 0 0 12px #f59e0b;
     }
 
     /* 2. DIRECTIONS GRID (4 MAIN CARDS) */
     .afro-directions-section {
-      padding: 65px 0 45px;
+      padding: 90px 0;
+      background: #090a10;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
     .afro-dir-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
     .afro-dir-card {
       position: relative;
       border-radius: 20px;
       overflow: hidden;
-      min-height: 300px;
+      height: 420px;
+      background-size: cover;
+      background-position: center center;
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 32px 28px;
+      padding: 28px 24px;
       text-decoration: none;
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s, box-shadow 0.3s;
+      transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
     }
     .afro-dir-card::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(8, 8, 12, 0.2) 0%, rgba(8, 8, 12, 0.85) 65%, rgba(5, 5, 8, 0.98) 100%);
-      z-index: 1;
+      background: linear-gradient(180deg, rgba(8, 9, 14, 0.1) 0%, rgba(8, 9, 14, 0.9) 85%);
       transition: opacity 0.3s;
     }
     .afro-dir-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(245, 158, 11, 0.65);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.75), 0 0 25px rgba(245, 158, 11, 0.25);
+      transform: translateY(-8px);
+      border-color: #f59e0b;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.3);
     }
     .afro-dir-content {
       position: relative;
       z-index: 2;
     }
-    .afro-dir-num {
+    .afro-dir-tag {
       display: inline-block;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      color: #f59e0b;
-      margin-bottom: 6px;
-    }
-    .afro-dir-title {
-      font-family: 'Cinzel', serif;
-      font-size: 24px;
+      font-size: 11px;
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.18);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      margin-bottom: 10px;
+    }
+    .afro-dir-name {
+      font-family: 'Cinzel', serif;
+      font-size: 22px;
+      font-weight: 800;
       color: #ffffff;
       margin-bottom: 8px;
+      line-height: 1.3;
     }
-    .afro-dir-text {
+    .afro-dir-desc {
       font-size: 13.5px;
       color: #cbd5e1;
-      line-height: 1.55;
-      margin-bottom: 16px;
-      max-width: 500px;
-    }
-    .afro-dir-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #f59e0b;
-      transition: gap 0.2s;
-    }
-    .afro-dir-card:hover .afro-dir-link {
-      gap: 10px;
+      line-height: 1.5;
     }
 
     /* 3. ALL KINDS OF HAIR EXTENSIONS - INTERACTIVE SWITCHER */
     .afro-all-types-section {
-      padding: 55px 0 65px;
-      background: linear-gradient(180deg, rgba(10, 10, 15, 0.5) 0%, rgba(15, 15, 22, 0.8) 50%, rgba(10, 10, 15, 0.5) 100%);
-      border-top: 1px solid rgba(245, 158, 11, 0.15);
-      border-bottom: 1px solid rgba(245, 158, 11, 0.15);
-      position: relative;
+      padding: 90px 0;
+      background: #0c0d14;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
-    .afro-tabs-nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 35px;
-    }
-    .afro-tab-btn {
-      background: rgba(20, 20, 28, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #cbd5e1;
-      padding: 12px 22px;
-      font-size: 13.5px;
-      font-weight: 600;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      backdrop-filter: blur(10px);
-    }
-    .afro-tab-btn:hover {
-      border-color: rgba(245, 158, 11, 0.5);
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
-    .afro-tab-btn.active {
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      color: #0b0b0f;
-      border-color: #f59e0b;
-      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.45);
-      font-weight: 700;
-    }
-
-    .afro-tab-showcase {
-      background: rgba(14, 14, 20, 0.95);
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      border-radius: 24px;
-      padding: 36px;
+    .afro-types-layout {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 360px 1fr;
       gap: 36px;
-      align-items: center;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(245, 158, 11, 0.1);
-      position: relative;
-      overflow: hidden;
+      align-items: start;
     }
-    .afro-tab-showcase::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, transparent, #f59e0b, #fbbf24, transparent);
-    }
-    .afro-tab-info {
+    .afro-types-menu {
       display: flex;
       flex-direction: column;
+      gap: 8px;
+      background: #12141e;
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 16px;
     }
-    .afro-tab-tag {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #f59e0b;
-      margin-bottom: 8px;
+    .afro-type-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      padding: 13px 18px;
+      color: #cbd5e1;
+      font-size: 14.5px;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
     }
-    .afro-tab-name {
+    .afro-type-btn:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+    }
+    .afro-type-btn.active {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(217, 119, 6, 0.22) 100%);
+      border-color: rgba(245, 158, 11, 0.5);
+      color: #fbbf24;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.15);
+    }
+    .afro-type-btn svg {
+      width: 16px;
+      height: 16px;
+      opacity: 0.5;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .afro-type-btn.active svg {
+      opacity: 1;
+      transform: translateX(3px);
+      stroke: #fbbf24;
+    }
+    .afro-type-display {
+      background: #12141e;
+      border: 1.5px solid rgba(245, 158, 11, 0.3);
+      border-radius: 24px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      min-height: 480px;
+    }
+    .afro-type-photo {
+      position: relative;
+      background-size: cover;
+      background-position: center center;
+      min-height: 380px;
+    }
+    .afro-type-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(18, 20, 30, 0) 60%, rgba(18, 20, 30, 1) 100%);
+    }
+    .afro-type-info {
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .afro-type-title {
       font-family: 'Cinzel', serif;
-      font-size: 30px;
+      font-size: 28px;
       font-weight: 800;
       color: #ffffff;
       margin-bottom: 14px;
       line-height: 1.25;
     }
-    .afro-tab-desc {
-      font-size: 14.5px;
+    .afro-type-text {
+      font-size: 15px;
       color: #cbd5e1;
-      line-height: 1.65;
+      line-height: 1.7;
       margin-bottom: 24px;
     }
-    .afro-tab-specs {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-    .afro-spec-box {
-      background: rgba(22, 22, 32, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 12px 14px;
-    }
-    .afro-spec-label {
-      font-size: 11px;
-      color: #94a3b8;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 4px;
-    }
-    .afro-spec-val {
-      font-size: 14px;
-      color: #ffffff;
-      font-weight: 700;
-    }
-    .afro-tab-actions {
+    .afro-type-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .afro-type-features li {
+      display: flex;
       align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #e2e8f0;
     }
-
-    .afro-tab-visual {
-      position: relative;
-      border-radius: 18px;
-      overflow: hidden;
-      height: 380px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
-    }
-    .afro-tab-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-    .afro-tab-visual:hover .afro-tab-img {
-      transform: scale(1.04);
-    }
-    .afro-tab-visual-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(6, 6, 8, 0.85) 100%);
-      display: flex;
-      align-items: flex-end;
-      padding: 20px;
-    }
-    .afro-tab-visual-badge {
-      background: rgba(245, 158, 11, 0.18);
-      border: 1px solid #f59e0b;
-      color: #f59e0b;
-      font-size: 11px;
+    .afro-type-features li span {
+      color: #fbbf24;
       font-weight: 700;
-      padding: 5px 12px;
-      border-radius: 999px;
-      backdrop-filter: blur(8px);
+      font-size: 16px;
     }
 
     /* 4. KLING AI ART BANNER */
     .afro-art-section {
-      padding: 50px 0 35px;
+      padding: 80px 0;
+      background: #090a10;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
     .afro-art-banner {
-      width: 100%;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid rgba(245, 158, 11, 0.35);
       position: relative;
-      min-height: 250px;
-      background-size: cover;
-      background-position: center;
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #141724 0%, #0d0f17 100%);
+      border: 1.5px solid rgba(245, 158, 11, 0.35);
+      padding: 56px 48px;
       display: flex;
       align-items: center;
-      padding: 34px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.65);
+      justify-content: space-between;
+      gap: 36px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(245, 158, 11, 0.15);
     }
-    .afro-art-banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(8, 8, 12, 0.94) 0%, rgba(8, 8, 12, 0.72) 55%, rgba(8, 8, 12, 0.35) 100%);
-      z-index: 1;
-    }
-    .afro-art-content {
-      position: relative;
-      z-index: 2;
-      max-width: 620px;
+    .afro-art-text {
+      max-width: 650px;
     }
     .afro-art-title {
       font-family: 'Cinzel', serif;
-      font-size: 30px;
+      font-size: 32px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      line-height: 1.3;
     }
     .afro-art-title span {
-      color: #f59e0b;
+      color: #fbbf24;
     }
     .afro-art-desc {
-      font-size: 14.5px;
+      font-size: 15.5px;
       color: #cbd5e1;
-      line-height: 1.65;
-      margin-bottom: 22px;
+      line-height: 1.7;
+      margin-bottom: 26px;
     }
 
-    /* 5. TELEGRAM LIVE FEED (STREAMLINED & ELEGANT) */
+    /* 5. TELEGRAM LIVE FEED */
     .afro-tg-section {
-      margin-top: 45px;
-      margin-bottom: 45px;
-      padding: 34px 28px;
-      background: linear-gradient(180deg, rgba(16, 16, 22, 0.96) 0%, rgba(10, 10, 14, 0.98) 100%);
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      border-radius: 22px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 30px rgba(245, 158, 11, 0.12);
+      padding: 90px 0;
+      background: #08090e;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .afro-tg-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+    .afro-tg-card {
+      background: #11131c;
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    }
+    .afro-tg-card:hover {
+      transform: translateY(-6px);
+      border-color: #f59e0b;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.25);
+    }
+    .afro-tg-media {
       position: relative;
+      width: 100%;
+      height: 290px;
+      background-size: cover;
+      background-position: center center;
+      background-color: #0b0c12;
       overflow: hidden;
     }
-    .afro-tg-section::before {
-      content: '';
+    .afro-tg-play-btn {
       position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, transparent, #f59e0b, #fbbf24, transparent);
-    }
-    .afro-tg-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 28px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .afro-tg-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #f59e0b;
-      background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      padding: 5px 14px;
-      border-radius: 999px;
-    }
-    .afro-tg-badge span {
-      width: 8px;
-      height: 8px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
-      background: #10b981;
-      box-shadow: 0 0 8px #10b981;
-      display: inline-block;
-      animation: afroPulse 1.8s infinite;
+      background: rgba(11, 13, 20, 0.8);
+      border: 2px solid #f59e0b;
+      color: #f59e0b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+      transition: all 0.25s ease;
     }
-    @keyframes afroPulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.85); }
+    .afro-tg-card:hover .afro-tg-play-btn {
+      transform: translate(-50%, -50%) scale(1.12);
+      background: #f59e0b;
+      color: #0b0c10;
+      box-shadow: 0 0 30px rgba(245, 158, 11, 0.7);
+    }
+    .afro-tg-play-btn svg {
+      width: 22px;
+      height: 22px;
+      margin-left: 3px;
+    }
+    .afro-tg-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
     .afro-tg-title {
       font-family: 'Cinzel', serif;
-      font-size: 28px;
+      font-size: 18px;
       font-weight: 800;
       color: #ffffff;
-      margin-top: 8px;
+      margin-bottom: 10px;
+      line-height: 1.4;
     }
-    .afro-tg-title span {
-      color: #f59e0b;
-    }
-    .afro-tg-sub {
-      font-size: 13.5px;
+    .afro-tg-text {
+      font-size: 14px;
       color: #94a3b8;
-      margin-top: 4px;
+      line-height: 1.6;
+      flex-grow: 1;
+      margin-bottom: 18px;
     }
-    .afro-tg-channel-btn {
-      display: inline-flex;
+    .afro-tg-meta {
+      display: flex;
       align-items: center;
-      gap: 8px;
-      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-      color: #ffffff !important;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 14px;
+      font-size: 12.5px;
+      color: #64748b;
+    }
+    .afro-tg-link {
+      color: #fbbf24;
       text-decoration: none;
       font-weight: 700;
-      font-size: 13px;
-      padding: 12px 22px;
-      border-radius: 12px;
-      box-shadow: 0 4px 18px rgba(2, 132, 199, 0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .afro-tg-channel-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(2, 132, 199, 0.55);
-    }
-    
-    /* TELEGRAM 3 COLUMNS GRID */
-    .afro-tg-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      width: 100%;
-    }
-    .afro-tg-card {
-      background: rgba(14, 14, 20, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 18px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
-      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
-    }
-    .afro-tg-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(245, 158, 11, 0.5);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), 0 0 20px rgba(245, 158, 11, 0.15);
-    }
-    .afro-tg-card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      font-size: 12px;
-    }
-    .afro-tg-card-date {
-      color: #f59e0b;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .afro-tg-card-channel {
-      color: #94a3b8;
-      font-weight: 500;
-    }
-
-    /* REAL SCREENSHOT / PHOTO CONTAINER */
-    .afro-tg-media-wrap {
-      position: relative;
-      width: 100%;
-      height: 200px;
-      border-radius: 14px;
-      overflow: hidden;
-      background: #08080c;
-      margin-bottom: 14px;
-      flex-shrink: 0;
-      cursor: pointer;
-    }
-    .afro-tg-media-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-    .afro-tg-card:hover .afro-tg-media-img {
-      transform: scale(1.05);
-    }
-    .afro-tg-play-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0, 0, 0, 0.35);
-      transition: background 0.2s;
-    }
-    .afro-tg-card:hover .afro-tg-play-overlay {
-      background: rgba(0, 0, 0, 0.2);
-    }
-    .afro-tg-play-btn {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: #f59e0b;
-      color: #0b0b0f;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      padding-left: 4px;
-      box-shadow: 0 0 25px rgba(245, 158, 11, 0.75);
-      transition: transform 0.2s;
-    }
-    .afro-tg-card:hover .afro-tg-play-btn {
-      transform: scale(1.12);
-    }
-    .afro-tg-video-badge {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      background: rgba(0, 0, 0, 0.82);
-      border: 1px solid #f59e0b;
-      color: #f59e0b;
-      font-size: 10px;
-      font-weight: 800;
-      padding: 3px 8px;
-      border-radius: 5px;
-      letter-spacing: 0.08em;
-    }
-    
-    /* SCROLLABLE POST TEXT */
-    .afro-tg-text-box {
-      font-size: 13px;
-      color: #cbd5e1;
-      line-height: 1.55;
-      max-height: 155px;
-      overflow-y: auto;
-      padding-right: 6px;
-      flex-grow: 1;
-      word-break: break-word;
-    }
-    .afro-tg-text-box::-webkit-scrollbar {
-      width: 4px;
-    }
-    .afro-tg-text-box::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 4px;
-    }
-    .afro-tg-text-box::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 4px;
-    }
-    .afro-tg-text-box::-webkit-scrollbar-thumb:hover {
-      background: #f59e0b;
-    }
-    .afro-tg-text-box a {
-      color: #38bdf8;
-      text-decoration: underline;
-    }
-
-    .afro-tg-footer-actions {
-      text-align: center;
-      margin-top: 28px;
-    }
-    .afro-tg-more-btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.4);
+      gap: 5px;
+      transition: color 0.2s;
+    }
+    .afro-tg-link:hover {
       color: #f59e0b;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 12px 28px;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.2s;
     }
-    .afro-tg-more-btn:hover {
-      background: #f59e0b;
-      color: #000;
-      border-color: #f59e0b;
-    }
-    .afro-tg-loader {
-      text-align: center;
-      padding: 30px;
-      color: #94a3b8;
-      font-size: 14px;
-      grid-column: 1 / -1;
+    .afro-tg-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    
-    /* 6. COOKIE & LEGAL BANNER (YANDEX STYLE - SCREENSHOTS 1, 2, 3) */
+    /* 6. COOKIE BANNER & MODAL (SCREENSHOTS 1, 2, 3) */
+    .afro-cookie-banner {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      max-width: 440px;
+      width: calc(100% - 48px);
+      background: #12141f;
+      border: 1.5px solid #f59e0b;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 30px rgba(245, 158, 11, 0.25);
+      border-radius: 20px;
+      padding: 24px;
+      z-index: 999998;
+      display: none;
+      box-sizing: border-box;
+      backdrop-filter: blur(12px);
+    }
+    .afro-cookie-banner.open {
+      display: block !important;
+      animation: afroFadeInUp 0.35s ease forwards;
+    }
+    @keyframes afroFadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     .afro-cookie-close-corner {
       position: absolute;
-      top: 14px;
-      right: 14px;
+      top: 16px;
+      right: 16px;
       width: 28px;
       height: 28px;
       border-radius: 50%;
@@ -933,177 +881,103 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 13px;
+      font-size: 14px;
       line-height: 1;
       padding: 0;
       transition: all 0.2s;
-      z-index: 10;
     }
     .afro-cookie-close-corner:hover {
       background: #f59e0b;
-      color: #0b0f17;
+      color: #0b0c10;
       border-color: #f59e0b;
     }
-
-    .afro-cookie-banner {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      max-width: 440px;
-      width: calc(100% - 40px);
-      background: #141722;
-      border: 1.5px solid #f59e0b;
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.9), 0 0 25px rgba(245, 158, 11, 0.25);
-      border-radius: 18px;
-      padding: 22px;
-      z-index: 999999;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(25px);
-      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-      box-sizing: border-box;
-      color: #e2e8f0;
-    }
-    .afro-cookie-banner.visible {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .afro-cookie-view {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .afro-cookie-view.hidden {
-      display: none !important;
-    }
-
-    .afro-cookie-top-nav {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding-right: 32px;
-    }
-    .afro-cookie-back-btn {
-      background: transparent;
-      border: none;
-      color: #cbd5e1;
-      cursor: pointer;
-      padding: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 6px;
-      transition: color 0.2s, background 0.2s;
-    }
-    .afro-cookie-back-btn:hover {
-      color: #f59e0b;
-      background: rgba(245, 158, 11, 0.12);
-    }
-
     .afro-cookie-title {
       font-family: 'Cinzel', serif;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 800;
       color: #ffffff;
-      letter-spacing: 0.03em;
-      line-height: 1.3;
-      padding-right: 28px;
+      margin-bottom: 10px;
+      padding-right: 30px;
     }
     .afro-cookie-text {
-      font-size: 12.5px;
-      line-height: 1.55;
+      font-size: 13px;
+      line-height: 1.6;
       color: #94a3b8;
+      margin-bottom: 18px;
     }
     .afro-cookie-text a {
-      color: #f59e0b;
+      color: #fbbf24;
       text-decoration: underline;
       cursor: pointer;
     }
-    .afro-cookie-text a:hover {
-      color: #fbbf24;
-    }
-
     .afro-cookie-btn-col {
       display: flex;
       flex-direction: column;
-      gap: 9px;
-      margin-top: 4px;
+      gap: 10px;
     }
     .afro-cookie-btn-primary {
       width: 100%;
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      color: #0b0f17;
-      border: none;
-      border-radius: 10px;
-      padding: 12px 16px;
+      min-height: 46px;
+      background: radial-gradient(120% 120% at 50% 10%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 60%), linear-gradient(180deg, #fde68a 0%, #f59e0b 50%, #d97706 100%);
+      color: #0b0f17 !important;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 9999px;
+      padding: 13px 24px;
       font-size: 13.5px;
-      font-weight: 700;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
       cursor: pointer;
-      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-    .afro-cookie-btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+      box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.8), 0 6px 20px rgba(245, 158, 11, 0.4);
+      transition: all 0.2s ease;
+      white-space: nowrap;
     }
     .afro-cookie-btn-secondary {
       width: 100%;
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(217, 119, 6, 0.22) 100%);
-      border: 1px solid rgba(245, 158, 11, 0.45);
-      color: #f59e0b;
-      border-radius: 10px;
-      padding: 11px 16px;
+      min-height: 44px;
+      background: rgba(245, 158, 11, 0.16);
+      border: 1.5px solid rgba(245, 158, 11, 0.45);
+      color: #fbbf24 !important;
+      border-radius: 9999px;
+      padding: 12px 24px;
       font-size: 13px;
       font-weight: 700;
       cursor: pointer;
-      transition: all 0.2s;
-    }
-    .afro-cookie-btn-secondary:hover {
-      background: rgba(245, 158, 11, 0.32);
-      color: #ffffff;
+      transition: all 0.2s ease;
+      white-space: nowrap;
     }
     .afro-cookie-btn-dark {
       width: 100%;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #cbd5e1;
-      border-radius: 10px;
-      padding: 10px 16px;
+      min-height: 42px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #cbd5e1 !important;
+      border-radius: 9999px;
+      padding: 11px 24px;
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.2s ease;
+      white-space: nowrap;
     }
-    .afro-cookie-btn-dark:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: #f59e0b;
-      color: #ffffff;
-    }
-
-    /* TOGGLES LIST (SCREENSHOT 3) */
     .afro-cookie-toggles-list {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin: 4px 0 6px;
+      margin: 10px 0 16px;
     }
     .afro-cookie-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 10px 14px;
     }
     .afro-cookie-item-label {
-      font-size: 12.5px;
+      font-size: 13px;
       color: #e2e8f0;
       font-weight: 600;
       display: flex;
@@ -1111,17 +985,14 @@
       gap: 6px;
     }
     .afro-cookie-item-label span {
-      color: #f59e0b;
+      color: #fbbf24;
       font-weight: 700;
     }
-
-    /* SWITCH TOGGLE */
     .afro-switch {
       position: relative;
       display: inline-block;
       width: 44px;
       height: 24px;
-      flex-shrink: 0;
     }
     .afro-switch input {
       opacity: 0;
@@ -1131,7 +1002,7 @@
     .afro-slider {
       position: absolute;
       cursor: pointer;
-      top: 0; left: 0; right: 0; bottom: 0;
+      inset: 0;
       background-color: rgba(255, 255, 255, 0.2);
       transition: 0.3s;
       border-radius: 24px;
@@ -1143,7 +1014,7 @@
       width: 18px;
       left: 3px;
       bottom: 3px;
-      background-color: #ffffff;
+      background-color: white;
       transition: 0.3s;
       border-radius: 50%;
     }
@@ -1153,69 +1024,61 @@
     .afro-switch input:checked + .afro-slider:before {
       transform: translateX(20px);
     }
-    .afro-switch input:disabled + .afro-slider {
-      opacity: 0.75;
-      cursor: not-allowed;
-      background-color: #b45309;
-    }
 
-    /* FOOTER (SCREENSHOT 2) */
-    
-    /* ALWAYS VISIBLE CUSTOM FOOTER (SCREENSHOT 2) */
+    /* 7. CUSTOM FOOTER (ALWAYS VISIBLE) */
     .afro-custom-footer {
       display: block !important;
       visibility: visible !important;
       opacity: 1 !important;
       position: relative !important;
       z-index: 99 !important;
-      background: #08090d !important;
-      border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
-      padding: 36px 20px 42px !important;
+      background: #08090e !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+      padding: 40px 20px 44px !important;
       text-align: center !important;
-      font-size: 12px !important;
+      font-size: 12.5px !important;
       color: #94a3b8 !important;
-      line-height: 1.65 !important;
+      line-height: 1.7 !important;
       width: 100% !important;
       box-sizing: border-box !important;
     }
-
     .afro-footer-line1 {
       color: #cbd5e1;
       font-weight: 500;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
     .afro-footer-line2 {
-      font-size: 10.5px;
       color: #64748b;
-      margin-bottom: 12px;
+      font-size: 11.5px;
+      margin-bottom: 14px;
     }
     .afro-footer-links {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
     }
     .afro-footer-link {
-      background: transparent;
+      background: none;
       border: none;
-      color: #38bdf8;
+      color: #94a3b8;
+      font-size: 12.5px;
       text-decoration: underline;
-      font-size: 12px;
       cursor: pointer;
       padding: 0;
       transition: color 0.2s;
     }
     .afro-footer-link:hover {
-      color: #f59e0b;
+      color: #fbbf24;
     }
 
-    /* POLICY MODAL (IN-PAGE 152-FZ) */
+    /* 8. POLICY MODAL (IN-PAGE 152-FZ) */
     .afro-policy-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(10px);
       z-index: 1000000;
       display: none;
       align-items: center;
@@ -1227,27 +1090,27 @@
       display: flex !important;
     }
     .afro-policy-box {
-      background: #0f1017;
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      border-radius: 20px;
-      max-width: 720px;
+      background: #0f1118;
+      border: 1.5px solid rgba(245, 158, 11, 0.45);
+      border-radius: 24px;
+      max-width: 740px;
       width: 100%;
       max-height: 85vh;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.9), 0 0 35px rgba(245,158,11,0.15);
+      box-shadow: 0 25px 80px rgba(0,0,0,0.95), 0 0 35px rgba(245,158,11,0.2);
       overflow: hidden;
     }
     .afro-policy-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 24px;
+      padding: 22px 26px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     .afro-policy-title {
       font-family: 'Cinzel', serif;
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 800;
       color: #ffffff;
     }
@@ -1262,582 +1125,211 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 15px;
+      font-size: 16px;
       transition: all 0.2s;
     }
     .afro-policy-close:hover {
       background: #f59e0b;
-      color: #000;
+      color: #0b0c10;
       border-color: #f59e0b;
     }
     .afro-policy-body {
-      padding: 24px;
+      padding: 26px;
       overflow-y: auto;
       font-size: 13.5px;
-      line-height: 1.7;
+      line-height: 1.75;
       color: #cbd5e1;
     }
     .afro-policy-body h4 {
-      color: #f59e0b;
-      margin: 18px 0 8px;
-      font-size: 15px;
+      color: #fbbf24;
+      margin: 20px 0 8px;
+      font-size: 15.5px;
     }
     .afro-policy-body h4:first-child {
       margin-top: 0;
     }
 
     /* RESPONSIVE DESIGN */
-    @media screen and (max-width: 992px) {
-      .afro-tab-showcase {
-        grid-template-columns: 1fr;
-        padding: 26px;
+    @media (max-width: 1100px) {
+      .afro-dir-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
-      .afro-tab-visual {
-        height: 280px;
+      .afro-types-layout {
+        grid-template-columns: 1fr;
       }
       .afro-tg-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .afro-hero-h1 {
+        font-size: 32px;
       }
       .afro-dir-grid {
         grid-template-columns: 1fr;
       }
-      .afro-hero-h1 {
-        font-size: 34px;
+      .afro-type-display {
+        grid-template-columns: 1fr;
       }
-      .afro-section-title {
-        font-size: 28px;
-      }
-    }
-    @media screen and (max-width: 640px) {
       .afro-tg-grid {
         grid-template-columns: 1fr;
       }
-      .afro-hero-slide {
-        min-height: 480px;
-        padding: 50px 16px 65px;
-      }
-      .afro-hero-h1 {
-        font-size: 26px;
-      }
-      .afro-hero-desc {
-        font-size: 14px;
-      }
-      .afro-hero-arrow {
-        display: none;
-      }
-      .afro-tab-showcase {
-        padding: 20px 16px;
-      }
-      .afro-tab-name {
-        font-size: 24px;
-      }
-      .afro-tab-specs {
-        grid-template-columns: 1fr;
-      }
-      .afro-tg-section {
-        padding: 20px 14px;
-      }
-      .afro-tg-header {
+      .afro-art-banner {
         flex-direction: column;
-        align-items: flex-start;
+        text-align: center;
+        padding: 36px 24px;
       }
-      #afro-cookie-banner {
-        flex-direction: column;
-        align-items: flex-start;
+      #afro-scroll-top {
+        bottom: 20px !important;
+        right: 20px !important;
+        width: 48px !important;
+        height: 48px !important;
       }
     }
   `;
 
-  if (!document.getElementById('afro-widget-styles')) {
-    const styleEl = document.createElement('style');
-    styleEl.id = 'afro-widget-styles';
-    styleEl.innerHTML = styles;
-    document.head.appendChild(styleEl);
-  }
+  const styleEl = document.createElement('style');
+  styleEl.id = 'afro-luxury-styles';
+  styleEl.innerHTML = styles;
+  document.head.appendChild(styleEl);
 
-  // 4. FIND ROOT CONTAINER
-  const root = document.getElementById('afrostudio-app');
-  if (!root) {
-    console.warn('[Afrostudio] Container #afrostudio-app not found.');
-    return;
-  }
+  // 4. METRIKA GOAL TRACKING
+  window.afroTrack = function(goal) {
+    if (window.ym) {
+      try {
+        window.ym(296485879, 'reachGoal', goal);
+        console.log('[Metrika Goal Sent]:', goal);
+      } catch (e) {
+        console.warn('[Metrika Error]:', e);
+      }
+    }
+  };
 
-  // 5. DATA FOR HAIR EXTENSION TECHNOLOGIES SWITCHER
-  const HAIR_TECH_DATA = [
+  // 5. DATA FOR HAIR EXTENSION SWITCHER
+  const HAIR_TYPES_DATA = [
     {
-      id: 'hot-capsule',
-      btnLabel: 'Горячее капсульное',
-      tag: 'ИТАЛЬЯНСКАЯ МЕТОДИКА LUX',
-      title: 'Горячее капсульное наращивание',
-      desc: 'Классическое итальянское кератиновое наращивание, а также микро и нано капсулы. Капсулы формируются вручную мастером под цвет родных волос. Они неощутимы на голове, позволяют делать высокие прически, хвосты и проборы без малейшей видимости креплений.',
-      specs: [
-        { label: 'Срок носки', val: '2.5 — 3.5 месяца' },
-        { label: 'Размер капсул', val: 'Стандарт / Микро / Нано' },
-        { label: 'Тип прядей', val: 'Славянские Lux & Премиум' },
-        { label: 'Безопасность', val: '100% защита родных волос' }
+      id: "capsule",
+      title: "Капсульное (Итальянское)",
+      text: "Самая популярная и надежная мировая технология. Донорские пряди крепятся с помощью микроскопических кератиновых капсул под цвет ваших волос. Капсулы не ощущаются при прикосновении и позволяют собирать любые прически, включая высокий хвост.",
+      features: [
+        "Срок носки: 2.5 - 3.5 месяца до коррекции",
+        "Кератин премиум-класса, безопасный для структуры волос",
+        "Возможность делать проборы в любых направлениях",
+        "Подходит для тонких и редких волос"
       ],
-      img: 'https://static.tildacdn.com/tild6337-3433-4361-a563-636431313934/photo.png',
-      badge: 'Самый популярный метод в РФ'
+      photo: "https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png"
     },
     {
-      id: 'cold-method',
-      btnLabel: 'Холодное наращивание',
-      tag: 'ИСПАНСКАЯ ТЕХНОЛОГИЯ БЕЗ ТЕПЛА',
-      title: 'Холодное клеевое наращивание',
-      desc: 'Методика бережного наращивания без воздействия горячих щипцов и термической обработки. Фиксация прядей осуществляется специальным прозрачным хирургическим клеем либо микроколечками (Ring Star). Идеально для тонких, ослабленных или поврежденных волос.',
-      specs: [
-        { label: 'Срок носки', val: '2 — 3 месяца' },
-        { label: 'Термовоздействие', val: 'Полностью отсутствует' },
-        { label: 'Крепление', val: 'Плоские микроспайки' },
-        { label: 'Для кого', val: 'Тонкие и ломкие волосы' }
+      id: "microcapsule",
+      title: "Микрокапсульное наращивание",
+      text: "Ювелирная техника с уменьшенными капсулами размером менее 2 мм. Идеальна для височной и теменной зоны, маскировки челки и наращивания на ультратонкие волосы. Полная незаметность даже при сильном ветре.",
+      features: [
+        "Невесомые капсулы весом всего 0.05 г",
+        "Максимально естественное распределение прядей",
+        "Отсутствие нагрузки на волосяные луковицы",
+        "Комфортный сон с первого дня"
       ],
-      img: 'https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png',
-      badge: 'Максимально бережный метод'
+      photo: "https://static.tildacdn.com/tild3164-3232-4735-b935-643564343162/microcapsule.jpg"
     },
     {
-      id: 'tape-method',
-      btnLabel: 'Ленточное наращивание',
-      tag: 'БЫСТРОТА & ПЛОТНЫЙ ОБЪЕМ',
-      title: 'Ленточное наращивание (Hair Talk)',
-      desc: 'Немецкая технология наращивания с помощью тончайших полимерных микролент. Процедура полного наращивания занимает всего 35–45 минут! Нагрузка на родные корни распределяется равномерно по ширине ленты, что исключает натяжение единичных волосков.',
-      specs: [
-        { label: 'Срок носки', val: '1.5 — 2 месяца' },
-        { label: 'Длительность сеанса', val: 'Всего 40 минут' },
-        { label: 'Тип лент', val: 'Ультратонкие микроленты' },
-        { label: 'Коррекция', val: 'Быстрая перестановка' }
+      id: "nanocapsule",
+      title: "Нано-наращивание волос",
+      text: "Ультрасовременная технология с нано-капсулами, которые в 3 раза меньше стандартных микрокапсул. Мастер работает с тонкими прядками, добиваясь эффекта натуральной густоты собственных волос.",
+      features: [
+        "Невидимость даже при макросъемке и ярком солнце",
+        "Идеально для зоны пробора и краевой линии роста",
+        "Безопасно для поврежденных и ослабленных волос",
+        "100% славянские донорские волосы категории Люкс"
       ],
-      img: 'https://static.tildacdn.com/tild6434-6330-4265-b838-396634313135/photo.png',
-      badge: 'Экспресс преображение за 40 мин'
+      photo: "https://static.tildacdn.com/tild3833-3164-4261-b664-373539343361/nanocapsule.jpg"
     },
     {
-      id: 'hollywood-method',
-      btnLabel: 'Голливудское (трессовое)',
-      tag: 'ЭКО-МЕТОДИКА БЕЗ КЛЕЯ И КАПСУЛ',
-      title: 'Голливудское трессовое наращивание',
-      desc: 'Самый экологичный и безвредный способ добавления длины и колоссального объема. Мастер заплетает микроскопическую прикорневую косичку, к которой специальной нитью пришивается тресс из натуральных волос. Никакой химии, клея, кератина или щипцов!',
-      specs: [
-        { label: 'Срок носки', val: '1.5 — 2 месяца' },
-        { label: 'Клей и химия', val: '0% (только нить и тресс)' },
-        { label: 'Эффект', val: 'Густота и роскошная волна' },
-        { label: 'Уход', val: 'Мытье и сушка без ограничений' }
+      id: "tape",
+      title: "Ленточное наращивание",
+      text: "Быстрая холодная технология без термического воздействия. Волосы распределяются широкими мягкими лентами, создавая мгновенный плотный объем и длину за 40-50 минут.",
+      features: [
+        "Быстрая процедура наращивания",
+        "Полное отсутствие термощипцов и нагрева",
+        "Ровный густой срез по всей длине",
+        "Легкое снятие специальным безопасным спреем"
       ],
-      img: 'https://static.tildacdn.com/tild3332-3066-4637-b063-313337666137/Grey-Wolf_Hair_Exten.png',
-      badge: '100% Экологично и безвредно'
+      photo: "https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png"
     },
     {
-      id: 'bioprotein-method',
-      btnLabel: 'Биопротеиновые волосы',
-      tag: 'ЯПОНСКАЯ ИННОВАЦИЯ',
-      title: 'Наращивание биопротеиновых волос',
-      desc: 'Новейшая японская разработка из биопротеинового волокна, визуально и тактильно неотличимая от натуральных волос. Не секутся, не пушатся во влажную погоду, сохраняют шелковистость и блеск, а стоят в 3–4 раза доступнее славянских прядей.',
-      specs: [
-        { label: 'Срок носки', val: 'До 2.5 месяцев' },
-        { label: 'Структура', val: 'Японский биопротеин' },
-        { label: 'Выгода', val: 'В 3 раза доступнее славянки' },
-        { label: 'Укладка', val: 'Выпрямление до 160°C' }
+      id: "hollywood",
+      title: "Голливудское (Пришивание трессов)",
+      text: "Экологичный и безопасный метод, используемый звездами мирового кино. На голове плетется тончайшая микрокосичка (брейд), к которой вручную пришивается мягкий тресс из натуральных волос.",
+      features: [
+        "Ноль клея, кератина и химических составов",
+        "Мгновенный королевский объем от корней",
+        "Возможность многократного использования тресса",
+        "Комфортное расчесывание без зацепок"
       ],
-      img: 'https://static.tildacdn.com/tild3035-6535-4466-b132-623636393732/kling_20260322_IMAGE.png',
-      badge: 'Хит сезона по доступной цене'
+      photo: "https://static.tildacdn.com/tild3235-6631-4566-a361-626237366630/Screenshot_19.jpg"
+    },
+    {
+      id: "bioprotein",
+      title: "Биопротеиновое наращивание",
+      text: "Инновационная доступная альтернатива натуральным волосам. Японское биопротеиновое волокно визуально и тактильно неотличимо от шелковистых славянских волос, не сечется и сохраняет гладкость.",
+      features: [
+        "В 3 раза выгоднее натуральных волос",
+        "Идеальный блеск и послушность при укладке",
+        "Легко выпрямляется утюжком до 160 градусов",
+        "Богатая палитра трендовых оттенков и омбре"
+      ],
+      photo: "https://static.tildacdn.com/tild3164-3232-4735-b935-643564343162/microcapsule.jpg"
+    },
+    {
+      id: "ultrasonic",
+      title: "Ультразвуковое наращивание",
+      text: "Аппаратная холодная технология, при которой кератин размягчается ультразвуковыми волнами без нагрева. Подходит для клиентов с чувствительной кожей головы.",
+      features: [
+        "Бережное воздействие ультразвуком",
+        "Высокая прочность сцепки прядей",
+        "Отсутствие риска перегрева волоса",
+        "Длительный период носки"
+      ],
+      photo: "https://static.tildacdn.com/tild3833-3164-4261-b664-373539343361/nanocapsule.jpg"
+    },
+    {
+      id: "cold_spanish",
+      title: "Холодное испанское (Rueber)",
+      text: "Фиксация прядей специальным хирургическим клеем Rueber, образующим микроскопические плоские капсулы. Устойчиво к воздействию масел, масок и саун.",
+      features: [
+        "Устойчивость к уходовым косметическим маслам",
+        "Абсолютно холодный метод крепления",
+        "Подходит для блондинок и светлых оттенков",
+        "Маленькие плоские незаметные соединения"
+      ],
+      photo: "https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png"
+    },
+    {
+      id: "japanese",
+      title: "Японское (Ring Star / Кольца)",
+      text: "Метод фиксации прядей на миниатюрных металлокерамических клипсах-бусинах с силиконовой прослойкой внутри. Полностью исключает контакт с клеем и температурой.",
+      features: [
+        "Механическая фиксация без термического нагрева",
+        "Внутренний силиконовый слой защищает волос от залома",
+        "Быстрое снятие и моментальная коррекция",
+        "Безопасно для густых и плотных волос"
+      ],
+      photo: "https://static.tildacdn.com/tild3235-6631-4566-a361-626237366630/Screenshot_19.jpg"
+    },
+    {
+      id: "brazilian",
+      title: "Бразильское наращивание",
+      text: "Холодное наращивание путем вплетения донорской пряди в собственную тонкую косичку с закреплением эластичной шелковой нитью. Проверенная временем бережная классика.",
+      features: [
+        "Натуральные материалы фиксации",
+        "Надежное удержание прядей при активном спорте",
+        "Без использования аппаратов и химических клеев",
+        "Подходит для кудрявых и пористых текстур"
+      ],
+      photo: "https://static.tildacdn.com/tild3164-3232-4735-b935-643564343162/microcapsule.jpg"
     }
   ];
 
-  // 6. RENDER APPLICATION STRUCTURE
-  root.innerHTML = `
-    <!-- SCROLL TO TOP -->
-    <div id="afro-scroll-top" title="Наверх">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 15l-6-6-6 6"/></svg>
-    </div>
-
-    <!-- 1. HERO SLIDER -->
-    <section class="afro-hero-section">
-      <div class="afro-hero-track" id="afro-hero-track">
-        <!-- SLIDE 1 -->
-        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3235-6631-4566-a361-626237366630/Screenshot_19.jpg');">
-          <div class="afro-hero-content">
-            <span class="afro-hero-pill">Премиум салон в центре Москвы</span>
-            <h1 class="afro-hero-h1">Afrostudio — студия <span>наращивания волос</span> и афроплетения</h1>
-            <p class="afro-hero-desc">Безупречная техника, натуральные материалы высшего качества и индивидуальный подбор длины и оттенка от топ-мастеров Москвы.</p>
-            <div class="afro-hero-actions">
-              <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('form_lead')">Оставить заявку в салон</a>
-              <a href="#afro-tech-section" class="afro-btn-trans">Все виды наращивания</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- SLIDE 2 -->
-        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3337-3833-4835-b261-643866373439/afro34f1a9f.png');">
-          <div class="afro-hero-content">
-            <span class="afro-hero-pill">Тренды и авторский стиль</span>
-            <h2 class="afro-hero-h1">Афрокосички, брейды и <span>дредокудри</span></h2>
-            <p class="afro-hero-desc">Зизи, сенегальские косы, брейды в хвост, дредокудри и яркие плетения любой сложности. До 1.5–2 месяцев безупречной носки.</p>
-            <div class="afro-hero-actions">
-              <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('form_lead')">Записаться на плетение</a>
-              <a href="https://t.me/Salon_afrostudio" target="_blank" class="afro-btn-trans" onclick="afroTrack('telegram')">Канал студии</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- SLIDE 3 -->
-        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png');">
-          <div class="afro-hero-content">
-            <span class="afro-hero-pill">Итальянская горячая методика</span>
-            <h2 class="afro-hero-h1">Наращивание волос <span>высшей категории</span></h2>
-            <p class="afro-hero-desc">Микро и нано-капсулы, биопротеиновые пряди, натуральные славянские волосы Lux. Невидимые крепления без вреда для своих волос.</p>
-            <div class="afro-hero-actions">
-              <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('form_lead')">Записаться на примерку</a>
-              <a href="tel:+74959113911" class="afro-btn-trans" onclick="afroTrack('phone')">+7 (495) 911-39-11</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDER CONTROLS -->
-      <button class="afro-hero-arrow afro-arrow-prev" id="afro-prev-btn" aria-label="Предыдущий слайд">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-      <button class="afro-hero-arrow afro-arrow-next" id="afro-next-btn" aria-label="Следующий слайд">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 18l6-6-6-6"/></svg>
-      </button>
-      <div class="afro-hero-dots" id="afro-hero-dots">
-        <div class="afro-dot active" data-index="0"></div>
-        <div class="afro-dot" data-index="1"></div>
-        <div class="afro-dot" data-index="2"></div>
-      </div>
-    </section>
-
-    <!-- 2. DIRECTIONS GRID (4 MAIN CARDS) -->
-    <section class="afro-directions-section" id="afro-directions">
-      <div class="afro-container">
-        <div class="afro-section-header">
-          <div class="afro-badge">Услуги салона</div>
-          <h2 class="afro-section-title">Направления студии <span>Afrostudio</span></h2>
-          <p class="afro-section-sub">Профессиональный уход, безупречная эстетика и бережное отношение к здоровью волос</p>
-        </div>
-
-        <div class="afro-dir-grid">
-          <!-- 01 -->
-          <a href="#afro-tech-section" class="afro-dir-card" style="background-image: url('https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png');" onclick="afroTrack('dir_hair')">
-            <div class="afro-dir-content">
-              <span class="afro-dir-num">01 / ВСЕ ВИДЫ НАРАЩИВАНИЯ</span>
-              <h3 class="afro-dir-title">Наращивание волос</h3>
-              <p class="afro-dir-text">Итальянское капсульное, микро/нано пряди, ленточное, голливудское и биопротеин. Полная палитра оттенков и длин.</p>
-              <span class="afro-dir-link">Смотреть все виды &rarr;</span>
-            </div>
-          </a>
-
-          <!-- 02 -->
-          <a href="https://afrostudio.ru/services/afro" class="afro-dir-card" style="background-image: url('https://static.tildacdn.com/tild3337-3833-4835-b261-643866373439/afro34f1a9f.png');" onclick="afroTrack('dir_afro')">
-            <div class="afro-dir-content">
-              <span class="afro-dir-num">02 / АВТОРСКИЕ ПЛЕТЕНИЯ</span>
-              <h3 class="afro-dir-title">Афрокосички и брейды</h3>
-              <p class="afro-dir-text">Классические зизи, сенегальские косы, брейды в хвост, дредокудри и афрокудри с безопасным вплетением.</p>
-              <span class="afro-dir-link">Перейти к услуге &rarr;</span>
-            </div>
-          </a>
-
-          <!-- 03 -->
-          <a href="#popup:contact" class="afro-dir-card" style="background-image: url('https://static.tildacdn.com/tild3063-6664-4637-b334-376564313961/paint-bg27e7061.png');" onclick="afroTrack('form_lead')">
-            <div class="afro-dir-content">
-              <span class="afro-dir-num">03 / СТИЛИСТЫ & КОЛОРИСТИКА</span>
-              <h3 class="afro-dir-title">Стилисты и окрашивание</h3>
-              <p class="afro-dir-text">Сложное окрашивание, AirTouch, тонирование под цвет донорских прядей, восстанавливающие спа-уходы.</p>
-              <span class="afro-dir-link">Консультация колориста &rarr;</span>
-            </div>
-          </a>
-
-          <!-- 04 -->
-          <a href="https://afrostudio.ru/services/traininghairextensions" class="afro-dir-card" style="background-image: url('https://static.tildacdn.com/tild3762-3565-4130-b234-396335363263/main-s-355276df.png');" onclick="afroTrack('dir_training')">
-            <div class="afro-dir-content">
-              <span class="afro-dir-num">04 / АКАДЕМИЯ МАСТЕРОВ</span>
-              <h3 class="afro-dir-title">Обучение мастеров</h3>
-              <p class="afro-dir-text">Курсы по наращиванию волос и афроплетению с нуля и для действующих специалистов. Сертификат и диплом мастера.</p>
-              <span class="afro-dir-link">Программа курсов &rarr;</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. ALL KINDS OF HAIR EXTENSIONS - INTERACTIVE SWITCHER -->
-    <section class="afro-all-types-section" id="afro-tech-section">
-      <div class="afro-container">
-        <div class="afro-section-header">
-          <div class="afro-badge">Полный спектр методик</div>
-          <h2 class="afro-section-title">Мы занимаемся <span>всеми видами</span> наращивания</h2>
-          <p class="afro-section-sub">В салоне Afrostudio доступны все мировые техники наращивания. Выберите подходящую технологию для подробного ознакомления:</p>
-        </div>
-
-        <!-- TABS NAV -->
-        <div class="afro-tabs-nav" id="afro-tabs-nav"></div>
-
-        <!-- ACTIVE TAB SHOWCASE -->
-        <div class="afro-tab-showcase" id="afro-tab-showcase"></div>
-      </div>
-    </section>
-
-    <!-- 4. ART BANNER & STUDIO PHILOSOPHY -->
-    <section class="afro-art-section">
-      <div class="afro-container">
-        <div class="afro-art-banner" style="background-image: url('https://static.tildacdn.com/tild3035-6535-4466-b132-623636393732/kling_20260322_IMAGE.png');">
-          <div class="afro-art-content">
-            <h3 class="afro-art-title">Искусство преображения в <span>Afrostudio</span></h3>
-            <p class="afro-art-desc">Более 12 лет создаем роскошные прически и безупречные образы для сотен клиентов в Москве. Уютная студия рядом с метро Полянка и Третьяковская.</p>
-            <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('form_lead')">Оставить заявку мастеру</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. TELEGRAM LIVE FEED (CONNECTED TO CHANNEL @Salon_afrostudio) -->
-    <section class="afro-container">
-      <div id="afro-telegram-feed" class="afro-tg-section">
-        <div class="afro-tg-header">
-          <div>
-            <div class="afro-tg-badge"><span></span> LIVE ЭФИР ИЗ TELEGRAM</div>
-            <h2 class="afro-tg-title">Акции и публикации в <span>@Salon_afrostudio</span></h2>
-            <p class="afro-tg-sub">Прямая трансляция свежих работ, видеообзоров и спецпредложений из Telegram-канала студии</p>
-          </div>
-          <a href="https://t.me/Salon_afrostudio" target="_blank" class="afro-tg-channel-btn" onclick="afroTrack('telegram')">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#24A1DE"/><path d="M5.4 12.03L17.15 7.5c.54-.2.85.12.7.75l-2 9.43c-.15.67-.55.83-1.11.52l-3.05-2.25-1.47 1.42c-.16.16-.3.3-.61.3l.22-3.11 5.66-5.11c.25-.22-.05-.34-.39-.12L8.1 14.8 5.08 13.86c-.66-.21-.67-.66.14-.97z" fill="white"/></svg>
-            Перейти в @Salon_afrostudio
-          </a>
-        </div>
-
-        <div id="afro-tg-grid" class="afro-tg-grid">
-          <div class="afro-tg-loader">Загрузка публикаций студии...</div>
-        </div>
-
-        <div class="afro-tg-footer-actions">
-          <button id="afro-tg-more-btn" class="afro-tg-more-btn" onclick="window.afroLoadMoreTg()">Показать ещё посты</button>
-        </div>
-      </div>
-    </section>
-
-    
-    <!-- 6. LEGAL & FOOTER SECTION (SCREENSHOT 2) -->
-    <div class="afro-custom-footer" id="afro-custom-footer">
-      <div class="afro-footer-line1">&copy; 2012&ndash;2026 AFROSTUDIO &middot; Студия наращивания волос и афроплетения &middot; afrostudio.ru &middot; г. Москва, ул. Большая Полянка, 26 к. 1</div>
-      <div class="afro-footer-line2">*Meta признана экстремистской организацией и запрещена на территории РФ</div>
-      <div class="afro-footer-links">
-        <button type="button" class="afro-footer-link" onclick="openPolicyModal()">Политика конфиденциальности</button>
-        <button type="button" class="afro-footer-link" onclick="openCookieSettings()">Настройки Cookie</button>
-      </div>
-    </div>
-
-    <!-- 7. COOKIE BANNER & MODAL (SCREENSHOTS 1 & 3) -->
-    <div id="afro-cookie-banner" class="afro-cookie-banner">
-      <button type="button" class="afro-cookie-close-corner" onclick="closeCookieBanner()" title="Закрыть" aria-label="Закрыть">&times;</button>
-      
-      <!-- ШАГ 1: ГЛАВНЫЙ БАННЕР СОГЛАСИЯ (SCREENSHOT 1) -->
-      <div id="afro-cookie-view-main" class="afro-cookie-view">
-        <div class="afro-cookie-title">AFROSTUDIO использует файлы COOKIE</div>
-        <div class="afro-cookie-text">
-          Они необходимы для правильной и надежной работы сайта и сервисов. Подробнее прочитайте в <a onclick="openPolicyModal()">Политике использования файлов cookie</a>
-        </div>
-        <div class="afro-cookie-btn-col">
-          <button type="button" class="afro-cookie-btn-primary" onclick="acceptAllCookies()">Разрешить все</button>
-          <button type="button" class="afro-cookie-btn-secondary" onclick="acceptEssentialCookies()">Разрешить обязательные</button>
-          <button type="button" class="afro-cookie-btn-dark" onclick="showCookieSettings()">Настроить</button>
-        </div>
-      </div>
-
-      <!-- ШАГ 2: ДЕТАЛЬНЫЕ НАСТРОЙКИ COOKIE (SCREENSHOT 3) -->
-      <div id="afro-cookie-view-settings" class="afro-cookie-view hidden">
-        <div class="afro-cookie-top-nav">
-          <button type="button" class="afro-cookie-back-btn" onclick="hideCookieSettings()" title="Назад" aria-label="Назад">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="afro-cookie-title">Настройки файлов COOKIE</div>
-        </div>
-        
-        <div class="afro-cookie-text">
-          Сервис использует технические файлы cookie для функционирования сайта. Также используются маркетинговые и аналитические файлы cookie для улучшения взаимодействия и показа релевантных материалов. Подробнее читайте в <a onclick="openPolicyModal()">Политике использования файлов cookie</a>
-        </div>
-
-        <div class="afro-cookie-toggles-list">
-          <div class="afro-cookie-item">
-            <div class="afro-cookie-item-label">
-              <span>+</span> Технические, всегда активны
-            </div>
-            <label class="afro-switch">
-              <input type="checkbox" checked disabled>
-              <span class="afro-slider"></span>
-            </label>
-          </div>
-
-          <div class="afro-cookie-item">
-            <div class="afro-cookie-item-label">
-              <span>+</span> Аналитические / маркетинговые
-            </div>
-            <label class="afro-switch">
-              <input type="checkbox" id="afro-cookie-toggle-analytics" checked>
-              <span class="afro-slider"></span>
-            </label>
-          </div>
-
-          <div class="afro-cookie-item">
-            <div class="afro-cookie-item-label">
-              <span>+</span> Другие файлы cookie
-            </div>
-            <label class="afro-switch">
-              <input type="checkbox" id="afro-cookie-toggle-other" checked>
-              <span class="afro-slider"></span>
-            </label>
-          </div>
-        </div>
-
-        <div class="afro-cookie-btn-col">
-          <button type="button" class="afro-cookie-btn-primary" onclick="acceptSelectedCookies()">Разрешить выбранные</button>
-          <button type="button" class="afro-cookie-btn-secondary" onclick="acceptEssentialCookies()">Разрешить обязательные</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 8. POLICY MODAL (152-FZ) -->
-    <div id="afro-policy-modal" class="afro-policy-backdrop" onclick="closePolicyModal()">
-      <div class="afro-policy-box" onclick="event.stopPropagation()">
-        <div class="afro-policy-top">
-          <div class="afro-policy-title">Политика конфиденциальности</div>
-          <button type="button" class="afro-policy-close" onclick="closePolicyModal()">&times;</button>
-        </div>
-        <div class="afro-policy-body">
-          <h4>1. Общие положения</h4>
-          <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ &laquo;О персональных данных&raquo; и определяет порядок обработки персональных данных и меры по обеспечению безопасности данных студией Afrostudio (г. Москва, ул. Большая Полянка, д. 26, корп. 1).</p>
-          
-          <h4>2. Цели сбора и обработки данных</h4>
-          <p>Сбор данных (имя, номер телефона, аккаунт Telegram, выбранные услуги) осуществляется исключительно в целях консультации, записи на процедуры наращивания волос и афроплетения, а также информирования о подтверждении визита.</p>
-          
-          <h4>3. Обработка файлов cookie</h4>
-          <p>Сайт использует файлы cookie для корректной работы сервисов, авторизации сессий и сбора статистики посещаемости через систему Яндекс Метрика. Пользователь вправе в любой момент изменить настройки файлов cookie в соответствующем меню сайта.</p>
-          
-          <h4>4. Безопасность и защита данных</h4>
-          <p>Студия принимает необходимые организационные и технические меры для защиты персональной информации от неправомерного или случайного доступа, уничтожения, изменения или распространения третьими лицами.</p>
-
-          <h4>5. Контакты студии</h4>
-          <p>Студия Afrostudio: г. Москва, ул. Большая Полянка, 26 к. 1.<br>Телефон: +7 (495) 911-39-11.<br>Официальный сайт: afrostudio.ru</p>
-        </div>
-      </div>
-    </div>
-
-  `;
-
-  // 7. RENDER TABS FOR HAIR EXTENSION TECHNOLOGIES
-  const tabsNav = document.getElementById('afro-tabs-nav');
-  const tabShowcase = document.getElementById('afro-tab-showcase');
-  let activeTechIndex = 0;
-
-  function renderTechTab(idx) {
-    activeTechIndex = idx;
-    const item = HAIR_TECH_DATA[idx];
-    if (!item || !tabShowcase) return;
-
-    // Update buttons
-    const btns = tabsNav.querySelectorAll('.afro-tab-btn');
-    btns.forEach(function(btn, i) {
-      btn.classList.toggle('active', i === idx);
-    });
-
-    let specsHtml = '';
-    item.specs.forEach(function(sp) {
-      specsHtml += '<div class="afro-spec-box"><div class="afro-spec-label">' + sp.label + '</div><div class="afro-spec-val">' + sp.val + '</div></div>';
-    });
-
-    tabShowcase.innerHTML = `
-      <div class="afro-tab-info">
-        <span class="afro-tab-tag">${item.tag}</span>
-        <h3 class="afro-tab-name">${item.title}</h3>
-        <p class="afro-tab-desc">${item.desc}</p>
-        <div class="afro-tab-specs">${specsHtml}</div>
-        <div class="afro-tab-actions">
-          <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('form_lead')">Записаться на процедуру</a>
-          <a href="https://afrostudio.ru/services/hair-extension" class="afro-btn-trans" onclick="afroTrack('services_hair')">Подробнее о методике &rarr;</a>
-        </div>
-      </div>
-      <div class="afro-tab-visual">
-        <img src="${item.img}" class="afro-tab-img" alt="${item.title}" loading="lazy" />
-        <div class="afro-tab-visual-overlay">
-          <span class="afro-tab-visual-badge">${item.badge}</span>
-        </div>
-      </div>
-    `;
-  }
-
-  if (tabsNav) {
-    HAIR_TECH_DATA.forEach(function(item, idx) {
-      const btn = document.createElement('button');
-      btn.className = 'afro-tab-btn' + (idx === 0 ? ' active' : '');
-      btn.innerHTML = item.btnLabel;
-      btn.onclick = function() { renderTechTab(idx); };
-      tabsNav.appendChild(btn);
-    });
-    renderTechTab(0);
-  }
-
-  // 8. HERO SLIDER INTERACTION
-  let currentSlide = 0;
-  const track = document.getElementById('afro-hero-track');
-  const dots = document.querySelectorAll('.afro-dot');
-  const totalSlides = 3;
-
-  function updateHeroSlide(idx) {
-    currentSlide = (idx + totalSlides) % totalSlides;
-    if (track) {
-      track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-    }
-    dots.forEach(function(dot, i) {
-      dot.classList.toggle('active', i === currentSlide);
-    });
-  }
-
-  const prevBtn = document.getElementById('afro-prev-btn');
-  const nextBtn = document.getElementById('afro-next-btn');
-  if (prevBtn) prevBtn.addEventListener('click', function() { updateHeroSlide(currentSlide - 1); });
-  if (nextBtn) nextBtn.addEventListener('click', function() { updateHeroSlide(currentSlide + 1); });
-  dots.forEach(function(dot) {
-    dot.addEventListener('click', function() {
-      const idx = parseInt(this.getAttribute('data-index'), 10);
-      updateHeroSlide(idx);
-    });
-  });
-
-  // Auto slide change
-  setInterval(function() {
-    updateHeroSlide(currentSlide + 1);
-  }, 6500);
-
-  // 9. TELEGRAM FEED LIVE LOADER
-  const TG_FEED_KEY = 'telegrambot-1192705437-e35adf4947a214c26';
-  const TG_CHANNEL_URL = 'https://t.me/Salon_afrostudio';
-  let tgPostsBatch = 9;
-  let tgPostsFrom = 0;
-  let tgTotalPosts = 0;
-
-  // Curated studio photos for fallback screenshots
-  const STUDIO_FALLBACK_IMAGES = [
-    'https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png',
-    'https://static.tildacdn.com/tild3337-3833-4835-b261-643866373439/afro34f1a9f.png',
-    'https://static.tildacdn.com/tild3063-6664-4637-b334-376564313961/paint-bg27e7061.png',
-    'https://static.tildacdn.com/tild6337-3433-4361-a563-636431313934/photo.png',
-    'https://static.tildacdn.com/tild3035-6535-4466-b132-623636393732/kling_20260322_IMAGE.png',
-    'https://static.tildacdn.com/tild3332-3066-4637-b063-313337666137/Grey-Wolf_Hair_Exten.png'
-  ];
-
-  function formatTgDate(dateStr) {
-    if (!dateStr) return '';
-    try {
-      const parts = dateStr.split(' ');
-      const dateParts = parts[0].split('-');
-      const day = dateParts[2];
-      const month = dateParts[1];
-      const year = dateParts[0];
-      const time = parts[1] ? parts[1].substring(0, 5) : '';
-      return day + '.' + month + '.' + year + (time ? ' в ' + time : '');
-    } catch(e) {
-      return dateStr;
-    }
-  }
-
-      // CLEAN DEDUPLICATED TELEGRAM POSTS (NO BROKEN TEXTS OR REPEATS)
+  // 6. CLEAN TELEGRAM POSTS DATABASE
   const AFRO_CLEAN_POSTS = {
     "393": {
       thumb: "https://cdn4.telesco.pe/file/fz_I_LF75CzaDsblUk8jYftxQYQTlGHb81a826abb671e63a59d5e3a559a8e7ee.jpg",
@@ -1918,268 +1410,446 @@
       is_video: true
     }
   };
-  const renderedPostKeys = new Set();
 
-  function formatTgDate(dateStr) {
-    if (!dateStr) return '';
-    try {
-      const parts = dateStr.split(' ');
-      const dateParts = parts[0].split('-');
-      const day = dateParts[2];
-      const month = dateParts[1];
-      const year = dateParts[0];
-      const time = parts[1] ? parts[1].substring(0, 5) : '';
-      return day + '.' + month + '.' + year + (time ? ' в ' + time : '');
-    } catch(e) {
-      return dateStr;
-    }
+  // 7. BUILD APP HTML STRUCTURE
+  let appContainer = document.getElementById('afrostudio-app');
+  if (!appContainer) {
+    appContainer = document.createElement('div');
+    appContainer.id = 'afrostudio-app';
+    const firstRec = document.querySelector('.r') || document.body.firstChild;
+    document.body.insertBefore(appContainer, firstRec);
   }
 
-  function renderTgCard(post) {
-    const postText = post.text || '';
+  appContainer.innerHTML = `
+    <!-- 1. HERO SLIDER -->
+    <section class="afro-hero-section">
+      <div class="afro-hero-track" id="afro-hero-track">
+        <!-- SLIDE 1 -->
+        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3235-6631-4566-a361-626237366630/Screenshot_19.jpg');">
+          <div class="afro-hero-content">
+            <span class="afro-hero-pill">ПРЕМИУМ САЛОН В МОСКВЕ &middot; 14 ЛЕТ МАСТЕРСТВА</span>
+            <h1 class="afro-hero-h1">Afrostudio &mdash; Студия <span>Наращивания Волос</span> и Афроплетения</h1>
+            <p class="afro-hero-desc">Безупречный результат, 100% натуральные донорские волосы славянского типа, микрокапсулы и авторские схемы плетения в центре Москвы (м. Полянка).</p>
+            <div class="afro-hero-actions">
+              <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('cta_hero_book')">Записаться онлайн</a>
+              <a href="#afro-tech-section" class="afro-btn-trans">Все технологии</a>
+            </div>
+          </div>
+        </div>
+        <!-- SLIDE 2 -->
+        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png');">
+          <div class="afro-hero-content">
+            <span class="afro-hero-pill">ТОП МАСТЕРА &middot; ГАРАНТИЯ КАЧЕСТВА</span>
+            <h1 class="afro-hero-h1">Капсульное, Ленточное и <span>Биопротеиновое</span> Наращивание</h1>
+            <p class="afro-hero-desc">Скрытые невидимые капсулы, легкая носка без утяжеления, подбор идеального оттенка и структуры волос под ваш образ.</p>
+            <div class="afro-hero-actions">
+              <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('cta_hero_fitting')">Записаться на примерку</a>
+              <a href="#afro-telegram-feed" class="afro-btn-trans">Смотреть работы</a>
+            </div>
+          </div>
+        </div>
+        <!-- SLIDE 3 -->
+        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3164-3232-4735-b935-643564343162/microcapsule.jpg');">
+          <div class="afro-hero-content">
+            <span class="afro-hero-pill">ТРЕНД СЕЗОНА &middot; АВТОРСКИЙ СТИЛЬ</span>
+            <h1 class="afro-hero-h1">Афрокосички, Зизи, Брейды и <span>Дредокудри</span></h1>
+            <p class="afro-hero-desc">Яркие и естественные комплекты, безопасность для собственных волос, комфортная носка до 2-3 месяцев.</p>
+            <div class="afro-hero-actions">
+              <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('cta_hero_style')">Выбрать стиль</a>
+              <a href="#afro-tech-section" class="afro-btn-trans">Каталог техник</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="afro-hero-arrow afro-arrow-prev" id="afro-slider-prev" aria-label="Назад">&#10094;</button>
+      <button class="afro-hero-arrow afro-arrow-next" id="afro-slider-next" aria-label="Вперед">&#10095;</button>
+      <div class="afro-hero-dots" id="afro-slider-dots">
+        <span class="afro-hero-dot active" data-index="0"></span>
+        <span class="afro-hero-dot" data-index="1"></span>
+        <span class="afro-hero-dot" data-index="2"></span>
+      </div>
+    </section>
+
+    <!-- 2. DIRECTIONS GRID -->
+    <section class="afro-directions-section" id="afro-directions">
+      <div class="afro-container">
+        <div class="afro-section-header">
+          <span class="afro-section-pill">НАПРАВЛЕНИЯ РАБОТЫ</span>
+          <h2 class="afro-section-title">Услуги студии <span>Afrostudio</span></h2>
+          <p class="afro-section-sub">Премиальный уровень сервиса, сертифицированные мастера и материалы высшей пробы</p>
+        </div>
+        <div class="afro-dir-grid">
+          <a href="#afro-tech-section" class="afro-dir-card" style="background-image: url('https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png');" onclick="afroTrack('dir_hair')">
+            <div class="afro-dir-content">
+              <span class="afro-dir-tag">ТОП УСЛУГА</span>
+              <h3 class="afro-dir-name">Наращивание волос</h3>
+              <p class="afro-dir-desc">Капсульное, ленточное, голливудское, биопротеин</p>
+            </div>
+          </a>
+          <a href="#afro-telegram-feed" class="afro-dir-card" style="background-image: url('https://static.tildacdn.com/tild3235-6631-4566-a361-626237366630/Screenshot_19.jpg');" onclick="afroTrack('dir_afro')">
+            <div class="afro-dir-content">
+              <span class="afro-dir-tag">АВТОРСКИЙ СТИЛЬ</span>
+              <h3 class="afro-dir-name">Афроплетение и дреды</h3>
+              <p class="afro-dir-desc">Зизи, брейды, сенегальские косы, дредокудри</p>
+            </div>
+          </a>
+          <a href="#popup:contact" class="afro-dir-card" style="background-image: url('https://static.tildacdn.com/tild3164-3232-4735-b935-643564343162/microcapsule.jpg');" onclick="afroTrack('dir_color')">
+            <div class="afro-dir-content">
+              <span class="afro-dir-tag">КОЛОРИСТИКА</span>
+              <h3 class="afro-dir-name">Окрашивание и уход</h3>
+              <p class="afro-dir-desc">Сложные техники, тонирование, спа-восстановление</p>
+            </div>
+          </a>
+          <a href="#popup:contact" class="afro-dir-card" style="background-image: url('https://static.tildacdn.com/tild3833-3164-4261-b664-373539343361/nanocapsule.jpg');" onclick="afroTrack('dir_edu')">
+            <div class="afro-dir-content">
+              <span class="afro-dir-tag">АКАДЕМИЯ</span>
+              <h3 class="afro-dir-name">Обучение мастеров</h3>
+              <p class="afro-dir-desc">Курсы с нуля, постановка руки, выдача сертификата</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ALL KINDS OF HAIR EXTENSIONS -->
+    <section class="afro-all-types-section" id="afro-tech-section">
+      <div class="afro-container">
+        <div class="afro-section-header">
+          <span class="afro-section-pill">ВСЕ ВИДЫ НАРАЩИВАНИЯ</span>
+          <h2 class="afro-section-title">10 современных <span>технологий</span> наращивания</h2>
+          <p class="afro-section-sub">В студии Afrostudio представлены все признанные мировые техники. Выберите подходящий метод под структуру ваших волос:</p>
+        </div>
+        <div class="afro-types-layout">
+          <div class="afro-types-menu" id="afro-types-menu"></div>
+          <div class="afro-type-display" id="afro-type-display"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. KLING AI ART BANNER -->
+    <section class="afro-art-section">
+      <div class="afro-container">
+        <div class="afro-art-banner">
+          <div class="afro-art-text">
+            <span class="afro-section-pill">ИНТЕЛЛЕКТУАЛЬНЫЙ ПОДБОР</span>
+            <h2 class="afro-art-title">Искусство преображения <span>в деталях</span></h2>
+            <p class="afro-art-desc">Каждый образ создается индивидуально с учетом пропорций лица, густоты и здоровья ваших волос. Приходите на бесплатную очную консультацию и примерку прядей в наш салон на Полянке.</p>
+            <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('cta_art_consult')">Записаться на примерку</a>
+          </div>
+          <div class="afro-art-badge">
+            <div style="font-family: 'Cinzel', serif; font-size: 54px; font-weight: 800; color: #fbbf24; line-height: 1; text-align: center;">14</div>
+            <div style="font-size: 13px; font-weight: 700; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; margin-top: 6px;">Лет мастерства</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TELEGRAM LIVE FEED -->
+    <section class="afro-tg-section" id="afro-telegram-feed">
+      <div class="afro-container">
+        <div class="afro-section-header">
+          <span class="afro-section-pill">ЖИВАЯ ЛЕНТА TELEGRAM</span>
+          <h2 class="afro-section-title">Свежие работы <span>@Salon_afrostudio</span></h2>
+          <p class="afro-section-sub">Реальные видео и фото из нашей студии в Москве. Обновляется в прямом эфире!</p>
+        </div>
+        <div class="afro-tg-grid" id="afro-tg-posts-grid"></div>
+        <div class="afro-tg-actions">
+          <button type="button" class="afro-btn-gold" id="afro-tg-load-more" onclick="afroLoadMoreTg()">Показать еще работы</button>
+          <a href="https://t.me/Salon_afrostudio" target="_blank" rel="noopener noreferrer" class="afro-btn-trans" onclick="afroTrack('tg_channel_click')">Перейти в канал Telegram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ALWAYS VISIBLE CUSTOM FOOTER -->
+    <div class="afro-custom-footer" id="afro-custom-footer">
+      <div class="afro-footer-line1">&copy; 2012&ndash;2026 AFROSTUDIO &middot; Студия наращивания волос и афроплетения &middot; afrostudio.ru &middot; г. Москва, ул. Большая Полянка, 26 к. 1 (м. Полянка / Третьяковская)</div>
+      <div class="afro-footer-line2">*Meta признана экстремистской организацией и запрещена на территории РФ</div>
+      <div class="afro-footer-links">
+        <button type="button" class="afro-footer-link" onclick="openPolicyModal()">Политика конфиденциальности</button>
+        <button type="button" class="afro-footer-link" onclick="openCookieSettings()">Настройки Cookie</button>
+      </div>
+    </div>
+
+    <!-- 7. COOKIE CONSENT & SETTINGS HUD -->
+    <div id="afro-cookie-banner" class="afro-cookie-banner">
+      <button type="button" class="afro-cookie-close-corner" onclick="closeCookieBanner()" title="Закрыть" aria-label="Закрыть">&times;</button>
+      
+      <!-- ШАГ 1: БАННЕР СОГЛАСИЯ -->
+      <div id="afro-cookie-view-main" class="afro-cookie-view">
+        <div class="afro-cookie-title">AFROSTUDIO использует файлы COOKIE</div>
+        <div class="afro-cookie-text">
+          Они необходимы для правильной и надежной работы сайта и сервисов. Подробнее прочитайте в <a onclick="openPolicyModal()">Политике использования файлов cookie</a>
+        </div>
+        <div class="afro-cookie-btn-col">
+          <button type="button" class="afro-cookie-btn-primary" onclick="acceptAllCookies()">Разрешить все</button>
+          <button type="button" class="afro-cookie-btn-secondary" onclick="acceptEssentialCookies()">Разрешить обязательные</button>
+          <button type="button" class="afro-cookie-btn-dark" onclick="showCookieSettings()">Настроить</button>
+        </div>
+      </div>
+
+      <!-- ШАГ 2: НАСТРОЙКИ С ТУМБЛЕРАМИ -->
+      <div id="afro-cookie-view-settings" class="afro-cookie-view" style="display: none;">
+        <div class="afro-cookie-title">Настройки файлов COOKIE</div>
+        <div class="afro-cookie-text">
+          Сервис использует файлы cookie для корректной работы и аналитики посещаемости. Подробнее в <a onclick="openPolicyModal()">Политике использования файлов cookie</a>
+        </div>
+        <div class="afro-cookie-toggles-list">
+          <div class="afro-cookie-item">
+            <div class="afro-cookie-item-label"><span>+</span> Технические, всегда активны</div>
+            <label class="afro-switch">
+              <input type="checkbox" checked disabled>
+              <span class="afro-slider"></span>
+            </label>
+          </div>
+          <div class="afro-cookie-item">
+            <div class="afro-cookie-item-label"><span>+</span> Аналитические / рекламные</div>
+            <label class="afro-switch">
+              <input type="checkbox" id="afro-cookie-toggle-analytics" checked>
+              <span class="afro-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="afro-cookie-btn-col">
+          <button type="button" class="afro-cookie-btn-primary" onclick="acceptSelectedCookies()">Сохранить выбор</button>
+          <button type="button" class="afro-cookie-btn-secondary" onclick="hideCookieSettings()">Назад</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. POLICY MODAL 152-FZ -->
+    <div id="afro-policy-modal" class="afro-policy-backdrop" onclick="closePolicyModal()">
+      <div class="afro-policy-box" onclick="event.stopPropagation()">
+        <div class="afro-policy-top">
+          <div class="afro-policy-title">Политика конфиденциальности</div>
+          <button type="button" class="afro-policy-close" onclick="closePolicyModal()">&times;</button>
+        </div>
+        <div class="afro-policy-body">
+          <h4>1. Общие положения</h4>
+          <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ &laquo;О персональных данных&raquo; и определяет порядок обработки персональных данных и меры по обеспечению безопасности данных студией Afrostudio (г. Москва, ул. Большая Полянка, д. 26, корп. 1).</p>
+          
+          <h4>2. Цели сбора и обработки данных</h4>
+          <p>Сбор данных (имя, номер телефона, аккаунт Telegram, выбранные услуги) осуществляется исключительно в целях консультации, записи на процедуры наращивания волос и афроплетения, а также подтверждения визита.</p>
+          
+          <h4>3. Обработка файлов cookie</h4>
+          <p>Сайт использует файлы cookie для корректной работы сервисов, авторизации сессий и сбора статистики посещаемости через систему Яндекс Метрика. Пользователь вправе в любой момент изменить настройки файлов cookie в соответствующем меню сайта.</p>
+          
+          <h4>4. Безопасность и защита данных</h4>
+          <p>Студия принимает необходимые организационные и технические меры для защиты персональной информации от неправомерного или случайного доступа третьими лицами.</p>
+
+          <h4>5. Контакты студии</h4>
+          <p>Студия Afrostudio: г. Москва, ул. Большая Полянка, 26 к. 1.<br>Телефон: +7 (495) 911-39-11.<br>Официальный сайт: afrostudio.ru</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. ULTRA-BRIGHT 3D GOLD SCROLL TO TOP -->
+    <button type="button" id="afro-scroll-top" aria-label="Наверх" title="Наверх">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  `;
+
+  // 8. RENDER TABS FOR HAIR EXTENSION TECHNOLOGIES
+  const menuContainer = document.getElementById('afro-types-menu');
+  const displayContainer = document.getElementById('afro-type-display');
+
+  function renderTechTab(techId) {
+    const tech = HAIR_TYPES_DATA.find(t => t.id === techId) || HAIR_TYPES_DATA[0];
     
-    // Check if post links to another target video post ID (e.g. /393, /391, /388)
-    const targetMatch = postText.match(/t\.me\/Salon_afrostudio\/(\d+)/i);
-    const targetPid = targetMatch ? targetMatch[1] : (post.messageid ? String(post.messageid) : '');
-    const uniqueKey = targetPid || String(post.messageid);
+    // Update active button
+    document.querySelectorAll('.afro-type-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.techId === tech.id);
+    });
 
-    // DEDUPLICATION: If we already showed this work / video, skip duplicate stub
-    if (uniqueKey && renderedPostKeys.has(uniqueKey)) {
-      return null;
+    // Render Display Content
+    const featuresHtml = tech.features.map(f => `<li><span>&#10003;</span> ${f}</li>`).join('');
+    displayContainer.innerHTML = `
+      <div class="afro-type-photo" style="background-image: url('${tech.photo}');"></div>
+      <div class="afro-type-info">
+        <h3 class="afro-type-title">${tech.title}</h3>
+        <p class="afro-type-text">${tech.text}</p>
+        <ul class="afro-type-features">${featuresHtml}</ul>
+        <div>
+          <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('tech_consult_${tech.id}')">Записаться на консультацию</a>
+        </div>
+      </div>
+    `;
+  }
+
+  if (menuContainer && displayContainer) {
+    HAIR_TYPES_DATA.forEach((tech, idx) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'afro-type-btn' + (idx === 0 ? ' active' : '');
+      btn.dataset.techId = tech.id;
+      btn.innerHTML = `
+        <span>${tech.title}</span>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      `;
+      btn.addEventListener('click', () => renderTechTab(tech.id));
+      menuContainer.appendChild(btn);
+    });
+
+    renderTechTab(HAIR_TYPES_DATA[0].id);
+  }
+
+  // 9. HERO SLIDER ENGINE
+  let currentSlide = 0;
+  const totalSlides = 3;
+  const track = document.getElementById('afro-hero-track');
+  const dots = document.querySelectorAll('.afro-hero-dot');
+
+  function goToSlide(idx) {
+    currentSlide = (idx + totalSlides) % totalSlides;
+    if (track) {
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
-    if (uniqueKey) {
-      renderedPostKeys.add(uniqueKey);
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  const prevBtn = document.getElementById('afro-slider-prev');
+  const nextBtn = document.getElementById('afro-slider-next');
+  if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.index, 10)));
+  });
+
+  // Auto slide every 6 seconds
+  setInterval(() => {
+    goToSlide(currentSlide + 1);
+  }, 6000);
+
+  // 10. RENDER CLEAN TELEGRAM POSTS
+  const tgGrid = document.getElementById('afro-tg-posts-grid');
+  const renderedPostKeys = new Set();
+  let tgDisplayLimit = 6;
+
+  function renderTelegramPosts() {
+    if (!tgGrid) return;
+    tgGrid.innerHTML = '';
+    renderedPostKeys.clear();
+
+    const postKeys = Object.keys(AFRO_CLEAN_POSTS);
+    const visibleKeys = postKeys.slice(0, tgDisplayLimit);
+
+    visibleKeys.forEach(pid => {
+      const p = AFRO_CLEAN_POSTS[pid];
+      renderedPostKeys.add(pid);
+
+      const card = document.createElement('div');
+      card.className = 'afro-tg-card';
+      card.innerHTML = `
+        <div class="afro-tg-media" style="background-image: url('${p.thumb}');">
+          <div class="afro-tg-play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="afro-tg-body">
+          <h4 class="afro-tg-title">${p.title}</h4>
+          <p class="afro-tg-text">${p.desc}</p>
+          <div class="afro-tg-meta">
+            <span>Afrostudio Moscow</span>
+            <a href="https://t.me/Salon_afrostudio/${pid}" target="_blank" rel="noopener noreferrer" class="afro-tg-link">Смотреть в Telegram &rarr;</a>
+          </div>
+        </div>
+      `;
+      tgGrid.appendChild(card);
+    });
+
+    const moreBtn = document.getElementById('afro-tg-load-more');
+    if (moreBtn) {
+      moreBtn.style.display = tgDisplayLimit >= postKeys.length ? 'none' : 'inline-flex';
     }
-
-    const card = document.createElement('div');
-    card.className = 'afro-tg-card';
-
-    const top = document.createElement('div');
-    top.className = 'afro-tg-card-top';
-    top.innerHTML = '<span class="afro-tg-card-date">📅 ' + formatTgDate(post.date) + '</span><span class="afro-tg-card-channel">@Salon_afrostudio</span>';
-    card.appendChild(top);
-
-    let mediaUrl = '';
-    let isVideoPost = false;
-    let cardTitle = '';
-    let cardDescription = '';
-
-    // Match with verified clean posts
-    if (uniqueKey && AFRO_CLEAN_POSTS[uniqueKey]) {
-      const item = AFRO_CLEAN_POSTS[uniqueKey];
-      mediaUrl = item.thumb;
-      cardTitle = item.title;
-      cardDescription = item.desc;
-      isVideoPost = item.is_video;
-    } else if (post.files && post.files.length > 0 && post.files[0]) {
-      mediaUrl = 'https://news.tildacdn.com/' + post.files[0] + '/-/resize/x900/';
-      cardDescription = postText.replace(/https?:\/\/t\.me\/Salon_afrostudio\/\d+/g, '').replace(/Смотрите видео в нашем телеграмме/gi, '').trim();
-      isVideoPost = /видео|video|ролик|эфир/i.test(postText);
-    } else {
-      // Pick first verified video screenshot
-      mediaUrl = AFRO_CLEAN_POSTS["391"].thumb;
-      cardDescription = postText;
-      isVideoPost = true;
-    }
-
-    const postLink = uniqueKey ? (TG_CHANNEL_URL + '/' + uniqueKey) : (post.link || TG_CHANNEL_URL);
-
-    const mediaWrap = document.createElement('div');
-    mediaWrap.className = 'afro-tg-media-wrap';
-    mediaWrap.onclick = function() {
-      afroTrack('telegram');
-      window.open(postLink, '_blank');
-    };
-
-    let overlayHtml = '';
-    if (isVideoPost) {
-      overlayHtml = '<div class="afro-tg-play-overlay"><div class="afro-tg-play-btn">▶</div><span class="afro-tg-video-badge">ВИДЕО</span></div>';
-    }
-    mediaWrap.innerHTML = '<img src="' + mediaUrl + '" class="afro-tg-media-img" loading="lazy" alt="Медиа поста Afrostudio" onerror="this.src=\'' + AFRO_CLEAN_POSTS["391"].thumb + '\'" />' + overlayHtml;
-    card.appendChild(mediaWrap);
-
-    // Text box with clean typography & scrollbar
-    const textBox = document.createElement('div');
-    textBox.className = 'afro-tg-text-box';
-    
-    let htmlContent = '';
-    if (cardTitle) {
-      htmlContent += '<strong style="color:#ffffff; font-size:13.5px; display:block; margin-bottom:6px;">' + cardTitle + '</strong>';
-    }
-    htmlContent += (cardDescription || 'Публикация из официального Telegram-канала студии Afrostudio.');
-    htmlContent += '<div style="margin-top:10px;"><a href="' + postLink + '" target="_blank" onclick="event.stopPropagation();" style="color:#f59e0b; font-weight:600; text-decoration:none;">Смотреть в Telegram &rarr;</a></div>';
-    
-    textBox.innerHTML = htmlContent;
-    card.appendChild(textBox);
-
-    return card;
   }
 
   window.afroLoadMoreTg = function() {
-    const grid = document.getElementById('afro-tg-grid');
-    const moreBtn = document.getElementById('afro-tg-more-btn');
-    if (!grid) return;
-
-    const url = 'https://news.tildacdn.com/feed/' + TG_FEED_KEY + '/' + tgPostsBatch + '/' + tgPostsFrom + '/0';
-    fetch(url)
-      .then(function(res) { return res.json(); })
-      .then(function(data) {
-        const loader = grid.querySelector('.afro-tg-loader');
-        if (loader) loader.remove();
-
-        tgTotalPosts = data.total || 0;
-        const msgs = data.messages || [];
-        if (msgs.length === 0 && tgPostsFrom === 0) {
-          grid.innerHTML = '<div class="afro-tg-loader">Публикаций пока нет. Перейдите в канал @Salon_afrostudio!</div>';
-          if (moreBtn) moreBtn.style.display = 'none';
-          return;
-        }
-
-        msgs.forEach(function(post, i) {
-          const card = renderTgCard(post, tgPostsFrom + i);
-          if (card) grid.appendChild(card);
-        });
-
-        tgPostsFrom += msgs.length;
-        if (moreBtn) {
-          if (tgPostsFrom >= tgTotalPosts || msgs.length < tgPostsBatch) {
-            moreBtn.style.display = 'none';
-          } else {
-            moreBtn.style.display = 'inline-block';
-          }
-        }
-      })
-      .catch(function(err) {
-        console.warn('[Afrostudio] Telegram feed load error', err);
-        const loader = grid.querySelector('.afro-tg-loader');
-        if (loader) {
-          loader.innerHTML = 'Загляните прямо в канал: <a href="' + TG_CHANNEL_URL + '" target="_blank" style="color:#f59e0b">@Salon_afrostudio</a>';
-        }
-      });
+    tgDisplayLimit += 6;
+    renderTelegramPosts();
   };
 
-  // Launch feed
-  setTimeout(window.afroLoadMoreTg, 200);
+  renderTelegramPosts();
 
-  // 10. SCROLL TO TOP ARROW
+  // 11. SCROLL TO TOP LOGIC
   const scrollTopBtn = document.getElementById('afro-scroll-top');
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 400) {
-      scrollTopBtn.classList.add('afro-visible');
-    } else {
-      scrollTopBtn.classList.remove('afro-visible');
-    }
-  });
-  scrollTopBtn.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  
-  // ========================================================================
-  // COOKIE, LEGAL & POLICY MODAL LOGIC (152-FZ)
-  // ========================================================================
-  function saveCookieConsent(settings) {
-    try {
-      localStorage.setItem('afro_cookie_consent', JSON.stringify(settings));
-      localStorage.setItem('afro_cookie_accepted', '1');
-    } catch(e) {}
-    closeCookieBanner();
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('afro-visible');
+      } else {
+        scrollTopBtn.classList.remove('afro-visible');
+      }
+    });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
+  // 12. COOKIE BANNER & MODALS LOGIC
+  const cookieBanner = document.getElementById('afro-cookie-banner');
+  const policyModal = document.getElementById('afro-policy-modal');
+
   window.closeCookieBanner = function() {
-    const banner = document.getElementById('afro-cookie-banner');
-    if (banner) {
-      banner.classList.remove('visible');
-      setTimeout(function() { banner.style.display = 'none'; }, 300);
+    if (cookieBanner) cookieBanner.classList.remove('open');
+  };
+
+  window.openCookieSettings = function() {
+    if (cookieBanner) {
+      cookieBanner.classList.add('open');
+      const mainView = document.getElementById('afro-cookie-view-main');
+      const setView = document.getElementById('afro-cookie-view-settings');
+      if (mainView) mainView.style.display = 'none';
+      if (setView) setView.style.display = 'block';
     }
-  };
-
-  window.acceptAllCookies = function() {
-    saveCookieConsent({ technical: true, analytics: true, other: true });
-  };
-
-  window.acceptEssentialCookies = function() {
-    saveCookieConsent({ technical: true, analytics: false, other: false });
-  };
-
-  window.acceptSelectedCookies = function() {
-    const analytics = document.getElementById('afro-cookie-toggle-analytics');
-    const other = document.getElementById('afro-cookie-toggle-other');
-    saveCookieConsent({
-      technical: true,
-      analytics: analytics ? analytics.checked : true,
-      other: other ? other.checked : true
-    });
   };
 
   window.showCookieSettings = function() {
     const mainView = document.getElementById('afro-cookie-view-main');
-    const settingsView = document.getElementById('afro-cookie-view-settings');
-    if (mainView && settingsView) {
-      mainView.classList.add('hidden');
-      settingsView.classList.remove('hidden');
-    }
+    const setView = document.getElementById('afro-cookie-view-settings');
+    if (mainView) mainView.style.display = 'none';
+    if (setView) setView.style.display = 'block';
   };
 
   window.hideCookieSettings = function() {
     const mainView = document.getElementById('afro-cookie-view-main');
-    const settingsView = document.getElementById('afro-cookie-view-settings');
-    if (mainView && settingsView) {
-      settingsView.classList.add('hidden');
-      mainView.classList.remove('hidden');
-    }
+    const setView = document.getElementById('afro-cookie-view-settings');
+    if (mainView) mainView.style.display = 'block';
+    if (setView) setView.style.display = 'none';
   };
 
-  window.openCookieSettings = function() {
-    const banner = document.getElementById('afro-cookie-banner');
-    if (banner) {
-      banner.style.display = 'flex';
-      window.showCookieSettings();
-      setTimeout(function() { banner.classList.add('visible'); }, 20);
-    }
+  window.acceptAllCookies = function() {
+    try { localStorage.setItem('afro_cookie_accepted', 'all'); } catch (e) {}
+    closeCookieBanner();
+  };
+
+  window.acceptEssentialCookies = function() {
+    try { localStorage.setItem('afro_cookie_accepted', 'essential'); } catch (e) {}
+    closeCookieBanner();
+  };
+
+  window.acceptSelectedCookies = function() {
+    try { localStorage.setItem('afro_cookie_accepted', 'custom'); } catch (e) {}
+    closeCookieBanner();
   };
 
   window.openPolicyModal = function() {
-    const modal = document.getElementById('afro-policy-modal');
-    if (modal) modal.classList.add('open');
+    if (policyModal) policyModal.classList.add('open');
   };
 
   window.closePolicyModal = function() {
-    const modal = document.getElementById('afro-policy-modal');
-    if (modal) modal.classList.remove('open');
+    if (policyModal) policyModal.classList.remove('open');
   };
 
-  function checkCookieConsent() {
+  // Show cookie banner if not accepted yet
+  setTimeout(() => {
     try {
-      const saved = localStorage.getItem('afro_cookie_consent') || localStorage.getItem('afro_cookie_accepted');
-      if (!saved) {
-        setTimeout(function() {
-          const banner = document.getElementById('afro-cookie-banner');
-          if (banner) {
-            banner.style.display = 'flex';
-            window.hideCookieSettings();
-            setTimeout(function() { banner.classList.add('visible'); }, 30);
-          }
-        }, 1000);
+      if (!localStorage.getItem('afro_cookie_accepted')) {
+        if (cookieBanner) cookieBanner.classList.add('open');
       }
-    } catch(e) {}
-  }
-
-  // Trigger check on load
-  checkCookieConsent();
-
-  // 12. METRIKA GOALS
-  window.afroTrack = function(goal) {
-    if (typeof ym !== 'undefined') {
-      try {
-        const metrikaId = 88058414;
-        if (goal === 'form_lead') ym(metrikaId, 'reachGoal', '296485879');
-        else if (goal === 'whatsapp') ym(metrikaId, 'reachGoal', '233127645');
-        else if (goal === 'telegram') ym(metrikaId, 'reachGoal', '368208880');
-        else if (goal === 'phone') ym(metrikaId, 'reachGoal', '357211540');
-        else ym(metrikaId, 'reachGoal', '296485879');
-      } catch(e) {}
+    } catch (e) {
+      if (cookieBanner) cookieBanner.classList.add('open');
     }
-  };
+  }, 1200);
 
 })();
