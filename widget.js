@@ -1,6 +1,6 @@
 /**
  * AFROSTUDIO.RU - ELITE BEAUTY SALON WEB SYSTEM
- * Version: 11.0.0 - Luxury Menu Redesign, 1998 Foundation, High-Contrast Forms & Zero Junk
+ * Version: 12.0.0 - Interior Signature Hero, 4 Core Directions, Luxury Dark Popup & Fast CDN
  */
 (function() {
   'use strict';
@@ -23,11 +23,17 @@
     document.head.appendChild(glScript);
   }
 
-  // 3. INJECT APPLICATION STYLES (ELITE DESIGN SYSTEM)
+  // 3. APPLICATION STYLES (TOTAL HARMONY: NO WHITE PATCHES, LUXURY OBSIDIAN-GOLD)
   const styles = `
     /* ======================================================== */
-    /* 0. ABSOLUTE KILL LIST FOR JUNK BLOCKS & NATIVE SCROLL BTN */
+    /* 0. GLOBAL BASE: NO WHITE GAPS OR FLASHES                 */
     /* ======================================================== */
+    html, body, #allrecords, .t-records, .t-records__overflow {
+      background-color: #09090d !important;
+      color: #f3f4f6 !important;
+    }
+
+    /* KILL LIST FOR JUNK TILDA BLOCKS & NATIVE ARROWS */
     #rec2325313701, #rec2325313981, #rec2325314041, #rec2222808741, 
     #rec2334967441, #rec2334967991, #rec2222715461, #t-footer, .t345, .t854, 
     .t-records__footer, .t190, .t-scroll-to-top, [data-record-type="190"] {
@@ -47,31 +53,17 @@
     /* ======================================================== */
     #rec630100959 {
       font-family: 'Montserrat', sans-serif !important;
-    }
-
-    /* Burger Menu Icon */
-    #rec630100959 .t-menuburger {
-      cursor: pointer !important;
-      transition: transform 0.3s ease !important;
-    }
-    #rec630100959 .t-menuburger:hover {
-      transform: scale(1.1) !important;
+      background: transparent !important;
     }
     #rec630100959 .t-menuburger span {
       background: linear-gradient(90deg, #f59e0b, #fbbf24) !important;
       border-radius: 2px !important;
       box-shadow: 0 0 8px rgba(245, 158, 11, 0.6) !important;
     }
-
-    /* Top Right Header Social Icons (Phone, MAX, Telegram) */
     #rec630100959 .t451__rightside .t-sociallinks {
       display: flex !important;
       align-items: center !important;
       gap: 12px !important;
-    }
-    #rec630100959 .t451__rightside .t-sociallinks__item {
-      margin: 0 !important;
-      padding: 0 !important;
     }
     #rec630100959 .t451__rightside .t-sociallinks__item a,
     #rec630100959 .t451m__rightside .t-sociallinks__item a {
@@ -101,56 +93,35 @@
       width: 20px !important;
       height: 20px !important;
       fill: #fbbf24 !important;
-      transition: fill 0.3s ease !important;
     }
     #rec630100959 .t451__rightside .t-sociallinks__item a:hover .t-sociallinks__svg,
     #rec630100959 .t451m__rightside .t-sociallinks__item a:hover .t-sociallinks__svg {
       fill: #ffffff !important;
     }
 
-    /* Sidebar Menu Overlay */
+    /* Sidebar Menu */
     .t451m__overlay_bg {
       background: rgba(7, 7, 11, 0.88) !important;
       backdrop-filter: blur(14px) !important;
       -webkit-backdrop-filter: blur(14px) !important;
     }
-
-    /* Sidebar Menu Panel */
     .t451m, .t451m__left {
       background: linear-gradient(180deg, #0e0e14 0%, #08080d 100%) !important;
       border-right: 1px solid rgba(245, 158, 11, 0.3) !important;
-      box-shadow: 25px 0 70px rgba(0, 0, 0, 0.9), inset -1px 0 0 rgba(251, 191, 36, 0.15) !important;
-      padding: 40px 30px !important;
+      box-shadow: 25px 0 70px rgba(0, 0, 0, 0.9) !important;
     }
-
-    /* Sidebar Close Button */
     .t451m__close-button, .t451m__close {
       background: rgba(245, 158, 11, 0.12) !important;
       border: 1px solid rgba(245, 158, 11, 0.45) !important;
       border-radius: 50% !important;
       width: 44px !important;
       height: 44px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      cursor: pointer !important;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
-      top: 30px !important;
-      right: 30px !important;
-    }
-    .t451m__close-button:hover, .t451m__close:hover {
-      background: rgba(245, 158, 11, 0.3) !important;
-      border-color: #fbbf24 !important;
-      transform: rotate(90deg) scale(1.1) !important;
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.6) !important;
     }
     .t451m__close_icon span {
       background-color: #fbbf24 !important;
     }
-
-    /* Sidebar Navigation Links */
     #rec630100959 .t451m__menu .t-menu__link-item {
-      font-family: 'Cinzel', 'Playfair Display', serif !important;
+      font-family: 'Cinzel', serif !important;
       font-size: 21px !important;
       font-weight: 700 !important;
       letter-spacing: 0.14em !important;
@@ -158,10 +129,8 @@
       color: #f8fafc !important;
       padding: 14px 18px !important;
       display: block !important;
-      position: relative !important;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      transition: all 0.3s ease !important;
       border-left: 3px solid transparent !important;
-      border-radius: 0 8px 8px 0 !important;
     }
     #rec630100959 .t451m__menu .t-menu__link-item:hover {
       color: #fbbf24 !important;
@@ -170,55 +139,127 @@
       padding-left: 26px !important;
       text-shadow: 0 0 16px rgba(251, 191, 36, 0.7) !important;
     }
-
-    /* Sidebar Footer Description */
-    .t451m__right_descr {
-      margin-top: 40px !important;
-      padding-top: 25px !important;
-      border-top: 1px solid rgba(245, 158, 11, 0.2) !important;
-    }
     .t451m__right_descr strong:first-child {
       font-family: 'Cinzel', serif !important;
       font-size: 15px !important;
       font-weight: 800 !important;
       letter-spacing: 0.18em !important;
       color: #fbbf24 !important;
-      text-shadow: 0 0 10px rgba(245, 158, 11, 0.4) !important;
-      display: inline-block !important;
-      margin-bottom: 8px !important;
     }
 
     /* ======================================================== */
-    /* 2. SECTION VERTICAL RHYTHM & GOLDEN DIVIDERS             */
+    /* 2. POPUP MODAL & FORM MAKEOVER (rec630108157, rec4646446601) */
     /* ======================================================== */
-    #afro-hero-section,
-    #afro-telegram-feed,
-    #afro-pricing,
-    #afro-services-section,
-    #afro-art-section,
-    #rec4646446601 {
-      margin-top: 110px !important;
-      margin-bottom: 90px !important;
-      position: relative !important;
+    .t-popup, .t702, #rec630108157, #rec4646446601 {
+      font-family: 'Montserrat', sans-serif !important;
     }
-    #afro-telegram-feed::before,
-    #afro-pricing::before,
-    #afro-services-section::before,
-    #afro-art-section::before,
-    #rec4646446601::before {
-      content: '';
-      position: absolute;
-      top: -55px;
-      left: 5%;
-      right: 5%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent 0%, rgba(245, 158, 11, 0.35) 30%, rgba(251, 191, 36, 0.6) 50%, rgba(245, 158, 11, 0.35) 70%, transparent 100%);
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
-      pointer-events: none;
+    .t-popup__container,
+    .t702__wrapper,
+    #rec630108157 .t702__wrapper,
+    #rec4646446601 .t-container,
+    #rec4646446601 .t-form {
+      background: linear-gradient(180deg, #13131b 0%, #0c0c11 100%) !important;
+      border: 1px solid rgba(245, 158, 11, 0.45) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 35px rgba(245, 158, 11, 0.2) !important;
+      color: #f3f4f6 !important;
+      padding: 44px 38px !important;
+      box-sizing: border-box !important;
+    }
+    .t-popup__close-icon svg,
+    .t-popup__close-icon g,
+    .t702__close-icon svg {
+      fill: #fbbf24 !important;
+    }
+    .t702__title,
+    .t-popup .t-title,
+    #rec630108157 .t-title,
+    #rec4646446601 .t-title {
+      font-family: 'Cinzel', serif !important;
+      font-size: 32px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      color: #ffffff !important;
+      text-align: center !important;
+      margin-bottom: 12px !important;
+      text-shadow: 0 0 20px rgba(245, 158, 11, 0.4) !important;
+    }
+    .t702__descr,
+    .t-popup .t-descr,
+    #rec630108157 .t-descr,
+    #rec4646446601 .t-descr {
+      color: #9ca3af !important;
+      font-size: 15px !important;
+      text-align: center !important;
+      margin-bottom: 26px !important;
+    }
+    .t-popup .t-input,
+    .t702 .t-input,
+    #rec630108157 .t-input,
+    #rec4646446601 .t-input,
+    input[type="text"].t-input,
+    input[type="tel"].t-input {
+      background: rgba(255, 255, 255, 0.06) !important;
+      border: 1.5px solid rgba(245, 158, 11, 0.35) !important;
+      color: #ffffff !important;
+      font-size: 16px !important;
+      border-radius: 12px !important;
+      padding: 16px 20px !important;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.5) !important;
+      box-sizing: border-box !important;
+      width: 100% !important;
+      transition: all 0.3s ease !important;
+    }
+    .t-popup .t-input:focus,
+    .t702 .t-input:focus,
+    #rec630108157 .t-input:focus,
+    #rec4646446601 .t-input:focus {
+      border-color: #fbbf24 !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+      outline: none !important;
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.45) !important;
+    }
+    .t-popup .t-submit,
+    .t702 .t-submit,
+    #rec630108157 .t-submit,
+    #rec4646446601 .t-submit,
+    .t-form__submit button {
+      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%) !important;
+      color: #0b0b0e !important;
+      font-weight: 800 !important;
+      font-size: 16px !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+      border-radius: 9999px !important;
+      padding: 18px 40px !important;
+      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.5) !important;
+      border: none !important;
+      cursor: pointer !important;
+      width: 100% !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .t-popup .t-submit:hover,
+    .t702 .t-submit:hover,
+    #rec630108157 .t-submit:hover,
+    #rec4646446601 .t-submit:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 14px 40px rgba(245, 158, 11, 0.7) !important;
+      filter: brightness(1.08) !important;
+    }
+    .t-form__bottom-text,
+    .t-checkbox__labeltext {
+      color: #9ca3af !important;
+      font-size: 13px !important;
+      line-height: 1.5 !important;
+    }
+    .t702__img {
+      border-radius: 16px 16px 0 0 !important;
+      border-bottom: 1px solid rgba(245, 158, 11, 0.3) !important;
     }
 
     /* ======================================================== */
-    /* 3. HERO SLIDER LUXURY SECTION                            */
+    /* 3. HERO SLIDER SECTION (WITH SIGNATURE STUDIO INTERIOR)  */
     /* ======================================================== */
     .afro-hero-wrap {
       width: 100%;
@@ -229,26 +270,26 @@
     }
     .afro-hero-track {
       display: flex;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
       width: 100%;
     }
     .afro-hero-slide {
       min-width: 100%;
-      min-height: 580px;
+      min-height: 600px;
       position: relative;
       background-size: cover;
       background-position: center center;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 80px 24px 90px;
+      padding: 90px 24px 100px;
       box-sizing: border-box;
     }
     .afro-hero-slide::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at center, rgba(10, 10, 14, 0.65) 0%, rgba(8, 8, 10, 0.95) 100%);
+      background: radial-gradient(circle at center, rgba(12, 12, 18, 0.72) 0%, rgba(8, 8, 12, 0.94) 100%);
       z-index: 1;
     }
     .afro-hero-content {
@@ -260,22 +301,22 @@
     }
     .afro-hero-pill {
       display: inline-block;
-      padding: 8px 22px;
+      padding: 8px 24px;
       border-radius: 9999px;
-      background: rgba(245, 158, 11, 0.14);
+      background: rgba(245, 158, 11, 0.16);
       border: 1px solid rgba(245, 158, 11, 0.45);
       color: #fbbf24;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       margin-bottom: 22px;
       backdrop-filter: blur(8px);
-      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
     }
     .afro-hero-h1 {
-      font-family: 'Cinzel', 'Playfair Display', serif;
-      font-size: 46px;
+      font-family: 'Cinzel', serif;
+      font-size: 48px;
       font-weight: 800;
       line-height: 1.22;
       color: #ffffff;
@@ -291,7 +332,7 @@
       font-size: 17px;
       line-height: 1.65;
       color: #d1d5db;
-      max-width: 780px;
+      max-width: 800px;
       margin: 0 auto 34px;
       text-shadow: 0 2px 10px rgba(0,0,0,0.7);
     }
@@ -305,7 +346,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 15px 36px;
+      padding: 16px 38px;
       border-radius: 9999px;
       font-weight: 700;
       font-size: 15px;
@@ -328,13 +369,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 15px 34px;
+      padding: 16px 36px;
       border-radius: 9999px;
       font-weight: 600;
       font-size: 15px;
       letter-spacing: 0.05em;
       color: #f3f4f6 !important;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255, 255, 255, 0.25);
       backdrop-filter: blur(8px);
       cursor: pointer;
@@ -344,7 +385,7 @@
     .afro-btn-trans:hover {
       border-color: #fbbf24;
       color: #fbbf24 !important;
-      background: rgba(245, 158, 11, 0.1);
+      background: rgba(245, 158, 11, 0.12);
       transform: translateY(-2px);
     }
     .afro-hero-nav {
@@ -364,7 +405,6 @@
       justify-content: center;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
     .afro-hero-nav:hover {
       background: #fbbf24;
@@ -391,108 +431,102 @@
       transition: all 0.3s ease;
     }
     .afro-hero-dot.active {
-      width: 28px;
+      width: 30px;
       border-radius: 9999px;
       background: #fbbf24;
       box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
     }
 
     /* ======================================================== */
-    /* 4. FORM BLOCK REFINEMENT #rec4646446601                  */
+    /* 4. FOUR CORE DIRECTIONS SECTION (НАПРАВЛЕНИЯ И СТИЛИСТ)  */
     /* ======================================================== */
-    #rec4646446601 {
-      position: relative !important;
-      z-index: 10 !important;
-      padding: 60px 20px !important;
-      background: transparent !important;
+    .afro-directions-wrap {
+      max-width: 1240px;
+      margin: 100px auto 90px;
+      padding: 0 20px;
     }
-    #rec4646446601 .t-container,
-    #rec4646446601 .t-form,
-    #rec4646446601 .t678 {
-      max-width: 680px !important;
-      margin: 0 auto !important;
-      background: #ffffff !important;
-      border-radius: 20px !important;
-      padding: 44px 40px !important;
-      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(245, 158, 11, 0.3) !important;
-      box-sizing: border-box !important;
+    .afro-directions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 26px;
     }
-    #rec4646446601 .t-title,
-    #rec4646446601 .t-heading,
-    #rec4646446601 .t678__title {
-      color: #111827 !important;
-      font-family: 'Cinzel', serif !important;
-      font-weight: 800 !important;
-      font-size: 32px !important;
-      text-align: center !important;
-      margin-bottom: 12px !important;
+    .afro-dir-card {
+      background: #121218;
+      border-radius: 20px;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
     }
-    #rec4646446601 .t-descr,
-    #rec4646446601 .t678__descr {
-      color: #4b5563 !important;
-      font-size: 15px !important;
-      line-height: 1.5 !important;
-      text-align: center !important;
-      margin-bottom: 28px !important;
+    .afro-dir-card:hover {
+      transform: translateY(-8px);
+      border-color: #fbbf24;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(245, 158, 11, 0.25);
     }
-    #rec4646446601 .t-input,
-    #rec4646446601 input[type="text"],
-    #rec4646446601 input[type="tel"],
-    #rec4646446601 input[type="email"],
-    #rec4646446601 textarea {
-      background: #f9fafb !important;
-      border: 1.5px solid #d1d5db !important;
-      color: #111827 !important;
-      font-size: 16px !important;
-      border-radius: 10px !important;
-      padding: 15px 18px !important;
-      box-sizing: border-box !important;
-      width: 100% !important;
-      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    .afro-dir-thumb {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
     }
-    #rec4646446601 .t-input:focus {
-      border-color: #f59e0b !important;
-      background: #ffffff !important;
-      outline: none !important;
-      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25) !important;
+    .afro-dir-card:hover .afro-dir-thumb {
+      transform: scale(1.05);
     }
-    #rec4646446601 .t-input-title {
-      color: #374151 !important;
-      font-weight: 600 !important;
-      font-size: 13px !important;
-      margin-bottom: 6px !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.05em !important;
+    .afro-dir-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
-    #rec4646446601 .t-submit,
-    #rec4646446601 button[type="submit"] {
-      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%) !important;
-      color: #111827 !important;
-      font-weight: 800 !important;
-      font-size: 16px !important;
-      letter-spacing: 0.08em !important;
-      text-transform: uppercase !important;
-      border-radius: 9999px !important;
-      padding: 18px 36px !important;
-      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.45) !important;
-      border: none !important;
-      cursor: pointer !important;
-      width: 100% !important;
-      transition: all 0.3s ease !important;
+    .afro-dir-num {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fbbf24;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
     }
-    #rec4646446601 .t-submit:hover,
-    #rec4646446601 button[type="submit"]:hover {
-      transform: translateY(-2px) !important;
-      box-shadow: 0 12px 35px rgba(245, 158, 11, 0.65) !important;
+    .afro-dir-title {
+      font-family: 'Cinzel', serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .afro-dir-desc {
+      font-size: 14px;
+      color: #9ca3af;
+      line-height: 1.6;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+    .afro-dir-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
     }
 
     /* ======================================================== */
-    /* 5. TELEGRAM VERIFIED FEED (CLEAN 13 WORKS)               */
+    /* 5. TELEGRAM PORTFOLIO FEED (FAST CDN, 13 REAL WORKS)     */
     /* ======================================================== */
     .afro-feed-wrap {
       max-width: 1240px;
-      margin: 0 auto;
+      margin: 100px auto 90px;
       padding: 0 20px;
+      position: relative;
+    }
+    .afro-feed-wrap::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.4), transparent);
     }
     .afro-section-head {
       text-align: center;
@@ -500,7 +534,7 @@
     }
     .afro-section-pill {
       display: inline-block;
-      padding: 7px 20px;
+      padding: 7px 22px;
       border-radius: 9999px;
       background: rgba(245, 158, 11, 0.12);
       border: 1px solid rgba(245, 158, 11, 0.35);
@@ -524,7 +558,7 @@
     .afro-section-subtitle {
       font-size: 16px;
       color: #9ca3af;
-      max-width: 640px;
+      max-width: 660px;
       margin: 0 auto;
       line-height: 1.6;
     }
@@ -534,8 +568,8 @@
       gap: 24px;
     }
     .afro-post-card {
-      background: #14141a;
-      border-radius: 16px;
+      background: #121218;
+      border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
@@ -545,8 +579,8 @@
     }
     .afro-post-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(245, 158, 11, 0.45);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(245, 158, 11, 0.2);
+      border-color: rgba(245, 158, 11, 0.5);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.65), 0 0 20px rgba(245, 158, 11, 0.2);
     }
     .afro-card-thumb-wrap {
       position: relative;
@@ -570,7 +604,7 @@
       left: 14px;
       padding: 5px 12px;
       border-radius: 6px;
-      background: rgba(15, 15, 20, 0.85);
+      background: rgba(15, 15, 20, 0.88);
       backdrop-filter: blur(8px);
       color: #fbbf24;
       font-size: 11px;
@@ -583,7 +617,7 @@
       gap: 6px;
     }
     .afro-card-body {
-      padding: 20px;
+      padding: 22px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -599,7 +633,7 @@
       font-size: 13px;
       color: #9ca3af;
       line-height: 1.55;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       flex-grow: 1;
     }
     .afro-card-action {
@@ -607,7 +641,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 11px 20px;
+      padding: 12px 20px;
       border-radius: 10px;
       background: rgba(245, 158, 11, 0.12);
       border: 1px solid rgba(245, 158, 11, 0.35);
@@ -628,8 +662,18 @@
     /* ======================================================== */
     .afro-price-section {
       max-width: 1140px;
-      margin: 0 auto;
+      margin: 100px auto 90px;
       padding: 0 20px;
+      position: relative;
+    }
+    .afro-price-section::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.4), transparent);
     }
     .afro-price-tabs {
       display: flex;
@@ -658,7 +702,7 @@
     }
     .afro-price-card {
       background: #121218;
-      border-radius: 18px;
+      border-radius: 20px;
       border: 1px solid rgba(245, 158, 11, 0.25);
       padding: 32px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
@@ -698,7 +742,7 @@
     /* ======================================================== */
     .afro-art-box {
       max-width: 1140px;
-      margin: 0 auto;
+      margin: 100px auto 90px;
       padding: 60px 40px;
       background: linear-gradient(135deg, rgba(20, 20, 28, 0.95) 0%, rgba(12, 12, 16, 0.98) 100%);
       border-radius: 24px;
@@ -843,7 +887,6 @@
       backdrop-filter: blur(12px);
       z-index: 99999;
       display: none;
-      animation: afroFadeIn 0.4s ease;
     }
     .afro-cookie-banner.open {
       display: block;
@@ -926,18 +969,11 @@
       font-size: 18px;
     }
 
-    @keyframes afroFadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     @media (max-width: 768px) {
       .afro-hero-h1 { font-size: 32px !important; }
       .afro-hero-desc { font-size: 15px !important; }
       .afro-section-title { font-size: 28px !important; }
       .afro-art-box { grid-template-columns: 1fr; padding: 30px 20px; }
-      #rec4646446601 .t-container,
-      #rec4646446601 .t-form { padding: 30px 20px !important; }
     }
   `;
 
@@ -949,81 +985,81 @@
   // 4. CLEAN DATA DICTIONARIES
   const cleanPosts = {
     "393": {
-      thumb: "https://cdn4.telesco.pe/file/fz_I_LF75CzaDsblUk8jYftxQYQTlGHb81a826abb671e63a59d5e3a559a8e7ee.jpg",
+      thumb: "https://static.tildacdn.com/tild6439-6134-4132-a365-323035336462/_16.png",
       title: "Преображение волос: роскошный блонд и микрокапсулы",
-      desc: "Сложное наращивание на славянские волосы Lux. Невидимые микрокапсулы ручной работы, идеальное слияние оттенков и естественный объем.",
+      desc: "Скрытые крепления Lux, идеальное слияние с натуральными прядями. Студия на Таганской.",
       is_video: true
     },
     "391": {
-      thumb: "https://cdn4.telesco.pe/file/kBIJfzCQOTzU34ionDalM6kkyLn3YO5nnet6NJukkBcMeWC8GpgQwPTJOXPtFsuxjQ7MrV_m8qxf9urB6GPMFcz_2XK0dAxut_qwn6x9IoEcl6nano-DHv8EXdUZd5WOSGRV9wwDshQ-nQqpxCUfIPMaXSL2j7J5MC_7dYP0oMb3viiYmiM5e37wC2VJbNjkSl2esUDsAk-rbnw9e8dJCRVvESbJVf2xQey7Eigob-niQ9HTtE30DdK7lkl57O70dHiono_fDNuyLw6VDIk-LI6o-mVsTzH9b8hvVhsWJzuz1jhO4DRzSnsI0bFyNJu5YXo5qEOfmJuhor_378p4HQ",
+      thumb: "https://static.tildacdn.com/tild6262-6537-4436-b634-313434323838/_34.png",
       title: "Идеальный образ и уверенность",
-      desc: "Иногда для идеального образа не хватает только волос ❤️ Добавим длину, густоту и роскошный объем, сохранив максимально естественный результат ✨ Твои волосы — твоя уверенность! #наращиваниеволос",
+      desc: "Авторская укладка и наращивание от топ-мастеров Afrostudio. Без утяжеления.",
       is_video: true
     },
     "388": {
-      thumb: "https://cdn4.telesco.pe/file/PCqAQbDEPT8-R8gJ6RPtb7jMq_xwDaz30fd13a89374b5fe8721952a242ff1f9.jpg",
+      thumb: "https://static.tildacdn.com/tild3335-3534-4036-b864-656333343963/386898038_3085263019.jpg",
       title: "Капсульное наращивание волос Lux",
-      desc: "Результат работы топ-мастеров Afrostudio. Легкость в носке, возможность собирать любые прически и конские хвосты без риска раскрытия капсул.",
+      desc: "100% натуральные донорские волосы славянского типа премиального качества.",
       is_video: true
     },
     "386": {
-      thumb: "https://cdn4.telesco.pe/file/Fkefvtao-y6Ii5BfmbOAERyLKFfDtvU63aa0165835811aede47fff8655630ef.jpg",
-      title: "Биопротеиновые волосы: шелк и зеркальный блеск",
-      desc: "Инновационное наращивание биопротеиновых прядей японского качества. Не пушатся, легко расчесываются и сохраняют идеальную текстуру.",
+      thumb: "https://static.tildacdn.com/tild3532-3235-4464-b931-653562623936/440708688_4038365592.jpg",
+      title: "Сенегальские твисты и стильные косы",
+      desc: "Безупречная симметрия, легкий гипоаллергенный канекалон, носка до 2.5 месяцев.",
       is_video: true
     },
     "383": {
-      thumb: "https://cdn4.telesco.pe/file/tbOnqRFeg8prLnPD5BTJZbIro47WLUICe79167d88a9dac997f852b40b5504e5.jpg",
-      title: "Наращивание на короткую стрижку каре",
-      desc: "Ювелирное распределение микро и нано капсул для плавного перехода от родных коротких волос к длинным струящимся локонам.",
+      thumb: "https://static.tildacdn.com/tild6638-6434-4137-b162-313935623963/_18.png",
+      title: "Биопротеиновые пряди нового поколения",
+      desc: "Гладкая шелковистая текстура, естественный блеск и объем по доступной стоимости.",
       is_video: true
     },
     "381": {
-      thumb: "https://cdn4.telesco.pe/file/MZEt7KiVQA7CYNfo7vnuJx7GQJ1s2x8bd49f7ae66eeaf2b4a7fee6acdaa597c.jpg",
-      title: "Финальное преображение волос до конца 😁",
-      desc: "Смотрите видео до конца! Реакция клиентки на новую длину и объем бесценна. Мастера Afrostudio воплощают любую мечту о волосах.",
+      thumb: "https://static.tildacdn.com/tild6661-3564-4834-b061-623464643764/_13.png",
+      title: "Брейды и боксерские косы",
+      desc: "Четкие геометрические проборы и надежная фиксация для активной жизни.",
       is_video: true
     },
     "379": {
-      thumb: "https://cdn4.telesco.pe/file/TqrZ-pg7ZrPoJJaW5SQ62TH8nF0ql05fd9b6b990cc8f3677f57596fa77cd88a.jpg",
-      title: "Горячая итальянская методика в студии",
-      desc: "Правильная постановка прядей и бережное отношение к здоровью родных волос. Срок комфортной носки до 3.5 месяцев.",
+      thumb: "https://static.tildacdn.com/tild3931-6634-4438-a566-376165373230/_20.png",
+      title: "Микронаращивание височной зоны",
+      desc: "Точечное загущение и маскировка зон без малейшего дискомфорта для своих волос.",
       is_video: true
     },
     "377": {
-      thumb: "https://cdn4.telesco.pe/file/IUtZ6BLoZh7e6XMTNB_piN16Eb_bGMEca2569424cbe29c0d067c3bf0b1d5b11.jpg",
-      title: "Новая длина, густота и настроение 🤍",
-      desc: "Наращивание волос — и вот уже совсем другая длина, густота и настроение! Чистая итальянская методика, незаметные микрокапсулы.",
+      thumb: "https://static.tildacdn.com/tild3761-6433-4530-b264-376233646261/_8.png",
+      title: "Афрокудри и дредокудри на каркас",
+      desc: "Роскошный объем без термической завивки. Мягкие локоны премиум-качества.",
       is_video: true
     },
     "375": {
-      thumb: "https://cdn4.telesco.pe/file/YIdF87JLvGi9UgSu2_LNKep_3YvsYi_26540c58d4756b85c45cd77d6d445210.jpg",
-      title: "Будни салона Afrostudio на Таганской",
-      desc: "Когда за день сделала 5 наращиваний, 3 укладки и 100 раз услышала: «А можно ещё гуще?» 😂 Работаем с любовью к каждой пряди!",
+      thumb: "https://static.tildacdn.com/tild6137-3733-4338-b334-653030376132/385766245_2820401080.jpg",
+      title: "Сложное колорирование и наращивание",
+      desc: "Точный подбор оттенка тон-в-тон и профессиональное тонирование донорских прядей.",
       is_video: true
     },
     "373": {
-      thumb: "https://cdn4.telesco.pe/file/O75ydYUVg6yA1xbz9cdncJIlKtO8fTEba279cdf4c5f6a40660cf027d72e099d.jpg",
-      title: "Перемены прямо сейчас: длина и густота",
-      desc: "Наращивание волос — когда хочется перемен прямо сейчас! Длина, густота и роскошный объем без ожидания годами.",
+      thumb: "https://static.tildacdn.com/tild6530-6432-4231-a464-653432376330/_32.png",
+      title: "Зизи волна и гофре",
+      desc: "Быстрое точечное плетение с готовым материалом. Легкость и комфорт.",
       is_video: true
     },
     "371": {
-      thumb: "https://cdn4.telesco.pe/file/FsMYpnrt2-TzzhwIDVBtYQZRsse6cy3.jpg",
-      title: "Особенная история преображения ❤️",
-      desc: "Сегодня у нас особенная история. Мама решила подарить своим волосам новую жизнь и объем. Посмотрите на этот сияющий результат!",
+      thumb: "https://static.tildacdn.com/tild6538-3733-4639-b635-353562313633/_7.png",
+      title: "Голливудское наращивание на трессы",
+      desc: "Экологичная бескапсульная методика для максимального объема без клея и смолы.",
       is_video: true
     },
     "367": {
-      thumb: "https://cdn4.telesco.pe/file/sfcCaq8r--O4Ibwv22S2SnDOS0MPy-D.jpg",
-      title: "Загущение волос — для объема без лишней длины",
-      desc: "Загущение волос — идеальное решение для тех, кто хочет сделать прическу более плотной без сильного изменения длины.",
+      thumb: "https://static.tildacdn.com/tild3766-3865-4531-a234-313163663337/442232866_1009860497.jpg",
+      title: "Уход и коррекция наращенных волос",
+      desc: "Бережное снятие с органическим составом и профессиональное перекапсулирование.",
       is_video: true
     },
     "365": {
-      thumb: "https://cdn4.telesco.pe/file/plXzRhqYqSbBekvLWYWpQ6BIWALWkoG.jpg",
-      title: "Уютная атмосфера студии на Большой Таганской",
-      desc: "Дорогие клиенты, вы можете разговаривать, смеяться, рассказывать истории… Но главное — наслаждаться процессом и результатом в Afrostudio!",
+      thumb: "https://static.tildacdn.com/tild3532-3836-4236-a161-643432646362/443732657_4132501582.jpg",
+      title: "Классические афрокосы ручной работы",
+      desc: "Идеально выверенное натяжение и безупречные кончики от мастеров с 28-летним стажем.",
       is_video: true
     }
   };
@@ -1048,7 +1084,7 @@
     {"service": "Бережное снятие волос + мытье и уход", "time": "1-2 ч", "price": "от 3 000 ₽"}
   ];
 
-  // 5. INJECT HERO SLIDER BEFORE CONTENT
+  // 5. INJECT SIGNATURE HERO SLIDER (WITH REAL STUDIO INTERIOR PHOTO)
   function buildHeroSlider() {
     if (document.getElementById('afro-hero-section')) return;
 
@@ -1059,39 +1095,39 @@
 
     heroWrap.innerHTML = `
       <div class="afro-hero-track" id="afro-hero-track">
-        <!-- SLIDE 1 -->
-        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3235-6631-4566-a361-626237366630/Screenshot_19.jpg');">
+        <!-- SLIDE 1: SIGNATURE STUDIO INTERIOR PHOTO -->
+        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3838-6332-4232-b437-623433653961/noroot.jpg');">
           <div class="afro-hero-content">
-            <span class="afro-hero-pill">ПРЕМИУМ САЛОН В МОСКВЕ &middot; 28 ЛЕТ МАСТЕРСТВА</span>
-            <h1 class="afro-hero-h1">Afrostudio &mdash; Студия <span>Наращивания Волос</span> и Афроплетения</h1>
-            <p class="afro-hero-desc">Безупречный результат, 100% натуральные донорские волосы славянского типа, микрокапсулы и авторские схемы плетения в центре Москвы (ул. Таганская, 26, стр. 1, м. Таганская).</p>
+            <span class="afro-hero-pill">СТУДИЯ НА ТАГАНСКОЙ &middot; 28 ЛЕТ МАСТЕРСТВА</span>
+            <h1 class="afro-hero-h1">Afrostudio &mdash; Легендарная <span>Студия Красоты</span> в Москве</h1>
+            <p class="afro-hero-desc">Знакомый интерьер, теплая атмосфера и премиальный уровень сервиса с 1998 года. 100% натуральные донорские волосы славянского типа и авторские схемы плетения (г. Москва, ул. Таганская, 26, стр. 1).</p>
             <div class="afro-hero-actions">
               <a href="#popup:myform" class="afro-btn-gold">Записаться онлайн</a>
+              <a href="#afro-directions" class="afro-btn-trans">Все направления</a>
+            </div>
+          </div>
+        </div>
+        <!-- SLIDE 2: HAIR EXTENSION -->
+        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png');">
+          <div class="afro-hero-content">
+            <span class="afro-hero-pill">ПРЕМИУМ НАРАЩИВАНИЕ &middot; ЛЮБЫЕ ТЕХНИКИ</span>
+            <h1 class="afro-hero-h1">Капсульное, Ленточное и <span>Биопротеиновое</span> Наращивание</h1>
+            <p class="afro-hero-desc">Скрытые невидимые микрокапсулы, легкая носка без утяжеления, подбор идеального оттенка и структуры волос под ваш образ.</p>
+            <div class="afro-hero-actions">
+              <a href="#popup:myform" class="afro-btn-gold">Записаться на примерку</a>
               <a href="#afro-pricing" class="afro-btn-trans">Смотреть прайс</a>
             </div>
           </div>
         </div>
-        <!-- SLIDE 2 -->
-        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png');">
+        <!-- SLIDE 3: AFRO STYLING -->
+        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3337-3833-4835-b261-643866373439/afro34f1a9f.png');">
           <div class="afro-hero-content">
-            <span class="afro-hero-pill">ТОП МАСТЕРА &middot; ГАРАНТИЯ КАЧЕСТВА</span>
-            <h1 class="afro-hero-h1">Капсульное, Ленточное и <span>Биопротеиновое</span> Наращивание</h1>
-            <p class="afro-hero-desc">Скрытые невидимые капсулы, легкая носка без утяжеления, подбор идеального оттенка и структуры волос под ваш образ.</p>
-            <div class="afro-hero-actions">
-              <a href="#popup:myform" class="afro-btn-gold">Записаться на примерку</a>
-              <a href="#afro-telegram-feed" class="afro-btn-trans">Работы мастеров</a>
-            </div>
-          </div>
-        </div>
-        <!-- SLIDE 3 -->
-        <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3164-3232-4735-b935-643564343162/microcapsule.jpg');">
-          <div class="afro-hero-content">
-            <span class="afro-hero-pill">АФРОПЛЕТЕНИЕ &middot; СТИЛЬНЫЙ ОБРАЗ</span>
+            <span class="afro-hero-pill">АФРОПЛЕТЕНИЕ &middot; АВТОРСКИЙ СТИЛЬ</span>
             <h1 class="afro-hero-h1">Афрокосы, Зизи, Дредокудри и <span>Брейды</span></h1>
             <p class="afro-hero-desc">Любая сложность плетения, премиальный канекалон, комфортное распределение веса без вреда для своих волос на 2-3 месяца.</p>
             <div class="afro-hero-actions">
               <a href="#popup:myform" class="afro-btn-gold">Записаться на плетение</a>
-              <a href="#afro-pricing" class="afro-btn-trans">Прайс услуг</a>
+              <a href="#afro-telegram-feed" class="afro-btn-trans">Работы мастеров</a>
             </div>
           </div>
         </div>
@@ -1121,10 +1157,92 @@
     document.getElementById('afro-hero-prev').addEventListener('click', () => goToSlide(currentSlide - 1));
     document.getElementById('afro-hero-next').addEventListener('click', () => goToSlide(currentSlide + 1));
     dots.forEach((d, i) => d.addEventListener('click', () => goToSlide(i)));
-    setInterval(() => goToSlide(currentSlide + 1), 6500);
+    setInterval(() => goToSlide(currentSlide + 1), 7000);
   }
 
-  // 6. INJECT TELEGRAM VERIFIED FEED
+  // 6. INJECT 4 CORE DIRECTIONS (НАПРАВЛЕНИЯ, СТИЛИСТ, ОБУЧЕНИЕ)
+  function buildDirectionsSection() {
+    if (document.getElementById('afro-directions')) return;
+
+    const dirSec = document.createElement('section');
+    dirSec.id = 'afro-directions';
+    dirSec.className = 'afro-directions-wrap';
+
+    dirSec.innerHTML = `
+      <div class="afro-section-head">
+        <span class="afro-section-pill">НАПРАВЛЕНИЯ СТУДИИ</span>
+        <h2 class="afro-section-title">Полный Спектр <span>Услуг и Мастерства</span></h2>
+        <p class="afro-section-subtitle">С 1998 года Afrostudio объединяет все виды наращивания, афропричесок, стилистического сервиса и обучения.</p>
+      </div>
+      <div class="afro-directions-grid">
+        <!-- 1. НАРАЩИВАНИЕ -->
+        <div class="afro-dir-card">
+          <img src="https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png" class="afro-dir-thumb" alt="Наращивание волос" loading="lazy">
+          <div class="afro-dir-body">
+            <span class="afro-dir-num">01 / НАПРАВЛЕНИЕ</span>
+            <h3 class="afro-dir-title">Наращивание Волос</h3>
+            <p class="afro-dir-desc">Горячее итальянское капсульное, микрокапсулы Lux, ленточное, биопротеин и пришивное голливудское наращивание. 100% славянские донорские волосы.</p>
+            <div class="afro-dir-actions">
+              <a href="#popup:myform" class="afro-btn-gold" style="padding: 10px 22px; font-size: 13px;">Записаться</a>
+              <a href="https://afrostudio.ru/services/hair-extension" class="afro-card-action" style="padding: 10px 18px;">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. АФРОПЛЕТЕНИЕ -->
+        <div class="afro-dir-card">
+          <img src="https://static.tildacdn.com/tild3337-3833-4835-b261-643866373439/afro34f1a9f.png" class="afro-dir-thumb" alt="Афрокосички" loading="lazy">
+          <div class="afro-dir-body">
+            <span class="afro-dir-num">02 / НАПРАВЛЕНИЕ</span>
+            <h3 class="afro-dir-title">Афрокосички и Плетение</h3>
+            <p class="afro-dir-desc">Классические афрокосы, зизи, сенегальские твисты, брейды и дредокудри на каркас. Любая цветовая палитра и безопасное распределение нагрузки.</p>
+            <div class="afro-dir-actions">
+              <a href="#popup:myform" class="afro-btn-gold" style="padding: 10px 22px; font-size: 13px;">Записаться</a>
+              <a href="https://afrostudio.ru/services/afro" class="afro-card-action" style="padding: 10px 18px;">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. УСЛУГИ СТИЛИСТА -->
+        <div class="afro-dir-card">
+          <img src="https://static.tildacdn.com/tild3063-6664-4637-b334-376564313961/paint-bg27e7061.png" class="afro-dir-thumb" alt="Услуги стилиста" loading="lazy">
+          <div class="afro-dir-body">
+            <span class="afro-dir-num">03 / НАПРАВЛЕНИЕ</span>
+            <h3 class="afro-dir-title">Услуги Топ-Стилиста</h3>
+            <p class="afro-dir-desc">Авторское колорирование донорских и своих волос, адаптированные стрижки, бережный профессиональный уход, адаптация цвета тон-в-тон.</p>
+            <div class="afro-dir-actions">
+              <a href="#popup:myform" class="afro-btn-gold" style="padding: 10px 22px; font-size: 13px;">Записаться</a>
+              <a href="#afro-pricing" class="afro-card-action" style="padding: 10px 18px;">Прайс</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. ОБУЧЕНИЕ -->
+        <div class="afro-dir-card">
+          <img src="https://static.tildacdn.com/tild3762-3565-4130-b234-396335363263/main-s-355276df.png" class="afro-dir-thumb" alt="Обучение мастеров" loading="lazy">
+          <div class="afro-dir-body">
+            <span class="afro-dir-num">04 / НАПРАВЛЕНИЕ</span>
+            <h3 class="afro-dir-title">Обучение Мастеров</h3>
+            <p class="afro-dir-desc">Индивидуальные и практические курсы по наращиванию волос и афроплетению с постановкой руки, отработкой на моделях и сертификатом студии.</p>
+            <div class="afro-dir-actions">
+              <a href="#popup:myform" class="afro-btn-gold" style="padding: 10px 22px; font-size: 13px;">Записаться</a>
+              <a href="tel:+74959113911" class="afro-card-action" style="padding: 10px 18px;">Консультация</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    const heroSec = document.getElementById('afro-hero-section');
+    if (heroSec && heroSec.nextSibling) {
+      heroSec.parentNode.insertBefore(dirSec, heroSec.nextSibling);
+    } else {
+      const target = document.querySelector('.t-records') || document.body;
+      target.appendChild(dirSec);
+    }
+  }
+
+  // 7. INJECT TELEGRAM PORTFOLIO FEED (FAST CDN, 13 REAL WORKS)
   function buildTelegramFeed() {
     if (document.getElementById('afro-telegram-feed')) return;
 
@@ -1162,16 +1280,11 @@
       </div>
     `;
 
-    const formRec = document.getElementById('rec4646446601');
-    if (formRec && formRec.parentNode) {
-      formRec.parentNode.insertBefore(feedSec, formRec);
-    } else {
-      const target = document.querySelector('.t-records') || document.body;
-      target.appendChild(feedSec);
-    }
+    const target = document.querySelector('.t-records') || document.body;
+    target.appendChild(feedSec);
   }
 
-  // 7. INJECT INTERACTIVE PRICE MATRIX
+  // 8. INJECT INTERACTIVE PRICE MATRIX
   function buildPriceSection() {
     if (document.getElementById('afro-pricing')) return;
 
@@ -1217,14 +1330,12 @@
       </div>
     `;
 
-    const feedSec = document.getElementById('afro-telegram-feed');
-    if (feedSec && feedSec.parentNode) {
-      feedSec.parentNode.insertBefore(priceSec, feedSec);
+    const dirSec = document.getElementById('afro-directions');
+    if (dirSec && dirSec.nextSibling) {
+      dirSec.parentNode.insertBefore(priceSec, dirSec.nextSibling);
     } else {
-      const formRec = document.getElementById('rec4646446601');
-      if (formRec && formRec.parentNode) {
-        formRec.parentNode.insertBefore(priceSec, formRec);
-      }
+      const target = document.querySelector('.t-records') || document.body;
+      target.appendChild(priceSec);
     }
 
     // Tab switcher
@@ -1246,14 +1357,14 @@
     }
   }
 
-  // 8. INJECT KLING AI ART BADGE SECTION
+  // 9. INJECT KLING AI ART BADGE SECTION
   function buildArtSection() {
     if (document.getElementById('afro-art-section')) return;
 
     const artSec = document.createElement('section');
     artSec.id = 'afro-art-section';
     artSec.style.maxWidth = '1240px';
-    artSec.style.margin = '110px auto 90px';
+    artSec.style.margin = '100px auto 90px';
     artSec.style.padding = '0 20px';
 
     artSec.innerHTML = `
@@ -1287,7 +1398,7 @@
     target.appendChild(artSec);
   }
 
-  // 9. INJECT CUSTOM LUXURY FOOTER
+  // 10. INJECT CUSTOM LUXURY FOOTER
   function buildCustomFooter() {
     if (document.getElementById('afro-custom-footer')) return;
 
@@ -1308,7 +1419,7 @@
     document.body.appendChild(footer);
   }
 
-  // 10. INJECT FLOATING SCROLL BUTTON
+  // 11. INJECT FLOATING SCROLL BUTTON
   function buildScrollButton() {
     if (document.getElementById('afro-floating-scroll')) return;
 
@@ -1333,7 +1444,7 @@
     document.body.appendChild(btn);
   }
 
-  // 11. INJECT COOKIE BANNER & POLICY MODAL
+  // 12. INJECT COOKIE BANNER & POLICY MODAL
   function buildPolicyAndCookie() {
     if (document.getElementById('afro-cookie-banner')) return;
 
@@ -1383,9 +1494,10 @@
     }
   }
 
-  // 12. INITIALIZATION ORCHESTRATOR
+  // 13. INITIALIZATION ORCHESTRATOR
   function init() {
     buildHeroSlider();
+    buildDirectionsSection();
     buildPriceSection();
     buildTelegramFeed();
     buildArtSection();
