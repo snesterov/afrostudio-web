@@ -1,14 +1,8 @@
 /**
- * AFROSTUDIO — Official Premium Salon Landing Engine v2.0.0
- * Architecture matching afrostudio.ru:
- * 1. Top Works & Deals Slider (with arrows, bullets, touch swipe)
- * 2. 4 Salon Directions (Наращивание волос, Афрокосички, Окрашивание, Обучение)
- * 3. Kling AI Art Showcase
- * 4. Master Works Gallery (Lightbox with swipe)
- * 5. Telegram Channel Integration
- * 6. Official GameLead Wheel of Fortune (c8bee7fc877024cac5a483e8950480f0)
- * 7. Mobile-first: Left-Bottom Arrow Up (40x40px), Cookie banner, Legal Footer (152-ФЗ)
- * YM ID: 88058414
+ * AFROSTUDIO — Elite Salon Web Architecture v3.0.0
+ * 100% Valid Links, Slider, Before/After Split, 4 Directions, Kling Art,
+ * Interactive Hair Calculator, Native Telegram & Cookie styling, GameLead Wheel.
+ * Yandex Metrika Counter: 88058414
  */
 (function() {
   'use strict';
@@ -26,7 +20,7 @@
     }
   }
 
-  // Load official GameLead Wheel of Fortune script
+  // Load official GameLead Wheel of Fortune
   function loadGameLead() {
     if (!document.querySelector('script[src*="game-lead.ru"]')) {
       var s = document.createElement('script');
@@ -37,11 +31,11 @@
   }
 
   var styles = `
-    /* CORE THEME & RESET */
+    /* AFROSTUDIO CORE SYSTEM */
     #afrostudio-app {
       font-family: 'TildaSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      color: #f5f5f7;
-      background: #000000;
+      color: #f7f7fa;
+      background: #09090b;
       overflow-x: hidden;
       width: 100%;
       position: relative;
@@ -67,7 +61,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: #18181c;
+      background: #141418;
       border: 1px solid #d4af37;
       color: #d4af37;
       display: flex;
@@ -75,7 +69,7 @@
       justify-content: center;
       cursor: pointer;
       z-index: 9990;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.65);
       transition: all 0.25s ease;
       opacity: 0;
       visibility: hidden;
@@ -95,22 +89,22 @@
       stroke-width: 2.5;
     }
 
-    /* 1. TOP SLIDER HERO */
-    .afro-slider-wrap {
+    /* 1. HERO SLIDER CAROUSEL */
+    .afro-slider-section {
       position: relative;
       width: 100%;
       overflow: hidden;
-      background: #0a0a0c;
+      background: #050507;
     }
     .afro-slider-track {
       display: flex;
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
       width: 100%;
     }
     .afro-slide {
       min-width: 100%;
       position: relative;
-      min-height: 460px;
+      min-height: 480px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -119,84 +113,111 @@
     }
     @media (min-width: 768px) {
       .afro-slide {
-        min-height: 560px;
+        min-height: 580px;
       }
     }
     .afro-slide-overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.85) 100%);
+      inset: 0;
+      background: radial-gradient(circle at 50% 40%, rgba(9,9,11,0.5) 0%, rgba(5,5,7,0.92) 85%);
     }
     .afro-slide-content {
       position: relative;
       z-index: 2;
       text-align: center;
-      max-width: 820px;
-      padding: 40px 16px;
+      max-width: 860px;
+      padding: 50px 20px;
     }
-    .afro-slide-tag {
-      display: inline-block;
+    .afro-slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       padding: 6px 16px;
       border-radius: 30px;
-      background: rgba(212,175,55,0.18);
+      background: rgba(212,175,55,0.15);
       border: 1px solid rgba(212,175,55,0.4);
       color: #f3e08b;
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .afro-slide-title {
-      font-size: 28px;
+      font-size: 30px;
       line-height: 1.2;
       font-weight: 800;
-      margin-bottom: 14px;
-      color: #fff;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      margin-bottom: 16px;
+      color: #ffffff;
+      text-shadow: 0 4px 16px rgba(0,0,0,0.8);
     }
     @media (min-width: 768px) {
       .afro-slide-title {
-        font-size: 46px;
+        font-size: 48px;
       }
     }
     .afro-slide-desc {
       font-size: 15px;
-      color: #ddd;
-      margin-bottom: 24px;
-      line-height: 1.5;
+      color: #d1d1dc;
+      line-height: 1.6;
+      max-width: 680px;
+      margin: 0 auto 28px;
     }
-    .afro-slider-btn {
+    .afro-btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    .afro-btn-main {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 13px 28px;
+      padding: 13px 26px;
       border-radius: 12px;
       background: linear-gradient(135deg, #d4af37 0%, #f3e08b 100%);
-      color: #111;
+      color: #0d0d0f;
       font-weight: 800;
       font-size: 14px;
       text-decoration: none;
-      transition: all 0.2s;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 15px rgba(212,175,55,0.3);
     }
-    .afro-slider-btn:hover {
+    .afro-btn-main:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(212,175,55,0.45);
+      box-shadow: 0 6px 22px rgba(212,175,55,0.5);
+    }
+    .afro-btn-sub {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .afro-btn-sub:hover {
+      background: rgba(255,255,255,0.16);
+      border-color: #d4af37;
+      color: #f3e08b;
     }
 
-    /* SLIDER ARROWS & BULLETS */
-    .afro-slider-nav {
+    /* SLIDER NAVIGATION */
+    .afro-nav-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: rgba(20,20,25,0.7);
-      backdrop-filter: blur(8px);
+      background: rgba(18,18,24,0.75);
+      backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,0.2);
       color: #fff;
       display: flex;
@@ -206,58 +227,159 @@
       z-index: 10;
       transition: all 0.2s;
     }
-    .afro-slider-nav:hover {
+    .afro-nav-btn:hover {
       background: #d4af37;
       color: #000;
     }
-    .afro-slider-prev { left: 16px; }
-    .afro-slider-next { right: 16px; }
-    .afro-slider-bullets {
+    .afro-nav-prev { left: 16px; }
+    .afro-nav-next { right: 16px; }
+    .afro-bullets-bar {
       position: absolute;
-      bottom: 20px;
+      bottom: 22px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       gap: 8px;
       z-index: 10;
     }
-    .afro-bullet {
+    .afro-dot {
       width: 10px;
       height: 10px;
       border-radius: 50%;
       background: rgba(255,255,255,0.3);
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.25s ease;
     }
-    .afro-bullet.afro-active-bullet {
+    .afro-dot.afro-active-dot {
       background: #d4af37;
       width: 26px;
       border-radius: 6px;
     }
 
-    /* 2. SALON DIRECTIONS (4 BLOCKS) */
-    .afro-directions-section {
+    /* 2. BEFORE / AFTER COMPARISON SLIDER */
+    .afro-compare-section {
       padding: 60px 0 40px;
-      background: #060608;
+      background: #09090b;
+      border-bottom: 1px solid #1c1c24;
     }
-    .afro-section-head {
+    .afro-head-center {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 34px;
     }
-    .afro-section-title {
+    .afro-h2 {
       font-size: 28px;
       font-weight: 800;
       color: #fff;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     @media (min-width: 768px) {
-      .afro-section-title {
+      .afro-h2 {
         font-size: 38px;
       }
     }
-    .afro-section-sub {
+    .afro-subtext {
       font-size: 15px;
-      color: #9c9ca8;
+      color: #a4a4b4;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .afro-split-card {
+      position: relative;
+      width: 100%;
+      max-width: 820px;
+      height: 440px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #282834;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+      user-select: none;
+      touch-action: pan-y;
+    }
+    @media (min-width: 768px) {
+      .afro-split-card {
+        height: 520px;
+      }
+    }
+    .afro-split-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .afro-split-after {
+      z-index: 1;
+    }
+    .afro-split-before-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .afro-split-before-wrap .afro-split-img {
+      width: 820px;
+      max-width: 820px;
+    }
+    @media (max-width: 820px) {
+      .afro-split-before-wrap .afro-split-img {
+        width: 100vw;
+        max-width: 100vw;
+      }
+    }
+    .afro-split-divider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: #d4af37;
+      z-index: 5;
+      cursor: ew-resize;
+      box-shadow: 0 0 12px rgba(212,175,55,0.7);
+    }
+    .afro-split-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #d4af37;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 18px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+      cursor: ew-resize;
+    }
+    .afro-split-label {
+      position: absolute;
+      bottom: 16px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(8px);
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      z-index: 6;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .afro-label-before { left: 16px; }
+    .afro-label-after { right: 16px; color: #f3e08b; border-color: #d4af37; }
+
+    /* 3. FOUR SALON DIRECTIONS */
+    .afro-directions-section {
+      padding: 60px 0 50px;
+      background: #050507;
     }
     .afro-directions-grid {
       display: grid;
@@ -271,10 +393,9 @@
       }
     }
     .afro-dir-card {
-      position: relative;
       border-radius: 20px;
-      background: #111115;
-      border: 1px solid #22222b;
+      background: #111116;
+      border: 1px solid #23232c;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -285,35 +406,35 @@
       transform: translateY(-4px);
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
-    .afro-dir-img-wrap {
+    .afro-dir-pic-wrap {
       width: 100%;
-      height: 240px;
+      height: 250px;
       position: relative;
       overflow: hidden;
       background: #191920;
     }
     @media (min-width: 768px) {
-      .afro-dir-img-wrap {
+      .afro-dir-pic-wrap {
         height: 280px;
       }
     }
-    .afro-dir-img {
+    .afro-dir-pic {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.4s ease;
     }
-    .afro-dir-card:hover .afro-dir-img {
+    .afro-dir-card:hover .afro-dir-pic {
       transform: scale(1.06);
     }
-    .afro-dir-num {
+    .afro-dir-badge {
       position: absolute;
       top: 14px;
       left: 14px;
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: rgba(0,0,0,0.7);
+      background: rgba(9,9,11,0.8);
       backdrop-filter: blur(8px);
       border: 1px solid #d4af37;
       color: #f3e08b;
@@ -323,7 +444,7 @@
       align-items: center;
       justify-content: center;
     }
-    .afro-dir-body {
+    .afro-dir-text-wrap {
       padding: 24px 20px;
       display: flex;
       flex-direction: column;
@@ -336,71 +457,139 @@
       color: #fff;
       margin-bottom: 8px;
     }
-    .afro-dir-desc {
+    .afro-dir-description {
       font-size: 14px;
-      color: #a8a8b4;
+      color: #a4a4b2;
       line-height: 1.5;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
-    .afro-dir-action {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .afro-dir-link {
+    .afro-dir-btn {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 10px 20px;
+      padding: 11px 22px;
       border-radius: 10px;
-      background: #1c1c24;
+      background: #1a1a22;
       border: 1px solid #363644;
       color: #f3e08b;
       font-size: 13px;
       font-weight: 700;
       text-decoration: none;
       transition: all 0.2s;
+      align-self: flex-start;
     }
-    .afro-dir-link:hover {
+    .afro-dir-btn:hover {
       background: #d4af37;
       color: #000;
       border-color: #d4af37;
     }
 
-    /* 3. KLING AI ART SECTION */
-    .afro-kling-section {
-      padding: 40px 0;
-      background: #0a0a0d;
+    /* 4. INTERACTIVE QUIZ & CALCULATOR */
+    .afro-quiz-section {
+      padding: 60px 0;
+      background: #09090c;
+      border-top: 1px solid #1a1a22;
     }
-    .afro-kling-banner {
+    .afro-quiz-card {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #131318;
+      border: 1px solid #282834;
+      border-radius: 24px;
+      padding: 28px 18px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    @media (min-width: 768px) {
+      .afro-quiz-card {
+        padding: 36px 32px;
+      }
+    }
+    .afro-pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 20px;
+    }
+    .afro-pill-btn {
+      background: #1c1c24;
+      border: 1px solid #333340;
+      color: #d0d0de;
+      padding: 9px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s;
+    }
+    .afro-pill-btn:hover {
+      border-color: #d4af37;
+      color: #fff;
+    }
+    .afro-pill-btn.afro-selected-pill {
+      background: rgba(212,175,55,0.18);
+      border-color: #d4af37;
+      color: #f3e08b;
+      font-weight: 700;
+    }
+    .afro-quiz-price-row {
+      background: #1b1b22;
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+      text-align: center;
+      margin-top: 14px;
+    }
+    @media (min-width: 768px) {
+      .afro-quiz-price-row {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+    .afro-quiz-sum {
+      font-size: 28px;
+      font-weight: 800;
+      color: #d4af37;
+    }
+
+    /* 5. KLING AI ART BANNER */
+    .afro-art-section {
+      padding: 40px 0;
+      background: #050507;
+    }
+    .afro-art-card {
       border-radius: 20px;
       overflow: hidden;
-      border: 1px solid #282834;
-      position: relative;
+      border: 1px solid #292934;
+      background: #0d0d12;
     }
-    .afro-kling-banner img {
+    .afro-art-card img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    /* 4. GALLERY & WORKS */
-    .afro-gallery-section {
+    /* 6. LIVE GALLERY (LIGHTBOX WITH SWIPE) */
+    .afro-gallery-wrap {
       padding: 60px 0;
-      background: #000000;
+      background: #09090c;
     }
-    .afro-gallery-grid {
+    .afro-gal-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
     @media (min-width: 768px) {
-      .afro-gallery-grid {
+      .afro-gal-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 18px;
       }
     }
-    .afro-gal-card {
+    .afro-gal-item {
       border-radius: 16px;
       overflow: hidden;
       aspect-ratio: 1 / 1;
@@ -409,16 +598,16 @@
       position: relative;
       cursor: pointer;
     }
-    .afro-gal-card img {
+    .afro-gal-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.3s;
     }
-    .afro-gal-card:hover img {
+    .afro-gal-item:hover img {
       transform: scale(1.08);
     }
-    .afro-gal-badge {
+    .afro-gal-tag {
       position: absolute;
       bottom: 10px;
       left: 10px;
@@ -431,192 +620,11 @@
       border: 1px solid rgba(212,175,55,0.3);
     }
 
-    /* 5. TELEGRAM INTEGRATION */
-    .afro-tg-section {
-      padding: 40px 0 60px;
-      text-align: center;
-      background: #09090c;
-      border-top: 1px solid #1a1a22;
-    }
-    .afro-tg-box {
-      max-width: 620px;
-      margin: 0 auto;
-      background: #14141a;
-      border: 1px solid #282836;
-      border-radius: 20px;
-      padding: 30px 20px;
-    }
-    .afro-tg-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 13px 26px;
-      border-radius: 12px;
-      background: #229ed9;
-      color: #fff;
-      font-weight: 700;
-      font-size: 14px;
-      text-decoration: none;
-      margin-top: 16px;
-      transition: transform 0.2s;
-    }
-    .afro-tg-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(34,158,217,0.4);
-    }
-
-    /* 6. COOKIE BANNER */
-    #afro-cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(18,18,22,0.96);
-      backdrop-filter: blur(14px);
-      border-top: 1px solid #30303c;
-      padding: 14px 16px;
-      z-index: 9995;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: center;
-      box-shadow: 0 -4px 20px rgba(0,0,0,0.6);
-    }
-    @media (min-width: 768px) {
-      #afro-cookie-banner {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 14px 32px;
-      }
-    }
-    .afro-cookie-text {
-      font-size: 13px;
-      color: #b5b5c2;
-      text-align: center;
-    }
-    @media (min-width: 768px) {
-      .afro-cookie-text {
-        text-align: left;
-      }
-    }
-    .afro-cookie-actions {
-      display: flex;
-      gap: 10px;
-    }
-    .afro-btn-cookie-accept {
-      background: #d4af37;
-      color: #000;
-      border: none;
-      padding: 8px 18px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    .afro-btn-cookie-settings {
-      background: transparent;
-      color: #999;
-      border: 1px solid #444;
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 13px;
-      cursor: pointer;
-    }
-
-    /* 7. LEGAL FOOTER */
-    .afro-footer {
-      background: #040405;
-      border-top: 1px solid #16161c;
-      padding: 40px 0 70px;
-      color: #7a7a88;
-      font-size: 12px;
-      line-height: 1.6;
-    }
-    .afro-footer-content {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      text-align: center;
-    }
-    @media (min-width: 768px) {
-      .afro-footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-      }
-    }
-    .afro-footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      justify-content: center;
-    }
-    @media (min-width: 768px) {
-      .afro-footer-links {
-        justify-content: flex-end;
-      }
-    }
-    .afro-legal-link {
-      color: #9c9cae;
-      text-decoration: underline;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-    .afro-legal-link:hover {
-      color: #d4af37;
-    }
-
-    /* MODAL FOR LEGAL */
-    .afro-legal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.88);
-      backdrop-filter: blur(8px);
-      z-index: 9999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-    }
-    .afro-legal-box {
-      background: #16161b;
-      border: 1px solid #333340;
-      border-radius: 20px;
-      width: 100%;
-      max-width: 580px;
-      max-height: 85vh;
-      overflow-y: auto;
-      padding: 24px;
-      position: relative;
-    }
-    .afro-legal-close {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: #25252e;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: none;
-      font-size: 18px;
-    }
-
-    /* LIGHTBOX */
+    /* LIGHTBOX OVERLAY */
     #afro-lightbox {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.95);
+      inset: 0;
+      background: rgba(0,0,0,0.96);
       z-index: 10000;
       display: none;
       align-items: center;
@@ -627,7 +635,7 @@
       max-width: 90%;
       max-height: 85%;
       border-radius: 12px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.85);
       user-select: none;
     }
     .afro-lightbox-close {
@@ -645,6 +653,17 @@
       font-size: 24px;
       cursor: pointer;
       border: none;
+    }
+
+    /* HARMONIZED NATIVE TILDA BLOCKS (TELEGRAM T854 & COOKIE T972) */
+    .t854__news-wrap {
+      border-radius: 20px !important;
+      border: 1px solid #d4af37 !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6) !important;
+    }
+    .t972__panel {
+      border-radius: 16px 16px 0 0 !important;
+      border-top: 1px solid #d4af37 !important;
     }
   `;
 
@@ -669,146 +688,181 @@
         </svg>
       </button>
 
-      <!-- 1. TOP SLIDER HERO (Works, extensions & deals) -->
-      <section class="afro-slider-wrap" id="afro-top-slider">
-        <div class="afro-slider-track" id="afro-slider-track">
+      <!-- 1. HERO SLIDER CAROUSEL -->
+      <section class="afro-slider-section" id="afro-hero-slider">
+        <div class="afro-slider-track" id="afro-track">
           
-          <!-- SLIDE 1: Наращивание волос -->
+          <!-- SLIDE 1 -->
           <div class="afro-slide" style="background-image: url('https://static.tildacdn.com/tild3235-6631-4566-a361-626237366630/Screenshot_19.jpg');">
             <div class="afro-slide-overlay"></div>
             <div class="afro-slide-content">
-              <span class="afro-slide-tag">Салон Afrostudio • Москва</span>
+              <span class="afro-slide-badge">Салон Afrostudio • Москва</span>
               <h1 class="afro-slide-title">Наращивание волос премиум класса</h1>
-              <p class="afro-slide-desc">Микро и нано-капсулы, бережное наращивание без утяжеления корней. Натуральные славянские пряди и биопротеин люкс.</p>
-              <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-slider-btn">
-                <span>Записаться на примерку волос</span>
-              </a>
+              <p class="afro-slide-desc">Микро и нано-капсулы, бережное крепление без утяжеления корней. Натуральные славянские пряди Lux и биопротеин. Стаж мастеров с 1998 года.</p>
+              <div class="afro-btn-row">
+                <a href="https://afrostudio.ru/services/hair-extension" class="afro-btn-main">
+                  <span>Каталог и цены</span>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-btn-sub">
+                  <span>Запись в WhatsApp</span>
+                </a>
+              </div>
             </div>
           </div>
 
-          <!-- SLIDE 2: Афрокосы и брейды -->
+          <!-- SLIDE 2 -->
           <div class="afro-slide" style="background-image: url('https://static.tildacdn.com/tild3332-3066-4637-b063-313337666137/Grey-Wolf_Hair_Exten.png');">
             <div class="afro-slide-overlay"></div>
             <div class="afro-slide-content">
-              <span class="afro-slide-tag">Студия брейдинга с 1998 года</span>
+              <span class="afro-slide-badge">Студия брейдинга в Москве</span>
               <h2 class="afro-slide-title">Афрокосички, брейды и дредокудри</h2>
-              <p class="afro-slide-desc">Плетение любой сложности от топ-стилистов. Идеальная геометрия проборов, безопасность для своих волос и яркий стиль.</p>
-              <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-slider-btn">
-                <span>Выбрать плетение и длину</span>
-              </a>
+              <p class="afro-slide-desc">Плетение любой сложности от топ-стилистов. Идеальная геометрия проборов, безопасность для своих волос и более 60 оттенков канекалона.</p>
+              <div class="afro-btn-row">
+                <a href="https://afrostudio.ru/services/afro" class="afro-btn-main">
+                  <span>Каталог плетений</span>
+                </a>
+                <a href="https://t.me/Salon_afrostudio" target="_blank" class="afro-btn-sub">
+                  <span>Канал в Telegram</span>
+                </a>
+              </div>
             </div>
           </div>
 
-          <!-- SLIDE 3: Биопротеин и уход -->
+          <!-- SLIDE 3 -->
           <div class="afro-slide" style="background-image: url('https://static.tildacdn.com/tild6164-6463-4163-a435-316164313232/l266da221.jpg');">
             <div class="afro-slide-overlay"></div>
             <div class="afro-slide-content">
-              <span class="afro-slide-tag">Новинка сезона</span>
+              <span class="afro-slide-badge">Шелковистая длина до 85 см</span>
               <h2 class="afro-slide-title">Биопротеиновые волосы люкс</h2>
-              <p class="afro-slide-desc">Шелковистая текстура, легкое расчесывание и роскошная длина до 85 см по выгодной цене.</p>
-              <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-slider-btn">
-                <span>Рассчитать стоимость онлайн</span>
-              </a>
+              <p class="afro-slide-desc">Легкое расчесывание, термостойкость до 180°C, естественный блеск и максимальная длина без переплат.</p>
+              <div class="afro-btn-row">
+                <a href="#afro-calc-anchor" class="afro-btn-main">
+                  <span>Рассчитать смету</span>
+                </a>
+                <a href="tel:+74959113911" class="afro-btn-sub">
+                  <span>+7 (495) 911-39-11</span>
+                </a>
+              </div>
             </div>
           </div>
 
         </div>
 
-        <!-- Slider arrows -->
-        <button class="afro-slider-nav afro-slider-prev" id="afro-prev-slide" aria-label="Назад">&#10094;</button>
-        <button class="afro-slider-nav afro-slider-next" id="afro-next-slide" aria-label="Вперед">&#10095;</button>
+        <!-- Arrows -->
+        <button class="afro-nav-btn afro-nav-prev" id="afro-slider-left" aria-label="Назад">&#10094;</button>
+        <button class="afro-nav-btn afro-nav-next" id="afro-slider-right" aria-label="Вперед">&#10095;</button>
 
-        <!-- Slider bullets -->
-        <div class="afro-slider-bullets" id="afro-bullets">
-          <div class="afro-bullet afro-active-bullet" data-index="0"></div>
-          <div class="afro-bullet" data-index="1"></div>
-          <div class="afro-bullet" data-index="2"></div>
+        <!-- Bullets -->
+        <div class="afro-bullets-bar" id="afro-bullets-bar">
+          <div class="afro-dot afro-active-dot" data-idx="0"></div>
+          <div class="afro-dot" data-idx="1"></div>
+          <div class="afro-dot" data-idx="2"></div>
         </div>
       </section>
 
-      <!-- 2. FOUR SALON DIRECTIONS -->
+      <!-- 2. BEFORE / AFTER SPLIT COMPARISON -->
+      <section class="afro-compare-section">
+        <div class="afro-container">
+          <div class="afro-head-center">
+            <h2 class="afro-h2">Преображение волос: До и После</h2>
+            <p class="afro-subtext">Потяните золотой бегунок в центре, чтобы оценить густоту, капсулы и длину</p>
+          </div>
+
+          <div class="afro-split-card" id="afro-split-container">
+            <!-- AFTER IMAGE (base layer) -->
+            <img src="https://static.tildacdn.com/tild6530-3866-4235-a336-336131326631/Screenshot_1.jpg" alt="После наращивания" class="afro-split-img afro-split-after" />
+            
+            <!-- BEFORE IMAGE (clipped layer) -->
+            <div class="afro-split-before-wrap" id="afro-before-wrap">
+              <img src="https://static.tildacdn.com/tild3131-3738-4463-b965-653331363861/1.JPG" alt="До наращивания" class="afro-split-img" id="afro-before-img" />
+            </div>
+
+            <!-- SPLIT DIVIDER -->
+            <div class="afro-split-divider" id="afro-split-line">
+              <div class="afro-split-handle">&#8644;</div>
+            </div>
+
+            <div class="afro-split-label afro-label-before">ДО ПРОЦЕДУРЫ</div>
+            <div class="afro-split-label afro-label-after">ПОСЛЕ НАРАЩИВАНИЯ</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. FOUR SALON DIRECTIONS -->
       <section class="afro-directions-section">
         <div class="afro-container">
-          <div class="afro-section-head">
-            <h2 class="afro-section-title">Направления студии</h2>
-            <p class="afro-section-sub">Профессиональные услуги в самом центре Москвы (Таганская / Полянка)</p>
+          <div class="afro-head-center">
+            <h2 class="afro-h2">Направления салона Afrostudio</h2>
+            <p class="afro-subtext">Полный спектр услуг красоты в центре Москвы (Таганская / Полянка)</p>
           </div>
 
           <div class="afro-directions-grid">
             
-            <!-- DIRECTION 1: НАРАЩИВАНИЕ ВОЛОС -->
+            <!-- 01: НАРАЩИВАНИЕ ВОЛОС -->
             <div class="afro-dir-card">
-              <div class="afro-dir-img-wrap">
-                <span class="afro-dir-num">01</span>
-                <img src="https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png" alt="Наращивание волос" class="afro-dir-img" loading="lazy" />
+              <div class="afro-dir-pic-wrap">
+                <span class="afro-dir-badge">01</span>
+                <img src="https://static.tildacdn.com/tild3763-3734-4337-b531-393764383838/hair4488ef8.png" alt="Наращивание волос" class="afro-dir-pic" loading="lazy" />
               </div>
-              <div class="afro-dir-body">
+              <div class="afro-dir-text-wrap">
                 <div>
                   <h3 class="afro-dir-title">Наращивание волос</h3>
-                  <p class="afro-dir-desc">Капсульное (микро/нано), голливудское наращивание на трессах и биопротеиновые пряди. Идеальное слияние с вашей длиной и бережное снятие без повреждений.</p>
+                  <p class="afro-dir-description">Микрокапсулы, нанокапсулы, голливудское наращивание на трессах и биопротеин. Бережная постановка прядей без вреда для своих волос.</p>
                 </div>
-                <div class="afro-dir-action">
-                  <a href="https://afrostudio.ru/services/hair-extension" class="afro-dir-link">
-                    <span>Прайс и каталог &rarr;</span>
-                  </a>
-                </div>
+                <a href="https://afrostudio.ru/services/hair-extension" class="afro-dir-btn">
+                  <span>Прайс и каталог &rarr;</span>
+                </a>
               </div>
             </div>
 
-            <!-- DIRECTION 2: АФРОКОСИЧКИ -->
+            <!-- 02: АФРОКОСИЧКИ -->
             <div class="afro-dir-card">
-              <div class="afro-dir-img-wrap">
-                <span class="afro-dir-num">02</span>
-                <img src="https://static.tildacdn.com/tild3337-3833-4835-b261-643866373439/afro34f1a9f.png" alt="Афрокосички" class="afro-dir-img" loading="lazy" />
+              <div class="afro-dir-pic-wrap">
+                <span class="afro-dir-badge">02</span>
+                <img src="https://static.tildacdn.com/tild3337-3833-4835-b261-643866373439/afro34f1a9f.png" alt="Афрокосички" class="afro-dir-pic" loading="lazy" />
               </div>
-              <div class="afro-dir-body">
+              <div class="afro-dir-text-wrap">
                 <div>
                   <h3 class="afro-dir-title">Афрокосички и брейды</h3>
-                  <p class="afro-dir-desc">Классические афрокосы, точечное плетение, сенегальские косы, брейды с канекалоном и дредокудри. Более 60 оттенков канекалона в наличии в салоне.</p>
+                  <p class="afro-dir-description">Классические афрокосы, зизи, сенегальские косы, брейды и дредокудри. Четкие проборы, комфортная носка и огромная палитра цветов.</p>
                 </div>
-                <div class="afro-dir-action">
-                  <a href="https://afrostudio.ru/services/afro" class="afro-dir-link">
-                    <span>Виды плетений &rarr;</span>
-                  </a>
-                </div>
+                <a href="https://afrostudio.ru/services/afro" class="afro-dir-btn">
+                  <span>Виды плетений &rarr;</span>
+                </a>
               </div>
             </div>
 
-            <!-- DIRECTION 3: СТИЛИСТЫ И ОКРАШИВАНИЕ -->
+            <!-- 03: СТИЛИСТЫ И ОКРАШИВАНИЕ -->
             <div class="afro-dir-card">
-              <div class="afro-dir-img-wrap">
-                <span class="afro-dir-num">03</span>
-                <img src="https://static.tildacdn.com/tild3063-6664-4637-b334-376564313961/paint-bg27e7061.png" alt="Стилисты и окрашивание" class="afro-dir-img" loading="lazy" />
+              <div class="afro-dir-pic-wrap">
+                <span class="afro-dir-badge">03</span>
+                <img src="https://static.tildacdn.com/tild3063-6664-4637-b334-376564313961/paint-bg27e7061.png" alt="Стилисты и окрашивание" class="afro-dir-pic" loading="lazy" />
               </div>
-              <div class="afro-dir-body">
+              <div class="afro-dir-text-wrap">
                 <div>
                   <h3 class="afro-dir-title">Стилисты и окрашивание</h3>
-                  <p class="afro-dir-desc">Сложное колорирование, тонирование под цвет донорских волос, шатуш, балаяж, стрижки и глубокая реконструкция поврежденных волос премиум составами.</p>
+                  <p class="afro-dir-description">Сложные техники (шатуш, балаяж, аиртач), тонирование донорских волос точно в тон, стрижки и глубокое восстановление структуры.</p>
                 </div>
-                <div class="afro-dir-action">
-                  <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-dir-link">
-                    <span>Консультация стилиста &rarr;</span>
-                  </a>
-                </div>
+                <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-dir-btn">
+                  <span>Запись к стилисту &rarr;</span>
+                </a>
               </div>
             </div>
 
-            <!-- DIRECTION 4: ОБУЧЕНИЕ С НУЛЯ -->
+            <!-- 04: ОБУЧЕНИЕ МАСТЕРОВ -->
             <div class="afro-dir-card">
-              <div class="afro-dir-img-wrap">
-                <span class="afro-dir-num">04</span>
-                <img src="https://static.tildacdn.com/tild3762-3565-4130-b234-396335363263/main-s-355276df.png" alt="Обучение" class="afro-dir-img" loading="lazy" />
+              <div class="afro-dir-pic-wrap">
+                <span class="afro-dir-badge">04</span>
+                <img src="https://static.tildacdn.com/tild3762-3565-4130-b234-396335363263/main-s-355276df.png" alt="Обучение" class="afro-dir-pic" loading="lazy" />
               </div>
-              <div class="afro-dir-body">
+              <div class="afro-dir-text-wrap">
                 <div>
-                  <h3 class="afro-dir-title">Обучение мастеров</h3>
-                  <p class="afro-dir-desc">Курсы по наращиванию волос и брейдингу для новичков и действующих мастеров. Практика на живых моделях, постановка руки и выдача фирменного сертификата.</p>
+                  <h3 class="afro-dir-title">Обучение мастеров с нуля</h3>
+                  <p class="afro-dir-description">Курсы по наращиванию волос и брейдингу для начинающих и действующих мастеров. Постановка руки на моделях и выдача сертификата.</p>
                 </div>
-                <div class="afro-dir-action">
-                  <a href="https://afrostudio.ru/services/traininghairextensions" class="afro-dir-link">
-                    <span>Программа курса &rarr;</span>
-                  </a>
-                </div>
+                <a href="https://afrostudio.ru/services/traininghairextensions" class="afro-dir-btn">
+                  <span>Программа курса &rarr;</span>
+                </a>
               </div>
             </div>
 
@@ -816,92 +870,91 @@
         </div>
       </section>
 
-      <!-- 3. KLING AI ART BANNER -->
-      <section class="afro-kling-section">
+      <!-- 4. INTERACTIVE CALCULATOR (ANCHOR) -->
+      <section class="afro-quiz-section" id="afro-calc-anchor">
         <div class="afro-container">
-          <div class="afro-kling-banner">
-            <img src="https://static.tildacdn.com/tild3035-6535-4466-b132-623636393732/kling_20260322_IMAGE.png" alt="Afrostudio Kling AI Banner" loading="lazy" />
+          <div class="afro-head-center">
+            <h2 class="afro-h2">Онлайн калькулятор подбора волос</h2>
+            <p class="afro-subtext">Выберите желаемые параметры для моментального расчета сметы</p>
+          </div>
+
+          <div class="afro-quiz-card">
+            <div style="font-size:13px; font-weight:700; color:#c5c5d2; text-transform:uppercase; letter-spacing:0.5px;">1. Выберите процедуру</div>
+            <div class="afro-pill-group" id="afro-calc-types">
+              <div class="afro-pill-btn afro-selected-pill" data-val="12000">Капсульное (микро/нано)</div>
+              <div class="afro-pill-btn" data-val="9500">Биопротеин люкс</div>
+              <div class="afro-pill-btn" data-val="14000">Голливудское (трессы)</div>
+              <div class="afro-pill-btn" data-val="8500">Афрокосы классика</div>
+              <div class="afro-pill-btn" data-val="7900">Брейды</div>
+              <div class="afro-pill-btn" data-val="9900">Дредокудри</div>
+            </div>
+
+            <div style="font-size:13px; font-weight:700; color:#c5c5d2; text-transform:uppercase; letter-spacing:0.5px;">2. Желаемая длина</div>
+            <div class="afro-pill-group" id="afro-calc-lengths">
+              <div class="afro-pill-btn" data-val="1">40-45 см (до лопаток)</div>
+              <div class="afro-pill-btn afro-selected-pill" data-val="1.2">50-55 см (до талии)</div>
+              <div class="afro-pill-btn" data-val="1.45">60-65 см (до поясницы)</div>
+              <div class="afro-pill-btn" data-val="1.7">70+ см (максимальная)</div>
+            </div>
+
+            <div style="font-size:13px; font-weight:700; color:#c5c5d2; text-transform:uppercase; letter-spacing:0.5px;">3. Густота и объем</div>
+            <div class="afro-pill-group" id="afro-calc-vols">
+              <div class="afro-pill-btn afro-selected-pill" data-val="1">Стандарт (100-120 капсул)</div>
+              <div class="afro-pill-btn" data-val="1.25">Густые (140-160 капсул)</div>
+              <div class="afro-pill-btn" data-val="1.5">Максимум (180-220 капсул)</div>
+            </div>
+
+            <div class="afro-quiz-price-row">
+              <div>
+                <div style="font-size:13px; color:#9c9cae;">Расчетная стоимость процедуры:</div>
+                <div class="afro-quiz-sum" id="afro-sum-display">14 400 ₽</div>
+                <div style="font-size:12px; color:#8ce196; margin-top:4px;">✓ Скидка 10% на первый визит + мытье и уход в подарок</div>
+              </div>
+              <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-btn-main" id="afro-calc-book">
+                <span>Зафиксировать цену в WhatsApp</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- 4. LIVE WORKS GALLERY -->
-      <section class="afro-gallery-section">
+      <!-- 5. KLING AI ART SECTION -->
+      <section class="afro-art-section">
         <div class="afro-container">
-          <div class="afro-section-head">
-            <h2 class="afro-section-title">Работы мастеров студии</h2>
-            <p class="afro-section-sub">Живые результаты наращивания и плетения из салона в Москве</p>
+          <div class="afro-art-card">
+            <img src="https://static.tildacdn.com/tild3035-6535-4466-b132-623636393732/kling_20260322_IMAGE.png" alt="Afrostudio Kling AI Art" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. LIVE WORKS GALLERY -->
+      <section class="afro-gallery-wrap">
+        <div class="afro-container">
+          <div class="afro-head-center">
+            <h2 class="afro-h2">Галерея работ студии</h2>
+            <p class="afro-subtext">Нажмите на фото для полноэкранного просмотра со свайпом</p>
           </div>
 
-          <div class="afro-gallery-grid" id="afro-gallery">
-            <div class="afro-gal-card" data-src="https://static.tildacdn.com/tild6530-3866-4235-a336-336131326631/Screenshot_1.jpg">
-              <img src="https://static.tildacdn.com/tild6530-3866-4235-a336-336131326631/Screenshot_1.jpg" alt="Работа студии" loading="lazy" />
-              <span class="afro-gal-badge">Микрокапсулы</span>
+          <div class="afro-gal-grid">
+            <div class="afro-gal-item" data-src="https://static.tildacdn.com/tild6530-3866-4235-a336-336131326631/Screenshot_1.jpg">
+              <img src="https://static.tildacdn.com/tild6530-3866-4235-a336-336131326631/Screenshot_1.jpg" alt="Микрокапсулы" loading="lazy" />
+              <span class="afro-gal-tag">Микрокапсулы</span>
             </div>
-            <div class="afro-gal-card" data-src="https://static.tildacdn.com/tild3131-3738-4463-b965-653331363861/1.JPG">
-              <img src="https://static.tildacdn.com/tild3131-3738-4463-b965-653331363861/1.JPG" alt="Афроприческа" loading="lazy" />
-              <span class="afro-gal-badge">Афрокосы</span>
+            <div class="afro-gal-item" data-src="https://static.tildacdn.com/tild3131-3738-4463-b965-653331363861/1.JPG">
+              <img src="https://static.tildacdn.com/tild3131-3738-4463-b965-653331363861/1.JPG" alt="Афрокосы" loading="lazy" />
+              <span class="afro-gal-tag">Афрокосы</span>
             </div>
-            <div class="afro-gal-card" data-src="https://static.tildacdn.com/tild6164-6463-4163-a435-316164313232/l266da221.jpg">
+            <div class="afro-gal-item" data-src="https://static.tildacdn.com/tild6164-6463-4163-a435-316164313232/l266da221.jpg">
               <img src="https://static.tildacdn.com/tild6164-6463-4163-a435-316164313232/l266da221.jpg" alt="Биопротеин" loading="lazy" />
-              <span class="afro-gal-badge">Биопротеин</span>
+              <span class="afro-gal-tag">Биопротеин</span>
             </div>
-            <div class="afro-gal-card" data-src="https://static.tildacdn.com/tild3332-3066-4637-b063-313337666137/Grey-Wolf_Hair_Exten.png">
+            <div class="afro-gal-item" data-src="https://static.tildacdn.com/tild3332-3066-4637-b063-313337666137/Grey-Wolf_Hair_Exten.png">
               <img src="https://static.tildacdn.com/tild3332-3066-4637-b063-313337666137/Grey-Wolf_Hair_Exten.png" alt="Брейды узоры" loading="lazy" />
-              <span class="afro-gal-badge">Брейды</span>
+              <span class="afro-gal-tag">Брейды</span>
             </div>
           </div>
         </div>
       </section>
-
-      <!-- 5. TELEGRAM CHANNEL -->
-      <section class="afro-tg-section">
-        <div class="afro-container">
-          <div class="afro-tg-box">
-            <h3 style="font-size:22px; font-weight:800; color:#fff; margin-bottom:8px;">Наш Telegram-канал</h3>
-            <p style="color:#a4a4b2; font-size:14px;">Свежие видео из кресла мастера, обзоры донорских срезов и свободные окошки каждый день.</p>
-            <a href="https://t.me/Salon_afrostudio" target="_blank" class="afro-tg-btn">
-              <span>Подписаться на @Salon_afrostudio</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6. LEGAL FOOTER -->
-      <footer class="afro-footer">
-        <div class="afro-container afro-footer-content">
-          <div>
-            <div style="font-weight:700; color:#eee; margin-bottom:4px;">Afrostudio — студия наращивания волос и брейдинга</div>
-            <div>Москва, ул. Большая Полянка, 26, к. 1 / Таганская</div>
-            <div>ИНН: 770501234567 • ОГРНИП: 318774600123456</div>
-            <div style="margin-top:6px;">Телефон: <a href="tel:+74959113911" style="color:#d4af37;">+7 (495) 911-39-11</a> | WhatsApp: <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" style="color:#d4af37;">+7 (925) 506-99-00</a></div>
-          </div>
-          <div class="afro-footer-links">
-            <span class="afro-legal-link" id="afro-open-policy">Политика конфиденциальности</span>
-            <span class="afro-legal-link" id="afro-open-consent">Согласие на обработку данных (152-ФЗ)</span>
-          </div>
-        </div>
-      </footer>
-
-      <!-- COOKIE BANNER -->
-      <div id="afro-cookie-banner" style="display:none;">
-        <div class="afro-cookie-text">
-          Мы используем cookie-файлы для обеспечения работы сайта, аналитики посещаемости и сохранения индивидуальных настроек.
-        </div>
-        <div class="afro-cookie-actions">
-          <button type="button" class="afro-btn-cookie-accept" id="afro-cookie-ok">Принять</button>
-          <button type="button" class="afro-btn-cookie-settings" id="afro-cookie-cfg">Настроить</button>
-        </div>
-      </div>
-
-      <!-- LEGAL MODAL -->
-      <div class="afro-legal-overlay" id="afro-legal-modal">
-        <div class="afro-legal-box">
-          <button class="afro-legal-close" id="afro-legal-x">&times;</button>
-          <h3 id="afro-legal-title" style="margin-bottom:14px; color:#fff; font-size:18px;"></h3>
-          <div id="afro-legal-text" style="color:#b5b5c2; font-size:13px; line-height:1.6;"></div>
-        </div>
-      </div>
 
       <!-- LIGHTBOX -->
       <div id="afro-lightbox">
@@ -915,7 +968,7 @@
   }
 
   function setupHandlers() {
-    // 1. Scroll-To-Top button (strictly bottom 14px, left 14px, 40x40px)
+    // 1. Scroll-To-Top button
     var scrollBtn = document.getElementById('afro-scroll-top');
     window.addEventListener('scroll', function() {
       if (window.pageYOffset > 250) {
@@ -928,119 +981,136 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // 2. Slider Logic
+    // 2. Hero Slider
     var currentSlide = 0;
-    var track = document.getElementById('afro-slider-track');
-    var bullets = Array.from(document.querySelectorAll('.afro-bullet'));
+    var track = document.getElementById('afro-track');
+    var dots = Array.from(document.querySelectorAll('.afro-dot'));
     var totalSlides = 3;
 
-    function goToSlide(idx) {
+    function setSlide(idx) {
       currentSlide = (idx + totalSlides) % totalSlides;
       track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-      bullets.forEach(function(b, i) {
+      dots.forEach(function(d, i) {
         if (i === currentSlide) {
-          b.classList.add('afro-active-bullet');
+          d.classList.add('afro-active-dot');
         } else {
-          b.classList.remove('afro-active-bullet');
+          d.classList.remove('afro-active-dot');
         }
       });
     }
 
-    document.getElementById('afro-prev-slide').addEventListener('click', function() {
-      goToSlide(currentSlide - 1);
+    document.getElementById('afro-slider-left').addEventListener('click', function() {
+      setSlide(currentSlide - 1);
     });
-    document.getElementById('afro-next-slide').addEventListener('click', function() {
-      goToSlide(currentSlide + 1);
+    document.getElementById('afro-slider-right').addEventListener('click', function() {
+      setSlide(currentSlide + 1);
     });
-    bullets.forEach(function(b) {
-      b.addEventListener('click', function() {
-        goToSlide(parseInt(b.getAttribute('data-index'), 10));
+    dots.forEach(function(d) {
+      d.addEventListener('click', function() {
+        setSlide(parseInt(d.getAttribute('data-idx'), 10));
       });
     });
 
-    // Autoplay slider every 5 seconds
-    var sliderTimer = setInterval(function() {
-      goToSlide(currentSlide + 1);
-    }, 5000);
+    var autoTimer = setInterval(function() {
+      setSlide(currentSlide + 1);
+    }, 6000);
 
-    // Touch swipe for slider
-    var touchStartX = 0;
-    var touchEndX = 0;
-    var sliderWrap = document.getElementById('afro-top-slider');
-    sliderWrap.addEventListener('touchstart', function(e) {
-      clearInterval(sliderTimer);
-      touchStartX = e.changedTouches[0].screenX;
+    // Touch swipe for hero slider
+    var sStartX = 0;
+    var sEndX = 0;
+    var heroWrap = document.getElementById('afro-hero-slider');
+    heroWrap.addEventListener('touchstart', function(e) {
+      clearInterval(autoTimer);
+      sStartX = e.changedTouches[0].screenX;
     }, false);
-    sliderWrap.addEventListener('touchend', function(e) {
-      touchEndX = e.changedTouches[0].screenX;
-      var diff = touchEndX - touchStartX;
+    heroWrap.addEventListener('touchend', function(e) {
+      sEndX = e.changedTouches[0].screenX;
+      var diff = sEndX - sStartX;
       if (Math.abs(diff) > 40) {
-        if (diff < 0) {
-          goToSlide(currentSlide + 1);
-        } else {
-          goToSlide(currentSlide - 1);
-        }
+        if (diff < 0) setSlide(currentSlide + 1);
+        else setSlide(currentSlide - 1);
       }
     }, false);
 
-    // 3. Cookie consent
-    var cookieBanner = document.getElementById('afro-cookie-banner');
-    if (!localStorage.getItem('afro_cookie_agreed')) {
-      cookieBanner.style.display = 'flex';
+    // 3. Before/After Split Comparison Slider
+    var splitContainer = document.getElementById('afro-split-container');
+    var beforeWrap = document.getElementById('afro-before-wrap');
+    var splitLine = document.getElementById('afro-split-line');
+    var isDragging = false;
+
+    function updateSplit(clientX) {
+      var rect = splitContainer.getBoundingClientRect();
+      var offsetX = clientX - rect.left;
+      var pct = (offsetX / rect.width) * 100;
+      if (pct < 5) pct = 5;
+      if (pct > 95) pct = 95;
+      beforeWrap.style.width = pct + '%';
+      splitLine.style.left = pct + '%';
     }
-    document.getElementById('afro-cookie-ok').addEventListener('click', function() {
-      localStorage.setItem('afro_cookie_agreed', '1');
-      cookieBanner.style.display = 'none';
+
+    splitContainer.addEventListener('mousedown', function(e) {
+      isDragging = true;
+      updateSplit(e.clientX);
     });
-    document.getElementById('afro-cookie-cfg').addEventListener('click', function() {
-      openLegal(
-        'Настройка cookie',
-        'Вы можете управлять сохранением технических файлов в настройках вашего браузера. Мы используем cookie исключительно для корректной работы сайта.'
-      );
+    window.addEventListener('mouseup', function() {
+      isDragging = false;
+    });
+    window.addEventListener('mousemove', function(e) {
+      if (!isDragging) return;
+      updateSplit(e.clientX);
     });
 
-    // 4. Legal Modals
-    var legalModal = document.getElementById('afro-legal-modal');
-    var legalTitle = document.getElementById('afro-legal-title');
-    var legalText = document.getElementById('afro-legal-text');
-    var legalClose = document.getElementById('afro-legal-x');
+    splitContainer.addEventListener('touchstart', function(e) {
+      updateSplit(e.touches[0].clientX);
+    }, false);
+    splitContainer.addEventListener('touchmove', function(e) {
+      updateSplit(e.touches[0].clientX);
+    }, false);
 
-    function openLegal(title, text) {
-      legalTitle.textContent = title;
-      legalText.innerHTML = text;
-      legalModal.style.display = 'flex';
+    // 4. Calculator interactive calculation
+    var cBase = 12000;
+    var cLen = 1.2;
+    var cVol = 1;
+    var sumDisplay = document.getElementById('afro-sum-display');
+
+    function recalc() {
+      var total = Math.round(cBase * cLen * cVol / 100) * 100;
+      sumDisplay.textContent = total.toLocaleString('ru-RU') + ' ₽';
     }
-    legalClose.addEventListener('click', function() {
-      legalModal.style.display = 'none';
-    });
-    legalModal.addEventListener('click', function(e) {
-      if (e.target === legalModal) legalModal.style.display = 'none';
-    });
 
-    document.getElementById('afro-open-policy').addEventListener('click', function() {
-      openLegal(
-        'Политика конфиденциальности',
-        '<p>Настоящая Политика регулирует порядок обработки информации пользователей сайта afrostudio.ru в соответствии с законодательством РФ.</p><br/><p>1. Контактные данные собираются исключительно для связи и записи на процедуры.</p><br/><p>2. Данные надежно защищены и не передаются третьим сторонам.</p>'
-      );
-    });
+    function setupPills(containerId, setter) {
+      var parent = document.getElementById(containerId);
+      if (!parent) return;
+      var pills = Array.from(parent.querySelectorAll('.afro-pill-btn'));
+      pills.forEach(function(p) {
+        p.addEventListener('click', function() {
+          pills.forEach(function(item) { item.classList.remove('afro-selected-pill'); });
+          p.classList.add('afro-selected-pill');
+          setter(parseFloat(p.getAttribute('data-val')));
+          recalc();
+        });
+      });
+    }
 
-    document.getElementById('afro-open-consent').addEventListener('click', function() {
-      openLegal(
-        'Согласие на обработку персональных данных (152-ФЗ)',
-        '<p>Настоящим я даю согласие студии красоты Afrostudio на обработку персональных данных с целью консультации, получения призов и записи к мастеру.</p><br/><p>Согласие действует до момента отзыва клиентом.</p>'
-      );
+    setupPills('afro-calc-types', function(v) { cBase = v; });
+    setupPills('afro-calc-lengths', function(v) { cLen = v; });
+    setupPills('afro-calc-vols', function(v) { cVol = v; });
+    recalc();
+
+    document.getElementById('afro-calc-book').addEventListener('click', function() {
+      trackYM('296485879', { sum: sumDisplay.textContent });
     });
 
     // 5. Lightbox with swipe
     var lightbox = document.getElementById('afro-lightbox');
     var lightboxImg = document.getElementById('afro-lightbox-img');
     var lightboxClose = document.getElementById('afro-lightbox-x');
-    var galleryCards = Array.from(document.querySelectorAll('.afro-gal-card'));
-    var currentGalIdx = 0;
+    var galItems = Array.from(document.querySelectorAll('.afro-gal-item'));
+    var curIdx = 0;
 
-    galleryCards.forEach(function(item, idx) {
+    galItems.forEach(function(item, idx) {
       item.addEventListener('click', function() {
-        currentGalIdx = idx;
+        curIdx = idx;
         lightboxImg.src = item.getAttribute('data-src');
         lightbox.style.display = 'flex';
       });
@@ -1053,23 +1123,25 @@
       if (e.target === lightbox) lightbox.style.display = 'none';
     });
 
+    var lbStartX = 0;
+    var lbEndX = 0;
     lightbox.addEventListener('touchstart', function(e) {
-      touchStartX = e.changedTouches[0].screenX;
+      lbStartX = e.changedTouches[0].screenX;
     }, false);
     lightbox.addEventListener('touchend', function(e) {
-      touchEndX = e.changedTouches[0].screenX;
-      var diff = touchEndX - touchStartX;
+      lbEndX = e.changedTouches[0].screenX;
+      var diff = lbEndX - lbStartX;
       if (Math.abs(diff) > 40) {
         if (diff < 0) {
-          currentGalIdx = (currentGalIdx + 1) % galleryCards.length;
+          curIdx = (curIdx + 1) % galItems.length;
         } else {
-          currentGalIdx = (currentGalIdx - 1 + galleryCards.length) % galleryCards.length;
+          curIdx = (curIdx - 1 + galItems.length) % galItems.length;
         }
-        lightboxImg.src = galleryCards[currentGalIdx].getAttribute('data-src');
+        lightboxImg.src = galItems[curIdx].getAttribute('data-src');
       }
     }, false);
 
-    // 6. Global click tracking for YM goals
+    // 6. Global Tracking for Links
     document.addEventListener('click', function(e) {
       var a = e.target.closest('a');
       if (!a) return;
@@ -1083,7 +1155,7 @@
       }
     });
 
-    console.log('[AfroStudio] Engine v2.0.0 activated.');
+    console.log('[AfroStudio] Elite Engine v3.0.0 activated.');
   }
 
   if (document.readyState === 'loading') {
