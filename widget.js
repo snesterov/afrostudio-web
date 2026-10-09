@@ -1,6 +1,6 @@
 /**
  * AFROSTUDIO.RU - ULTRA BEAUTY MARKETING TREND WEB SYSTEM
- * Version: 16.0.0 - Real Video Screenshots CDN, Bottom-Left Floating Scroll, Fixed Card Buttons
+ * Version: 17.0.0 - Real Video Screenshots CDN, Bottom-Left Floating Scroll, Fixed Card Buttons
  */
 (function() {
   'use strict';
@@ -1065,133 +1065,133 @@
   // 4. CLEAN DATA DICTIONARIES
   const cleanPosts = {
     "393": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_393.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_393.jpg",
       title: "Когда общаешься со сложным клиентом и случайно смотришь на коллегу 😁",
       desc: "Будни наших топ-мастеров в Afrostudio 😂 Смотрите видеоролик в нашем Telegram-канале!",
       is_video: true
     },
     "391": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_391.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_391.jpg",
       title: "Иногда для идеального образа не хватает только волос ❤️",
       desc: "Добавим длину, густоту и роскошный объем, сохранив максимально естественный результат ✨ Твои волосы - твоя уверенность!",
       is_video: true
     },
     "386": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_386.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_386.jpg",
       title: "Когда вернулся клиент, который говорил, что дорого 😁",
       desc: "Качественная работа всегда окупается! Смотрите живое видео преображения в Telegram.",
       is_video: true
     },
     "383": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_383.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_383.jpg",
       title: "Те самые «незаменимые» сотрудники студии ❤️",
       desc: "Иногда для идеального образа не хватает только волос! Смотрите ролик в нашем канале.",
       is_video: true
     },
     "379": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_379.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_379.jpg",
       title: "Блин, мне так плохо, мне срочно нужны… витрины волос! 😁",
       desc: "Огромный выбор натуральных донорских срезов в студии на Таганской. Смотрите видео в Telegram.",
       is_video: true
     },
     "377": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_377.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_377.jpg",
       title: "Наращивание волос — совсем другая длина, густота и настроение! 🤍",
       desc: "Красивые волосы меняют не только образ, но и самоощущение. Записывайтесь на преображение 💫",
       is_video: true
     },
     "375": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_375.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_375.jpg",
       title: "Когда за день сделала 5 наращиваний, 3 укладки и 100 раз услышала:",
       desc: "«А можно ещё чуть-чуть длиннее?» 😅 В конце рабочего дня мастер уже не ходит — он передвигается по инерции)",
       is_video: true
     },
     "373": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_373.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_373.jpg",
       title: "Наращивание волос — когда хочется перемен прямо сейчас!",
       desc: "Длина, густота и роскошный объём — всё это можно получить за одну процедуру 🤍 Индивидуальный подбор волос ✨",
       is_video: true
     },
     "371": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_371.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_371.jpg",
       title: "Сегодня у нас особенная история ❤️ Донор — дочка",
       desc: "Мама решила подарить своим волосам новую длину и объем, а донором стала её дочка ✨ Мы аккуратно отрезали детские волосы и нарастили маме.",
       is_video: true
     },
     "367": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_367.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_367.jpg",
       title: "Загущение волос — идеальное решение для плотной прически ✨",
       desc: "Для тех, кто хочет сделать прическу более плотной, естественной и ухоженной, не меняя длину ✨",
       is_video: true
     },
     "365": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_365.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_365.jpg",
       title: "Дорогие клиенты, вы можете разговаривать, смеяться…",
       desc: "Но, пожалуйста, не забывайте, что голова должна оставаться на месте 😄 Мастер работает. Клиент отдыхает. Результат радует обоих ❤️",
       is_video: true
     },
     "362": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_362.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_362.jpg",
       title: "Когда записали двух клиентов на одно время 😅",
       desc: "Смотрите юмористический ролик из закулисья работы мастеров Afrostudio в Telegram.",
       is_video: true
     },
     "331": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_331.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_331.jpg",
       title: "Мы не только делаем лучшее наращивание, но и создаем уют ❤️",
       desc: "Уютная и душевная атмосфера студии Afrostudio на Таганской 🤗 💫 Ждем вас в гости!",
       is_video: true
     },
     "329": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_329.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_329.jpg",
       title: "Исправление неудачной стрижки и эксперименты с цветом 🤗",
       desc: "Наращивание волос может помочь исправить любую неудачную стрижку или легко поэкспериментировать с цветом без вреда для своих прядей!",
       is_video: true
     },
     "324": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_324.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_324.jpg",
       title: "Нарастим даже на самые короткие волосы 🤗",
       desc: "Ювелирная техника микрокапсул позволяет работать с любой ультракороткой длиной. Результат абсолютно незаметен!",
       is_video: true
     },
     "322": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_322.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_322.jpg",
       title: "Расскажи снегурочка где была? В АФРОСТУДИИ конечно 😁 🩵",
       desc: "Праздничные преображения и роскошная длина для наших любимых клиенток в студии на Таганской ✨",
       is_video: true
     },
     "311": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_311.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_311.jpg",
       title: "Красота начинается с волос ❤️",
       desc: "Идеальные славянские волосы премиум качества, бережное капсулирование и гармоничный образ от топ-мастеров.",
       is_video: true
     },
     "301": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_301.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_301.jpg",
       title: "Дорогие клиенты, не опаздывайте пожалуйста ❤️",
       desc: "Или предупреждайте что не успеваете. Мы всегда готовы идти к вам навстречу 💋 Ждем вас в Afrostudio!",
       is_video: true
     },
     "261": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_261.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_261.jpg",
       title: "Вот чего по-настоящему хочется в субботу вечером 😁",
       desc: "Всем уютной субботы 💕 Роскошные волосы, идеальная укладка и отличное настроение от нашей команды мастеров!",
       is_video: true
     },
     "213": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_213.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_213.jpg",
       title: "Мы стараемся для Вас! ❤️ Не обесценивайте работу мастера",
       desc: "Попытка сэкономить может привести к дополнительным расходам 🤗 Доверяйте волосы только профессионалам с многолетним стажем!",
       is_video: true
     },
     "180": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_180.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_180.jpg",
       title: "Afrostudio ❤️ Награда «Хорошее Место» от Яндекса!",
       desc: "Признание и высшая оценка наших клиентов на Яндекс Картах! Спасибо за доверие и любовь к нашей студии ✨",
       is_video: false
     },
     "125": {
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v16.0.0/images/post_125.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@v17.0.0/images/post_125.jpg",
       title: "100% натуральные славянские волосы премиум качества!",
       desc: "У нас в студии вы всегда найдёте сертифицированные детские и славянские срезы без силикона для идеального наращивания ✨",
       is_video: true
@@ -1230,7 +1230,7 @@
     heroWrap.innerHTML = `
       <div class="afro-hero-track" id="afro-hero-track">
         <!-- SLIDE 1: INTERIOR PHOTO -->
-        <div class="afro-hero-slide" style="background-image: url('https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@main/images/hero_interior.jpg');">
+        <div class="afro-hero-slide" style="background-image: url('https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@main/images/hero_interior_hd.jpg');">
           <div class="afro-hero-content">
             <span class="afro-hero-pill">СТУДИЯ НА ТАГАНСКОЙ &middot; 28 ЛЕТ МАСТЕРСТВА</span>
             <h1 class="afro-hero-h1">Afrostudio &mdash; Легендарная <span>Студия Красоты</span> в Москве</h1>
