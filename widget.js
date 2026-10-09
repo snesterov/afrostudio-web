@@ -566,6 +566,13 @@
       margin: 0 auto 36px;
       text-shadow: 0 2px 12px rgba(0,0,0,0.8);
     }
+    .afro-hero-address {
+      display: inline-block;
+      margin-top: 6px;
+      color: #fbcfe8;
+      font-weight: 600;
+      white-space: nowrap;
+    }
     .afro-hero-actions {
       display: flex;
       gap: 18px;
@@ -1356,7 +1363,7 @@
           <div class="afro-hero-content">
             <span class="afro-hero-pill">СТУДИЯ НА ТАГАНСКОЙ &middot; 28 ЛЕТ МАСТЕРСТВА</span>
             <h1 class="afro-hero-h1">Afrostudio &mdash; Легендарная <span>Студия Красоты</span> в Москве</h1>
-            <p class="afro-hero-desc">Знакомый интерьер, теплая атмосфера и премиальный уровень сервиса с 1998 года. 100% натуральные донорские волосы славянского типа и авторские схемы плетения (г. Москва, ул. Таганская, 26, стр. 1).</p>
+            <p class="afro-hero-desc">Знакомый интерьер, теплая атмосфера и премиальный уровень сервиса с 1998 года.<br>100% натуральные донорские волосы славянского типа и авторские схемы плетения.<br><span class="afro-hero-address">г. Москва, ул. Таганская, 26, стр. 1</span></p>
             <div class="afro-hero-actions">
               <a href="#popup:myform" class="afro-btn-gold">Записаться онлайн</a>
               <a href="#afro-directions" class="afro-btn-trans">Все направления</a>
