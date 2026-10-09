@@ -1170,11 +1170,77 @@
     }
 
     @media (max-width: 768px) {
-      .afro-hero-h1 { font-size: 34px !important; }
-      .afro-hero-desc { font-size: 15px !important; }
+      /* 1. HERO SLIDER ON MOBILE: NO CLIPPING ARROWS, FULL TEXT READABILITY */
+      .afro-hero-nav { display: none !important; }
+      .afro-hero-content { padding: 0 14px !important; }
+      .afro-hero-h1 { font-size: 32px !important; line-height: 1.25 !important; }
+      .afro-hero-desc { font-size: 15px !important; line-height: 1.6 !important; margin: 0 auto 28px !important; }
+      .afro-hero-address { display: block !important; margin-top: 8px !important; font-size: 14px !important; }
+      .afro-hero-actions { flex-direction: column !important; width: 100% !important; max-width: 310px !important; margin: 0 auto !important; gap: 12px !important; }
+      .afro-hero-actions a { width: 100% !important; text-align: center !important; }
+      .afro-hero-dots { bottom: 22px !important; }
+
+      /* 2. PRICE SECTION ON MOBILE: PURE VERTICAL CARDS (ZERO HORIZONTAL SCROLL) */
+      .afro-price-section { padding: 0 14px !important; margin: 65px auto 55px !important; }
+      .afro-price-tabs { gap: 8px !important; margin-bottom: 22px !important; }
+      .afro-price-tab-btn { padding: 10px 18px !important; font-size: 13px !important; }
+      .afro-price-card { padding: 16px 12px !important; border-radius: 20px !important; }
+      .afro-price-table thead { display: none !important; }
+      .afro-price-table,
+      .afro-price-table tbody,
+      .afro-price-table tr,
+      .afro-price-table td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .afro-price-table tr {
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(244, 114, 182, 0.22) !important;
+        border-radius: 16px !important;
+        padding: 16px 14px !important;
+        margin-bottom: 14px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+      }
+      .afro-price-table tr:hover td { background: transparent !important; }
+      .afro-price-table td { padding: 4px 0 !important; border: none !important; }
+      .afro-price-table td:nth-child(1) strong {
+        font-size: 16px !important;
+        color: #ffffff !important;
+        display: block !important;
+        line-height: 1.4 !important;
+        margin-bottom: 4px !important;
+      }
+      .afro-price-table td:nth-child(2) {
+        font-size: 13.5px !important;
+        color: #94a3b8 !important;
+        display: block !important;
+        margin-bottom: 6px !important;
+      }
+      .afro-price-val {
+        font-size: 19px !important;
+        font-weight: 800 !important;
+        display: inline-block !important;
+        margin: 4px 0 10px !important;
+      }
+      .afro-price-table td:last-child {
+        margin-top: 8px !important;
+      }
+      .afro-price-table td:last-child a {
+        display: block !important;
+        text-align: center !important;
+        padding: 12px 20px !important;
+        border-radius: 9999px !important;
+        font-size: 13.5px !important;
+        font-weight: 800 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      /* 3. SECTIONS & MODALS ON MOBILE */
       .afro-section-title { font-size: 28px !important; }
       .afro-art-box { grid-template-columns: 1fr; padding: 32px 20px; }
-      .afro-cookie-banner { left: 20px !important; right: 20px !important; max-width: none !important; }
+      .afro-cookie-banner { left: 16px !important; right: 16px !important; max-width: none !important; }
     }
   `;
 
@@ -1417,8 +1483,23 @@
     }
 
     document.getElementById('afro-hero-prev').addEventListener('click', () => goToSlide(currentSlide - 1));
-    document.getElementById('afro-hero-next').addEventListener('click', () => goToSlide(currentSlide + 1));
     dots.forEach((d, i) => d.addEventListener('click', () => goToSlide(i)));
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    heroWrap.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    heroWrap.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 45) {
+        goToSlide(currentSlide + 1);
+      } else if (touchEndX - touchStartX > 45) {
+        goToSlide(currentSlide - 1);
+      }
+    }, { passive: true });
+
     setInterval(() => goToSlide(currentSlide + 1), 7000);
   }
 
