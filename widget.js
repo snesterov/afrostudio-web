@@ -392,6 +392,51 @@
       font-weight: 700 !important;
     }
 
+    /* FIX FOR TILDA PHONE MASK SO NUMBERS ARE FULLY VISIBLE WITHOUT CLIPPING */
+    .t-input-group_ph .t-input-block,
+    #rec630108157 .t-input-group_ph .t-input-block {
+      display: flex !important;
+      align-items: center !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1.5px solid rgba(244, 114, 182, 0.35) !important;
+      border-radius: 14px !important;
+      padding: 6px 14px !important;
+      box-sizing: border-box !important;
+      width: 100% !important;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.5) !important;
+    }
+    .t-input-group_ph .t-input-block:focus-within,
+    #rec630108157 .t-input-group_ph .t-input-block:focus-within {
+      border-color: #fb7185 !important;
+      box-shadow: 0 0 20px rgba(244, 63, 94, 0.45) !important;
+    }
+    .t-input-group_ph input[type="tel"],
+    .t-input-group_ph .t-input,
+    .t-input-group_ph .js-phonemask-input,
+    #rec630108157 .t-input-group_ph input[type="tel"],
+    #rec630108157 .t-input-group_ph .t-input {
+      border: none !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      padding: 10px 8px !important;
+      margin: 0 !important;
+      flex: 1 1 auto !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      color: #ffffff !important;
+      font-size: 16px !important;
+      letter-spacing: 0.03em !important;
+      box-sizing: border-box !important;
+    }
+    .t-input-phonemask__wrap,
+    .t-input-phonemask__select {
+      display: inline-flex !important;
+      align-items: center !important;
+      flex-shrink: 0 !important;
+      margin-right: 6px !important;
+    }
+
     /* HIGH CONTRAST RADIANT CHECKBOX & TERMS ACCENTS */
     .t-checkbox__control {
       display: inline-flex !important;
@@ -1279,6 +1324,28 @@
       .afro-section-title { font-size: 28px !important; }
       .afro-art-box { grid-template-columns: 1fr; padding: 32px 20px; }
       .afro-cookie-banner { left: 16px !important; right: 16px !important; max-width: none !important; }
+
+      /* MODAL DIALOG ON MOBILE (NO WORD CLIPPING & PERFECT PADDING) */
+      .t702__wrapper,
+      #rec630108157 .t702__wrapper {
+        padding: 36px 18px !important;
+      }
+      .t702__title,
+      .t-popup .t-title,
+      #rec630108157 .t-title {
+        font-size: 23px !important;
+        letter-spacing: 0.04em !important;
+        white-space: nowrap !important;
+        line-height: 1.25 !important;
+        margin-bottom: 14px !important;
+      }
+      .t-input-group_ph .t-input-block {
+        padding: 4px 10px !important;
+      }
+      .t-input-group_ph input[type="tel"] {
+        font-size: 15px !important;
+        padding: 8px 4px !important;
+      }
     }
   `;
 
