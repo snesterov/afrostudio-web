@@ -1,7 +1,8 @@
 /**
- * AFROSTUDIO — Autonomous Hair & Afro Engine v1.1.0
+ * AFROSTUDIO — Autonomous Engine v1.2.0
  * Yandex Metrika Counter: 88058414
- * Mobile-First: 360px+, Left Bottom Scroll (40x40), Right Bottom Lead/AI Launcher
+ * Floating leadgen widget completely removed.
+ * Left Bottom Scroll-To-Top button: bottom: 14px, left: 14px, 40x40 px.
  */
 (function() {
   'use strict';
@@ -79,37 +80,6 @@
       stroke-width: 2.5;
     }
 
-    /* AI LEADGEN LAUNCHER — STRICTLY BOTTOM 14px, RIGHT 14px */
-    #afro-lead-launcher {
-      position: fixed;
-      bottom: 14px;
-      right: 14px;
-      height: 40px;
-      padding: 0 16px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #d4af37 0%, #f3e08b 100%);
-      color: #121214;
-      font-weight: 700;
-      font-size: 13px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      z-index: 9990;
-      box-shadow: 0 6px 20px rgba(212,175,55,0.4);
-      transition: all 0.25s ease;
-      white-space: nowrap;
-      border: none;
-    }
-    #afro-lead-launcher:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(212,175,55,0.55);
-    }
-    #afro-lead-launcher svg {
-      width: 16px;
-      height: 16px;
-    }
-
     /* HERO SECTION */
     .afro-hero {
       padding: 60px 0 40px;
@@ -155,153 +125,12 @@
       padding: 0 8px;
     }
 
-    /* INTERACTIVE AI CALCULATOR */
-    .afro-calc-card {
-      background: #151518;
-      border: 1px solid #26262d;
-      border-radius: 20px;
-      padding: 24px 18px;
-      margin: 20px auto 40px;
-      max-width: 840px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-      text-align: left;
-    }
-    @media (min-width: 768px) {
-      .afro-calc-card {
-        padding: 36px 32px;
-      }
-    }
-    .afro-calc-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-      border-bottom: 1px solid #222228;
-      padding-bottom: 16px;
-    }
-    .afro-calc-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .afro-steps-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .afro-field-group {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .afro-label {
-      font-size: 13px;
-      font-weight: 600;
-      color: #c0c0cb;
-    }
-    
-    /* PILLS GRID (NO TAG WITH O-P-T) */
-    .afro-pills-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .afro-pill {
-      background: #1f1f24;
-      border: 1px solid #32323a;
-      color: #d0d0dc;
-      padding: 8px 14px;
-      border-radius: 10px;
-      font-size: 13px;
-      cursor: pointer;
-      user-select: none;
-      transition: all 0.2s;
-    }
-    .afro-pill:hover {
-      border-color: #d4af37;
-      color: #fff;
-    }
-    .afro-pill.afro-active {
-      background: rgba(212,175,55,0.18);
-      border-color: #d4af37;
-      color: #f3e08b;
-      font-weight: 700;
-    }
-
-    .afro-input {
-      width: 100%;
-      height: 44px;
-      padding: 0 14px;
-      border-radius: 10px;
-      background: #1f1f24;
-      border: 1px solid #32323a;
-      color: #f0f0f5;
-      font-size: 14px;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .afro-input:focus {
-      border-color: #d4af37;
-    }
-    .afro-price-box {
-      background: #1c1c22;
-      border: 1px solid rgba(212,175,55,0.35);
-      border-radius: 14px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 12px;
-      margin-top: 10px;
-    }
-    @media (min-width: 768px) {
-      .afro-price-box {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-      }
-    }
-    .afro-price-val {
-      font-size: 26px;
-      font-weight: 800;
-      color: #d4af37;
-    }
-    .afro-bonus-tag {
-      font-size: 12px;
-      color: #8ce196;
-      background: rgba(140,225,150,0.12);
-      padding: 4px 10px;
-      border-radius: 20px;
-      display: inline-block;
-      margin-top: 4px;
-    }
-    .afro-btn-calc {
-      height: 46px;
-      padding: 0 24px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #d4af37 0%, #f3e08b 100%);
-      color: #121214;
-      font-weight: 700;
-      font-size: 14px;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .afro-btn-calc:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 15px rgba(212,175,55,0.4);
-    }
-
     /* TELEGRAM SHOWCASE WITH PREVIEWS */
     .afro-gallery-section {
-      padding: 40px 0;
+      padding: 50px 0;
     }
     .afro-section-title {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 800;
       text-align: center;
       margin-bottom: 8px;
@@ -310,7 +139,7 @@
       font-size: 14px;
       color: #9c9ca8;
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
     .afro-gallery-grid {
       display: grid;
@@ -352,6 +181,43 @@
       font-size: 11px;
       color: #d4af37;
       border: 1px solid rgba(212,175,55,0.3);
+    }
+
+    /* DIRECT CONTACT BUTTONS */
+    .afro-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .afro-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .afro-cta-gold {
+      background: linear-gradient(135deg, #d4af37 0%, #f3e08b 100%);
+      color: #121214;
+    }
+    .afro-cta-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(212,175,55,0.4);
+    }
+    .afro-cta-dark {
+      background: #1f1f26;
+      border: 1px solid #363642;
+      color: #f5f5f7;
+    }
+    .afro-cta-dark:hover {
+      background: #2a2a34;
+      border-color: #d4af37;
     }
 
     /* COOKIE BANNER */
@@ -457,7 +323,7 @@
       color: #d4af37;
     }
 
-    /* MODAL WINDOW FOR LEGAL / AI */
+    /* MODAL WINDOW FOR LEGAL DOCUMENTS */
     .afro-modal-overlay {
       position: fixed;
       top: 0;
@@ -554,19 +420,11 @@
     }
 
     root.innerHTML = `
-      <!-- SCROLL TO TOP -->
+      <!-- SCROLL TO TOP (strictly bottom 14px, left 14px, 40x40px) -->
       <button id="afro-scroll-top" title="Наверх" aria-label="Наверх">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
           <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
-      </button>
-
-      <!-- AI LEAD LAUNCHER -->
-      <button id="afro-lead-launcher" aria-label="AI-Разбор волос">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
-        </svg>
-        <span>AI-Разбор волос</span>
       </button>
 
       <!-- HERO -->
@@ -576,60 +434,13 @@
           <h1 class="afro-title">Наращивание волос и афропрически нового уровня</h1>
           <p class="afro-subtitle">Индивидуальный подбор донорских прядей, бережная капсуляция без утяжеления и плетение любой сложности со стажем мастеров с 1998 года.</p>
 
-          <!-- CALCULATOR -->
-          <div class="afro-calc-card">
-            <div class="afro-calc-header">
-              <div class="afro-calc-title">
-                <span>Калькулятор сметы и подбор волос</span>
-              </div>
-            </div>
-            
-            <div class="afro-steps-grid">
-              <div class="afro-field-group">
-                <label class="afro-label">Тип процедуры</label>
-                <div class="afro-pills-row" id="afro-pills-type">
-                  <div class="afro-pill afro-active" data-val="12000" data-name="Капсульное наращивание">Капсульное (микро/нано)</div>
-                  <div class="afro-pill" data-val="9500" data-name="Биопротеиновые волосы">Биопротеин люкс</div>
-                  <div class="afro-pill" data-val="14000" data-name="Голливудское наращивание">Голливудское (трессы)</div>
-                  <div class="afro-pill" data-val="8500" data-name="Афрокосы классика">Афрокосы</div>
-                  <div class="afro-pill" data-val="7900" data-name="Брейды">Брейды</div>
-                  <div class="afro-pill" data-val="9900" data-name="Дредокудри">Дредокудри и зизи</div>
-                </div>
-              </div>
-
-              <div class="afro-field-group">
-                <label class="afro-label">Желаемая длина</label>
-                <div class="afro-pills-row" id="afro-pills-length">
-                  <div class="afro-pill" data-val="1" data-len="40-45 см">40-45 см (лопатки)</div>
-                  <div class="afro-pill afro-active" data-val="1.2" data-len="50-55 см">50-55 см (талия)</div>
-                  <div class="afro-pill" data-val="1.45" data-len="60-65 см">60-65 см (поясница)</div>
-                  <div class="afro-pill" data-val="1.7" data-len="70+ см">70+ см (максимальная)</div>
-                </div>
-              </div>
-
-              <div class="afro-field-group">
-                <label class="afro-label">Объем и густота</label>
-                <div class="afro-pills-row" id="afro-pills-volume">
-                  <div class="afro-pill afro-active" data-val="1" data-vol="Стандарт">Стандарт (100-120 капсул)</div>
-                  <div class="afro-pill" data-val="1.25" data-vol="Густые">Густые (140-160 капсул)</div>
-                  <div class="afro-pill" data-val="1.5" data-vol="Максимум">Максимум (180-220 капсул)</div>
-                </div>
-              </div>
-
-              <div class="afro-field-group">
-                <label class="afro-label">Ваш номер телефона</label>
-                <input type="tel" id="afro-phone-input" class="afro-input" placeholder="+7 (___) ___-__-__" />
-              </div>
-
-              <div class="afro-price-box">
-                <div>
-                  <div class="afro-label">Примерный расчет стоимости:</div>
-                  <div class="afro-price-val" id="afro-calc-total">14 400 ₽</div>
-                  <span class="afro-bonus-tag">✓ Скидка 10% на первый визит + уход в подарок</span>
-                </div>
-                <button type="button" id="afro-calc-submit" class="afro-btn-calc">Зафиксировать цену</button>
-              </div>
-            </div>
+          <div class="afro-cta-row">
+            <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-cta-btn afro-cta-gold">
+              <span>Записаться в WhatsApp</span>
+            </a>
+            <a href="https://t.me/afrostudio" target="_blank" class="afro-cta-btn afro-cta-dark">
+              <span>Канал в Telegram</span>
+            </a>
           </div>
         </div>
       </section>
@@ -707,7 +518,7 @@
   }
 
   function setupHandlers() {
-    // 1. Scroll-To-Top button (bottom: 14px, left: 14px, 40x40px)
+    // 1. Scroll-To-Top button (strictly bottom: 14px, left: 14px, 40x40px)
     var scrollBtn = document.getElementById('afro-scroll-top');
     window.addEventListener('scroll', function() {
       if (window.pageYOffset > 250) {
@@ -720,65 +531,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // 2. AI Lead Launcher button (bottom: 14px, right: 14px)
-    var leadLauncher = document.getElementById('afro-lead-launcher');
-    leadLauncher.addEventListener('click', function() {
-      var card = document.querySelector('.afro-calc-card');
-      if (card) {
-        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-      trackYM('lead_launcher_click');
-    });
-
-    // 3. Calculator interactive calculation
-    var currentBase = 12000;
-    var currentLenMult = 1.2;
-    var currentVolMult = 1;
-    var totalDisplay = document.getElementById('afro-calc-total');
-
-    function updatePrice() {
-      var sum = Math.round(currentBase * currentLenMult * currentVolMult / 100) * 100;
-      totalDisplay.textContent = sum.toLocaleString('ru-RU') + ' ₽';
-    }
-
-    function bindPillGroup(containerId, callback) {
-      var container = document.getElementById(containerId);
-      if (!container) return;
-      var pills = container.querySelectorAll('.afro-pill');
-      pills.forEach(function(p) {
-        p.addEventListener('click', function() {
-          pills.forEach(function(item) { item.classList.remove('afro-active'); });
-          p.classList.add('afro-active');
-          callback(parseFloat(p.getAttribute('data-val')));
-          updatePrice();
-        });
-      });
-    }
-
-    bindPillGroup('afro-pills-type', function(val) { currentBase = val; });
-    bindPillGroup('afro-pills-length', function(val) { currentLenMult = val; });
-    bindPillGroup('afro-pills-volume', function(val) { currentVolMult = val; });
-    updatePrice();
-
-    // 4. Form Submit & Metrika trigger
-    var submitBtn = document.getElementById('afro-calc-submit');
-    var phoneInput = document.getElementById('afro-phone-input');
-    submitBtn.addEventListener('click', function() {
-      var phone = phoneInput.value.trim();
-      if (!phone) {
-        alert('Пожалуйста, укажите ваш номер телефона для связи.');
-        phoneInput.focus();
-        return;
-      }
-      // Reaching YM goal
-      trackYM('296485879', { price: totalDisplay.textContent, phone: phone });
-      trackYM('gamelead_send');
-      
-      alert('Спасибо! Ваш расчет зафиксирован. Мастер свяжется с вами в течение 10 минут для консультации.');
-      phoneInput.value = '';
-    });
-
-    // 5. Cookie consent
+    // 2. Cookie consent
     var cookieBanner = document.getElementById('afro-cookie-banner');
     if (!localStorage.getItem('afro_cookie_agreed')) {
       cookieBanner.style.display = 'flex';
@@ -790,11 +543,11 @@
     document.getElementById('afro-cookie-cfg').addEventListener('click', function() {
       openModal(
         'Настройка cookie',
-        'Вы можете управлять сохранением технических файлов в настройках вашего веб-обозревателя. Мы используем cookie исключительно для работы расчета и безопасности сайта.'
+        'Вы можете управлять сохранением технических файлов в настройках вашего веб-обозревателя. Мы используем cookie исключительно для корректной работы сайта.'
       );
     });
 
-    // 6. Legal Modals
+    // 3. Legal Modals
     var modal = document.getElementById('afro-modal');
     var modalTitle = document.getElementById('afro-modal-title');
     var modalText = document.getElementById('afro-modal-text');
@@ -815,18 +568,18 @@
     document.getElementById('afro-open-policy').addEventListener('click', function() {
       openModal(
         'Политика конфиденциальности',
-        '<p>Настоящая Политика регулирует порядок обработки персональной информации пользователей сайта afrostudio.ru в соответствии с требованиями законодательства РФ.</p><br/><p>1. Мы собираем контактные данные (имя, номер телефона) исключительно для связи с клиентом и записи на прием.</p><br/><p>2. Данные не передаются третьим лицам и надежно защищены.</p>'
+        '<p>Настоящая Политика регулирует порядок обработки персональной информации пользователей сайта afrostudio.ru в соответствии с требованиями законодательства РФ.</p><br/><p>1. Мы собираем контактные данные исключительно для связи с клиентом и записи на прием.</p><br/><p>2. Данные не передаются третьим лицам и надежно защищены.</p>'
       );
     });
 
     document.getElementById('afro-open-consent').addEventListener('click', function() {
       openModal(
         'Согласие на обработку персональных данных (152-ФЗ)',
-        '<p>Настоящим я даю согласие студии красоты Afrostudio на обработку моих персональных данных (телефон, имя) с целью консультации, расчета стоимости услуг и записи к мастеру.</p><br/><p>Согласие действует до момента отзыва субъектом персональных данных.</p>'
+        '<p>Настоящим я даю согласие студии красоты Afrostudio на обработку моих персональных данных с целью консультации и записи к мастеру.</p><br/><p>Согласие действует до момента отзыва субъектом персональных данных.</p>'
       );
     });
 
-    // 7. Lightbox with swipe
+    // 4. Lightbox with swipe
     var lightbox = document.getElementById('afro-lightbox');
     var lightboxImg = document.getElementById('afro-lightbox-img');
     var lightboxClose = document.getElementById('afro-lightbox-x');
@@ -882,7 +635,7 @@
       }
     });
 
-    console.log('[AfroStudio] Engine v1.1.0 activated.');
+    console.log('[AfroStudio] Engine v1.2.0 activated.');
   }
 
   if (document.readyState === 'loading') {
