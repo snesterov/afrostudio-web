@@ -1561,7 +1561,7 @@
             <p class="afro-hero-desc">Знакомый интерьер, теплая атмосфера и премиальный уровень сервиса с 1998 года.<br>100% натуральные донорские волосы славянского типа и авторские схемы плетения.<br><span class="afro-hero-address">г. Москва, ул. Таганская, 26, стр. 1</span></p>
             <div class="afro-hero-actions">
               <a href="#popup:myform" class="afro-btn-gold">Записаться онлайн</a>
-              <a href="#afro-directions" class="afro-btn-trans">Все направления</a>
+              <a href="#afro-telegram-feed" class="afro-btn-trans">Работы мастеров</a>
             </div>
           </div>
         </div>
@@ -1585,7 +1585,7 @@
             <p class="afro-hero-desc">Любая сложность плетения, премиальный канекалон, комфортное распределение веса без вреда для своих волос на 2-3 месяца.</p>
             <div class="afro-hero-actions">
               <a href="#popup:myform" class="afro-btn-gold">Записаться на плетение</a>
-              <a href="#afro-telegram-feed" class="afro-btn-trans">Работы мастеров</a>
+              <a href="#afro-pricing" class="afro-btn-trans" id="afro-hero-btn-afroprice">Прайс на афрокосы</a>
             </div>
           </div>
         </div>
@@ -1827,16 +1827,26 @@
     const tbody = document.getElementById('afro-price-tbody');
 
     if (tabHair && tabAfro && tbody) {
-      tabHair.addEventListener('click', () => {
+      function showHairPrices() {
         tabHair.classList.add('active');
         tabAfro.classList.remove('active');
         tbody.innerHTML = renderTableRows(hairPrices);
-      });
-      tabAfro.addEventListener('click', () => {
+      }
+      function showAfroPrices() {
         tabAfro.classList.add('active');
         tabHair.classList.remove('active');
         tbody.innerHTML = renderTableRows(afroPrices);
-      });
+      }
+      tabHair.addEventListener('click', showHairPrices);
+      tabAfro.addEventListener('click', showAfroPrices);
+
+      // Connect button from hero slider
+      const afroHeroBtn = document.getElementById('afro-hero-btn-afroprice');
+      if (afroHeroBtn) {
+        afroHeroBtn.addEventListener('click', () => {
+          showAfroPrices();
+        });
+      }
     }
   }
 
