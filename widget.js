@@ -936,6 +936,10 @@
       border: 1px solid rgba(244, 114, 182, 0.3);
       padding: 36px;
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+      max-width: 100% !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      box-sizing: border-box !important;
     }
     .afro-price-table {
       width: 100%;
@@ -1203,7 +1207,7 @@
       font-size: 18px;
     }
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 980px) {
       /* 1. HERO SLIDER ON MOBILE: NO CLIPPING ARROWS, FULL TEXT READABILITY */
       .afro-hero-nav { display: none !important; }
       .afro-hero-content { padding: 0 14px !important; }
@@ -1516,8 +1520,19 @@
       dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
     }
 
-    document.getElementById('afro-hero-prev').addEventListener('click', () => goToSlide(currentSlide - 1));
+    const prevBtn = document.getElementById('afro-hero-prev');
+    const nextBtn = document.getElementById('afro-hero-next');
+    if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
     dots.forEach((d, i) => d.addEventListener('click', () => goToSlide(i)));
+
+    function checkMobileHeroNav() {
+      const isMobile = window.innerWidth <= 980;
+      if (prevBtn) prevBtn.style.setProperty('display', isMobile ? 'none' : 'flex', 'important');
+      if (nextBtn) nextBtn.style.setProperty('display', isMobile ? 'none' : 'flex', 'important');
+    }
+    checkMobileHeroNav();
+    window.addEventListener('resize', checkMobileHeroNav);
 
     // Touch swipe support for mobile
     let touchStartX = 0;
