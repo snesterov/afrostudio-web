@@ -1,8 +1,9 @@
 /**
- * AFROSTUDIO — Autonomous Engine v1.2.0
+ * AFROSTUDIO — Autonomous Engine v1.3.0
  * Yandex Metrika Counter: 88058414
- * Floating leadgen widget completely removed.
- * Left Bottom Scroll-To-Top button: bottom: 14px, left: 14px, 40x40 px.
+ * Left Bottom: Scroll-To-Top (bottom: 14px, left: 14px, 40x40px)
+ * Right Bottom: Колесо Фортуны (bottom: 14px, right: 14px)
+ * YM Goal: gamelead_send (540991082)
  */
 (function() {
   'use strict';
@@ -13,16 +14,16 @@
     if (window.ym) {
       try {
         window.ym(YM_ID, 'reachGoal', target, params);
-        console.log('[AfroStudio YM Target]:', target);
+        console.log('[AfroStudio YM]:', target);
       } catch(err) {
-        console.warn('[AfroStudio YM Warning]:', err);
+        console.warn('[AfroStudio YM Error]:', err);
       }
     }
   }
 
   // Styles Injection
   var styles = `
-    /* AFROSTUDIO GLOBAL STYLES */
+    /* AFROSTUDIO BASE */
     #afrostudio-app {
       font-family: 'TildaSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       color: #f5f5f7;
@@ -36,7 +37,6 @@
       margin: 0;
       padding: 0;
     }
-    
     .afro-container {
       width: 100%;
       max-width: 1200px;
@@ -80,7 +80,43 @@
       stroke-width: 2.5;
     }
 
-    /* HERO SECTION */
+    /* WHEEL LAUNCHER — STRICTLY BOTTOM 14px, RIGHT 14px */
+    #afro-wheel-launcher {
+      position: fixed;
+      bottom: 14px;
+      right: 14px;
+      height: 40px;
+      padding: 0 14px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #d4af37 0%, #f3e08b 100%);
+      color: #121214;
+      font-weight: 700;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      z-index: 9990;
+      box-shadow: 0 6px 20px rgba(212,175,55,0.4);
+      transition: all 0.25s ease;
+      border: none;
+      white-space: nowrap;
+    }
+    #afro-wheel-launcher:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212,175,55,0.6);
+    }
+    #afro-wheel-launcher svg {
+      width: 16px;
+      height: 16px;
+      animation: afroSpinPulse 3s infinite linear;
+    }
+    @keyframes afroSpinPulse {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* HERO */
     .afro-hero {
       padding: 60px 0 40px;
       text-align: center;
@@ -124,8 +160,45 @@
       margin: 0 auto 28px;
       padding: 0 8px;
     }
+    .afro-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .afro-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .afro-cta-gold {
+      background: linear-gradient(135deg, #d4af37 0%, #f3e08b 100%);
+      color: #121214;
+    }
+    .afro-cta-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(212,175,55,0.4);
+    }
+    .afro-cta-dark {
+      background: #1f1f26;
+      border: 1px solid #363642;
+      color: #f5f5f7;
+    }
+    .afro-cta-dark:hover {
+      background: #2a2a34;
+      border-color: #d4af37;
+    }
 
-    /* TELEGRAM SHOWCASE WITH PREVIEWS */
+    /* SHOWCASE */
     .afro-gallery-section {
       padding: 50px 0;
     }
@@ -183,44 +256,118 @@
       border: 1px solid rgba(212,175,55,0.3);
     }
 
-    /* DIRECT CONTACT BUTTONS */
-    .afro-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 24px;
-    }
-    .afro-cta-btn {
-      display: inline-flex;
+    /* WHEEL MODAL */
+    .afro-wheel-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      display: none;
       align-items: center;
-      gap: 8px;
-      padding: 12px 22px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.2s;
+      justify-content: center;
+      padding: 16px;
     }
-    .afro-cta-gold {
+    .afro-wheel-card {
+      background: #16161a;
+      border: 1px solid #2f2f38;
+      border-radius: 24px;
+      width: 100%;
+      max-width: 440px;
+      padding: 24px;
+      position: relative;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+    }
+    .afro-wheel-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #26262e;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      font-size: 18px;
+    }
+    .afro-wheel-wrap {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      margin: 16px auto;
+    }
+    .afro-wheel-arrow {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 22px solid #f3e08b;
+      z-index: 10;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    }
+    #afro-wheel-canvas {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      box-shadow: 0 0 25px rgba(212,175,55,0.25);
+      transition: transform 4s cubic-bezier(0.15, 0.95, 0.35, 1);
+    }
+    .afro-wheel-btn {
+      width: 100%;
+      height: 46px;
+      border-radius: 12px;
       background: linear-gradient(135deg, #d4af37 0%, #f3e08b 100%);
       color: #121214;
+      font-weight: 800;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      margin-top: 14px;
+      transition: transform 0.2s;
     }
-    .afro-cta-gold:hover {
+    .afro-wheel-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(212,175,55,0.4);
     }
-    .afro-cta-dark {
-      background: #1f1f26;
-      border: 1px solid #363642;
-      color: #f5f5f7;
+    .afro-wheel-result-box {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 10px;
+      background: rgba(212,175,55,0.12);
+      border: 1px solid rgba(212,175,55,0.3);
+      display: none;
     }
-    .afro-cta-dark:hover {
-      background: #2a2a34;
-      border-color: #d4af37;
+    .afro-wheel-prize-text {
+      color: #f3e08b;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .afro-wheel-phone {
+      width: 100%;
+      height: 42px;
+      border-radius: 8px;
+      background: #212128;
+      border: 1px solid #3d3d4a;
+      color: #fff;
+      padding: 0 12px;
+      font-size: 14px;
+      outline: none;
+      margin-bottom: 10px;
     }
 
-    /* COOKIE BANNER */
+    /* COOKIE */
     #afro-cookie-banner {
       position: fixed;
       bottom: 0;
@@ -280,7 +427,7 @@
       cursor: pointer;
     }
 
-    /* FOOTER / LEGAL BLOCK */
+    /* FOOTER */
     .afro-footer {
       background: #09090b;
       border-top: 1px solid #1c1c22;
@@ -323,8 +470,8 @@
       color: #d4af37;
     }
 
-    /* MODAL WINDOW FOR LEGAL DOCUMENTS */
-    .afro-modal-overlay {
+    /* MODAL FOR LEGAL */
+    .afro-legal-overlay {
       position: fixed;
       top: 0;
       left: 0;
@@ -338,7 +485,7 @@
       justify-content: center;
       padding: 16px;
     }
-    .afro-modal-body {
+    .afro-legal-box {
       background: #18181d;
       border: 1px solid #32323e;
       border-radius: 20px;
@@ -349,7 +496,7 @@
       padding: 24px;
       position: relative;
     }
-    .afro-modal-close {
+    .afro-legal-close {
       position: absolute;
       top: 16px;
       right: 16px;
@@ -366,7 +513,7 @@
       font-size: 18px;
     }
 
-    /* FULLSCREEN LIGHTBOX WITH SWIPE */
+    /* LIGHTBOX */
     #afro-lightbox {
       position: fixed;
       top: 0;
@@ -410,7 +557,6 @@
   styleEl.appendChild(document.createTextNode(styles));
   document.head.appendChild(styleEl);
 
-  // Core App Injection
   function renderApp() {
     var root = document.getElementById('afrostudio-app');
     if (!root) {
@@ -420,11 +566,20 @@
     }
 
     root.innerHTML = `
-      <!-- SCROLL TO TOP (strictly bottom 14px, left 14px, 40x40px) -->
+      <!-- SCROLL TO TOP (strictly bottom: 14px, left: 14px, 40x40px) -->
       <button id="afro-scroll-top" title="Наверх" aria-label="Наверх">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
           <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
+      </button>
+
+      <!-- WHEEL LAUNCHER (strictly bottom: 14px, right: 14px) -->
+      <button id="afro-wheel-launcher" aria-label="Колесо Фортуны">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
+        </svg>
+        <span>Колесо Фортуны</span>
       </button>
 
       <!-- HERO -->
@@ -435,17 +590,17 @@
           <p class="afro-subtitle">Индивидуальный подбор донорских прядей, бережная капсуляция без утяжеления и плетение любой сложности со стажем мастеров с 1998 года.</p>
 
           <div class="afro-cta-row">
-            <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-cta-btn afro-cta-gold">
+            <button type="button" class="afro-cta-btn afro-cta-gold" id="afro-hero-wheel-trigger">
+              <span>Крутить Колесо Фортуны</span>
+            </button>
+            <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-cta-btn afro-cta-dark">
               <span>Записаться в WhatsApp</span>
-            </a>
-            <a href="https://t.me/afrostudio" target="_blank" class="afro-cta-btn afro-cta-dark">
-              <span>Канал в Telegram</span>
             </a>
           </div>
         </div>
       </section>
 
-      <!-- SHOWCASE SECTION -->
+      <!-- SHOWCASE -->
       <section class="afro-gallery-section">
         <div class="afro-container">
           <h2 class="afro-section-title">Работы мастеров студии</h2>
@@ -463,7 +618,7 @@
               <img src="https://static.tildacdn.com/tild3235-6631-4566-a361-626237366630/Screenshot_19.jpg" alt="Биопротеин люкс" loading="lazy" />
               <span class="afro-gallery-badge">Биопротеин</span>
             </div>
-            <div class="afro-gallery-item" data-src="https://static.tildacdn.com/tild3838-6332-4232-b437-623433653961/noroot.jpg">
+            <div class="afro-gallery-item" data-src="https://thb.tildacdn.com/tild3838-6332-4232-b437-623433653961/-/empty/noroot.jpg">
               <img src="https://static.tildacdn.com/tild3838-6332-4232-b437-623433653961/noroot.jpg" alt="Дредокудри" loading="lazy" />
               <span class="afro-gallery-badge">Дредокудри</span>
             </div>
@@ -487,7 +642,7 @@
         </div>
       </footer>
 
-      <!-- COOKIE BANNER -->
+      <!-- COOKIE -->
       <div id="afro-cookie-banner" style="display:none;">
         <div class="afro-cookie-text">
           Мы используем cookie-файлы для обеспечения работы сайта, аналитики посещаемости и сохранения индивидуальных настроек.
@@ -498,12 +653,34 @@
         </div>
       </div>
 
-      <!-- MODAL DIALOG -->
-      <div class="afro-modal-overlay" id="afro-modal">
-        <div class="afro-modal-body">
-          <button class="afro-modal-close" id="afro-modal-x">&times;</button>
-          <h3 id="afro-modal-title" style="margin-bottom:14px; color:#fff; font-size:18px;"></h3>
-          <div id="afro-modal-text" style="color:#b5b5c2; font-size:13px; line-height:1.6;"></div>
+      <!-- WHEEL MODAL -->
+      <div class="afro-wheel-modal" id="afro-wheel-modal">
+        <div class="afro-wheel-card">
+          <button class="afro-wheel-close" id="afro-wheel-x">&times;</button>
+          <h3 style="color:#fff; font-size:20px; font-weight:800;">Колесо Фортуны</h3>
+          <p style="color:#9c9ca8; font-size:13px; margin-top:4px;">Вращайте колесо и заберите персональный приз студии</p>
+          
+          <div class="afro-wheel-wrap">
+            <div class="afro-wheel-arrow"></div>
+            <canvas id="afro-wheel-canvas" width="520" height="520"></canvas>
+          </div>
+
+          <button type="button" id="afro-spin-trigger" class="afro-wheel-btn">Крутить колесо</button>
+
+          <div class="afro-wheel-result-box" id="afro-wheel-result">
+            <div class="afro-wheel-prize-text" id="afro-prize-display"></div>
+            <input type="tel" id="afro-wheel-phone" class="afro-wheel-phone" placeholder="Ваш телефон для фиксации приза" />
+            <button type="button" id="afro-prize-save" class="afro-wheel-btn" style="margin-top:0; height:40px; font-size:13px;">Забрать подарок</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEGAL MODAL -->
+      <div class="afro-legal-overlay" id="afro-legal-modal">
+        <div class="afro-legal-box">
+          <button class="afro-legal-close" id="afro-legal-x">&times;</button>
+          <h3 id="afro-legal-title" style="margin-bottom:14px; color:#fff; font-size:18px;"></h3>
+          <div id="afro-legal-text" style="color:#b5b5c2; font-size:13px; line-height:1.6;"></div>
         </div>
       </div>
 
@@ -515,10 +692,56 @@
     `;
 
     setupHandlers();
+    drawWheel();
+  }
+
+  // Wheel sectors & drawing
+  var prizes = [
+    'Скидка 15%',
+    'Спа-уход Lux',
+    'Купон 1000 ₽',
+    'Укладка в дар',
+    'Скидка 10%',
+    'Масло для волос'
+  ];
+  var wheelAngle = 0;
+  var isSpinning = false;
+  var wonPrize = '';
+
+  function drawWheel() {
+    var canvas = document.getElementById('afro-wheel-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var num = prizes.length;
+    var arc = (2 * Math.PI) / num;
+    var radius = 260;
+    ctx.clearRect(0, 0, 520, 520);
+
+    for (var i = 0; i < num; i++) {
+      var angle = i * arc;
+      ctx.beginPath();
+      ctx.fillStyle = (i % 2 === 0) ? '#1f1f26' : '#2b261b';
+      ctx.moveTo(radius, radius);
+      ctx.arc(radius, radius, radius - 6, angle, angle + arc);
+      ctx.lineTo(radius, radius);
+      ctx.fill();
+      ctx.strokeStyle = '#d4af37';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      ctx.save();
+      ctx.translate(radius, radius);
+      ctx.rotate(angle + arc / 2);
+      ctx.textAlign = 'right';
+      ctx.fillStyle = (i % 2 === 0) ? '#f5f5f7' : '#f3e08b';
+      ctx.font = 'bold 22px sans-serif';
+      ctx.fillText(prizes[i], radius - 30, 8);
+      ctx.restore();
+    }
   }
 
   function setupHandlers() {
-    // 1. Scroll-To-Top button (strictly bottom: 14px, left: 14px, 40x40px)
+    // 1. Scroll-To-Top button
     var scrollBtn = document.getElementById('afro-scroll-top');
     window.addEventListener('scroll', function() {
       if (window.pageYOffset > 250) {
@@ -531,7 +754,77 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // 2. Cookie consent
+    // 2. Wheel Open / Close
+    var wheelModal = document.getElementById('afro-wheel-modal');
+    var wheelLauncher = document.getElementById('afro-wheel-launcher');
+    var heroWheelTrigger = document.getElementById('afro-hero-wheel-trigger');
+    var wheelClose = document.getElementById('afro-wheel-x');
+
+    function openWheel() {
+      wheelModal.style.display = 'flex';
+      trackYM('wheel_open');
+    }
+    wheelLauncher.addEventListener('click', openWheel);
+    heroWheelTrigger.addEventListener('click', openWheel);
+
+    wheelClose.addEventListener('click', function() {
+      wheelModal.style.display = 'none';
+    });
+    wheelModal.addEventListener('click', function(e) {
+      if (e.target === wheelModal && !isSpinning) {
+        wheelModal.style.display = 'none';
+      }
+    });
+
+    // 3. Spin Logic
+    var spinBtn = document.getElementById('afro-spin-trigger');
+    var canvas = document.getElementById('afro-wheel-canvas');
+    var resultBox = document.getElementById('afro-wheel-result');
+    var prizeDisplay = document.getElementById('afro-prize-display');
+    var prizeSaveBtn = document.getElementById('afro-prize-save');
+    var wheelPhone = document.getElementById('afro-wheel-phone');
+
+    spinBtn.addEventListener('click', function() {
+      if (isSpinning) return;
+      isSpinning = true;
+      spinBtn.style.opacity = '0.5';
+      spinBtn.style.pointerEvents = 'none';
+
+      var randomPrizeIndex = Math.floor(Math.random() * prizes.length);
+      wonPrize = prizes[randomPrizeIndex];
+
+      var arcDeg = 360 / prizes.length;
+      var targetAngle = 360 - (randomPrizeIndex * arcDeg + arcDeg / 2);
+      var totalRotation = 360 * 5 + targetAngle;
+
+      canvas.style.transform = 'rotate(' + totalRotation + 'deg)';
+
+      setTimeout(function() {
+        isSpinning = false;
+        spinBtn.style.display = 'none';
+        prizeDisplay.textContent = 'Поздравляем! Ваш приз: ' + wonPrize;
+        resultBox.style.display = 'block';
+      }, 4200);
+    });
+
+    // 4. Save prize & fire Metrika goals
+    prizeSaveBtn.addEventListener('click', function() {
+      var phone = wheelPhone.value.trim();
+      if (!phone) {
+        alert('Пожалуйста, введите ваш номер телефона.');
+        wheelPhone.focus();
+        return;
+      }
+
+      // Reaching official goals from Yandex Metrika
+      trackYM('gamelead_send', { prize: wonPrize, phone: phone });
+      trackYM('296485879', { prize: wonPrize, phone: phone });
+
+      alert('Ваш подарок зафиксирован! Мы свяжемся с вами в течение 10 минут.');
+      wheelModal.style.display = 'none';
+    });
+
+    // 5. Cookie consent
     var cookieBanner = document.getElementById('afro-cookie-banner');
     if (!localStorage.getItem('afro_cookie_agreed')) {
       cookieBanner.style.display = 'flex';
@@ -541,45 +834,45 @@
       cookieBanner.style.display = 'none';
     });
     document.getElementById('afro-cookie-cfg').addEventListener('click', function() {
-      openModal(
+      openLegal(
         'Настройка cookie',
-        'Вы можете управлять сохранением технических файлов в настройках вашего веб-обозревателя. Мы используем cookie исключительно для корректной работы сайта.'
+        'Вы можете управлять сохранением технических файлов в настройках вашего браузера. Мы используем cookie исключительно для корректной работы сайта.'
       );
     });
 
-    // 3. Legal Modals
-    var modal = document.getElementById('afro-modal');
-    var modalTitle = document.getElementById('afro-modal-title');
-    var modalText = document.getElementById('afro-modal-text');
-    var modalClose = document.getElementById('afro-modal-x');
+    // 6. Legal Modals
+    var legalModal = document.getElementById('afro-legal-modal');
+    var legalTitle = document.getElementById('afro-legal-title');
+    var legalText = document.getElementById('afro-legal-text');
+    var legalClose = document.getElementById('afro-legal-x');
 
-    function openModal(title, text) {
-      modalTitle.textContent = title;
-      modalText.innerHTML = text;
-      modal.style.display = 'flex';
+    function openLegal(title, text) {
+      legalTitle.textContent = title;
+      legalText.innerHTML = text;
+      legalModal.style.display = 'flex';
     }
-    modalClose.addEventListener('click', function() {
-      modal.style.display = 'none';
+    legalClose.addEventListener('click', function() {
+      legalModal.style.display = 'none';
     });
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) modal.style.display = 'none';
+    legalModal.addEventListener('click', function(e) {
+      if (e.target === legalModal) legalModal.style.display = 'none';
     });
 
     document.getElementById('afro-open-policy').addEventListener('click', function() {
-      openModal(
+      openLegal(
         'Политика конфиденциальности',
-        '<p>Настоящая Политика регулирует порядок обработки персональной информации пользователей сайта afrostudio.ru в соответствии с требованиями законодательства РФ.</p><br/><p>1. Мы собираем контактные данные исключительно для связи с клиентом и записи на прием.</p><br/><p>2. Данные не передаются третьим лицам и надежно защищены.</p>'
+        '<p>Настоящая Политика регулирует порядок обработки информации пользователей сайта afrostudio.ru в соответствии с законодательством РФ.</p><br/><p>1. Контактные данные собираются исключительно для связи и записи на процедуры.</p><br/><p>2. Данные надежно защищены и не передаются третьим сторонам.</p>'
       );
     });
 
     document.getElementById('afro-open-consent').addEventListener('click', function() {
-      openModal(
+      openLegal(
         'Согласие на обработку персональных данных (152-ФЗ)',
-        '<p>Настоящим я даю согласие студии красоты Afrostudio на обработку моих персональных данных с целью консультации и записи к мастеру.</p><br/><p>Согласие действует до момента отзыва субъектом персональных данных.</p>'
+        '<p>Настоящим я даю согласие студии красоты Afrostudio на обработку персональных данных с целью консультации, получения призов и записи к мастеру.</p><br/><p>Согласие действует до момента отзыва клиентом.</p>'
       );
     });
 
-    // 4. Lightbox with swipe
+    // 7. Lightbox with swipe
     var lightbox = document.getElementById('afro-lightbox');
     var lightboxImg = document.getElementById('afro-lightbox-img');
     var lightboxClose = document.getElementById('afro-lightbox-x');
@@ -621,7 +914,7 @@
       }
     }, false);
 
-    // Global click delegation for YM goals
+    // Global click tracking for YM goals
     document.addEventListener('click', function(e) {
       var a = e.target.closest('a');
       if (!a) return;
@@ -635,7 +928,7 @@
       }
     });
 
-    console.log('[AfroStudio] Engine v1.2.0 activated.');
+    console.log('[AfroStudio] Engine v1.3.0 activated.');
   }
 
   if (document.readyState === 'loading') {
