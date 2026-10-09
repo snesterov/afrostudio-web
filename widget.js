@@ -1635,7 +1635,46 @@
     }
   }
 
-  // 13. INITIALIZATION ORCHESTRATOR
+    // 13. BACKGROUND ASYNC FEED SYNC (ZERO DELAY, NON-BLOCKING)
+  function initBackgroundFeedSync() {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        fetch('https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@main/feed.json?t=' + Date.now())
+          .then(res => res.json())
+          .then(data => {
+            if (!Array.isArray(data) || data.length === 0) return;
+            const container = document.querySelector('.afro-feed-grid');
+            if (!container) return;
+            const existingIds = new Set(cleanPosts.map(p => String(p.id)));
+            const newPosts = data.filter(p => !existingIds.has(String(p.id)));
+            if (newPosts.length > 0) {
+              let newHtml = '';
+              for (const p of newPosts) {
+                newHtml += `
+                  <div class="afro-post-card">
+                    <div class="afro-card-thumb-wrap">
+                      <img src="${p.thumb}" class="afro-card-thumb" alt="${p.title}" loading="lazy">
+                      <span class="afro-card-badge">${p.is_video ? '&#127916; Видео' : '&#128247; Фото'}</span>
+                    </div>
+                    <div class="afro-card-body">
+                      <h3 class="afro-card-title">${p.title}</h3>
+                      <p class="afro-card-desc">${p.desc}</p>
+                      <a href="https://t.me/Salon_afrostudio/${p.id}" target="_blank" rel="noopener" class="afro-card-action">
+                        <span>Смотреть в Telegram</span> &#8594;
+                      </a>
+                    </div>
+                  </div>
+                `;
+              }
+              container.insertAdjacentHTML('afterbegin', newHtml);
+            }
+          })
+          .catch(() => {});
+      }, 1500);
+    });
+  }
+
+  // 14. INITIALIZATION ORCHESTRATOR
   function init() {
     buildHeroSlider();
     buildDirectionsSection();
@@ -1645,6 +1684,7 @@
     buildCustomFooter();
     buildScrollButton();
     buildPolicyAndCookie();
+    initBackgroundFeedSync();
   }
 
   if (document.readyState === 'loading') {
