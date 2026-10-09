@@ -1,6 +1,6 @@
 /**
  * AFROSTUDIO.RU - LUXURY BEAUTY SALON APPLICATION
- * Version: 8.0.0 - Liquid Glass Fish-Eye UI & High-Contrast Forms
+ * Version: 9.0.0 - High-Contrast Forms, Unique Feed, Interactive Price Table
  */
 (function() {
   'use strict';
@@ -25,16 +25,16 @@
 
   // 3. INJECT APPLICATION STYLES
   const styles = `
-    /* HIDE OLD TILDA BLOCKS & DUPLICATE FOOTER */
+    /* HIDE OLD TILDA BLOCKS, DUPLICATE FEED AND DUPLICATE FOOTER */
     #rec2325313701, #rec2325313981, #rec2325314041, #rec2222808741, 
-    #rec2334967441, #rec2222715461, #t-footer, .t345 {
+    #rec2334967441, #rec2222715461, #t-footer, .t345, .t854 {
       display: none !important;
     }
 
-    /* TILDA POPUP FORM #rec4646446601 - ULTRA-CLEAR LUXURY BEAUTY STYLING */
+    /* TILDA POPUP FORM #rec4646446601 - ULTRA-CLEAR HIGH-CONTRAST STYLING */
     #rec4646446601 .t-popup {
-      background: rgba(0, 0, 0, 0.88) !important;
-      backdrop-filter: blur(12px) !important;
+      background: rgba(0, 0, 0, 0.9) !important;
+      backdrop-filter: blur(14px) !important;
     }
     #rec4646446601 .t-popup__container {
       background: #0f1118 !important;
@@ -68,20 +68,96 @@
       line-height: 1.6 !important;
       text-align: center !important;
     }
-    
-    /* HIGHLIGHT FIELD TITLES AND LABELS */
+
+    /* HIGHLIGHT EVERY LABEL & QUESTION TITLE IN FORM */
     #rec4646446601 .t-input-title,
-    #rec4646446601 .t-input-subtitle,
     #rec4646446601 .t-descr_md {
       color: #fbbf24 !important;
-      font-weight: 700 !important;
-      font-size: 13.5px !important;
+      -webkit-text-fill-color: #fbbf24 !important;
+      font-weight: 800 !important;
+      font-size: 14px !important;
       text-transform: uppercase !important;
       letter-spacing: 0.05em !important;
+      margin-top: 14px !important;
       margin-bottom: 8px !important;
       display: block !important;
     }
-    
+
+    /* NOTICE / SUBTITLE HELPER (Telegram / MAX instruction) */
+    #rec4646446601 .t-input-subtitle,
+    #rec4646446601 .t-input-subtitle * {
+      color: #e2e8f0 !important;
+      -webkit-text-fill-color: #e2e8f0 !important;
+      font-size: 13.5px !important;
+      line-height: 1.65 !important;
+      background: rgba(245, 158, 11, 0.12) !important;
+      border-left: 3.5px solid #f59e0b !important;
+      padding: 12px 16px !important;
+      border-radius: 8px !important;
+      margin-top: 10px !important;
+      margin-bottom: 16px !important;
+      display: block !important;
+    }
+
+    /* RADIO ITEMS & SURVEY QUESTIONS (Длина, Загущение, до плеч, etc.) */
+    #rec4646446601 .t-radio__item {
+      background: rgba(255, 255, 255, 0.06) !important;
+      border: 1px solid rgba(255, 255, 255, 0.16) !important;
+      border-radius: 12px !important;
+      padding: 12px 18px !important;
+      margin-bottom: 10px !important;
+      display: flex !important;
+      align-items: center !important;
+      cursor: pointer !important;
+      transition: all 0.2s !important;
+    }
+    #rec4646446601 .t-radio__item:hover {
+      border-color: #f59e0b !important;
+      background: rgba(245, 158, 11, 0.15) !important;
+    }
+    #rec4646446601 .t-radio__item-text,
+    #rec4646446601 .t-radio__control,
+    #rec4646446601 .t-radio__title,
+    #rec4646446601 .t-radio label {
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      font-size: 14.5px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.02em !important;
+    }
+    #rec4646446601 .t-radio__indicator {
+      border: 2px solid #f59e0b !important;
+      background: transparent !important;
+      margin-right: 12px !important;
+    }
+    #rec4646446601 .t-radio__item input:checked + .t-radio__indicator {
+      background: #f59e0b !important;
+      box-shadow: 0 0 10px #f59e0b !important;
+    }
+
+    /* CHECKBOX (152-FZ CONSENT) */
+    #rec4646446601 .t-checkbox__control,
+    #rec4646446601 .t-checkbox__label,
+    #rec4646446601 .t-checkbox__label span {
+      color: #cbd5e1 !important;
+      -webkit-text-fill-color: #cbd5e1 !important;
+      font-size: 13px !important;
+      line-height: 1.5 !important;
+    }
+    #rec4646446601 .t-checkbox__label a {
+      color: #fbbf24 !important;
+      text-decoration: underline !important;
+    }
+    #rec4646446601 .t-checkbox__indicator {
+      border: 2px solid #f59e0b !important;
+      background: transparent !important;
+      border-radius: 6px !important;
+    }
+    #rec4646446601 .t-checkbox input:checked + .t-checkbox__indicator {
+      background: #f59e0b !important;
+      box-shadow: 0 0 10px #f59e0b !important;
+    }
+
     /* ALL INPUTS CLEAR & CONTRAST */
     #rec4646446601 .t-input,
     #rec4646446601 input[type="text"],
@@ -160,17 +236,6 @@
       transform: translateY(-2px) scale(1.02) !important;
       box-shadow: inset 0 2px 3px rgba(255,255,255,0.95), inset 0 -3px 6px rgba(0,0,0,0.4), 0 16px 36px -2px rgba(245,158,11,0.75), 0 0 26px rgba(251,191,36,0.55) !important;
     }
-    #rec4646446601 .t-form__bottom-text,
-    #rec4646446601 .t-form__bottom-text * {
-      color: #94a3b8 !important;
-      font-size: 12.5px !important;
-      line-height: 1.55 !important;
-      text-align: center !important;
-    }
-    #rec4646446601 .t-form__bottom-text a {
-      color: #f59e0b !important;
-      text-decoration: underline !important;
-    }
 
     /* ULTRA-BRIGHT RADIANT 3D GOLD SCROLL TO TOP */
     #afro-scroll-top {
@@ -225,7 +290,7 @@
       box-sizing: border-box;
     }
 
-    /* SECTION TITLES & BADGES */
+    /* CONTAINER & HEADERS */
     .afro-container {
       max-width: 1320px;
       margin: 0 auto;
@@ -357,9 +422,6 @@
       color: #fbbf24 !important;
       background: radial-gradient(120% 120% at 50% 10%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.05) 65%), rgba(245, 158, 11, 0.18);
       box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5), 0 0 25px rgba(245, 158, 11, 0.4);
-    }
-    .afro-btn-trans:active {
-      transform: translateY(0) scale(0.98);
     }
 
     /* 1. HERO SLIDER */
@@ -496,7 +558,7 @@
       box-shadow: 0 0 12px #f59e0b;
     }
 
-    /* 2. DIRECTIONS GRID (4 MAIN CARDS) */
+    /* 2. DIRECTIONS GRID */
     .afro-directions-section {
       padding: 90px 0;
       background: #090a10;
@@ -566,7 +628,7 @@
       line-height: 1.5;
     }
 
-    /* 3. ALL KINDS OF HAIR EXTENSIONS - INTERACTIVE SWITCHER */
+    /* 3. ALL KINDS OF HAIR EXTENSIONS SWITCHER WITH PRICES */
     .afro-all-types-section {
       padding: 90px 0;
       background: #0c0d14;
@@ -614,17 +676,6 @@
       font-weight: 700;
       box-shadow: 0 4px 15px rgba(245, 158, 11, 0.15);
     }
-    .afro-type-btn svg {
-      width: 16px;
-      height: 16px;
-      opacity: 0.5;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-    .afro-type-btn.active svg {
-      opacity: 1;
-      transform: translateX(3px);
-      stroke: #fbbf24;
-    }
     .afro-type-display {
       background: #12141e;
       border: 1.5px solid rgba(245, 158, 11, 0.3);
@@ -633,13 +684,13 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-      min-height: 480px;
+      min-height: 500px;
     }
     .afro-type-photo {
       position: relative;
       background-size: cover;
       background-position: center center;
-      min-height: 380px;
+      min-height: 400px;
     }
     .afro-type-photo::after {
       content: '';
@@ -653,45 +704,179 @@
       flex-direction: column;
       justify-content: center;
     }
+    .afro-type-price-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 18px;
+      font-weight: 800;
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 6px 16px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
     .afro-type-title {
       font-family: 'Cinzel', serif;
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       line-height: 1.25;
     }
     .afro-type-text {
-      font-size: 15px;
+      font-size: 14.5px;
       color: #cbd5e1;
-      line-height: 1.7;
-      margin-bottom: 24px;
+      line-height: 1.65;
+      margin-bottom: 20px;
     }
     .afro-type-features {
       list-style: none;
       padding: 0;
-      margin: 0 0 32px;
+      margin: 0 0 28px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 9px;
     }
     .afro-type-features li {
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 14px;
+      font-size: 13.5px;
       color: #e2e8f0;
     }
     .afro-type-features li span {
       color: #fbbf24;
       font-weight: 700;
-      font-size: 16px;
     }
 
-    /* 4. KLING AI ART BANNER */
+    /* 4. NATIVE INTERACTIVE PRICING TABLE MATRIX */
+    .afro-pricing-section {
+      padding: 90px 0;
+      background: #090a11;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .afro-price-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .afro-price-tab-btn {
+      padding: 14px 32px;
+      border-radius: 9999px;
+      border: 1.5px solid rgba(245, 158, 11, 0.35);
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      font-size: 14.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .afro-price-tab-btn.active {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0b0c10;
+      border-color: #f59e0b;
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    }
+    .afro-price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .afro-price-card {
+      background: #11131e;
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 32px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .afro-price-card:hover {
+      transform: translateY(-6px);
+      border-color: #f59e0b;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.2);
+    }
+    .afro-price-card.featured {
+      border-color: rgba(245, 158, 11, 0.6);
+      background: linear-gradient(180deg, #161828 0%, #11131e 100%);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(245, 158, 11, 0.15);
+    }
+    .afro-price-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #0b0c10;
+      background: #fbbf24;
+      padding: 4px 12px;
+      border-radius: 9999px;
+    }
+    .afro-price-card-title {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .afro-price-card-desc {
+      font-size: 13.5px;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 22px;
+      min-height: 44px;
+    }
+    .afro-price-val {
+      font-family: 'Cinzel', serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: #fbbf24;
+      margin-bottom: 22px;
+    }
+    .afro-price-val span {
+      font-size: 13px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      color: #94a3b8;
+    }
+    .afro-price-includes {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 20px;
+    }
+    .afro-price-includes li {
+      font-size: 13px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .afro-price-includes li span {
+      color: #f59e0b;
+      font-weight: 700;
+    }
+
+    /* 5. KLING AI ART BANNER */
     .afro-art-section {
       padding: 80px 0;
-      background: #090a10;
+      background: #08090e;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
     .afro-art-banner {
@@ -728,10 +913,10 @@
       margin-bottom: 26px;
     }
 
-    /* 5. TELEGRAM LIVE FEED */
+    /* 6. TELEGRAM LIVE FEED (STREAMLINED & DIVERSE) */
     .afro-tg-section {
       padding: 90px 0;
-      background: #08090e;
+      background: #090a10;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
     .afro-tg-grid {
@@ -842,7 +1027,55 @@
       flex-wrap: wrap;
     }
 
-    /* 6. COOKIE BANNER & MODAL (SCREENSHOTS 1, 2, 3) */
+    /* 7. CUSTOM FOOTER (ALWAYS VISIBLE) */
+    .afro-custom-footer {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      z-index: 99 !important;
+      background: #08090e !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+      padding: 40px 20px 44px !important;
+      text-align: center !important;
+      font-size: 12.5px !important;
+      color: #94a3b8 !important;
+      line-height: 1.7 !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .afro-footer-line1 {
+      color: #cbd5e1;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .afro-footer-line2 {
+      color: #64748b;
+      font-size: 11.5px;
+      margin-bottom: 14px;
+    }
+    .afro-footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .afro-footer-link {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 12.5px;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 0;
+      transition: color 0.2s;
+    }
+    .afro-footer-link:hover {
+      color: #fbbf24;
+    }
+
+    /* 8. COOKIE BANNER & MODAL */
     .afro-cookie-banner {
       position: fixed;
       bottom: 24px;
@@ -1025,55 +1258,7 @@
       transform: translateX(20px);
     }
 
-    /* 7. CUSTOM FOOTER (ALWAYS VISIBLE) */
-    .afro-custom-footer {
-      display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-      position: relative !important;
-      z-index: 99 !important;
-      background: #08090e !important;
-      border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-      padding: 40px 20px 44px !important;
-      text-align: center !important;
-      font-size: 12.5px !important;
-      color: #94a3b8 !important;
-      line-height: 1.7 !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-    .afro-footer-line1 {
-      color: #cbd5e1;
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
-    .afro-footer-line2 {
-      color: #64748b;
-      font-size: 11.5px;
-      margin-bottom: 14px;
-    }
-    .afro-footer-links {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .afro-footer-link {
-      background: none;
-      border: none;
-      color: #94a3b8;
-      font-size: 12.5px;
-      text-decoration: underline;
-      cursor: pointer;
-      padding: 0;
-      transition: color 0.2s;
-    }
-    .afro-footer-link:hover {
-      color: #fbbf24;
-    }
-
-    /* 8. POLICY MODAL (IN-PAGE 152-FZ) */
+    /* 9. POLICY MODAL 152-FZ */
     .afro-policy-backdrop {
       position: fixed;
       inset: 0;
@@ -1157,6 +1342,9 @@
       .afro-types-layout {
         grid-template-columns: 1fr;
       }
+      .afro-price-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
       .afro-tg-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1169,6 +1357,9 @@
         grid-template-columns: 1fr;
       }
       .afro-type-display {
+        grid-template-columns: 1fr;
+      }
+      .afro-price-grid {
         grid-template-columns: 1fr;
       }
       .afro-tg-grid {
@@ -1205,11 +1396,12 @@
     }
   };
 
-  // 5. DATA FOR HAIR EXTENSION SWITCHER
+  // 5. DATA FOR HAIR EXTENSION SWITCHER (WITH REAL PRICES)
   const HAIR_TYPES_DATA = [
     {
       id: "capsule",
       title: "Капсульное (Итальянское)",
+      price: "от 6 900 ₽",
       text: "Самая популярная и надежная мировая технология. Донорские пряди крепятся с помощью микроскопических кератиновых капсул под цвет ваших волос. Капсулы не ощущаются при прикосновении и позволяют собирать любые прически, включая высокий хвост.",
       features: [
         "Срок носки: 2.5 - 3.5 месяца до коррекции",
@@ -1222,6 +1414,7 @@
     {
       id: "microcapsule",
       title: "Микрокапсульное наращивание",
+      price: "от 8 500 ₽",
       text: "Ювелирная техника с уменьшенными капсулами размером менее 2 мм. Идеальна для височной и теменной зоны, маскировки челки и наращивания на ультратонкие волосы. Полная незаметность даже при сильном ветре.",
       features: [
         "Невесомые капсулы весом всего 0.05 г",
@@ -1234,6 +1427,7 @@
     {
       id: "nanocapsule",
       title: "Нано-наращивание волос",
+      price: "от 9 900 ₽",
       text: "Ультрасовременная технология с нано-капсулами, которые в 3 раза меньше стандартных микрокапсул. Мастер работает с тонкими прядками, добиваясь эффекта натуральной густоты собственных волос.",
       features: [
         "Невидимость даже при макросъемке и ярком солнце",
@@ -1246,6 +1440,7 @@
     {
       id: "tape",
       title: "Ленточное наращивание",
+      price: "от 5 500 ₽",
       text: "Быстрая холодная технология без термического воздействия. Волосы распределяются широкими мягкими лентами, создавая мгновенный плотный объем и длину за 40-50 минут.",
       features: [
         "Быстрая процедура наращивания",
@@ -1258,6 +1453,7 @@
     {
       id: "hollywood",
       title: "Голливудское (Пришивание трессов)",
+      price: "от 7 000 ₽",
       text: "Экологичный и безопасный метод, используемый звездами мирового кино. На голове плетется тончайшая микрокосичка (брейд), к которой вручную пришивается мягкий тресс из натуральных волос.",
       features: [
         "Ноль клея, кератина и химических составов",
@@ -1270,6 +1466,7 @@
     {
       id: "bioprotein",
       title: "Биопротеиновое наращивание",
+      price: "от 8 900 ₽ под ключ",
       text: "Инновационная доступная альтернатива натуральным волосам. Японское биопротеиновое волокно визуально и тактильно неотличимо от шелковистых славянских волос, не сечется и сохраняет гладкость.",
       features: [
         "В 3 раза выгоднее натуральных волос",
@@ -1282,6 +1479,7 @@
     {
       id: "ultrasonic",
       title: "Ультразвуковое наращивание",
+      price: "от 8 000 ₽",
       text: "Аппаратная холодная технология, при которой кератин размягчается ультразвуковыми волнами без нагрева. Подходит для клиентов с чувствительной кожей головы.",
       features: [
         "Бережное воздействие ультразвуком",
@@ -1294,6 +1492,7 @@
     {
       id: "cold_spanish",
       title: "Холодное испанское (Rueber)",
+      price: "от 7 500 ₽",
       text: "Фиксация прядей специальным хирургическим клеем Rueber, образующим микроскопические плоские капсулы. Устойчиво к воздействию масел, масок и саун.",
       features: [
         "Устойчивость к уходовым косметическим маслам",
@@ -1306,6 +1505,7 @@
     {
       id: "japanese",
       title: "Японское (Ring Star / Кольца)",
+      price: "от 6 500 ₽",
       text: "Метод фиксации прядей на миниатюрных металлокерамических клипсах-бусинах с силиконовой прослойкой внутри. Полностью исключает контакт с клеем и температурой.",
       features: [
         "Механическая фиксация без термического нагрева",
@@ -1318,6 +1518,7 @@
     {
       id: "brazilian",
       title: "Бразильское наращивание",
+      price: "от 7 000 ₽",
       text: "Холодное наращивание путем вплетения донорской пряди в собственную тонкую косичку с закреплением эластичной шелковой нитью. Проверенная временем бережная классика.",
       features: [
         "Натуральные материалы фиксации",
@@ -1329,7 +1530,103 @@
     }
   ];
 
-  // 6. CLEAN TELEGRAM POSTS DATABASE
+  // 6. PRICING DATA (HAIR & AFRO EXTRACTED DIRECTLY FROM AFROSTUDIO.RU)
+  const PRICING_DATA = {
+    hair: [
+      {
+        title: "Капсульное наращивание Lux",
+        desc: "Итальянская техника, невидимые микрокапсулы, 100% славянские волосы",
+        price: "от 6 900 ₽",
+        badge: "Хит сезона",
+        featured: true,
+        includes: ["Консультация и подбор оттенка", "Ювелирная расстановка прядей", "Адаптационная стрижка", "Укладка в подарок"]
+      },
+      {
+        title: "Биопротеиновое наращивание",
+        desc: "Полное преображение под ключ: японский биопротеин + работа мастера",
+        price: "от 8 900 ₽",
+        badge: "Выгодно",
+        featured: false,
+        includes: ["Волосы включены в стоимость", "Длина до 70-80 см", "Шелковистая гладкость", "Не путаются и не секутся"]
+      },
+      {
+        title: "Микро / Нано-наращивание",
+        desc: "Невесомые микрокапсулы для челки, височной зоны и ультратонких волос",
+        price: "от 8 500 ₽",
+        badge: "Премиум",
+        featured: false,
+        includes: ["Капсулы менее 2 мм", "Без нагрузки на корни", "Комфортный сон", "Полная невидимость"]
+      },
+      {
+        title: "Голливудское (Трессы)",
+        desc: "Пришивание тресса на микрокосичку без клея, кератина и нагрева",
+        price: "от 7 000 ₽",
+        badge: "Безопасно",
+        featured: false,
+        includes: ["100% эко-технология", "Королевский прикорневой объем", "Многократное использование", "Быстрая процедура"]
+      },
+      {
+        title: "Ленточное наращивание",
+        desc: "Широкие ультратонкие ленты, идеальный ровный срез за 45 минут",
+        price: "от 5 500 ₽",
+        badge: "Экспресс",
+        featured: false,
+        includes: ["Без термощипцов", "Плотный объем по всей длине", "Быстрое наращивание", "Бережное холодное снятие"]
+      },
+      {
+        title: "Коррекция наращивания",
+        desc: "Комплекс: бережное снятие, перекапсуляция и повторное наращивание",
+        price: "от 8 000 ₽",
+        badge: "Уход",
+        featured: false,
+        includes: ["Бережный состав для снятия", "Новый итальянский кератин", "Мытье и спа-уход", "Повторная фиксация"]
+      }
+    ],
+    afro: [
+      {
+        title: "Афроклассика",
+        desc: "Классические афрокосы с канекалоном, точечное вплетение по всей голове",
+        price: "10 000 – 20 000 ₽",
+        badge: "Классика",
+        featured: true,
+        includes: ["Материал высшего качества", "Носка 2-3 месяца", "Любые цветовые переходы", "Легкий уход без фена"]
+      },
+      {
+        title: "Афропрически (Зи-зи, локоны)",
+        desc: "Афролоконы, зи-зи, сенегальские косы и гофре через брейды",
+        price: "15 000 ₽",
+        badge: "Тренд",
+        featured: false,
+        includes: ["Быстрое вплетение за 3-4 часа", "Пышный воздушный объем", "Безопасно для своих волос", "Повторное использование кос"]
+      },
+      {
+        title: "Боксерские косы",
+        desc: "Две объемные тугие косы с канекалоном на любую длину волос",
+        price: "3 000 ₽",
+        badge: "Топ выбор",
+        featured: false,
+        includes: ["Плетение за 1-1.5 часа", "Носка до 5-7 дней", "Яркие акцентные цвета", "Идеально для спорта и отдыха"]
+      },
+      {
+        title: "Афрохвост",
+        desc: "Стильный объемный хвост из брейдов с добавлением цветного материала",
+        price: "5 000 ₽",
+        badge: "Стиль",
+        featured: false,
+        includes: ["Эффектная вечерняя прическа", "Плотная фиксация", "Не требует расчесывания", "Носка до 1.5-2 недель"]
+      },
+      {
+        title: "Брейды по голове",
+        desc: "Французские косы по голове с узорами или классическими линиями",
+        price: "1 000 ₽ / шт.",
+        badge: "Индивидуально",
+        featured: false,
+        includes: ["Четкие ровные проборы", "С материалом или без", "Узоры любой сложности", "Удобство на каждый день"]
+      }
+    ]
+  };
+
+  // 7. CLEAN TELEGRAM POSTS DATABASE
   const AFRO_CLEAN_POSTS = {
     "393": {
       thumb: "https://cdn4.telesco.pe/file/fz_I_LF75CzaDsblUk8jYftxQYQTlGHb81a826abb671e63a59d5e3a559a8e7ee.jpg",
@@ -1411,7 +1708,7 @@
     }
   };
 
-  // 7. BUILD APP HTML STRUCTURE
+  // 8. BUILD APP HTML STRUCTURE
   let appContainer = document.getElementById('afrostudio-app');
   if (!appContainer) {
     appContainer = document.createElement('div');
@@ -1432,7 +1729,7 @@
             <p class="afro-hero-desc">Безупречный результат, 100% натуральные донорские волосы славянского типа, микрокапсулы и авторские схемы плетения в центре Москвы (м. Полянка).</p>
             <div class="afro-hero-actions">
               <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('cta_hero_book')">Записаться онлайн</a>
-              <a href="#afro-tech-section" class="afro-btn-trans">Все технологии</a>
+              <a href="#afro-pricing" class="afro-btn-trans">Смотреть прайс-лист</a>
             </div>
           </div>
         </div>
@@ -1517,7 +1814,7 @@
         <div class="afro-section-header">
           <span class="afro-section-pill">ВСЕ ВИДЫ НАРАЩИВАНИЯ</span>
           <h2 class="afro-section-title">10 современных <span>технологий</span> наращивания</h2>
-          <p class="afro-section-sub">В студии Afrostudio представлены все признанные мировые техники. Выберите подходящий метод под структуру ваших волос:</p>
+          <p class="afro-section-sub">В студии Afrostudio представлены все мировые техники. Выберите подходящий метод под структуру ваших волос:</p>
         </div>
         <div class="afro-types-layout">
           <div class="afro-types-menu" id="afro-types-menu"></div>
@@ -1526,14 +1823,30 @@
       </div>
     </section>
 
-    <!-- 4. KLING AI ART BANNER -->
+    <!-- 4. NATIVE INTERACTIVE PRICING TABLE MATRIX -->
+    <section class="afro-pricing-section" id="afro-pricing">
+      <div class="afro-container">
+        <div class="afro-section-header">
+          <span class="afro-section-pill">ПРОЗРАЧНЫЙ ПРАЙС-ЛИСТ</span>
+          <h2 class="afro-section-title">Стоимость услуг <span>Afrostudio</span></h2>
+          <p class="afro-section-sub">Фиксированные цены без скрытых доплат. В стоимость входит консультация мастера, подбор тона и бережная адаптация.</p>
+        </div>
+        <div class="afro-price-tabs">
+          <button type="button" class="afro-price-tab-btn active" id="afro-tab-hair-btn" onclick="switchPriceCategory('hair')">Наращивание волос</button>
+          <button type="button" class="afro-price-tab-btn" id="afro-tab-afro-btn" onclick="switchPriceCategory('afro')">Афроплетение и брейды</button>
+        </div>
+        <div class="afro-price-grid" id="afro-price-grid"></div>
+      </div>
+    </section>
+
+    <!-- 5. KLING AI ART BANNER -->
     <section class="afro-art-section">
       <div class="afro-container">
         <div class="afro-art-banner">
           <div class="afro-art-text">
             <span class="afro-section-pill">ИНТЕЛЛЕКТУАЛЬНЫЙ ПОДБОР</span>
             <h2 class="afro-art-title">Искусство преображения <span>в деталях</span></h2>
-            <p class="afro-art-desc">Каждый образ создается индивидуально с учетом пропорций лица, густоты и здоровья ваших волос. Приходите на бесплатную очную консультацию и примерку прядей в наш салон на Полянке.</p>
+            <p class="afro-art-desc">Каждый образ создается индивидуально с учетом пропорций лица, густоты и здоровья ваших волос. Приходите на очную консультацию и примерку прядей в наш салон на Полянке.</p>
             <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('cta_art_consult')">Записаться на примерку</a>
           </div>
           <div class="afro-art-badge">
@@ -1544,7 +1857,7 @@
       </div>
     </section>
 
-    <!-- 5. TELEGRAM LIVE FEED -->
+    <!-- 6. TELEGRAM LIVE FEED (STREAMLINED & DIVERSE) -->
     <section class="afro-tg-section" id="afro-telegram-feed">
       <div class="afro-container">
         <div class="afro-section-header">
@@ -1560,7 +1873,7 @@
       </div>
     </section>
 
-    <!-- 6. ALWAYS VISIBLE CUSTOM FOOTER -->
+    <!-- 7. ALWAYS VISIBLE CUSTOM FOOTER -->
     <div class="afro-custom-footer" id="afro-custom-footer">
       <div class="afro-footer-line1">&copy; 2012&ndash;2026 AFROSTUDIO &middot; Студия наращивания волос и афроплетения &middot; afrostudio.ru &middot; г. Москва, ул. Большая Полянка, 26 к. 1 (м. Полянка / Третьяковская)</div>
       <div class="afro-footer-line2">*Meta признана экстремистской организацией и запрещена на территории РФ</div>
@@ -1570,7 +1883,7 @@
       </div>
     </div>
 
-    <!-- 7. COOKIE CONSENT & SETTINGS HUD -->
+    <!-- 8. COOKIE CONSENT & SETTINGS HUD -->
     <div id="afro-cookie-banner" class="afro-cookie-banner">
       <button type="button" class="afro-cookie-close-corner" onclick="closeCookieBanner()" title="Закрыть" aria-label="Закрыть">&times;</button>
       
@@ -1591,7 +1904,7 @@
       <div id="afro-cookie-view-settings" class="afro-cookie-view" style="display: none;">
         <div class="afro-cookie-title">Настройки файлов COOKIE</div>
         <div class="afro-cookie-text">
-          Сервис использует файлы cookie для корректной работы и аналитики посещаемости. Подробнее в <a onclick="openPolicyModal()">Политике использования файлов cookie</a>
+          Сервис использует файлы cookie для корректной работы и сбора статистики. Подробнее в <a onclick="openPolicyModal()">Политике использования файлов cookie</a>
         </div>
         <div class="afro-cookie-toggles-list">
           <div class="afro-cookie-item">
@@ -1616,7 +1929,7 @@
       </div>
     </div>
 
-    <!-- 8. POLICY MODAL 152-FZ -->
+    <!-- 9. POLICY MODAL 152-FZ -->
     <div id="afro-policy-modal" class="afro-policy-backdrop" onclick="closePolicyModal()">
       <div class="afro-policy-box" onclick="event.stopPropagation()">
         <div class="afro-policy-top">
@@ -1642,34 +1955,33 @@
       </div>
     </div>
 
-    <!-- 9. ULTRA-BRIGHT 3D GOLD SCROLL TO TOP -->
+    <!-- 10. ULTRA-BRIGHT 3D GOLD SCROLL TO TOP -->
     <button type="button" id="afro-scroll-top" aria-label="Наверх" title="Наверх">
       <svg viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
   `;
 
-  // 8. RENDER TABS FOR HAIR EXTENSION TECHNOLOGIES
+  // 9. RENDER TABS FOR HAIR EXTENSION TECHNOLOGIES
   const menuContainer = document.getElementById('afro-types-menu');
   const displayContainer = document.getElementById('afro-type-display');
 
   function renderTechTab(techId) {
     const tech = HAIR_TYPES_DATA.find(t => t.id === techId) || HAIR_TYPES_DATA[0];
     
-    // Update active button
     document.querySelectorAll('.afro-type-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.techId === tech.id);
     });
 
-    // Render Display Content
     const featuresHtml = tech.features.map(f => `<li><span>&#10003;</span> ${f}</li>`).join('');
     displayContainer.innerHTML = `
       <div class="afro-type-photo" style="background-image: url('${tech.photo}');"></div>
       <div class="afro-type-info">
+        <div class="afro-type-price-badge">${tech.price}</div>
         <h3 class="afro-type-title">${tech.title}</h3>
         <p class="afro-type-text">${tech.text}</p>
         <ul class="afro-type-features">${featuresHtml}</ul>
         <div>
-          <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('tech_consult_${tech.id}')">Записаться на консультацию</a>
+          <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('tech_consult_${tech.id}')">Записаться по этой технологии</a>
         </div>
       </div>
     `;
@@ -1692,7 +2004,37 @@
     renderTechTab(HAIR_TYPES_DATA[0].id);
   }
 
-  // 9. HERO SLIDER ENGINE
+  // 10. RENDER PRICING MATRIX TABLE
+  window.switchPriceCategory = function(cat) {
+    document.getElementById('afro-tab-hair-btn').classList.toggle('active', cat === 'hair');
+    document.getElementById('afro-tab-afro-btn').classList.toggle('active', cat === 'afro');
+    
+    const grid = document.getElementById('afro-price-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    const items = PRICING_DATA[cat] || PRICING_DATA.hair;
+    items.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'afro-price-card' + (item.featured ? ' featured' : '');
+      const incHtml = item.includes.map(inc => `<li><span>&#10003;</span> ${inc}</li>`).join('');
+      card.innerHTML = `
+        ${item.badge ? `<div class="afro-price-badge">${item.badge}</div>` : ''}
+        <div>
+          <h3 class="afro-price-card-title">${item.title}</h3>
+          <p class="afro-price-card-desc">${item.desc}</p>
+          <div class="afro-price-val">${item.price}</div>
+          <ul class="afro-price-includes">${incHtml}</ul>
+        </div>
+        <a href="#popup:contact" class="afro-btn-gold" onclick="afroTrack('price_book_${cat}')">Записаться по акции</a>
+      `;
+      grid.appendChild(card);
+    });
+  };
+
+  switchPriceCategory('hair');
+
+  // 11. HERO SLIDER ENGINE
   let currentSlide = 0;
   const totalSlides = 3;
   const track = document.getElementById('afro-hero-track');
@@ -1716,27 +2058,23 @@
     dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.index, 10)));
   });
 
-  // Auto slide every 6 seconds
   setInterval(() => {
     goToSlide(currentSlide + 1);
   }, 6000);
 
-  // 10. RENDER CLEAN TELEGRAM POSTS
+  // 12. RENDER CLEAN & DIVERSE TELEGRAM POSTS
   const tgGrid = document.getElementById('afro-tg-posts-grid');
-  const renderedPostKeys = new Set();
   let tgDisplayLimit = 6;
 
   function renderTelegramPosts() {
     if (!tgGrid) return;
     tgGrid.innerHTML = '';
-    renderedPostKeys.clear();
 
     const postKeys = Object.keys(AFRO_CLEAN_POSTS);
     const visibleKeys = postKeys.slice(0, tgDisplayLimit);
 
     visibleKeys.forEach(pid => {
       const p = AFRO_CLEAN_POSTS[pid];
-      renderedPostKeys.add(pid);
 
       const card = document.createElement('div');
       card.className = 'afro-tg-card';
@@ -1771,7 +2109,7 @@
 
   renderTelegramPosts();
 
-  // 11. SCROLL TO TOP LOGIC
+  // 13. SCROLL TO TOP LOGIC
   const scrollTopBtn = document.getElementById('afro-scroll-top');
   if (scrollTopBtn) {
     window.addEventListener('scroll', () => {
@@ -1786,7 +2124,7 @@
     });
   }
 
-  // 12. COOKIE BANNER & MODALS LOGIC
+  // 14. COOKIE BANNER & MODALS LOGIC
   const cookieBanner = document.getElementById('afro-cookie-banner');
   const policyModal = document.getElementById('afro-policy-modal');
 
@@ -1841,7 +2179,6 @@
     if (policyModal) policyModal.classList.remove('open');
   };
 
-  // Show cookie banner if not accepted yet
   setTimeout(() => {
     try {
       if (!localStorage.getItem('afro_cookie_accepted')) {
