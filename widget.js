@@ -1150,7 +1150,7 @@
   const cleanPosts = [
     {
       id: "393",
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@main/images/post_393_hd.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@main/images/post_393.jpg",
       title: "Когда общаешься со сложным клиентом и случайно смотришь на коллегу 😁",
       desc: "Пост от 3 октября — живые моменты из будней топ-мастеров студии Afrostudio на Таганской. Смотрите ролик в нашем Telegram!",
       is_video: true
