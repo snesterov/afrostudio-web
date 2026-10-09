@@ -1,9 +1,8 @@
 /**
- * AFROSTUDIO — Autonomous Engine v1.3.0
+ * AFROSTUDIO — Autonomous Engine v1.4.0
  * Yandex Metrika Counter: 88058414
- * Left Bottom: Scroll-To-Top (bottom: 14px, left: 14px, 40x40px)
- * Right Bottom: Колесо Фортуны (bottom: 14px, right: 14px)
- * YM Goal: gamelead_send (540991082)
+ * Official GameLead Integration: c8bee7fc877024cac5a483e8950480f0
+ * Left Bottom Scroll: bottom: 14px, left: 14px, 40x40 px
  */
 (function() {
   'use strict';
@@ -21,9 +20,19 @@
     }
   }
 
-  // Styles Injection
+  // 1. AUTO-INJECT OFFICIAL GAMELEAD WHEEL
+  function loadGameLead() {
+    if (!document.querySelector('script[src*="game-lead.ru"]')) {
+      var s = document.createElement('script');
+      s.src = 'https://game-lead.ru/set/c8bee7fc877024cac5a483e8950480f0';
+      s.async = true;
+      document.body.appendChild(s);
+    }
+  }
+
+  // 2. STYLES
   var styles = `
-    /* AFROSTUDIO BASE */
+    /* BASE CONTAINER */
     #afrostudio-app {
       font-family: 'TildaSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       color: #f5f5f7;
@@ -78,42 +87,6 @@
       width: 18px;
       height: 18px;
       stroke-width: 2.5;
-    }
-
-    /* WHEEL LAUNCHER — STRICTLY BOTTOM 14px, RIGHT 14px */
-    #afro-wheel-launcher {
-      position: fixed;
-      bottom: 14px;
-      right: 14px;
-      height: 40px;
-      padding: 0 14px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #d4af37 0%, #f3e08b 100%);
-      color: #121214;
-      font-weight: 700;
-      font-size: 13px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      z-index: 9990;
-      box-shadow: 0 6px 20px rgba(212,175,55,0.4);
-      transition: all 0.25s ease;
-      border: none;
-      white-space: nowrap;
-    }
-    #afro-wheel-launcher:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(212,175,55,0.6);
-    }
-    #afro-wheel-launcher svg {
-      width: 16px;
-      height: 16px;
-      animation: afroSpinPulse 3s infinite linear;
-    }
-    @keyframes afroSpinPulse {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
     }
 
     /* HERO */
@@ -256,117 +229,6 @@
       border: 1px solid rgba(212,175,55,0.3);
     }
 
-    /* WHEEL MODAL */
-    .afro-wheel-modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.88);
-      backdrop-filter: blur(10px);
-      z-index: 9999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-    }
-    .afro-wheel-card {
-      background: #16161a;
-      border: 1px solid #2f2f38;
-      border-radius: 24px;
-      width: 100%;
-      max-width: 440px;
-      padding: 24px;
-      position: relative;
-      text-align: center;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.7);
-    }
-    .afro-wheel-close {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: #26262e;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: none;
-      font-size: 18px;
-    }
-    .afro-wheel-wrap {
-      position: relative;
-      width: 260px;
-      height: 260px;
-      margin: 16px auto;
-    }
-    .afro-wheel-arrow {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 12px solid transparent;
-      border-right: 12px solid transparent;
-      border-top: 22px solid #f3e08b;
-      z-index: 10;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-    }
-    #afro-wheel-canvas {
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      box-shadow: 0 0 25px rgba(212,175,55,0.25);
-      transition: transform 4s cubic-bezier(0.15, 0.95, 0.35, 1);
-    }
-    .afro-wheel-btn {
-      width: 100%;
-      height: 46px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #d4af37 0%, #f3e08b 100%);
-      color: #121214;
-      font-weight: 800;
-      font-size: 15px;
-      border: none;
-      cursor: pointer;
-      margin-top: 14px;
-      transition: transform 0.2s;
-    }
-    .afro-wheel-btn:hover {
-      transform: translateY(-2px);
-    }
-    .afro-wheel-result-box {
-      margin-top: 16px;
-      padding: 12px;
-      border-radius: 10px;
-      background: rgba(212,175,55,0.12);
-      border: 1px solid rgba(212,175,55,0.3);
-      display: none;
-    }
-    .afro-wheel-prize-text {
-      color: #f3e08b;
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .afro-wheel-phone {
-      width: 100%;
-      height: 42px;
-      border-radius: 8px;
-      background: #212128;
-      border: 1px solid #3d3d4a;
-      color: #fff;
-      padding: 0 12px;
-      font-size: 14px;
-      outline: none;
-      margin-bottom: 10px;
-    }
-
     /* COOKIE */
     #afro-cookie-banner {
       position: fixed;
@@ -470,7 +332,7 @@
       color: #d4af37;
     }
 
-    /* MODAL FOR LEGAL */
+    /* LEGAL MODAL */
     .afro-legal-overlay {
       position: fixed;
       top: 0;
@@ -573,15 +435,6 @@
         </svg>
       </button>
 
-      <!-- WHEEL LAUNCHER (strictly bottom: 14px, right: 14px) -->
-      <button id="afro-wheel-launcher" aria-label="Колесо Фортуны">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
-        </svg>
-        <span>Колесо Фортуны</span>
-      </button>
-
       <!-- HERO -->
       <section class="afro-hero">
         <div class="afro-container">
@@ -590,11 +443,11 @@
           <p class="afro-subtitle">Индивидуальный подбор донорских прядей, бережная капсуляция без утяжеления и плетение любой сложности со стажем мастеров с 1998 года.</p>
 
           <div class="afro-cta-row">
-            <button type="button" class="afro-cta-btn afro-cta-gold" id="afro-hero-wheel-trigger">
-              <span>Крутить Колесо Фортуны</span>
-            </button>
-            <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-cta-btn afro-cta-dark">
+            <a href="https://api.whatsapp.com/send/?phone=79255069900" target="_blank" class="afro-cta-btn afro-cta-gold">
               <span>Записаться в WhatsApp</span>
+            </a>
+            <a href="https://t.me/afrostudio" target="_blank" class="afro-cta-btn afro-cta-dark">
+              <span>Канал в Telegram</span>
             </a>
           </div>
         </div>
@@ -618,7 +471,7 @@
               <img src="https://static.tildacdn.com/tild3235-6631-4566-a361-626237366630/Screenshot_19.jpg" alt="Биопротеин люкс" loading="lazy" />
               <span class="afro-gallery-badge">Биопротеин</span>
             </div>
-            <div class="afro-gallery-item" data-src="https://thb.tildacdn.com/tild3838-6332-4232-b437-623433653961/-/empty/noroot.jpg">
+            <div class="afro-gallery-item" data-src="https://thb.tildacdn.com/tild3838-6332-4232-b437-623433653961/noroot.jpg">
               <img src="https://static.tildacdn.com/tild3838-6332-4232-b437-623433653961/noroot.jpg" alt="Дредокудри" loading="lazy" />
               <span class="afro-gallery-badge">Дредокудри</span>
             </div>
@@ -653,28 +506,6 @@
         </div>
       </div>
 
-      <!-- WHEEL MODAL -->
-      <div class="afro-wheel-modal" id="afro-wheel-modal">
-        <div class="afro-wheel-card">
-          <button class="afro-wheel-close" id="afro-wheel-x">&times;</button>
-          <h3 style="color:#fff; font-size:20px; font-weight:800;">Колесо Фортуны</h3>
-          <p style="color:#9c9ca8; font-size:13px; margin-top:4px;">Вращайте колесо и заберите персональный приз студии</p>
-          
-          <div class="afro-wheel-wrap">
-            <div class="afro-wheel-arrow"></div>
-            <canvas id="afro-wheel-canvas" width="520" height="520"></canvas>
-          </div>
-
-          <button type="button" id="afro-spin-trigger" class="afro-wheel-btn">Крутить колесо</button>
-
-          <div class="afro-wheel-result-box" id="afro-wheel-result">
-            <div class="afro-wheel-prize-text" id="afro-prize-display"></div>
-            <input type="tel" id="afro-wheel-phone" class="afro-wheel-phone" placeholder="Ваш телефон для фиксации приза" />
-            <button type="button" id="afro-prize-save" class="afro-wheel-btn" style="margin-top:0; height:40px; font-size:13px;">Забрать подарок</button>
-          </div>
-        </div>
-      </div>
-
       <!-- LEGAL MODAL -->
       <div class="afro-legal-overlay" id="afro-legal-modal">
         <div class="afro-legal-box">
@@ -692,52 +523,7 @@
     `;
 
     setupHandlers();
-    drawWheel();
-  }
-
-  // Wheel sectors & drawing
-  var prizes = [
-    'Скидка 15%',
-    'Спа-уход Lux',
-    'Купон 1000 ₽',
-    'Укладка в дар',
-    'Скидка 10%',
-    'Масло для волос'
-  ];
-  var wheelAngle = 0;
-  var isSpinning = false;
-  var wonPrize = '';
-
-  function drawWheel() {
-    var canvas = document.getElementById('afro-wheel-canvas');
-    if (!canvas) return;
-    var ctx = canvas.getContext('2d');
-    var num = prizes.length;
-    var arc = (2 * Math.PI) / num;
-    var radius = 260;
-    ctx.clearRect(0, 0, 520, 520);
-
-    for (var i = 0; i < num; i++) {
-      var angle = i * arc;
-      ctx.beginPath();
-      ctx.fillStyle = (i % 2 === 0) ? '#1f1f26' : '#2b261b';
-      ctx.moveTo(radius, radius);
-      ctx.arc(radius, radius, radius - 6, angle, angle + arc);
-      ctx.lineTo(radius, radius);
-      ctx.fill();
-      ctx.strokeStyle = '#d4af37';
-      ctx.lineWidth = 3;
-      ctx.stroke();
-
-      ctx.save();
-      ctx.translate(radius, radius);
-      ctx.rotate(angle + arc / 2);
-      ctx.textAlign = 'right';
-      ctx.fillStyle = (i % 2 === 0) ? '#f5f5f7' : '#f3e08b';
-      ctx.font = 'bold 22px sans-serif';
-      ctx.fillText(prizes[i], radius - 30, 8);
-      ctx.restore();
-    }
+    loadGameLead();
   }
 
   function setupHandlers() {
@@ -754,77 +540,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // 2. Wheel Open / Close
-    var wheelModal = document.getElementById('afro-wheel-modal');
-    var wheelLauncher = document.getElementById('afro-wheel-launcher');
-    var heroWheelTrigger = document.getElementById('afro-hero-wheel-trigger');
-    var wheelClose = document.getElementById('afro-wheel-x');
-
-    function openWheel() {
-      wheelModal.style.display = 'flex';
-      trackYM('wheel_open');
-    }
-    wheelLauncher.addEventListener('click', openWheel);
-    heroWheelTrigger.addEventListener('click', openWheel);
-
-    wheelClose.addEventListener('click', function() {
-      wheelModal.style.display = 'none';
-    });
-    wheelModal.addEventListener('click', function(e) {
-      if (e.target === wheelModal && !isSpinning) {
-        wheelModal.style.display = 'none';
-      }
-    });
-
-    // 3. Spin Logic
-    var spinBtn = document.getElementById('afro-spin-trigger');
-    var canvas = document.getElementById('afro-wheel-canvas');
-    var resultBox = document.getElementById('afro-wheel-result');
-    var prizeDisplay = document.getElementById('afro-prize-display');
-    var prizeSaveBtn = document.getElementById('afro-prize-save');
-    var wheelPhone = document.getElementById('afro-wheel-phone');
-
-    spinBtn.addEventListener('click', function() {
-      if (isSpinning) return;
-      isSpinning = true;
-      spinBtn.style.opacity = '0.5';
-      spinBtn.style.pointerEvents = 'none';
-
-      var randomPrizeIndex = Math.floor(Math.random() * prizes.length);
-      wonPrize = prizes[randomPrizeIndex];
-
-      var arcDeg = 360 / prizes.length;
-      var targetAngle = 360 - (randomPrizeIndex * arcDeg + arcDeg / 2);
-      var totalRotation = 360 * 5 + targetAngle;
-
-      canvas.style.transform = 'rotate(' + totalRotation + 'deg)';
-
-      setTimeout(function() {
-        isSpinning = false;
-        spinBtn.style.display = 'none';
-        prizeDisplay.textContent = 'Поздравляем! Ваш приз: ' + wonPrize;
-        resultBox.style.display = 'block';
-      }, 4200);
-    });
-
-    // 4. Save prize & fire Metrika goals
-    prizeSaveBtn.addEventListener('click', function() {
-      var phone = wheelPhone.value.trim();
-      if (!phone) {
-        alert('Пожалуйста, введите ваш номер телефона.');
-        wheelPhone.focus();
-        return;
-      }
-
-      // Reaching official goals from Yandex Metrika
-      trackYM('gamelead_send', { prize: wonPrize, phone: phone });
-      trackYM('296485879', { prize: wonPrize, phone: phone });
-
-      alert('Ваш подарок зафиксирован! Мы свяжемся с вами в течение 10 минут.');
-      wheelModal.style.display = 'none';
-    });
-
-    // 5. Cookie consent
+    // 2. Cookie consent
     var cookieBanner = document.getElementById('afro-cookie-banner');
     if (!localStorage.getItem('afro_cookie_agreed')) {
       cookieBanner.style.display = 'flex';
@@ -840,7 +556,7 @@
       );
     });
 
-    // 6. Legal Modals
+    // 3. Legal Modals
     var legalModal = document.getElementById('afro-legal-modal');
     var legalTitle = document.getElementById('afro-legal-title');
     var legalText = document.getElementById('afro-legal-text');
@@ -872,7 +588,7 @@
       );
     });
 
-    // 7. Lightbox with swipe
+    // 4. Lightbox with swipe
     var lightbox = document.getElementById('afro-lightbox');
     var lightboxImg = document.getElementById('afro-lightbox-img');
     var lightboxClose = document.getElementById('afro-lightbox-x');
@@ -928,7 +644,7 @@
       }
     });
 
-    console.log('[AfroStudio] Engine v1.3.0 activated.');
+    console.log('[AfroStudio] Engine v1.4.0 activated.');
   }
 
   if (document.readyState === 'loading') {
