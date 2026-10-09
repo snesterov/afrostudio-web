@@ -1,16 +1,16 @@
 /**
- * AFROSTUDIO.RU - ELITE BEAUTY SALON WEB SYSTEM
- * Version: 12.0.0 - Interior Signature Hero, 4 Core Directions, Luxury Dark Popup & Fast CDN
+ * AFROSTUDIO.RU - ULTRA BEAUTY MARKETING TREND WEB SYSTEM
+ * Version: 13.0.0 - Rose Gold Velvet Aura, Liquid Silk 3D Buttons & Luxury Glassmorphism 2.0
  */
 (function() {
   'use strict';
 
-  // 1. INJECT EXTERNAL STYLES & LUXURY FONTS
+  // 1. INJECT HIGH-FASHION BEAUTY FONTS
   if (!document.getElementById('afro-web-fonts')) {
     const fontLink = document.createElement('link');
     fontLink.id = 'afro-web-fonts';
     fontLink.rel = 'stylesheet';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap';
     document.head.appendChild(fontLink);
   }
 
@@ -23,17 +23,25 @@
     document.head.appendChild(glScript);
   }
 
-  // 3. APPLICATION STYLES (TOTAL HARMONY: NO WHITE PATCHES, LUXURY OBSIDIAN-GOLD)
+  // 3. ULTRA TREND BEAUTY STYLES
   const styles = `
     /* ======================================================== */
-    /* 0. GLOBAL BASE: NO WHITE GAPS OR FLASHES                 */
+    /* 0. AMBIENT LUXURY CANVAS (VELVET NOIR + ROSE GOLD MESH)  */
     /* ======================================================== */
     html, body, #allrecords, .t-records, .t-records__overflow {
-      background-color: #09090d !important;
-      color: #f3f4f6 !important;
+      background-color: #0b0910 !important;
+      background-image: 
+        radial-gradient(ellipse at 15% 10%, rgba(244, 63, 94, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 30%, rgba(245, 158, 11, 0.10) 0%, transparent 50%),
+        radial-gradient(ellipse at 25% 70%, rgba(217, 70, 239, 0.08) 0%, transparent 55%),
+        radial-gradient(ellipse at 75% 90%, rgba(244, 114, 182, 0.09) 0%, transparent 50%) !important;
+      background-attachment: fixed !important;
+      color: #f8fafc !important;
+      font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif !important;
+      -webkit-font-smoothing: antialiased !important;
     }
 
-    /* KILL LIST FOR JUNK TILDA BLOCKS & NATIVE ARROWS */
+    /* KILL LIST FOR JUNK TILDA BLOCKS */
     #rec2325313701, #rec2325313981, #rec2325314041, #rec2222808741, 
     #rec2334967441, #rec2334967991, #rec2222715461, #t-footer, .t345, .t854, 
     .t-records__footer, .t190, .t-scroll-to-top, [data-record-type="190"] {
@@ -49,16 +57,102 @@
     }
 
     /* ======================================================== */
-    /* 1. LUXURY STYLING FOR TILDA MENU #rec630100959 (t451)    */
+    /* 1. LIQUID SILK 3D PILL BUTTONS (2026 BEAUTY TREND)      */
+    /* ======================================================== */
+    .afro-btn-gold,
+    .t-popup .t-submit,
+    .t702 .t-submit,
+    #rec630108157 .t-submit,
+    #rec4646446601 .t-submit,
+    .t-form__submit button {
+      position: relative !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 17px 42px !important;
+      border-radius: 9999px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+      color: #ffffff !important;
+      background: linear-gradient(135deg, #f43f5e 0%, #fb7185 30%, #f59e0b 80%, #d97706 100%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      box-shadow: 
+        0 10px 30px rgba(244, 63, 94, 0.45),
+        0 0 20px rgba(245, 158, 11, 0.3),
+        inset 0 1px 2px rgba(255, 255, 255, 0.6) !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      overflow: hidden !important;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .afro-btn-gold::before,
+    .t-popup .t-submit::before,
+    .t702 .t-submit::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transform: rotate(25deg);
+      transition: all 0.75s ease;
+      pointer-events: none;
+    }
+    .afro-btn-gold:hover,
+    .t-popup .t-submit:hover,
+    .t702 .t-submit:hover {
+      transform: translateY(-3px) scale(1.02) !important;
+      box-shadow: 
+        0 16px 45px rgba(244, 63, 94, 0.6),
+        0 0 30px rgba(245, 158, 11, 0.5),
+        inset 0 1px 3px rgba(255, 255, 255, 0.8) !important;
+      filter: brightness(1.06) !important;
+    }
+    .afro-btn-gold:hover::before,
+    .t-popup .t-submit:hover::before {
+      left: 130%;
+    }
+    .afro-btn-trans {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 36px;
+      border-radius: 9999px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #fce7f3 !important;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      cursor: pointer;
+      text-decoration: none !important;
+      transition: all 0.3s ease;
+    }
+    .afro-btn-trans:hover {
+      border-color: #fb7185;
+      color: #ffffff !important;
+      background: rgba(244, 63, 94, 0.15);
+      box-shadow: 0 8px 25px rgba(244, 63, 94, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* ======================================================== */
+    /* 2. BEAUTY SALON MENU & HEADER ICONS (#rec630100959)      */
     /* ======================================================== */
     #rec630100959 {
-      font-family: 'Montserrat', sans-serif !important;
       background: transparent !important;
     }
     #rec630100959 .t-menuburger span {
-      background: linear-gradient(90deg, #f59e0b, #fbbf24) !important;
+      background: linear-gradient(90deg, #f43f5e, #fbbf24) !important;
       border-radius: 2px !important;
-      box-shadow: 0 0 8px rgba(245, 158, 11, 0.6) !important;
+      box-shadow: 0 0 10px rgba(244, 63, 94, 0.6) !important;
     }
     #rec630100959 .t451__rightside .t-sociallinks {
       display: flex !important;
@@ -70,29 +164,29 @@
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
-      width: 42px !important;
-      height: 42px !important;
+      width: 44px !important;
+      height: 44px !important;
       border-radius: 50% !important;
-      background: rgba(20, 20, 26, 0.75) !important;
-      backdrop-filter: blur(12px) !important;
-      -webkit-backdrop-filter: blur(12px) !important;
-      border: 1px solid rgba(245, 158, 11, 0.45) !important;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.12) !important;
+      background: rgba(26, 20, 34, 0.8) !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+      border: 1px solid rgba(244, 114, 182, 0.4) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
       text-decoration: none !important;
     }
     #rec630100959 .t451__rightside .t-sociallinks__item a:hover,
     #rec630100959 .t451m__rightside .t-sociallinks__item a:hover {
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.35) 0%, rgba(217, 119, 6, 0.45) 100%) !important;
-      border-color: #fbbf24 !important;
-      transform: translateY(-3px) scale(1.08) !important;
-      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5), 0 0 15px rgba(251, 191, 36, 0.4) !important;
+      background: linear-gradient(135deg, rgba(244, 63, 94, 0.4) 0%, rgba(245, 158, 11, 0.45) 100%) !important;
+      border-color: #fbcfe8 !important;
+      transform: translateY(-3px) scale(1.1) !important;
+      box-shadow: 0 10px 30px rgba(244, 63, 94, 0.5), 0 0 20px rgba(245, 158, 11, 0.4) !important;
     }
     #rec630100959 .t451__rightside .t-sociallinks__svg,
     #rec630100959 .t451m__rightside .t-sociallinks__svg {
       width: 20px !important;
       height: 20px !important;
-      fill: #fbbf24 !important;
+      fill: #fbcfe8 !important;
     }
     #rec630100959 .t451__rightside .t-sociallinks__item a:hover .t-sociallinks__svg,
     #rec630100959 .t451m__rightside .t-sociallinks__item a:hover .t-sociallinks__svg {
@@ -101,24 +195,24 @@
 
     /* Sidebar Menu */
     .t451m__overlay_bg {
-      background: rgba(7, 7, 11, 0.88) !important;
-      backdrop-filter: blur(14px) !important;
-      -webkit-backdrop-filter: blur(14px) !important;
+      background: rgba(10, 8, 14, 0.9) !important;
+      backdrop-filter: blur(18px) !important;
+      -webkit-backdrop-filter: blur(18px) !important;
     }
     .t451m, .t451m__left {
-      background: linear-gradient(180deg, #0e0e14 0%, #08080d 100%) !important;
-      border-right: 1px solid rgba(245, 158, 11, 0.3) !important;
-      box-shadow: 25px 0 70px rgba(0, 0, 0, 0.9) !important;
+      background: linear-gradient(180deg, #130f1c 0%, #0c0812 100%) !important;
+      border-right: 1px solid rgba(244, 114, 182, 0.3) !important;
+      box-shadow: 30px 0 80px rgba(0, 0, 0, 0.95) !important;
     }
     .t451m__close-button, .t451m__close {
-      background: rgba(245, 158, 11, 0.12) !important;
-      border: 1px solid rgba(245, 158, 11, 0.45) !important;
+      background: rgba(244, 63, 94, 0.15) !important;
+      border: 1px solid rgba(244, 114, 182, 0.5) !important;
       border-radius: 50% !important;
       width: 44px !important;
       height: 44px !important;
     }
     .t451m__close_icon span {
-      background-color: #fbbf24 !important;
+      background-color: #fbcfe8 !important;
     }
     #rec630100959 .t451m__menu .t-menu__link-item {
       font-family: 'Cinzel', serif !important;
@@ -126,73 +220,79 @@
       font-weight: 700 !important;
       letter-spacing: 0.14em !important;
       text-transform: uppercase !important;
-      color: #f8fafc !important;
-      padding: 14px 18px !important;
+      color: #fce7f3 !important;
+      padding: 14px 20px !important;
       display: block !important;
       transition: all 0.3s ease !important;
       border-left: 3px solid transparent !important;
     }
     #rec630100959 .t451m__menu .t-menu__link-item:hover {
-      color: #fbbf24 !important;
-      border-left-color: #fbbf24 !important;
-      background: linear-gradient(90deg, rgba(245, 158, 11, 0.16) 0%, transparent 100%) !important;
-      padding-left: 26px !important;
-      text-shadow: 0 0 16px rgba(251, 191, 36, 0.7) !important;
+      color: #ffffff !important;
+      border-left-color: #f43f5e !important;
+      background: linear-gradient(90deg, rgba(244, 63, 94, 0.2) 0%, transparent 100%) !important;
+      padding-left: 28px !important;
+      text-shadow: 0 0 18px rgba(244, 63, 94, 0.8) !important;
     }
     .t451m__right_descr strong:first-child {
       font-family: 'Cinzel', serif !important;
       font-size: 15px !important;
       font-weight: 800 !important;
       letter-spacing: 0.18em !important;
-      color: #fbbf24 !important;
+      background: linear-gradient(135deg, #fbcfe8, #fbbf24) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
     }
 
     /* ======================================================== */
-    /* 2. POPUP MODAL & FORM MAKEOVER (rec630108157, rec4646446601) */
+    /* 3. POPUP MODAL (rec630108157, rec4646446601, .t702)     */
     /* ======================================================== */
     .t-popup, .t702, #rec630108157, #rec4646446601 {
-      font-family: 'Montserrat', sans-serif !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
     }
     .t-popup__container,
     .t702__wrapper,
     #rec630108157 .t702__wrapper,
     #rec4646446601 .t-container,
     #rec4646446601 .t-form {
-      background: linear-gradient(180deg, #13131b 0%, #0c0c11 100%) !important;
-      border: 1px solid rgba(245, 158, 11, 0.45) !important;
-      border-radius: 24px !important;
-      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.95), 0 0 35px rgba(245, 158, 11, 0.2) !important;
-      color: #f3f4f6 !important;
-      padding: 44px 38px !important;
+      background: linear-gradient(180deg, rgba(22, 17, 30, 0.98) 0%, rgba(13, 9, 18, 0.99) 100%) !important;
+      border: 1px solid rgba(244, 114, 182, 0.45) !important;
+      border-radius: 28px !important;
+      box-shadow: 
+        0 30px 90px rgba(0, 0, 0, 0.95),
+        0 0 40px rgba(244, 63, 94, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
+      color: #fce7f3 !important;
+      padding: 48px 40px !important;
       box-sizing: border-box !important;
     }
     .t-popup__close-icon svg,
     .t-popup__close-icon g,
     .t702__close-icon svg {
-      fill: #fbbf24 !important;
+      fill: #fb7185 !important;
     }
     .t702__title,
     .t-popup .t-title,
     #rec630108157 .t-title,
     #rec4646446601 .t-title {
       font-family: 'Cinzel', serif !important;
-      font-size: 32px !important;
+      font-size: 34px !important;
       font-weight: 800 !important;
       letter-spacing: 0.08em !important;
       text-transform: uppercase !important;
-      color: #ffffff !important;
+      background: linear-gradient(135deg, #ffffff 0%, #fbcfe8 50%, #fb7185 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
       text-align: center !important;
       margin-bottom: 12px !important;
-      text-shadow: 0 0 20px rgba(245, 158, 11, 0.4) !important;
     }
     .t702__descr,
     .t-popup .t-descr,
     #rec630108157 .t-descr,
     #rec4646446601 .t-descr {
-      color: #9ca3af !important;
+      color: #d8b4fe !important;
       font-size: 15px !important;
       text-align: center !important;
-      margin-bottom: 26px !important;
+      margin-bottom: 28px !important;
     }
     .t-popup .t-input,
     .t702 .t-input,
@@ -200,13 +300,13 @@
     #rec4646446601 .t-input,
     input[type="text"].t-input,
     input[type="tel"].t-input {
-      background: rgba(255, 255, 255, 0.06) !important;
-      border: 1.5px solid rgba(245, 158, 11, 0.35) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1.5px solid rgba(244, 114, 182, 0.35) !important;
       color: #ffffff !important;
       font-size: 16px !important;
-      border-radius: 12px !important;
-      padding: 16px 20px !important;
-      box-shadow: inset 0 2px 5px rgba(0,0,0,0.5) !important;
+      border-radius: 14px !important;
+      padding: 17px 22px !important;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.5) !important;
       box-sizing: border-box !important;
       width: 100% !important;
       transition: all 0.3s ease !important;
@@ -215,58 +315,31 @@
     .t702 .t-input:focus,
     #rec630108157 .t-input:focus,
     #rec4646446601 .t-input:focus {
-      border-color: #fbbf24 !important;
-      background: rgba(255, 255, 255, 0.1) !important;
+      border-color: #fb7185 !important;
+      background: rgba(255, 255, 255, 0.09) !important;
       outline: none !important;
-      box-shadow: 0 0 16px rgba(245, 158, 11, 0.45) !important;
-    }
-    .t-popup .t-submit,
-    .t702 .t-submit,
-    #rec630108157 .t-submit,
-    #rec4646446601 .t-submit,
-    .t-form__submit button {
-      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%) !important;
-      color: #0b0b0e !important;
-      font-weight: 800 !important;
-      font-size: 16px !important;
-      letter-spacing: 0.1em !important;
-      text-transform: uppercase !important;
-      border-radius: 9999px !important;
-      padding: 18px 40px !important;
-      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.5) !important;
-      border: none !important;
-      cursor: pointer !important;
-      width: 100% !important;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    }
-    .t-popup .t-submit:hover,
-    .t702 .t-submit:hover,
-    #rec630108157 .t-submit:hover,
-    #rec4646446601 .t-submit:hover {
-      transform: translateY(-2px) !important;
-      box-shadow: 0 14px 40px rgba(245, 158, 11, 0.7) !important;
-      filter: brightness(1.08) !important;
+      box-shadow: 0 0 20px rgba(244, 63, 94, 0.45) !important;
     }
     .t-form__bottom-text,
     .t-checkbox__labeltext {
-      color: #9ca3af !important;
+      color: #c4b5fd !important;
       font-size: 13px !important;
       line-height: 1.5 !important;
     }
     .t702__img {
-      border-radius: 16px 16px 0 0 !important;
-      border-bottom: 1px solid rgba(245, 158, 11, 0.3) !important;
+      border-radius: 20px 20px 0 0 !important;
+      border-bottom: 1px solid rgba(244, 114, 182, 0.3) !important;
     }
 
     /* ======================================================== */
-    /* 3. HERO SLIDER SECTION (WITH SIGNATURE STUDIO INTERIOR)  */
+    /* 4. SIGNATURE HERO SLIDER                                 */
     /* ======================================================== */
     .afro-hero-wrap {
       width: 100%;
       position: relative;
       overflow: hidden;
-      background: #09090b;
-      border-bottom: 1px solid rgba(245, 158, 11, 0.25);
+      background: #0b0910;
+      border-bottom: 1px solid rgba(244, 114, 182, 0.25);
     }
     .afro-hero-track {
       display: flex;
@@ -275,147 +348,102 @@
     }
     .afro-hero-slide {
       min-width: 100%;
-      min-height: 600px;
+      min-height: 620px;
       position: relative;
       background-size: cover;
       background-position: center center;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 90px 24px 100px;
+      padding: 100px 24px 110px;
       box-sizing: border-box;
     }
     .afro-hero-slide::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at center, rgba(12, 12, 18, 0.72) 0%, rgba(8, 8, 12, 0.94) 100%);
+      background: radial-gradient(circle at center, rgba(14, 10, 20, 0.70) 0%, rgba(9, 6, 13, 0.95) 100%);
       z-index: 1;
     }
     .afro-hero-content {
       position: relative;
       z-index: 2;
-      max-width: 960px;
+      max-width: 980px;
       text-align: center;
       color: #fff;
     }
     .afro-hero-pill {
       display: inline-block;
-      padding: 8px 24px;
+      padding: 9px 26px;
       border-radius: 9999px;
-      background: rgba(245, 158, 11, 0.16);
-      border: 1px solid rgba(245, 158, 11, 0.45);
-      color: #fbbf24;
+      background: rgba(244, 63, 94, 0.16);
+      border: 1px solid rgba(244, 114, 182, 0.5);
+      color: #fbcfe8;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      margin-bottom: 22px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
+      margin-bottom: 24px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(244, 63, 94, 0.3);
     }
     .afro-hero-h1 {
       font-family: 'Cinzel', serif;
-      font-size: 48px;
+      font-size: 50px;
       font-weight: 800;
-      line-height: 1.22;
+      line-height: 1.2;
       color: #ffffff;
-      margin-bottom: 20px;
-      text-shadow: 0 4px 25px rgba(0,0,0,0.85);
+      margin-bottom: 22px;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.9);
     }
     .afro-hero-h1 span {
-      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
+      background: linear-gradient(135deg, #fbcfe8 0%, #fb7185 40%, #fbbf24 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .afro-hero-desc {
-      font-size: 17px;
+      font-size: 18px;
       line-height: 1.65;
-      color: #d1d5db;
-      max-width: 800px;
-      margin: 0 auto 34px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      color: #e2e8f0;
+      max-width: 820px;
+      margin: 0 auto 36px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.8);
     }
     .afro-hero-actions {
       display: flex;
-      gap: 16px;
+      gap: 18px;
       justify-content: center;
       flex-wrap: wrap;
-    }
-    .afro-btn-gold {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px 38px;
-      border-radius: 9999px;
-      font-weight: 700;
-      font-size: 15px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #0b0b0e !important;
-      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
-      box-shadow: 0 6px 25px rgba(245, 158, 11, 0.45);
-      border: none;
-      cursor: pointer;
-      text-decoration: none !important;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .afro-btn-gold:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 35px rgba(245, 158, 11, 0.65);
-      filter: brightness(1.08);
-    }
-    .afro-btn-trans {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px 36px;
-      border-radius: 9999px;
-      font-weight: 600;
-      font-size: 15px;
-      letter-spacing: 0.05em;
-      color: #f3f4f6 !important;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(8px);
-      cursor: pointer;
-      text-decoration: none !important;
-      transition: all 0.3s ease;
-    }
-    .afro-btn-trans:hover {
-      border-color: #fbbf24;
-      color: #fbbf24 !important;
-      background: rgba(245, 158, 11, 0.12);
-      transform: translateY(-2px);
     }
     .afro-hero-nav {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       z-index: 5;
-      width: 48px;
-      height: 48px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      background: rgba(18, 18, 24, 0.85);
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      color: #fbbf24;
-      font-size: 20px;
+      background: rgba(26, 18, 34, 0.85);
+      border: 1px solid rgba(244, 114, 182, 0.45);
+      color: #fbcfe8;
+      font-size: 22px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
     }
     .afro-hero-nav:hover {
-      background: #fbbf24;
-      color: #0b0b0e;
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+      background: linear-gradient(135deg, #f43f5e, #fbbf24);
+      color: #ffffff;
+      box-shadow: 0 0 25px rgba(244, 63, 94, 0.7);
     }
     .afro-hero-prev { left: 24px; }
     .afro-hero-next { right: 24px; }
     .afro-hero-dots {
       position: absolute;
-      bottom: 24px;
+      bottom: 26px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 5;
@@ -431,52 +459,54 @@
       transition: all 0.3s ease;
     }
     .afro-hero-dot.active {
-      width: 30px;
+      width: 32px;
       border-radius: 9999px;
-      background: #fbbf24;
-      box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
+      background: linear-gradient(90deg, #f43f5e, #fbbf24);
+      box-shadow: 0 0 12px rgba(244, 63, 94, 0.8);
     }
 
     /* ======================================================== */
-    /* 4. FOUR CORE DIRECTIONS SECTION (НАПРАВЛЕНИЯ И СТИЛИСТ)  */
+    /* 5. 4 CORE DIRECTIONS (ACRYLIC GLASSMORPHISM CARDS)       */
     /* ======================================================== */
     .afro-directions-wrap {
-      max-width: 1240px;
-      margin: 100px auto 90px;
+      max-width: 1260px;
+      margin: 110px auto 95px;
       padding: 0 20px;
     }
     .afro-directions-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 26px;
+      grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+      gap: 28px;
     }
     .afro-dir-card {
-      background: #121218;
-      border-radius: 20px;
-      border: 1px solid rgba(245, 158, 11, 0.25);
+      background: rgba(20, 15, 28, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 24px;
+      border: 1px solid rgba(244, 114, 182, 0.28);
       overflow: hidden;
       display: flex;
       flex-direction: column;
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6);
     }
     .afro-dir-card:hover {
       transform: translateY(-8px);
-      border-color: #fbbf24;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(245, 158, 11, 0.25);
+      border-color: #fb7185;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 30px rgba(244, 63, 94, 0.3);
     }
     .afro-dir-thumb {
       width: 100%;
-      height: 240px;
+      height: 250px;
       object-fit: cover;
-      transition: transform 0.6s ease;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .afro-dir-card:hover .afro-dir-thumb {
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
     .afro-dir-body {
-      padding: 24px;
+      padding: 26px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -485,13 +515,13 @@
       font-family: 'Cinzel', serif;
       font-size: 13px;
       font-weight: 700;
-      color: #fbbf24;
-      letter-spacing: 0.1em;
+      color: #fb7185;
+      letter-spacing: 0.12em;
       margin-bottom: 6px;
     }
     .afro-dir-title {
       font-family: 'Cinzel', serif;
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 700;
       color: #ffffff;
       margin-bottom: 12px;
@@ -499,9 +529,9 @@
     }
     .afro-dir-desc {
       font-size: 14px;
-      color: #9ca3af;
+      color: #cbd5e1;
       line-height: 1.6;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
       flex-grow: 1;
     }
     .afro-dir-actions {
@@ -511,67 +541,72 @@
     }
 
     /* ======================================================== */
-    /* 5. TELEGRAM PORTFOLIO FEED (FAST CDN, 13 REAL WORKS)     */
+    /* 6. TELEGRAM PORTFOLIO FEED                               */
     /* ======================================================== */
     .afro-feed-wrap {
-      max-width: 1240px;
-      margin: 100px auto 90px;
+      max-width: 1260px;
+      margin: 110px auto 95px;
       padding: 0 20px;
       position: relative;
     }
     .afro-feed-wrap::before {
       content: '';
       position: absolute;
-      top: -50px;
+      top: -55px;
       left: 10%;
       right: 10%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.4), transparent);
+      background: linear-gradient(90deg, transparent, rgba(244, 114, 182, 0.4), transparent);
     }
     .afro-section-head {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 52px;
     }
     .afro-section-pill {
       display: inline-block;
-      padding: 7px 22px;
+      padding: 8px 24px;
       border-radius: 9999px;
-      background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      color: #fbbf24;
+      background: rgba(244, 63, 94, 0.15);
+      border: 1px solid rgba(244, 114, 182, 0.4);
+      color: #fbcfe8;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       margin-bottom: 16px;
+      box-shadow: 0 4px 15px rgba(244, 63, 94, 0.2);
     }
     .afro-section-title {
       font-family: 'Cinzel', serif;
-      font-size: 38px;
+      font-size: 40px;
       font-weight: 800;
       color: #ffffff;
       margin-bottom: 14px;
     }
     .afro-section-title span {
-      color: #fbbf24;
+      background: linear-gradient(135deg, #fbcfe8, #fb7185, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .afro-section-subtitle {
       font-size: 16px;
-      color: #9ca3af;
-      max-width: 660px;
+      color: #cbd5e1;
+      max-width: 680px;
       margin: 0 auto;
       line-height: 1.6;
     }
     .afro-feed-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+      gap: 26px;
     }
     .afro-post-card {
-      background: #121218;
-      border-radius: 18px;
+      background: rgba(20, 15, 28, 0.85);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 20px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       display: flex;
       flex-direction: column;
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -579,45 +614,45 @@
     }
     .afro-post-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(245, 158, 11, 0.5);
-      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.65), 0 0 20px rgba(245, 158, 11, 0.2);
+      border-color: rgba(244, 114, 182, 0.55);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(244, 63, 94, 0.3);
     }
     .afro-card-thumb-wrap {
       position: relative;
       width: 100%;
       height: 260px;
-      background: #09090c;
+      background: #09060c;
       overflow: hidden;
     }
     .afro-card-thumb {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .afro-post-card:hover .afro-card-thumb {
-      transform: scale(1.06);
+      transform: scale(1.07);
     }
     .afro-card-badge {
       position: absolute;
       top: 14px;
       left: 14px;
-      padding: 5px 12px;
-      border-radius: 6px;
-      background: rgba(15, 15, 20, 0.88);
-      backdrop-filter: blur(8px);
-      color: #fbbf24;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(18, 12, 24, 0.9);
+      backdrop-filter: blur(10px);
+      color: #fbcfe8;
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      border: 1px solid rgba(245, 158, 11, 0.3);
+      border: 1px solid rgba(244, 114, 182, 0.4);
       display: flex;
       align-items: center;
       gap: 6px;
     }
     .afro-card-body {
-      padding: 22px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -625,15 +660,15 @@
     .afro-card-title {
       font-size: 16px;
       font-weight: 700;
-      color: #f3f4f6;
+      color: #ffffff;
       margin-bottom: 10px;
       line-height: 1.4;
     }
     .afro-card-desc {
       font-size: 13px;
-      color: #9ca3af;
+      color: #94a3b8;
       line-height: 1.55;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       flex-grow: 1;
     }
     .afro-card-action {
@@ -641,71 +676,73 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 12px 20px;
-      border-radius: 10px;
-      background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      color: #fbbf24 !important;
+      padding: 12px 22px;
+      border-radius: 9999px;
+      background: rgba(244, 63, 94, 0.12);
+      border: 1px solid rgba(244, 114, 182, 0.4);
+      color: #fbcfe8 !important;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none !important;
       transition: all 0.25s ease;
     }
     .afro-card-action:hover {
-      background: #fbbf24;
-      color: #0b0b0e !important;
-      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+      background: linear-gradient(135deg, #f43f5e, #fbbf24);
+      color: #ffffff !important;
+      border-color: transparent;
+      box-shadow: 0 6px 20px rgba(244, 63, 94, 0.5);
     }
 
     /* ======================================================== */
-    /* 6. INTERACTIVE PRICE MATRIX                              */
+    /* 7. INTERACTIVE PRICE MATRIX                              */
     /* ======================================================== */
     .afro-price-section {
-      max-width: 1140px;
-      margin: 100px auto 90px;
+      max-width: 1160px;
+      margin: 110px auto 95px;
       padding: 0 20px;
       position: relative;
     }
     .afro-price-section::before {
       content: '';
       position: absolute;
-      top: -50px;
+      top: -55px;
       left: 10%;
       right: 10%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.4), transparent);
+      background: linear-gradient(90deg, transparent, rgba(244, 114, 182, 0.4), transparent);
     }
     .afro-price-tabs {
       display: flex;
       justify-content: center;
-      gap: 12px;
-      margin-bottom: 35px;
+      gap: 14px;
+      margin-bottom: 38px;
       flex-wrap: wrap;
     }
     .afro-price-tab-btn {
-      padding: 12px 28px;
+      padding: 13px 30px;
       border-radius: 9999px;
-      background: #181820;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #d1d5db;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       transition: all 0.3s ease;
     }
     .afro-price-tab-btn.active {
-      background: linear-gradient(135deg, #f59e0b, #fbbf24);
-      color: #0b0b0e;
-      font-weight: 700;
-      border-color: #fbbf24;
-      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+      background: linear-gradient(135deg, #f43f5e, #fb7185 40%, #fbbf24);
+      color: #ffffff;
+      border-color: #fbcfe8;
+      box-shadow: 0 6px 25px rgba(244, 63, 94, 0.45);
     }
     .afro-price-card {
-      background: #121218;
-      border-radius: 20px;
-      border: 1px solid rgba(245, 158, 11, 0.25);
-      padding: 32px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      background: rgba(20, 15, 28, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 24px;
+      border: 1px solid rgba(244, 114, 182, 0.3);
+      padding: 36px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
     }
     .afro-price-table {
       width: 100%;
@@ -713,41 +750,43 @@
     }
     .afro-price-table th {
       text-align: left;
-      padding: 16px 20px;
+      padding: 18px 22px;
       font-family: 'Cinzel', serif;
       font-size: 14px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #fbbf24;
-      border-bottom: 1px solid rgba(245, 158, 11, 0.25);
+      letter-spacing: 0.1em;
+      color: #fbcfe8;
+      border-bottom: 1px solid rgba(244, 114, 182, 0.25);
     }
     .afro-price-table td {
-      padding: 18px 20px;
+      padding: 20px 22px;
       font-size: 15px;
-      color: #e5e7eb;
+      color: #e2e8f0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
     .afro-price-table tr:hover td {
-      background: rgba(245, 158, 11, 0.04);
+      background: rgba(244, 63, 94, 0.06);
     }
     .afro-price-val {
-      font-weight: 700;
-      color: #fbbf24;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fbcfe8, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-size: 16px;
       white-space: nowrap;
     }
 
     /* ======================================================== */
-    /* 7. KLING AI ART SECTION                                  */
+    /* 8. KLING AI ART SECTION                                  */
     /* ======================================================== */
     .afro-art-box {
-      max-width: 1140px;
-      margin: 100px auto 90px;
-      padding: 60px 40px;
-      background: linear-gradient(135deg, rgba(20, 20, 28, 0.95) 0%, rgba(12, 12, 16, 0.98) 100%);
-      border-radius: 24px;
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+      max-width: 1160px;
+      margin: 110px auto 95px;
+      padding: 65px 44px;
+      background: linear-gradient(135deg, rgba(26, 18, 36, 0.95) 0%, rgba(14, 9, 20, 0.98) 100%);
+      border-radius: 28px;
+      border: 1px solid rgba(244, 114, 182, 0.4);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 30px rgba(244, 63, 94, 0.2);
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
       gap: 40px;
@@ -755,19 +794,21 @@
     }
     .afro-art-title {
       font-family: 'Cinzel', serif;
-      font-size: 34px;
+      font-size: 36px;
       font-weight: 800;
       color: #ffffff;
       margin-bottom: 16px;
     }
     .afro-art-title span {
-      color: #fbbf24;
+      background: linear-gradient(135deg, #fbcfe8, #fb7185, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .afro-art-desc {
       font-size: 16px;
-      color: #d1d5db;
+      color: #cbd5e1;
       line-height: 1.65;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
     }
     .afro-art-badges {
       display: flex;
@@ -775,64 +816,64 @@
       flex-wrap: wrap;
     }
     .afro-art-badge-item {
-      background: rgba(245, 158, 11, 0.1);
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      padding: 14px 20px;
-      border-radius: 12px;
+      background: rgba(244, 63, 94, 0.12);
+      border: 1px solid rgba(244, 114, 182, 0.4);
+      padding: 15px 22px;
+      border-radius: 14px;
       text-align: center;
     }
     .afro-art-badge-item strong {
       font-family: 'Cinzel', serif;
-      font-size: 24px;
-      color: #fbbf24;
+      font-size: 26px;
+      color: #fbcfe8;
       display: block;
       margin-bottom: 4px;
     }
     .afro-art-badge-item span {
       font-size: 12px;
-      color: #9ca3af;
+      color: #cbd5e1;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
     }
 
     /* ======================================================== */
-    /* 8. ALWAYS VISIBLE LUXURY FOOTER                          */
+    /* 9. ALWAYS VISIBLE FOOTER                                 */
     /* ======================================================== */
     .afro-custom-footer {
-      background: #09090d;
-      border-top: 1px solid rgba(245, 158, 11, 0.3);
-      padding: 45px 20px;
+      background: #09060c;
+      border-top: 1px solid rgba(244, 114, 182, 0.3);
+      padding: 50px 20px;
       text-align: center;
       position: relative;
       z-index: 100;
     }
     .afro-footer-line1 {
       font-size: 15px;
-      color: #e5e7eb;
+      color: #e2e8f0;
       margin-bottom: 12px;
     }
     .afro-footer-line2 {
       font-size: 12px;
-      color: #6b7280;
+      color: #94a3b8;
       line-height: 1.5;
-      max-width: 800px;
-      margin: 0 auto 16px;
+      max-width: 820px;
+      margin: 0 auto 18px;
     }
     .afro-footer-links {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 22px;
       font-size: 13px;
       flex-wrap: wrap;
     }
     .afro-footer-links a {
-      color: #fbbf24;
+      color: #fb7185;
       text-decoration: underline;
       cursor: pointer;
     }
 
     /* ======================================================== */
-    /* 9. CUSTOM GOLD FLOATING SCROLL BUTTON                    */
+    /* 10. CUSTOM FLOATING SCROLL BUTTON                        */
     /* ======================================================== */
     .afro-floating-scroll {
       position: fixed;
@@ -841,9 +882,9 @@
       width: 52px;
       height: 52px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
-      color: #0b0b0e;
-      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5), 0 0 15px rgba(251, 191, 36, 0.4);
+      background: linear-gradient(135deg, #f43f5e 0%, #fbbf24 100%);
+      color: #ffffff;
+      box-shadow: 0 8px 25px rgba(244, 63, 94, 0.5), 0 0 15px rgba(245, 158, 11, 0.4);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -861,30 +902,30 @@
     }
     .afro-floating-scroll:hover {
       transform: translateY(-4px) scale(1.08);
-      box-shadow: 0 12px 35px rgba(245, 158, 11, 0.7), 0 0 25px rgba(251, 191, 36, 0.6);
+      box-shadow: 0 14px 40px rgba(244, 63, 94, 0.7);
     }
     .afro-floating-scroll svg {
       width: 22px;
       height: 22px;
-      stroke: #0b0b0e;
+      stroke: #ffffff;
       stroke-width: 2.5;
       fill: none;
     }
 
     /* ======================================================== */
-    /* 10. COOKIE BANNER & POLICY MODAL                         */
+    /* 11. COOKIE BANNER & POLICY MODAL                         */
     /* ======================================================== */
     .afro-cookie-banner {
       position: fixed;
       bottom: 24px;
       left: 24px;
       max-width: 440px;
-      background: rgba(18, 18, 24, 0.96);
-      border: 1px solid rgba(245, 158, 11, 0.45);
-      border-radius: 16px;
-      padding: 22px 24px;
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(12px);
+      background: rgba(22, 16, 30, 0.96);
+      border: 1px solid rgba(244, 114, 182, 0.45);
+      border-radius: 18px;
+      padding: 24px 26px;
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(16px);
       z-index: 99999;
       display: none;
     }
@@ -895,13 +936,13 @@
       font-family: 'Cinzel', serif;
       font-size: 15px;
       font-weight: 700;
-      color: #fbbf24;
+      color: #fbcfe8;
       margin-bottom: 8px;
     }
     .afro-cookie-text {
       font-size: 13px;
       line-height: 1.5;
-      color: #d1d5db;
+      color: #cbd5e1;
       margin-bottom: 16px;
     }
     .afro-cookie-actions {
@@ -909,28 +950,27 @@
       gap: 10px;
     }
     .afro-cookie-btn {
-      padding: 9px 18px;
-      border-radius: 8px;
+      padding: 10px 20px;
+      border-radius: 9999px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       border: none;
       transition: all 0.25s ease;
     }
     .afro-cookie-accept {
-      background: linear-gradient(135deg, #f59e0b, #fbbf24);
-      color: #0b0b0e;
-      font-weight: 700;
+      background: linear-gradient(135deg, #f43f5e, #fbbf24);
+      color: #ffffff;
     }
     .afro-cookie-decline {
       background: rgba(255, 255, 255, 0.08);
-      color: #d1d5db;
+      color: #cbd5e1;
     }
     .afro-modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(8px);
+      background: rgba(7, 5, 10, 0.88);
+      backdrop-filter: blur(10px);
       z-index: 100000;
       display: none;
       align-items: center;
@@ -941,16 +981,16 @@
       display: flex;
     }
     .afro-modal-card {
-      background: #14141a;
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      border-radius: 20px;
+      background: #140f1d;
+      border: 1px solid rgba(244, 114, 182, 0.45);
+      border-radius: 24px;
       max-width: 720px;
       max-height: 85vh;
       overflow-y: auto;
-      padding: 36px;
-      color: #e5e7eb;
+      padding: 38px;
+      color: #f1f5f9;
       position: relative;
-      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
     }
     .afro-modal-close {
       position: absolute;
@@ -959,8 +999,8 @@
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.2);
       color: #fff;
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -970,10 +1010,10 @@
     }
 
     @media (max-width: 768px) {
-      .afro-hero-h1 { font-size: 32px !important; }
+      .afro-hero-h1 { font-size: 34px !important; }
       .afro-hero-desc { font-size: 15px !important; }
       .afro-section-title { font-size: 28px !important; }
-      .afro-art-box { grid-template-columns: 1fr; padding: 30px 20px; }
+      .afro-art-box { grid-template-columns: 1fr; padding: 32px 20px; }
     }
   `;
 
@@ -1084,7 +1124,7 @@
     {"service": "Бережное снятие волос + мытье и уход", "time": "1-2 ч", "price": "от 3 000 ₽"}
   ];
 
-  // 5. INJECT SIGNATURE HERO SLIDER (WITH REAL STUDIO INTERIOR PHOTO)
+  // 5. INJECT HERO SLIDER (SIGNATURE STUDIO INTERIOR)
   function buildHeroSlider() {
     if (document.getElementById('afro-hero-section')) return;
 
@@ -1095,7 +1135,7 @@
 
     heroWrap.innerHTML = `
       <div class="afro-hero-track" id="afro-hero-track">
-        <!-- SLIDE 1: SIGNATURE STUDIO INTERIOR PHOTO -->
+        <!-- SLIDE 1: INTERIOR PHOTO -->
         <div class="afro-hero-slide" style="background-image: url('https://static.tildacdn.com/tild3838-6332-4232-b437-623433653961/noroot.jpg');">
           <div class="afro-hero-content">
             <span class="afro-hero-pill">СТУДИЯ НА ТАГАНСКОЙ &middot; 28 ЛЕТ МАСТЕРСТВА</span>
@@ -1143,7 +1183,6 @@
 
     target.insertBefore(heroWrap, target.firstChild);
 
-    // Slider Logic
     let currentSlide = 0;
     const track = document.getElementById('afro-hero-track');
     const dots = document.querySelectorAll('.afro-hero-dot');
@@ -1160,7 +1199,7 @@
     setInterval(() => goToSlide(currentSlide + 1), 7000);
   }
 
-  // 6. INJECT 4 CORE DIRECTIONS (НАПРАВЛЕНИЯ, СТИЛИСТ, ОБУЧЕНИЕ)
+  // 6. INJECT 4 CORE DIRECTIONS
   function buildDirectionsSection() {
     if (document.getElementById('afro-directions')) return;
 
@@ -1183,8 +1222,8 @@
             <h3 class="afro-dir-title">Наращивание Волос</h3>
             <p class="afro-dir-desc">Горячее итальянское капсульное, микрокапсулы Lux, ленточное, биопротеин и пришивное голливудское наращивание. 100% славянские донорские волосы.</p>
             <div class="afro-dir-actions">
-              <a href="#popup:myform" class="afro-btn-gold" style="padding: 10px 22px; font-size: 13px;">Записаться</a>
-              <a href="https://afrostudio.ru/services/hair-extension" class="afro-card-action" style="padding: 10px 18px;">Подробнее</a>
+              <a href="#popup:myform" class="afro-btn-gold" style="padding: 12px 24px; font-size: 13px;">Записаться</a>
+              <a href="https://afrostudio.ru/services/hair-extension" class="afro-card-action" style="padding: 12px 20px;">Подробнее</a>
             </div>
           </div>
         </div>
@@ -1197,8 +1236,8 @@
             <h3 class="afro-dir-title">Афрокосички и Плетение</h3>
             <p class="afro-dir-desc">Классические афрокосы, зизи, сенегальские твисты, брейды и дредокудри на каркас. Любая цветовая палитра и безопасное распределение нагрузки.</p>
             <div class="afro-dir-actions">
-              <a href="#popup:myform" class="afro-btn-gold" style="padding: 10px 22px; font-size: 13px;">Записаться</a>
-              <a href="https://afrostudio.ru/services/afro" class="afro-card-action" style="padding: 10px 18px;">Подробнее</a>
+              <a href="#popup:myform" class="afro-btn-gold" style="padding: 12px 24px; font-size: 13px;">Записаться</a>
+              <a href="https://afrostudio.ru/services/afro" class="afro-card-action" style="padding: 12px 20px;">Подробнее</a>
             </div>
           </div>
         </div>
@@ -1211,8 +1250,8 @@
             <h3 class="afro-dir-title">Услуги Топ-Стилиста</h3>
             <p class="afro-dir-desc">Авторское колорирование донорских и своих волос, адаптированные стрижки, бережный профессиональный уход, адаптация цвета тон-в-тон.</p>
             <div class="afro-dir-actions">
-              <a href="#popup:myform" class="afro-btn-gold" style="padding: 10px 22px; font-size: 13px;">Записаться</a>
-              <a href="#afro-pricing" class="afro-card-action" style="padding: 10px 18px;">Прайс</a>
+              <a href="#popup:myform" class="afro-btn-gold" style="padding: 12px 24px; font-size: 13px;">Записаться</a>
+              <a href="#afro-pricing" class="afro-card-action" style="padding: 12px 20px;">Прайс</a>
             </div>
           </div>
         </div>
@@ -1225,8 +1264,8 @@
             <h3 class="afro-dir-title">Обучение Мастеров</h3>
             <p class="afro-dir-desc">Индивидуальные и практические курсы по наращиванию волос и афроплетению с постановкой руки, отработкой на моделях и сертификатом студии.</p>
             <div class="afro-dir-actions">
-              <a href="#popup:myform" class="afro-btn-gold" style="padding: 10px 22px; font-size: 13px;">Записаться</a>
-              <a href="tel:+74959113911" class="afro-card-action" style="padding: 10px 18px;">Консультация</a>
+              <a href="#popup:myform" class="afro-btn-gold" style="padding: 12px 24px; font-size: 13px;">Записаться</a>
+              <a href="tel:+74959113911" class="afro-card-action" style="padding: 12px 20px;">Консультация</a>
             </div>
           </div>
         </div>
@@ -1242,7 +1281,7 @@
     }
   }
 
-  // 7. INJECT TELEGRAM PORTFOLIO FEED (FAST CDN, 13 REAL WORKS)
+  // 7. INJECT TELEGRAM PORTFOLIO FEED
   function buildTelegramFeed() {
     if (document.getElementById('afro-telegram-feed')) return;
 
@@ -1298,7 +1337,7 @@
           <td><strong>${it.service}</strong></td>
           <td>${it.time}</td>
           <td class="afro-price-val">${it.price}</td>
-          <td><a href="#popup:myform" class="afro-btn-gold" style="padding: 7px 18px; font-size: 12px;">Записаться</a></td>
+          <td><a href="#popup:myform" class="afro-btn-gold" style="padding: 8px 20px; font-size: 12px;">Записаться</a></td>
         </tr>
       `).join('');
     }
@@ -1338,7 +1377,6 @@
       target.appendChild(priceSec);
     }
 
-    // Tab switcher
     const tabHair = document.getElementById('tab-hair-btn');
     const tabAfro = document.getElementById('tab-afro-btn');
     const tbody = document.getElementById('afro-price-tbody');
@@ -1363,8 +1401,8 @@
 
     const artSec = document.createElement('section');
     artSec.id = 'afro-art-section';
-    artSec.style.maxWidth = '1240px';
-    artSec.style.margin = '100px auto 90px';
+    artSec.style.maxWidth = '1160px';
+    artSec.style.margin = '110px auto 95px';
     artSec.style.padding = '0 20px';
 
     artSec.innerHTML = `
@@ -1389,7 +1427,7 @@
           </div>
         </div>
         <div style="text-align: center;">
-          <a href="#popup:myform" class="afro-btn-gold" style="font-size: 16px; padding: 18px 40px;">Записаться на консультацию</a>
+          <a href="#popup:myform" class="afro-btn-gold" style="font-size: 16px; padding: 18px 44px;">Записаться на примерку</a>
         </div>
       </div>
     `;
@@ -1398,7 +1436,7 @@
     target.appendChild(artSec);
   }
 
-  // 10. INJECT CUSTOM LUXURY FOOTER
+  // 10. INJECT ALWAYS VISIBLE FOOTER
   function buildCustomFooter() {
     if (document.getElementById('afro-custom-footer')) return;
 
@@ -1467,8 +1505,8 @@
     modal.innerHTML = `
       <div class="afro-modal-card">
         <button class="afro-modal-close" onclick="closePolicyModal()">&times;</button>
-        <h2 style="font-family: 'Cinzel', serif; font-size: 24px; color: #fbbf24; margin-bottom: 20px;">Политика обработки персональных данных</h2>
-        <div style="font-size: 14px; line-height: 1.6; color: #d1d5db;">
+        <h2 style="font-family: 'Cinzel', serif; font-size: 24px; color: #fbcfe8; margin-bottom: 20px;">Политика обработки персональных данных</h2>
+        <div style="font-size: 14px; line-height: 1.6; color: #cbd5e1;">
           <p>Настоящая Политика составлена в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки данных студией Afrostudio (работает с 1998 года, г. Москва, ул. Таганская, 26, стр. 1).</p>
           <p>Студия обеспечивает конфиденциальность предоставленных клиентом данных (имя, номер телефона) исключительно для связи, консультации и записи на услуги.</p>
           <p>Контакты: +7 (495) 911-39-11 &middot; г. Москва, ул. Таганская, 26, стр. 1.</p>
