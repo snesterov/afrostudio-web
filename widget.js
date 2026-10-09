@@ -1,6 +1,6 @@
 /**
  * AFROSTUDIO.RU - ULTRA BEAUTY MARKETING TREND WEB SYSTEM
- * Version: 21.0.0 - Instant Zero-Lag First Paint + Non-Blocking Background Live Telegram Sync
+ * Version: 22.0.0 - Post 393 (3 October) Strictly First with HD Frame + Live Background Sync
  */
 (function() {
   'use strict';
@@ -1066,9 +1066,9 @@
   const cleanPosts = [
     {
       id: "393",
-      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@main/images/post_393.jpg",
+      thumb: "https://cdn.jsdelivr.net/gh/snesterov/afrostudio-web@main/images/post_393_hd.jpg",
       title: "Когда общаешься со сложным клиентом и случайно смотришь на коллегу 😁",
-      desc: "Живые моменты из будней топ-мастеров студии Afrostudio на Таганской. Смотрите ролик в нашем Telegram-канале!",
+      desc: "Пост от 3 октября — живые моменты из будней топ-мастеров студии Afrostudio на Таганской. Смотрите ролик в нашем Telegram!",
       is_video: true
     },
     {
